@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/llama-cpp/SKILL.md
+content_hash: ebcf96c998c3
+category: 99-misc

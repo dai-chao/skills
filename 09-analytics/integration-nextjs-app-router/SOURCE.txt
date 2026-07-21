@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/nextjs-app-router/SKILL.md
+content_hash: ef4e6cabe058
+category: 09-analytics

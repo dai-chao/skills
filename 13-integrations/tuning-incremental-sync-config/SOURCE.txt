@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/tuning-incremental-sync-config/SKILL.md
+content_hash: 8b9def82bd70
+category: 13-integrations

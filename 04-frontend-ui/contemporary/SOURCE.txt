@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: design-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/design-skills/skills/contemporary/SKILL.md
+content_hash: 7dfc42ed28aa
+category: 04-frontend-ui

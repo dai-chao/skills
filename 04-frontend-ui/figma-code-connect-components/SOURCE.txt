@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/figma-code-connect-components/SKILL.md
+content_hash: 3ef7f6e890c9
+category: 04-frontend-ui

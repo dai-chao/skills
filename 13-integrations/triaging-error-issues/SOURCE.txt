@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/triaging-error-issues/SKILL.md
+content_hash: 0929b026ec18
+category: 13-integrations

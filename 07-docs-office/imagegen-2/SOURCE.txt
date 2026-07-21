@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.codex/skills/.system/imagegen/SKILL.md
+content_hash: ec40260c0591
+category: 07-docs-office

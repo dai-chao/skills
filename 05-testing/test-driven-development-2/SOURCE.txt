@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: addyosmani
+source_path: /Users/chao/Desktop/skills/_tmp_sources/addyosmani/skills/test-driven-development/SKILL.md
+content_hash: 451c0d42e3bd
+category: 05-testing

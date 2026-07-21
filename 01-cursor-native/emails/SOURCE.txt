@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/emails/SKILL.md
+content_hash: 72a0fa30fbbf
+category: 01-cursor-native

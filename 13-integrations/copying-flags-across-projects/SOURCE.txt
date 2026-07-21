@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/copying-flags-across-projects/SKILL.md
+content_hash: 7933d9d36080
+category: 13-integrations

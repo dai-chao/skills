@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/43chat/SKILL.md
+content_hash: d45509715c0e
+category: 08-research-web

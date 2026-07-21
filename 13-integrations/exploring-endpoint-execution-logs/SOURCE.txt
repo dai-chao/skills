@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/exploring-endpoint-execution-logs/SKILL.md
+content_hash: 80e35ca86776
+category: 13-integrations

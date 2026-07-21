@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/signals-scout-anomaly-detection/SKILL.md
+content_hash: adad7f5e570d
+category: 13-integrations

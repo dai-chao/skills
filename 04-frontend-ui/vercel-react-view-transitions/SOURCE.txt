@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/vercel-agent-skills/skills/react-view-transitions/SKILL.md
+content_hash: 68da2d20e9cd
+category: 04-frontend-ui

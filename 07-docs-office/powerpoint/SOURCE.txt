@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/powerpoint/SKILL.md
+content_hash: 5340f7915287
+category: 07-docs-office

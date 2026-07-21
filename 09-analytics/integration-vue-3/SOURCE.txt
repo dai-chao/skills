@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/vue-3/SKILL.md
+content_hash: 02997e569988
+category: 09-analytics

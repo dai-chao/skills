@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/finding-replay-for-issue/SKILL.md
+content_hash: 88a8df6d0cf5
+category: 13-integrations

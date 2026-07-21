@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/software-development/threejs-browser-game-prototype/SKILL.md
+content_hash: 187f99ec0029
+category: 04-frontend-ui

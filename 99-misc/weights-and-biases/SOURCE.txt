@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/weights-and-biases/SKILL.md
+content_hash: eff06ac97faa
+category: 99-misc

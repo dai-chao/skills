@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/youtube-content/SKILL.md
+content_hash: e4cb284b63db
+category: 99-misc

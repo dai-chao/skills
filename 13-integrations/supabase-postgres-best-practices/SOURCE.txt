@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: supabase-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/supabase-skills/skills/supabase-postgres-best-practices/SKILL.md
+content_hash: 0e31e4a19ccc
+category: 13-integrations

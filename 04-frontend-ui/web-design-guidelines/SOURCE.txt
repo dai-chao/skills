@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/vercel-agent-skills/skills/web-design-guidelines/SKILL.md
+content_hash: 98087aedd183
+category: 04-frontend-ui

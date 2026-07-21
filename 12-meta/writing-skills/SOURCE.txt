@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: superpowers
+source_path: /Users/chao/Desktop/skills/_tmp_sources/superpowers/skills/writing-skills/SKILL.md
+content_hash: 4bad4f33e74a
+category: 12-meta

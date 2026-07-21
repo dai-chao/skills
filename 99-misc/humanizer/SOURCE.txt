@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/creative/humanizer/SKILL.md
+content_hash: bc680305912f
+category: 99-misc

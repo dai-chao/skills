@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/marketing-loops/SKILL.md
+content_hash: 95ef50e64166
+category: 01-cursor-native

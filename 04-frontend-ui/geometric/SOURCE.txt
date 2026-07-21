@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: design-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/design-skills/skills/geometric/SKILL.md
+content_hash: 860ffa9931a4
+category: 04-frontend-ui

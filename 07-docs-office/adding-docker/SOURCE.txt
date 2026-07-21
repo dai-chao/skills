@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/adding-docker/SKILL.md
+content_hash: 63eea161b65b
+category: 07-docs-office

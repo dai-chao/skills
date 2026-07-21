@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/mlops/huggingface-hub/SKILL.md
+content_hash: 81b5a1da69c0
+category: 08-research-web

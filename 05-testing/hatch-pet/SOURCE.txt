@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/hatch-pet/SKILL.md
+content_hash: b6fb844193f5
+category: 05-testing

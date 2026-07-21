@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/llm-wiki/SKILL.md
+content_hash: 7da57b1b74bd
+category: 07-docs-office

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/suggesting-data-imports/SKILL.md
+content_hash: 3b363b8e0bed
+category: 13-integrations

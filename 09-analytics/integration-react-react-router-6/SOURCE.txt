@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/react-react-router-6/SKILL.md
+content_hash: 9001a431476e
+category: 09-analytics

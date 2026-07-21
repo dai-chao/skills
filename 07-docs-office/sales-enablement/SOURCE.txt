@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/sales-enablement/SKILL.md
+content_hash: 3f1b6f54b332
+category: 07-docs-office

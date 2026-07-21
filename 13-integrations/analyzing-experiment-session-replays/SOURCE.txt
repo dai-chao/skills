@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/analyzing-experiment-session-replays/SKILL.md
+content_hash: f7ee9acfdf4d
+category: 13-integrations

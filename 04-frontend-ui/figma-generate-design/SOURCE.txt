@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/figma-generate-design/SKILL.md
+content_hash: 9c349f529d5a
+category: 04-frontend-ui

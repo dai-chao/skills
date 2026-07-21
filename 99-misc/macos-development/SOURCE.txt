@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/apple/macos-development/SKILL.md
+content_hash: d741ea7086dd
+category: 99-misc

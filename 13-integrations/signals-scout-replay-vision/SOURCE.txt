@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/signals-scout-replay-vision/SKILL.md
+content_hash: cd0b99437abc
+category: 13-integrations

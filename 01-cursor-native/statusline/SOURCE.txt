@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills-cursor/statusline/SKILL.md
+content_hash: f8d15ffa0654
+category: 01-cursor-native

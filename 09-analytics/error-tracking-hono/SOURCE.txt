@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/all/skills/error-tracking-hono/SKILL.md
+content_hash: 743a76f0b74c
+category: 09-analytics

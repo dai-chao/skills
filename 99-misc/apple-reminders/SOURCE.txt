@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/apple-reminders/SKILL.md
+content_hash: c33867c943d5
+category: 99-misc

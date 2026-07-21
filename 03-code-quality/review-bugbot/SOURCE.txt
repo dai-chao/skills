@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills-cursor/review-bugbot/SKILL.md
+content_hash: bf3b20cf4461
+category: 03-code-quality

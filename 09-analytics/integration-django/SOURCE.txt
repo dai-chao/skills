@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/django/SKILL.md
+content_hash: 63e192f03d8a
+category: 09-analytics

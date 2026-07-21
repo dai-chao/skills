@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: convex-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/convex-skills/skills/convex-migration-helper/SKILL.md
+content_hash: b36253cd6208
+category: 06-devops-infra

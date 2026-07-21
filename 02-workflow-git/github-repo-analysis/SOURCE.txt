@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/github-repo-analysis/SKILL.md
+content_hash: f73f4c610b52
+category: 02-workflow-git

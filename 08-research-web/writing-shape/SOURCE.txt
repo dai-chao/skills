@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/in-progress/writing-shape/SKILL.md
+content_hash: 08696385315c
+category: 08-research-web

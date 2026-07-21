@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/team/new-business-sales/onboarding-lead/SKILL.md
+content_hash: b8b969b03a77
+category: 08-research-web

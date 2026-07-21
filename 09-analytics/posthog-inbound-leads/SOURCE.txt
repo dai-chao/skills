@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/team/new-business-sales/inbound-lead/SKILL.md
+content_hash: 29bb3cde82fc
+category: 09-analytics

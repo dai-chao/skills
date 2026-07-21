@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: superpowers
+source_path: /Users/chao/Desktop/skills/_tmp_sources/superpowers/skills/requesting-code-review/SKILL.md
+content_hash: 245528df4082
+category: 03-code-quality

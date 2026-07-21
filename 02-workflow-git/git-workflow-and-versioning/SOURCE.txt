@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: addyosmani
+source_path: /Users/chao/Desktop/skills/_tmp_sources/addyosmani/skills/git-workflow-and-versioning/SKILL.md
+content_hash: 54a50c2845cc
+category: 02-workflow-git

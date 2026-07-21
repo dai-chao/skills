@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/lm-evaluation-harness/SKILL.md
+content_hash: bb8c553d7bee
+category: 99-misc

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/auditing-warehouse-data-health/SKILL.md
+content_hash: 2de81435397e
+category: 13-integrations

@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: addyosmani
+source_path: /Users/chao/Desktop/skills/_tmp_sources/addyosmani/skills/interview-me/SKILL.md
+content_hash: 9d57d4cd5219
+category: 04-frontend-ui

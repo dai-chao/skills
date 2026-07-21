@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/instrument-product-analytics/SKILL.md
+content_hash: c606c6c15281
+category: 09-analytics

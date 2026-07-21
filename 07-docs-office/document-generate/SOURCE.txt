@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/document-generate/SKILL.md
+content_hash: ed65f1adc553
+category: 07-docs-office

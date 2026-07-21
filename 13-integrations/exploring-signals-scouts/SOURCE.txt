@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/exploring-signals-scouts/SKILL.md
+content_hash: 9a371faab025
+category: 13-integrations

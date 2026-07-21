@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.codex/skills/.system/skill-creator/SKILL.md
+content_hash: 2536883050d3
+category: 12-meta

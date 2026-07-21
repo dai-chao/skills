@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/contract-risk-review/SKILL.md
+content_hash: e748fc2a8af1
+category: 03-code-quality

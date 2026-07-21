@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/setting-up-a-data-warehouse-source/SKILL.md
+content_hash: b004a3c4f779
+category: 13-integrations

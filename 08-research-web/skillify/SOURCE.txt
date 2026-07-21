@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/skillify/SKILL.md
+content_hash: f7e4c57593cc
+category: 08-research-web

@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: azure-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/azure-skills/.github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/SKILL.md
+content_hash: 262ae1217950
+category: 13-integrations

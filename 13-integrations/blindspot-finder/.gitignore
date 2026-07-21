@@ -1,0 +1,6 @@
+.claude/
+.agents/
+skills-lock.json
+
+# logo 草稿，最终稿在 docs/assets/
+design-demos/

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/excalidraw/SKILL.md
+content_hash: e3b564c6db0e
+category: 99-misc

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/doc-coauthoring/SKILL.md
+content_hash: 0ae8e1787034
+category: 10-payments-auth

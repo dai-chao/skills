@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/mcp/native-mcp/SKILL.md
+content_hash: 56f119952d74
+category: 03-code-quality

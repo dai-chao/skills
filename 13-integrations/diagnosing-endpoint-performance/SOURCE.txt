@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/diagnosing-endpoint-performance/SKILL.md
+content_hash: a89907fc0bb8
+category: 13-integrations

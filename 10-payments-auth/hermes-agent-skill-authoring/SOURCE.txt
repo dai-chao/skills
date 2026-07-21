@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/hermes-agent-skill-authoring-old-1782120036/SKILL.md
+content_hash: 03b65e289fff
+category: 10-payments-auth

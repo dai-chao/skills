@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/prompt-engineering/SKILL.md
+content_hash: d1669180ea42
+category: 08-research-web

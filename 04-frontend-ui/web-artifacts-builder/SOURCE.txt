@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/skills/web-artifacts-builder/SKILL.md
+content_hash: 90dbe0c78126
+category: 04-frontend-ui

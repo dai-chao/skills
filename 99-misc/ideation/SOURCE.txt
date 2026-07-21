@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/creative/creative-ideation/SKILL.md
+content_hash: cdb816d39955
+category: 99-misc

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/skills/mcp-builder/SKILL.md
+content_hash: 595dcfd738e6
+category: 11-planning

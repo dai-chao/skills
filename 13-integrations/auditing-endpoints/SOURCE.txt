@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/auditing-endpoints/SKILL.md
+content_hash: def1cfeaaa54
+category: 13-integrations

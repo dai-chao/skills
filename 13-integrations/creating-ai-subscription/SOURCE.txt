@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/creating-ai-subscription/SKILL.md
+content_hash: 946000f26989
+category: 13-integrations

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/verifying-in-browser/SKILL.md
+content_hash: 24b1a4811a7d
+category: 01-cursor-native

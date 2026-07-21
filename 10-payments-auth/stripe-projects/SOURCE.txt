@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/plugins/cache/cursor-public/stripe/f915ccf3cc13faae9b18ce2e734156e181db20da/skills/stripe-projects/SKILL.md
+content_hash: d3d5a6984900
+category: 10-payments-auth

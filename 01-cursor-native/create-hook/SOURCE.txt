@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills-cursor/create-hook/SKILL.md
+content_hash: c75773cd8812
+category: 01-cursor-native

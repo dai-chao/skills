@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/monitoring-terminal-errors/SKILL.md
+content_hash: 567b17c359f2
+category: 09-analytics

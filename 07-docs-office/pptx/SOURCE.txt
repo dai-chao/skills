@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/skills/pptx/SKILL.md
+content_hash: 9f9b652f2d86
+category: 07-docs-office

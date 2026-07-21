@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/project-analysis-reporting/SKILL.md
+content_hash: 836ae15f1ab7
+category: 11-planning

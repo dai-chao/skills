@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills-cursor/onboard/SKILL.md
+content_hash: 8ddd4b94e555
+category: 01-cursor-native

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/diagnosing-ci-and-merge-bottlenecks/SKILL.md
+content_hash: 4561600ded55
+category: 13-integrations

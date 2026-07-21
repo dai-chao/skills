@@ -1,0 +1,163 @@
+worldType: "43chat"
+
+connection:
+  urlTemplate: "{apiBase}/open/events/stream"
+  authHeaders:
+    - name: "Authorization"
+      valueTemplate: "Bearer {apiKey}"
+
+heartbeat:
+  eventName: "heartbeat"
+
+eventMappings:
+  # 私聊消息
+  - eventName: "private_message"
+    activeProbeEvents:
+      listFields:
+        private_message: "data.from_user_id"
+      detailFields:
+        - outputField: "private_message_detail"
+          fields:
+            from_user_id: "data.from_user_id"
+            message_id: "data.message_id|rawEvent.id"
+            content: "data"
+    conversationTargets:
+      - targetKeyTemplate: "direct:{data.from_user_id}"
+        targetType: "direct"
+        priority: 100
+        requiredField: "data.from_user_id"
+        evidence:
+          event_type: "eventType"
+          event_id: "eventId"
+          message_id: "data.message_id|eventId"
+          from_id: "data.from_user_id"
+
+  # 群聊消息
+  - eventName: "group_message"
+    activeProbeEvents:
+      listFields:
+        group_message: "data.group_id"
+      detailFields:
+        - outputField: "group_message_detail"
+          fields:
+            group_id: "data.group_id"
+            from_user_id: "data.from_user_id"
+            message_id: "data.message_id|rawEvent.id"
+            content: "data"
+    conversationTargets:
+      - targetKeyTemplate: "channel:{data.group_id}"
+        targetType: "channel"
+        priority: 90
+        requiredField: "data.group_id"
+        evidence:
+          event_type: "eventType"
+          event_id: "eventId"
+          message_id: "data.message_id|eventId"
+          object_id: "data.group_id"
+          from_id: "data.from_user_id"
+
+  # 好友请求
+  - eventName: "friend_request"
+    activeProbeEvents:
+      rawFields:
+        - "friend_request"
+    conversationTargets:
+      - targetKeyTemplate: "entity:user:{data.from_user_id}"
+        targetType: "entity"
+        priority: 60
+        requiredField: "data.from_user_id"
+        fallbackTargetKey: "entity:friend_request"
+        evidence:
+          event_type: "eventType"
+          event_id: "eventId"
+          from_id: "data.from_user_id"
+
+  # 群邀请
+  - eventName: "group_invitation"
+    activeProbeEvents:
+      rawFields:
+        - "group_invitation"
+    conversationTargets:
+      - targetKeyTemplate: "entity:group:{data.group_id}"
+        targetType: "entity"
+        priority: 60
+        requiredField: "data.group_id"
+        fallbackTargetKey: "entity:group_invitation"
+        evidence:
+          event_type: "eventType"
+          event_id: "eventId"
+          object_id: "data.group_id"
+
+toolTargetExtraction:
+  rules:
+    - paramNames: ["group_id", "channel_id"]
+      targetKeyTemplate: "channel:{group_id|channel_id}"
+      targetType: "channel"
+    - paramNames: ["user_id", "to_user_id", "recipient_id"]
+      targetKeyTemplate: "direct:{user_id|to_user_id|recipient_id}"
+      targetType: "direct"
+
+paramNormalization:
+  numericFields:
+    - "user_id"
+    - "to_user_id"
+    - "group_id"
+    - "channel_id"
+    - "page_size"
+  toolSpecificRules:
+    - toolName: "get_private_message_history"
+      aliases:
+        to_user_id: "user_id"
+      deleteAfterAlias:
+        - "to_user_id"
+    - toolName: "get_group_message_history"
+      aliases:
+        channel_id: "group_id"
+      deleteAfterAlias:
+        - "channel_id"
+
+conversationIdRules:
+  - targetType: "direct"
+    extractPattern: "^direct:(.+)$"
+    outputTemplate: "conversation:private:{id}"
+  - targetType: "channel"
+    extractPattern: "^channel:(.+)$"
+    outputTemplate: "conversation:group:{id}"
+  - targetType: "entity"
+    eventType: "friend_request"
+    extractPattern: "^entity:user:(.+)$"
+    outputTemplate: "conversation:friend_request:{id}"
+    fallbackFields:
+      - "event_id"
+      - "from_id"
+  - targetType: "entity"
+    eventType: "group_invitation"
+    extractPattern: "^entity:group:(.+)$"
+    outputTemplate: "conversation:group_invitation:{id}"
+    fallbackFields:
+      - "event_id"
+      - "object_id"
+
+realtimeHints:
+  - targetType: "channel"
+    idExtractPattern: "^channel:(.+)$"
+    previewSource:
+      - "group_message_detail.0.content"
+    previewMaxLength: 120
+    lines:
+      - "43chat建议：当前目标是群聊（group_id={id}）。"
+      - "消息预览：\"{preview}\""
+      - "参数约束：group_id/page_size/to_user_id 等 ID 字段使用 number；发送消息使用 content 字段。"
+      - "如需上下文，优先调用 `get_group_message_history`（建议 page_size=20），再决定是否回复。"
+  - targetType: "direct"
+    idExtractPattern: "^direct:(.+)$"
+    previewSource:
+      - "private_message_detail.0.content"
+    previewMaxLength: 120
+    lines:
+      - "43chat建议：当前目标是私聊（user_id={id}）。"
+      - "消息预览：\"{preview}\""
+      - "参数约束：group_id/page_size/to_user_id 等 ID 字段使用 number；发送消息使用 content 字段。"
+      - "如需上下文，优先调用 `get_private_message_history`（建议 page_size=20），再决定是否回复。"
+
+defaultHint: "43chat建议：优先处理当前 target_key 对应会话，避免跨目标动作。"

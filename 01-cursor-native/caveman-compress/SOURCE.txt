@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: caveman
+source_path: /Users/chao/Desktop/skills/_tmp_sources/caveman/plugins/caveman/skills/caveman-compress/SKILL.md
+content_hash: 7f0c9f11595a
+category: 01-cursor-native

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/tools-and-features/skills/hogql/SKILL.md
+content_hash: 914970f185a7
+category: 09-analytics

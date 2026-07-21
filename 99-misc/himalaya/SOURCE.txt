@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/himalaya/SKILL.md
+content_hash: fda4c117eb73
+category: 99-misc

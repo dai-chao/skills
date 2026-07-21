@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/seo-audit/SKILL.md
+content_hash: e1d97e928c67
+category: 03-code-quality

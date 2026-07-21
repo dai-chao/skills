@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/finding-sessions-to-watch/SKILL.md
+content_hash: 5ab8c9c0a48e
+category: 13-integrations

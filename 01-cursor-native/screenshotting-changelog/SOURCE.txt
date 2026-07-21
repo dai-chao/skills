@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/screenshotting-changelog/SKILL.md
+content_hash: 0567d7ada5e2
+category: 01-cursor-native

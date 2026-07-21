@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/team/customer-success/posthog-survey-creator/SKILL.md
+content_hash: a50624c85152
+category: 09-analytics

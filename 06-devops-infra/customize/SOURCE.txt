@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: azure-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/azure-skills/.github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/customize/SKILL.md
+content_hash: fb4b9996ab6c
+category: 06-devops-infra

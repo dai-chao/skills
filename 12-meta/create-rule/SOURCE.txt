@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills-cursor/create-rule/SKILL.md
+content_hash: 021d78f401ea
+category: 12-meta

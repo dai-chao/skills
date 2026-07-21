@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: addyosmani
+source_path: /Users/chao/Desktop/skills/_tmp_sources/addyosmani/skills/security-and-hardening/SKILL.md
+content_hash: 7e033038ad72
+category: 03-code-quality

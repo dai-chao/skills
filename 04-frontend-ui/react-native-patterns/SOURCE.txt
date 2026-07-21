@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/react-native-patterns/SKILL.md
+content_hash: db6ab3b865d8
+category: 04-frontend-ui

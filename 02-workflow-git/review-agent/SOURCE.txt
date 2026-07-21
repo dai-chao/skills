@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.codex/skills/.system/review-agent/SKILL.md
+content_hash: ef5c5bf2fb5a
+category: 02-workflow-git

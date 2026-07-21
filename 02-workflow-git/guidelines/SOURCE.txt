@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.ghcp-appmod/skills/guidelines/SKILL.md
+content_hash: 19011671afce
+category: 02-workflow-git

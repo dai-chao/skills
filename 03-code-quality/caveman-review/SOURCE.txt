@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: caveman
+source_path: /Users/chao/Desktop/skills/_tmp_sources/caveman/skills/caveman-review/SKILL.md
+content_hash: fbb47ffb8319
+category: 03-code-quality

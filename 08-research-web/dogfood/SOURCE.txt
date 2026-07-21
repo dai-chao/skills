@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/dogfood/SKILL.md
+content_hash: 0825d2b8ff63
+category: 08-research-web

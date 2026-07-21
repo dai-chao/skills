@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: shadcn-ui
+source_path: /Users/chao/Desktop/skills/_tmp_sources/shadcn-ui/skills/shadcn/SKILL.md
+content_hash: 2f4fc3783284
+category: 04-frontend-ui

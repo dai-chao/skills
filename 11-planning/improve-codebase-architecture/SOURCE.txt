@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/improve-codebase-architecture/SKILL.md
+content_hash: a5c2a84b5214
+category: 11-planning

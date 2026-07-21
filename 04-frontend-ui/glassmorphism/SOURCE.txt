@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: design-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/design-skills/skills/glassmorphism/SKILL.md
+content_hash: daf6b7338863
+category: 04-frontend-ui

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/43farm/SKILL.md
+content_hash: 48a061bb6bfa
+category: 08-research-web

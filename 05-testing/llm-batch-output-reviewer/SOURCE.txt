@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/qa/llm-batch-output-reviewer/SKILL.md
+content_hash: 7212db187c18
+category: 05-testing

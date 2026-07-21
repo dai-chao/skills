@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/domain-modeling/SKILL.md
+content_hash: ef92f0dcd9f2
+category: 99-misc

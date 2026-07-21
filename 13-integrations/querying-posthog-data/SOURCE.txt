@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/querying-posthog-data/SKILL.md
+content_hash: 20f647d20cbf
+category: 13-integrations

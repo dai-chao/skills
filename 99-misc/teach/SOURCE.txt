@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/productivity/teach/SKILL.md
+content_hash: 43cea3163927
+category: 99-misc

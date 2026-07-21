@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/all/skills/error-tracking-svelte/SKILL.md
+content_hash: 52966d76898f
+category: 09-analytics

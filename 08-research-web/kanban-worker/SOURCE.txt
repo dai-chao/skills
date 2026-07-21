@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/kanban-worker/SKILL.md
+content_hash: f93c72fa0be4
+category: 08-research-web

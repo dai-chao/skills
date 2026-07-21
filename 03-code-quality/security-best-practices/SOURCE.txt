@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/security-best-practices/SKILL.md
+content_hash: 9f3a5b389f97
+category: 03-code-quality

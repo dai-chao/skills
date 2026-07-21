@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/Desktop/Codex-Dream-Skin/windows/SKILL.md
+content_hash: 0da672a9fa3c
+category: 04-frontend-ui

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/apple/macos-apps/SKILL.md
+content_hash: 1d8a4d327cc0
+category: 01-cursor-native

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/nano-pdf/SKILL.md
+content_hash: f3055ecc192d
+category: 07-docs-office

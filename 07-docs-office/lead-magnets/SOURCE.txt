@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/lead-magnets/SKILL.md
+content_hash: 1b8057f1bcb3
+category: 07-docs-office

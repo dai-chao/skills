@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: addyosmani
+source_path: /Users/chao/Desktop/skills/_tmp_sources/addyosmani/skills/debugging-and-error-recovery/SKILL.md
+content_hash: 12d41c57d8bb
+category: 03-code-quality

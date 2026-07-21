@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/python-debugpy/SKILL.md
+content_hash: b0d28c08f7fe
+category: 03-code-quality

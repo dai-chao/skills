@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/migrate-to-codex/SKILL.md
+content_hash: 32b7f5389715
+category: 99-misc

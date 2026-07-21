@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/define-goal/SKILL.md
+content_hash: 06460d7420d6
+category: 99-misc

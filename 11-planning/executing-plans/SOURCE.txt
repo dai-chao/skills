@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: superpowers
+source_path: /Users/chao/Desktop/skills/_tmp_sources/superpowers/skills/executing-plans/SKILL.md
+content_hash: 639b38a69fbb
+category: 11-planning

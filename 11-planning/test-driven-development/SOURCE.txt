@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: superpowers
+source_path: /Users/chao/Desktop/skills/_tmp_sources/superpowers/skills/test-driven-development/SKILL.md
+content_hash: 769a5f7a29e5
+category: 11-planning

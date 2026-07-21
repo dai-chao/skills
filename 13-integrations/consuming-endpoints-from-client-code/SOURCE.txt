@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/consuming-endpoints-from-client-code/SKILL.md
+content_hash: 05809bb6abb6
+category: 13-integrations

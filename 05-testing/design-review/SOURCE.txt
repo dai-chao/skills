@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/design-review/SKILL.md
+content_hash: 24b9b1b98796
+category: 05-testing

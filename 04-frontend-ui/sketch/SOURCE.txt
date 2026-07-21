@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/sketch/SKILL.md
+content_hash: 4fd06c4cc636
+category: 04-frontend-ui

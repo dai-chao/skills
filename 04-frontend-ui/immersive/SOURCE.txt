@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: design-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/design-skills/skills/immersive/SKILL.md
+content_hash: be9f3d9dcd0d
+category: 04-frontend-ui

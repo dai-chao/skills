@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/github/github-pr-workflow/SKILL.md
+content_hash: 98659553ade3
+category: 02-workflow-git

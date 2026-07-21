@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/triage/SKILL.md
+content_hash: 0e34e837f9e5
+category: 99-misc

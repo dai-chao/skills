@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: finance
+source_path: /Users/chao/Desktop/skills/_tmp_sources/finance/skills/alphaear-reporter/SKILL.md
+content_hash: aacd11777426
+category: 14-finance

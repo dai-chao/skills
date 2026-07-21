@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: azure-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/azure-skills/.github/plugins/azure-skills/skills/python-appservice-deploy/SKILL.md
+content_hash: 2ee5e6eb8c9c
+category: 06-devops-infra

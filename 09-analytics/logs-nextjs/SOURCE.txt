@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/all/skills/logs-nextjs/SKILL.md
+content_hash: 00d1d4475dc2
+category: 09-analytics

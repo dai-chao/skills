@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/directory-submissions/SKILL.md
+content_hash: 53d98df2129a
+category: 07-docs-office

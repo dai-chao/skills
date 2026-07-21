@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: addyosmani
+source_path: /Users/chao/Desktop/skills/_tmp_sources/addyosmani/skills/incremental-implementation/SKILL.md
+content_hash: 3f597d1cf253
+category: 11-planning

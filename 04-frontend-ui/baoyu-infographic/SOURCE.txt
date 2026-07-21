@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/baoyu-infographic/SKILL.md
+content_hash: 380e0da4fce1
+category: 04-frontend-ui

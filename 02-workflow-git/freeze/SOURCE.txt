@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/freeze/SKILL.md
+content_hash: 2ff5d8a5015b
+category: 02-workflow-git

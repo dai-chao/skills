@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/skills/skill-creator/SKILL.md
+content_hash: a1277b9e97e7
+category: 12-meta

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/sred-work-summary/SKILL.md
+content_hash: 1c75f9e1c033
+category: 09-analytics

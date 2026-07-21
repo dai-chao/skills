@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/notion-spec-to-implementation/SKILL.md
+content_hash: 1e5dbf3c42c6
+category: 11-planning

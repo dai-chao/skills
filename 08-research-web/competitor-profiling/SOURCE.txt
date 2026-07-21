@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/competitor-profiling/SKILL.md
+content_hash: e3f0f044449a
+category: 08-research-web

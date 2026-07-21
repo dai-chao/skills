@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/skills/webapp-testing/SKILL.md
+content_hash: b02025a3df7f
+category: 05-testing

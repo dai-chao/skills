@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/team/customer-success/user-deep-dive/SKILL.md
+content_hash: f7921202d9dd
+category: 09-analytics

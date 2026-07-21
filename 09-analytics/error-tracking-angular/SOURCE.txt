@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/all/skills/error-tracking-angular/SKILL.md
+content_hash: 02195fa5effc
+category: 09-analytics

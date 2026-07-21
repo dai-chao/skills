@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/web-news-direct-access/SKILL.md
+content_hash: 673c763cc381
+category: 08-research-web

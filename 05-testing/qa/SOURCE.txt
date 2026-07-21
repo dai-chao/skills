@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/deprecated/qa/SKILL.md
+content_hash: 9c2626d6567b
+category: 05-testing

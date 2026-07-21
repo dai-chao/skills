@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/ab-testing/SKILL.md
+content_hash: bfdbfc1c9eaf
+category: 04-frontend-ui

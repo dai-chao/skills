@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/winui-app/SKILL.md
+content_hash: 97036d7bdcab
+category: 06-devops-infra

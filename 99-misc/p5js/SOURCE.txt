@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/p5js/SKILL.md
+content_hash: e5449ed31d61
+category: 99-misc

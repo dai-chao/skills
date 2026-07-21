@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/implement/SKILL.md
+content_hash: 7cc3e48c97c3
+category: 02-workflow-git

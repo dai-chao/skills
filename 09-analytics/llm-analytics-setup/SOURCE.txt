@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/llm-analytics/skills/setup/SKILL.md
+content_hash: 34b8da3b4064
+category: 09-analytics

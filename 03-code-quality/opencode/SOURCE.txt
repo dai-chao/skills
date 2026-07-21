@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/opencode/SKILL.md
+content_hash: 4b0db48587d1
+category: 03-code-quality

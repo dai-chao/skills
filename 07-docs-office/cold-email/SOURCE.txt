@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/cold-email/SKILL.md
+content_hash: 3759ab6416c4
+category: 07-docs-office

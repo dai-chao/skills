@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/devops/terminal-credential-redaction/SKILL.md
+content_hash: 72120070cd95
+category: 99-misc

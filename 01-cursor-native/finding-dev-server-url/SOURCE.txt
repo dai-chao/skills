@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/finding-dev-server-url/SKILL.md
+content_hash: 408174b0c93e
+category: 01-cursor-native

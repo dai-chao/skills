@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/chinese-university-research/SKILL.md
+content_hash: da4783de7254
+category: 08-research-web

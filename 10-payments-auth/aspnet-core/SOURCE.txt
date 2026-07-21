@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/aspnet-core/SKILL.md
+content_hash: 5c75b2a994f5
+category: 10-payments-auth

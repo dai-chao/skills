@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/suppressing-noisy-errors/SKILL.md
+content_hash: ea18cde01360
+category: 13-integrations

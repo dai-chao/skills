@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/notion/SKILL.md
+content_hash: ca43bcd44b27
+category: 07-docs-office

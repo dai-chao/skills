@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/blindspot-finder/SKILL.md
+content_hash: c81c1d9584a1
+category: 13-integrations

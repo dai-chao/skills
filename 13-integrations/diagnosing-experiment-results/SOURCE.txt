@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/diagnosing-experiment-results/SKILL.md
+content_hash: 34dc3f7648e6
+category: 13-integrations

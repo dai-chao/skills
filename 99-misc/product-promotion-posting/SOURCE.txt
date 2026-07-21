@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/product-promotion-posting/SKILL.md
+content_hash: 71a1805cffe8
+category: 99-misc

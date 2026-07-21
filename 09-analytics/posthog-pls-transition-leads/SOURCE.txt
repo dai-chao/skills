@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/team/new-business-sales/transition-leads/SKILL.md
+content_hash: 6a151a04545b
+category: 09-analytics

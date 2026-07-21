@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/screenshot/SKILL.md
+content_hash: 89b2aed6fc10
+category: 99-misc

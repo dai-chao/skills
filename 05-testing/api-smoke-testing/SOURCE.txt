@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/api-smoke-testing/SKILL.md
+content_hash: fb7d4ef59b86
+category: 05-testing

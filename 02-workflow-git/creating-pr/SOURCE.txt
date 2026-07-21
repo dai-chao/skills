@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/creating-pr/SKILL.md
+content_hash: d196ef485023
+category: 02-workflow-git

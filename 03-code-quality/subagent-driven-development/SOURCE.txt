@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/subagent-driven-development/SKILL.md
+content_hash: ebfcc30f3974
+category: 03-code-quality

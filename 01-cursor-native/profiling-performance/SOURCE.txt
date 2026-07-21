@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/profiling-performance/SKILL.md
+content_hash: e02148f265ff
+category: 01-cursor-native

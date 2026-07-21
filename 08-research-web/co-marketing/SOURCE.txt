@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/co-marketing/SKILL.md
+content_hash: 208a2a2822f1
+category: 08-research-web

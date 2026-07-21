@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/social-media/social-media-image-sourcing/SKILL.md
+content_hash: 6440b6a16fa4
+category: 99-misc

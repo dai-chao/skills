@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/research/web-search-fallbacks/SKILL.md
+content_hash: a7d567dcac0d
+category: 08-research-web

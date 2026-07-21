@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/codex/SKILL.md
+content_hash: 8619d2fc203f
+category: 02-workflow-git

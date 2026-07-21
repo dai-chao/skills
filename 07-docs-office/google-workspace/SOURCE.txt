@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/google-workspace/SKILL.md
+content_hash: 405ca8fd7da3
+category: 07-docs-office

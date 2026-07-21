@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/design-md/SKILL.md
+content_hash: dc005adaca85
+category: 10-payments-auth

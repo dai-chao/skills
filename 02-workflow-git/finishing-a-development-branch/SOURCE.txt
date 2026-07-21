@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: superpowers
+source_path: /Users/chao/Desktop/skills/_tmp_sources/superpowers/skills/finishing-a-development-branch/SKILL.md
+content_hash: 2d3caff3de61
+category: 02-workflow-git

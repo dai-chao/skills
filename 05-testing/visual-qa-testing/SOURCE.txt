@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/visual-qa-testing/SKILL.md
+content_hash: badddcb66cd2
+category: 05-testing

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/43comic/SKILL.md
+content_hash: ae78c742f640
+category: 08-research-web

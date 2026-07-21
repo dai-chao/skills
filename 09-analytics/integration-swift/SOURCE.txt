@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/swift/SKILL.md
+content_hash: 4a205db26607
+category: 09-analytics

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/systematic-debugging/SKILL.md
+content_hash: ff5540fc8d39
+category: 03-code-quality

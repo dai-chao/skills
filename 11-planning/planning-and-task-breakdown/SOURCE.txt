@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: addyosmani
+source_path: /Users/chao/Desktop/skills/_tmp_sources/addyosmani/skills/planning-and-task-breakdown/SKILL.md
+content_hash: c94af49d92d0
+category: 11-planning

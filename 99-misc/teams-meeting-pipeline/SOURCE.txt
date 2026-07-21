@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/teams-meeting-pipeline/SKILL.md
+content_hash: b1478d280818
+category: 99-misc

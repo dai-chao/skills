@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/local-personal-agent/SKILL.md
+content_hash: 2986a15b9989
+category: 99-misc

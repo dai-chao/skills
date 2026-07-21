@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: agent-browser
+source_path: /Users/chao/Desktop/skills/_tmp_sources/agent-browser/skills/agent-browser/SKILL.md
+content_hash: ed92243681e4
+category: 01-cursor-native

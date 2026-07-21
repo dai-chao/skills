@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/parallel-exploring/SKILL.md
+content_hash: 0692b1bbc9d5
+category: 01-cursor-native

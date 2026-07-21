@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/requesting-code-review/SKILL.md
+content_hash: a7dcf2839a46
+category: 03-code-quality

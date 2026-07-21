@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/macos-computer-use/SKILL.md
+content_hash: cc5d1fa6d01e
+category: 99-misc

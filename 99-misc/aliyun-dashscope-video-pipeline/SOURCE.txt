@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/software-development/aliyun-dashscope-video-pipeline/SKILL.md
+content_hash: 35ab5ec1f131
+category: 99-misc

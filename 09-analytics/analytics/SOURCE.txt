@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/analytics/SKILL.md
+content_hash: 3b4a4f7384eb
+category: 09-analytics

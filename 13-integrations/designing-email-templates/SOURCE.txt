@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/designing-email-templates/SKILL.md
+content_hash: f03d48c58560
+category: 13-integrations

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/caichong/SKILL.md
+content_hash: d21074dbb82c
+category: 08-research-web

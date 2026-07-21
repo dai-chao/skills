@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/find-bugs/SKILL.md
+content_hash: 84f582d88e4b
+category: 03-code-quality

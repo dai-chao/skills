@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/diagnosing-sdk-health/SKILL.md
+content_hash: 4d1661a543cd
+category: 13-integrations

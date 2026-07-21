@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/43swap/SKILL.md
+content_hash: cf13835aff26
+category: 08-research-web

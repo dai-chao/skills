@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills-cursor/create-subagent/SKILL.md
+content_hash: e404808ded36
+category: 01-cursor-native

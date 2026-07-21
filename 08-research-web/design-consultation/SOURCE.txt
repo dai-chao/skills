@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/design-consultation/SKILL.md
+content_hash: 8d9cd59fc2d3
+category: 08-research-web

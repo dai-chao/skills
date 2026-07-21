@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/triage-frontend-issues/SKILL.md
+content_hash: f9683076719b
+category: 09-analytics

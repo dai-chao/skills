@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/replay-ux-research/SKILL.md
+content_hash: 37402fa6e7a0
+category: 08-research-web

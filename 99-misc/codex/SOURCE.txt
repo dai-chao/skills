@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/codex/SKILL.md
+content_hash: e1379245b7e4
+category: 99-misc

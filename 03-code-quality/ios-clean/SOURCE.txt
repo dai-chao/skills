@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/ios-clean/SKILL.md
+content_hash: 09377ec1bd53
+category: 03-code-quality

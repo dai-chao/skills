@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: superpowers
+source_path: /Users/chao/Desktop/skills/_tmp_sources/superpowers/skills/subagent-driven-development/SKILL.md
+content_hash: 7ef03a346da7
+category: 11-planning

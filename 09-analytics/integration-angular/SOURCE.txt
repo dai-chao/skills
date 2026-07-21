@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/angular/SKILL.md
+content_hash: b481e58f42c0
+category: 09-analytics

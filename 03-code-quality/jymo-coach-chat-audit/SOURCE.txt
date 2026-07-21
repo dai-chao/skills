@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/jymo-coach-chat-audit/SKILL.md
+content_hash: 150ecdcc496e
+category: 03-code-quality

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/skills/canvas-design/SKILL.md
+content_hash: 3004dffc9161
+category: 07-docs-office

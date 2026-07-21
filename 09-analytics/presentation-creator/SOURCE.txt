@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/presentation-creator/SKILL.md
+content_hash: 44ede11ff1cc
+category: 09-analytics

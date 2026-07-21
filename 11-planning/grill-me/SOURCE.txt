@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/productivity/grill-me/SKILL.md
+content_hash: d07c47e3f0ff
+category: 11-planning

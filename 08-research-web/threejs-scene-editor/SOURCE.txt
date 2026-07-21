@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/threejs-scene-editor/SKILL.md
+content_hash: 2cc9af1a6789
+category: 08-research-web

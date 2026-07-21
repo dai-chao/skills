@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/gh-fix-ci/SKILL.md
+content_hash: 7ad29b1bd715
+category: 02-workflow-git

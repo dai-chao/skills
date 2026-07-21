@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: remotion-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/remotion-skills/skills/remotion-markup/SKILL.md
+content_hash: 92c316318b81
+category: 04-frontend-ui

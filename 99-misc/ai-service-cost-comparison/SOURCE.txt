@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/ai-service-cost-comparison/SKILL.md
+content_hash: bd9bad9dd7d9
+category: 99-misc

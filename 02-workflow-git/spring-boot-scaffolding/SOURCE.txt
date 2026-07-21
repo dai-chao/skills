@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.ghcp-appmod/skills/guidelines/spring-boot-scaffolding/SKILL.md
+content_hash: cc32c2ef8f69
+category: 02-workflow-git

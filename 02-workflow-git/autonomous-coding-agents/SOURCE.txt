@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/autonomous-ai-agents/autonomous-coding-agents/SKILL.md
+content_hash: da8674dd6ca2
+category: 02-workflow-git

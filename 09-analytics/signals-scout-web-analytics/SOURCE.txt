@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/signals-scout-web-analytics/SKILL.md
+content_hash: 9c39e4a5780d
+category: 09-analytics

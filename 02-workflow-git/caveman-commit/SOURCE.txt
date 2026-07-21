@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: caveman
+source_path: /Users/chao/Desktop/skills/_tmp_sources/caveman/skills/caveman-commit/SKILL.md
+content_hash: 1262c2156cd8
+category: 02-workflow-git

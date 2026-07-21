@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/python-requests-streaming-timeout/SKILL.md
+content_hash: 9800cedb8d10
+category: 13-integrations

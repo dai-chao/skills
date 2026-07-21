@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: design-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/design-skills/skills/pulse/SKILL.md
+content_hash: b462fd64c4ab
+category: 09-analytics

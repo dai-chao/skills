@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/skill-scanner/SKILL.md
+content_hash: ac56919d2d16
+category: 03-code-quality

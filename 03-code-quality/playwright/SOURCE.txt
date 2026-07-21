@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/playwright/SKILL.md
+content_hash: 6fa5a70680c5
+category: 03-code-quality

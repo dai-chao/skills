@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/formatting-insight-axes/SKILL.md
+content_hash: e49b67c1ec01
+category: 13-integrations

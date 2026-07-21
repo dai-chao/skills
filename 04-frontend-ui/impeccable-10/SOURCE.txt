@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: impeccable
+source_path: /Users/chao/Desktop/skills/_tmp_sources/impeccable/.agents/skills/impeccable/SKILL.md
+content_hash: 34d8a6e374fd
+category: 04-frontend-ui

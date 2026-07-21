@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/ruby-on-rails/SKILL.md
+content_hash: 0be7a3812944
+category: 09-analytics

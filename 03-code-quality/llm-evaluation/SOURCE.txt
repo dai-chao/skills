@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/mlops/llm-evaluation/SKILL.md
+content_hash: 7042a3e28972
+category: 03-code-quality

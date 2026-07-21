@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ff6b35, #f7c59f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .header .subtitle { color: #a0a0a0; font-size: 1.1em; }
+        .date-section {
+            margin-bottom: 40px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .date-header {
+            background: linear-gradient(90deg, #ff6b35, #e85d04);
+            padding: 18px 30px;
+            font-size: 1.3em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .user-section {
+            padding: 25px 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .user-section:last-child { border-bottom: none; }
+        .user-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .user-avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.9em;
+        }
+        .user-id { font-size: 1.1em; font-weight: 600; color: #fff; }
+        .user-stats { font-size: 0.85em; color: #a0a0a0; margin-top: 4px; }
+        .user-stats span { margin-right: 20px; }
+        .user-stats .highlight { color: #ff6b35; font-weight: 600; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+        th {
+            background: rgba(255,107,53,0.15); color: #ff6b35; font-weight: 600;
+            text-align: left; padding: 12px 16px;
+            text-transform: uppercase; font-size: 0.8em; letter-spacing: 0.5px;
+        }
+        td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #d0d0d0; }
+        tr:hover td { background: rgba(255,255,255,0.03); }
+        .model-badge {
+            display: inline-block; padding: 4px 12px; border-radius: 20px;
+            font-size: 0.85em; font-weight: 500;
+            background: rgba(102,126,234,0.2); color: #a5b4fc;
+            border: 1px solid rgba(102,126,234,0.3);
+        }
+        .model-badge.tts { background: rgba(16,185,129,0.15); color: #6ee7b7; border-color: rgba(16,185,129,0.3); }
+        .model-badge.minimax { background: rgba(245,158,11,0.15); color: #fcd34d; border-color: rgba(245,158,11,0.3); }
+        .summary-section {
+            margin-top: 40px; background: rgba(255,255,255,0.03);
+            border-radius: 16px; padding: 30px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .summary-section h2 { font-size: 1.5em; margin-bottom: 25px; color: #ff6b35; }
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .summary-card {
+            background: rgba(255,255,255,0.05); border-radius: 12px;
+            padding: 20px; border: 1px solid rgba(255,255,255,0.08);
+        }
+        .summary-card h3 { font-size: 0.9em; color: #a0a0a0; margin-bottom: 10px; text-transform: uppercase; }
+        .summary-card .value { font-size: 2em; font-weight: 700; color: #fff; }
+        .summary-card .sub { font-size: 0.85em; color: #888; margin-top: 5px; }
+        .model-dist { margin-top: 30px; }
+        .model-dist h3 { font-size: 1.1em; color: #a0a0a0; margin-bottom: 15px; }
+        .model-bar { display: flex; align-items: center; margin-bottom: 12px; gap: 15px; }
+        .model-name { width: 200px; font-size: 0.9em; color: #d0d0d0; text-align: right; }
+        .bar-track { flex: 1; height: 24px; background: rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; }
+        .bar-fill { height: 100%; border-radius: 12px; }
+        .bar-count { width: 60px; text-align: right; font-size: 0.9em; color: #ff6b35; font-weight: 600; }
+        .footer { text-align: center; margin-top: 50px; padding: 20px; color: #666; font-size: 0.85em; }
+        @media print {
+            body { background: #fff; color: #333; }
+            .date-section, .summary-section { background: #f8f9fa; border: 1px solid #ddd; }
+            .header { background: #f0f0f0; }
+            th { background: #e9ecef; color: #333; }
+            td { color: #333; border-bottom: 1px solid #eee; }
+            .user-id { color: #333; }
+            .model-badge { border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>报告标题</h1>
+            <div class="subtitle">数据周期: YYYY-MM-DD 至 YYYY-MM-DD | 共 N 条记录 | M 位用户</div>
+        </div>
+
+        <!-- Date sections go here -->
+
+        <div class="summary-section">
+            <h2>📊 总体统计</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>总记录数</h3>
+                    <div class="value">0</div>
+                </div>
+                <div class="summary-card">
+                    <h3>活跃用户数</h3>
+                    <div class="value">0</div>
+                </div>
+                <div class="summary-card">
+                    <h3>总时长</h3>
+                    <div class="value">0 min</div>
+                </div>
+                <div class="summary-card">
+                    <h3>最常用模型</h3>
+                    <div class="value">-</div>
+                </div>
+            </div>
+            <div class="model-dist">
+                <h3>模型调用分布</h3>
+                <!-- Model bars go here -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>报告生成时间: YYYY-MM-DD | 平台使用统计</p>
+        </div>
+    </div>
+</body>
+</html>

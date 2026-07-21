@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/gha-security-review/SKILL.md
+content_hash: 130eab62268f
+category: 03-code-quality

@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: azure-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/azure-skills/.github/plugins/azure-skills/skills/entra-app-registration/SKILL.md
+content_hash: 64b9c465003b
+category: 13-integrations

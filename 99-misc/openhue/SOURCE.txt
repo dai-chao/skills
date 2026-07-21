@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/openhue/SKILL.md
+content_hash: d1698a408133
+category: 99-misc

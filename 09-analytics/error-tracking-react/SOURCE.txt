@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/all/skills/error-tracking-react/SKILL.md
+content_hash: 36ae526264b7
+category: 09-analytics

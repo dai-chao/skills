@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: firebase-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/firebase-skills/skills/firebase-hosting-basics/SKILL.md
+content_hash: 251b3ec64bc6
+category: 06-devops-infra

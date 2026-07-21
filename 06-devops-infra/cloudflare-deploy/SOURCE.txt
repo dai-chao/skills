@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/cloudflare-deploy/SKILL.md
+content_hash: a614e762b291
+category: 06-devops-infra

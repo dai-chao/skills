@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: taste-skill
+source_path: /Users/chao/Desktop/skills/_tmp_sources/taste-skill/skills/image-to-code-skill/SKILL.md
+content_hash: 442613e4710f
+category: 04-frontend-ui

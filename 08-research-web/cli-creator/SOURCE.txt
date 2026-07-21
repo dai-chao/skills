@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/cli-creator/SKILL.md
+content_hash: 2d643ae1f34c
+category: 08-research-web

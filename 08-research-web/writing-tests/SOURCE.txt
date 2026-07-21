@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/writing-tests/SKILL.md
+content_hash: 4b1dcf98078e
+category: 08-research-web

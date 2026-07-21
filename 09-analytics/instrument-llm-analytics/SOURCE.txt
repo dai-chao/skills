@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/instrument-llm-analytics/SKILL.md
+content_hash: 502235e0ec0d
+category: 09-analytics

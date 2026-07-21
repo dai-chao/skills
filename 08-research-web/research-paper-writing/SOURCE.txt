@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/research-paper-writing/SKILL.md
+content_hash: f557b3b6f33c
+category: 08-research-web

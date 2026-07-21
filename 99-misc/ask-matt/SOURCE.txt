@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/ask-matt/SKILL.md
+content_hash: f5745d8142a5
+category: 99-misc

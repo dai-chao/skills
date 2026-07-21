@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/signals-scout-health-checks/SKILL.md
+content_hash: 58a7f70c07e7
+category: 13-integrations

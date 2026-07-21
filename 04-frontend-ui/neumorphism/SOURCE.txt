@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: design-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/design-skills/skills/neumorphism/SKILL.md
+content_hash: b9feb2a1b3de
+category: 04-frontend-ui

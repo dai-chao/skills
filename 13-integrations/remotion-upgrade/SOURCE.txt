@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: remotion-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/remotion-skills/skills/remotion-upgrade/SKILL.md
+content_hash: 5ec2878a9fbd
+category: 13-integrations

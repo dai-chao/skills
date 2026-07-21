@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/native-app-ui-clone/SKILL.md
+content_hash: 53d124bd52a7
+category: 08-research-web

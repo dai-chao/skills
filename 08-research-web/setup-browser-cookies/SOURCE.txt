@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/setup-browser-cookies/SKILL.md
+content_hash: e331740ae90c
+category: 08-research-web

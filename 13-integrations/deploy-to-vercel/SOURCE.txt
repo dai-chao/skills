@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/vercel-agent-skills/skills/deploy-to-vercel/SKILL.md
+content_hash: bd596f082654
+category: 13-integrations

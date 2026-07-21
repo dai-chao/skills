@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/js-tdz-init-order/SKILL.md
+content_hash: d0c99c677c14
+category: 99-misc

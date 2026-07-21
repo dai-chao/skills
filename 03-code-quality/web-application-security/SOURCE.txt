@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/software-development/web-application-security/SKILL.md
+content_hash: 010ceac629ed
+category: 03-code-quality

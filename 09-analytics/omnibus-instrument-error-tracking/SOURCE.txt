@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/all/skills/omnibus-instrument-error-tracking/SKILL.md
+content_hash: ac1ee3f6b30b
+category: 09-analytics

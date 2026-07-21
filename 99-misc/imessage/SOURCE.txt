@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/imessage/SKILL.md
+content_hash: bf7ff4872b86
+category: 99-misc

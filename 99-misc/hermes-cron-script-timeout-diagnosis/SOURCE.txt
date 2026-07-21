@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/devops/hermes-cron-script-timeout-diagnosis/SKILL.md
+content_hash: 54805af11ea0
+category: 99-misc

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/adding-auth/SKILL.md
+content_hash: 705d64d123f5
+category: 10-payments-auth

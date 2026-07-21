@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/jupyter-notebook/SKILL.md
+content_hash: 0732153c6d2c
+category: 99-misc

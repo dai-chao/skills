@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/building-skills-from-patterns/SKILL.md
+content_hash: ca59eb463724
+category: 01-cursor-native

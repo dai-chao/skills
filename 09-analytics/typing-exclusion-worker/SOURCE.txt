@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/typing-exclusion-worker/SKILL.md
+content_hash: 7442ff267941
+category: 09-analytics

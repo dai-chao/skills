@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/to-tickets/SKILL.md
+content_hash: 790df0bf329a
+category: 09-analytics

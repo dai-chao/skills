@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.ghcp-appmod/skills/completeness/SKILL.md
+content_hash: b30f7332e54d
+category: 02-workflow-git

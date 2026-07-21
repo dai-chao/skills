@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/in-progress/batch-grill-me/SKILL.md
+content_hash: 7bde51594dec
+category: 13-integrations

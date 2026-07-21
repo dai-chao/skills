@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/exporting-to-png/SKILL.md
+content_hash: 5c8d5db6286c
+category: 07-docs-office

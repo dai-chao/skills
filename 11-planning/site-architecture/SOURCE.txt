@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/site-architecture/SKILL.md
+content_hash: 899d64644b18
+category: 11-planning

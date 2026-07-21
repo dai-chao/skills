@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/feature-flags/skills/dotnet/SKILL.md
+content_hash: cb06d924ca1d
+category: 09-analytics

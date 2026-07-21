@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/best-of-n-solving/SKILL.md
+content_hash: cbfff13b21c3
+category: 01-cursor-native

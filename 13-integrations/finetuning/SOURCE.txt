@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: azure-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/azure-skills/.github/plugins/azure-skills/skills/microsoft-foundry/finetuning/SKILL.md
+content_hash: 243f13ff73bc
+category: 13-integrations

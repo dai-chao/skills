@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/systematic-debugging/SKILL.md
+content_hash: 6a8e13527dbb
+category: 03-code-quality

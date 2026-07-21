@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/obliteratus/SKILL.md
+content_hash: 0334892401d3
+category: 99-misc

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/skills/brand-guidelines/SKILL.md
+content_hash: 207ce9f9ea28
+category: 04-frontend-ui

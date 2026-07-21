@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/creating-an-endpoint/SKILL.md
+content_hash: b74a9ae50966
+category: 13-integrations

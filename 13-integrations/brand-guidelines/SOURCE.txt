@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/brand-guidelines/SKILL.md
+content_hash: 13786751ee3f
+category: 13-integrations

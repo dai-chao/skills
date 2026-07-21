@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills/commit-msg/SKILL.md
+content_hash: 36330ef77756
+category: 02-workflow-git

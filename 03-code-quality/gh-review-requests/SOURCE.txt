@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/gh-review-requests/SKILL.md
+content_hash: 72544c0048a5
+category: 03-code-quality

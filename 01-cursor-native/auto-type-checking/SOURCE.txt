@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/auto-type-checking/SKILL.md
+content_hash: 16b24112ff2c
+category: 01-cursor-native

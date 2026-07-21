@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/unsloth/SKILL.md
+content_hash: cad64b7e6549
+category: 99-misc

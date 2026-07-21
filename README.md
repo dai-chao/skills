@@ -1,0 +1,1020 @@
+# Agent Skills 合集
+
+> 共整理 **928** 个 skill（按内容去重）。含本机已装 + GitHub 精选 + **高价值补强**（skills.sh 热榜 / 工程方法论 / 设计 / 金融等）。
+
+## 分类一览
+
+| 目录 | 分类 | 数量 |
+|------|------|------|
+| `01-cursor-native/` | Cursor 原生能力 | 50 |
+| `02-workflow-git/` | Git / PR / 工作流 | 61 |
+| `03-code-quality/` | 代码质量 / 安全 / Review | 74 |
+| `04-frontend-ui/` | 前端 / UI / 设计 | 163 |
+| `05-testing/` | 测试 / QA | 27 |
+| `06-devops-infra/` | DevOps / 基础设施 | 33 |
+| `07-docs-office/` | 文档 / Office / 内容 | 67 |
+| `08-research-web/` | 调研 / 联网 / 搜索 | 60 |
+| `09-analytics/` | 分析 / 可观测 / 监控 | 124 |
+| `10-payments-auth/` | 支付 / 认证 | 18 |
+| `11-planning/` | 规划 / 架构 | 28 |
+| `12-meta/` | Skill 创作 / Meta | 10 |
+| `13-integrations/` | 厂商集成 / 平台 | 113 |
+| `14-finance/` | 金融 / 投资 | 10 |
+| `99-misc/` | 其他 / 未分类 | 90 |
+
+## 本次高价值来源
+
+- [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — 工程方法论
+- [obra/superpowers](https://github.com/obra/superpowers) — TDD / 调试 / 计划
+- [bergside/awesome-design-skills](https://github.com/bergside/awesome-design-skills) — 设计
+- [RKiding/Awesome-finance-skills](https://github.com/RKiding/Awesome-finance-skills) — 金融
+- [garrytan/gstack](https://github.com/garrytan/gstack) — Garry Tan 工作流
+- [microsoft/azure-skills](https://github.com/microsoft/azure-skills) — Azure
+- [remotion-dev/skills](https://github.com/remotion-dev/skills) — Remotion 视频
+- [supabase/agent-skills](https://github.com/supabase/agent-skills) / [get-convex/agent-skills](https://github.com/get-convex/agent-skills)
+- [leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill) / [pbakaus/impeccable](https://github.com/pbakaus/impeccable) / [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
+- [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) — 营销
+- [firebase/agent-skills](https://github.com/firebase/agent-skills)
+- [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman) / [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
+- 目录站：[skills.sh](https://skills.sh/)
+
+## 使用方式
+
+```bash
+cp -R 04-frontend-ui/<skill-name> ~/.cursor/skills/
+```
+
+## 明细
+
+### Cursor 原生能力 (`01-cursor-native/`)
+
+- **accessibility-auditing** — Use Cursor's browser aria snapshots to audit a page for accessibility issues — missing labels, broken tab order, contrast, and ARIA misuse.
+- **agent-browser** — Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web a
+- **auto-type-checking** — Run TypeScript type checking after file edits and immediately flag type errors before moving on. Uses Cursor hooks for automatic enforcement.
+- **automate** — Use this skill to create Cursor Automations.
+- **best-of-n-solving** — Solve a hard problem by trying multiple approaches in parallel using isolated git worktrees. Each attempt runs in its own branch, and the best solution is selected. Use for complex refactors, tricky b
+- **building-skills-from-patterns** — When the same multi-step workflow repeats in Cursor (user corrections or agent redos), capture it as a new SKILL.md under .cursor/skills/ so future sessions load it automatically.
+- **canvas** — >-
+- **cavecrew** — >
+- **caveman** — >
+- **caveman-compress** — >
+- **caveman-help** — >
+- **caveman-stats** — >
+- **codebase-onboarding** — Launch multiple explore subagents in parallel to investigate architecture, data models, auth, APIs, and deployment. Synthesize into an onboarding document.
+- **comparing-branches-visually** — Check out two branches in separate worktrees, start both dev servers on different ports, screenshot the same pages, and produce a visual diff.
+- **core** — Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill, type, select), extr
+- **create-hook** — >-
+- **create-subagent** — >-
+- **dark-mode-testing** — Toggle between light and dark mode in Cursor's browser, screenshot both states, and flag missing token mappings or contrast issues.
+- **derive-client** — Reverse-engineer a website's internal API by recording browser traffic into a HAR file, then generate a standalone client or CLI that calls the endpoints directly, with no browser needed after the fir
+- **detecting-port-conflicts** — Detect EADDRINUSE and port conflicts, find what's using the port, and resolve it by killing the process or suggesting an alternative port.
+- **electron** — Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with an Electron app, autom
+- **emails** — When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "drip campaign," "nurtur
+- **finding-dev-server-url** — Scan running terminals for dev server URLs (localhost ports), report them, and optionally open the app in Cursor's built-in browser.
+- **form-testing** — Use Cursor's browser to fill and submit every form in the app with valid and invalid data, verifying validation, error states, and success flows.
+- **grinding-until-pass** — Keep iterating on code changes until the tests pass, the build succeeds, or linting is clean. Runs in a tight loop of fix → run → check → repeat. Use when you want the agent to autonomously grind thro
+- **loop** — >-
+- **loop-me** — Grill me about specs for the workflows I want to build, within this workspace.
+- **macos-apps** — Automate macOS built-in apps: Notes, Reminders, Messages, FindMy via CLI tools and AppleScript."
+- **marketing-loops** — When the user wants to set up a recurring, self-running marketing workflow — a repeatable loop an AI agent runs on a cadence (weekly, daily, on a trigger) rather than a one-off task. Also use when the
+- **migrate-to-skills** — >-
+- **network-request-auditing** — After navigating and interacting in Cursor's built-in browser, use browser_network_requests to audit every fetch/XHR for failures, slowness, duplicate calls, and suspicious payloads. Use for API-heavy
+- **onboard** — >-
+- **parallel-exploring** — Explore a large codebase in parallel by launching multiple explore subagents that each investigate a different area simultaneously. Use when onboarding onto a new project, understanding architecture, 
+- **parallel-test-fixing** — When multiple tests fail, assign each failing test file to a separate subagent that fixes it independently in parallel.
+- **profiling-performance** — Profile a running web application's CPU performance using Cursor's built-in browser profiler. Captures call stacks, identifies slow functions, and suggests optimizations. Use when a page feels slow or
+- **responsive-testing** — Open the app in Cursor's browser at multiple viewport sizes, screenshot each, and report any layout breakage.
+- **screenshotting-changelog** — Generate a visual changelog or PR description by taking before/after screenshots of UI changes using Cursor's built-in browser. Use when preparing a PR with visual changes.
+- **shell** — >-
+- **slack** — Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search conversations, or autom
+- **split-to-prs** — >-
+- **statusline** — >-
+- **suggesting-cursor-hooks** — When the user keeps asking for the same check to run (lint, tests, type-check), suggest a Cursor hook to automate it.
+- **suggesting-cursor-rules** — When the user repeats the same correction or convention multiple times, suggest a Cursor rule to encode it permanently.
+- **suggesting-skills** — When the user struggles with a task that a known skill could handle, suggest installing it.
+- **switching-projects** — Switch the current Cursor workspace to a different project directory using the cursor-app-control MCP. Use when the user asks to switch projects, open another repo, jump to a different codebase, or mo
+- **tailing-build-output** — Monitor a build process (webpack, turbo, docker) for warnings and errors as they stream. Summarize issues and fix them before the build finishes.
+- **update-cli-config** — >-
+- **update-cursor-settings** — >-
+- **verifying-in-browser** — After making code changes, start the dev server, open the app in Cursor's built-in browser, and verify everything works — check rendering, console errors, and network health. Use proactively after any
+- **webhook-subscriptions** — Create and manage webhook subscriptions for event-driven agent activation, or for direct push notifications (zero LLM cost). Use when the user wants external services to trigger agent runs OR push not
+
+### Git / PR / 工作流 (`02-workflow-git/`)
+
+- **ai-coding-assistant-customization** — Install, theme, and safely customize desktop AI coding assistants (Codex, Claude, Cursor, etc.) from GitHub repos on macOS. Covers local setup, theme switching, custom backgrounds, color overrides, an
+- **autonomous-coding-agents** — Delegate coding tasks to autonomous AI coding agents: Claude Code, OpenAI Codex, and OpenCode CLI."
+- **azure-messaging** — Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems. 
+- **babysit** — >-
+- **babysitting-pr** — Monitor a pull request for CI failures, review comments, and merge conflicts — then fix them automatically. Use when a PR is open and you want the agent to keep it merge-ready.
+- **benchmark** — Performance regression detection using the browse daemon. (gstack)
+- **benchmark-models** — Cross-model benchmark for gstack skills. (gstack)
+- **careful** — Safety guardrails for destructive commands. (gstack)
+- **caveman-commit** — >
+- **code-review** — Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match wha
+- **codex** — OpenAI Codex CLI wrapper — three modes. (gstack)
+- **commit-msg** — Handles Git commits for any repository. Generates messages from status/diff/log (Chinese-first, matches repo style). On 提交代码/提交并推送, runs full workflow—message, commit, push. On 生成提交信息/写 commit, messag
+- **completeness** — Post-implementation final validation — verify end-to-end traceability, constitution compliance, and requirement fulfillment across all artifacts and code changes.
+- **constitution** — Create or update the project constitution from interactive or provided principle inputs, ensuring all dependent templates stay in sync.
+- **context-restore** — Restore working context saved earlier by /context-save. (gstack)
+- **context-save** — Save working context. (gstack)
+- **creating-pr** — Create a clean, review-ready pull request with a good title, structured description, linked issues, and appropriate reviewers.
+- **diagram** — Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)"
+- **finishing-a-development-branch** — Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
+- **freeze** — Restrict file edits to a specific directory for the session. (gstack)
+- **gh-address-comments** — Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and prompt the user to authenticate if not logged in.
+- **gh-fix-ci** — Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after exp
+- **git-guardrails-claude-code** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hoo
+- **git-workflow-and-versioning** — Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams. Use when cu
+- **github-issues** — Create, triage, label, assign GitHub issues via gh or REST."
+- **github-repo-analysis** — >
+- **github-repo-management** — Clone/create/fork repos; manage remotes, releases."
+- **github-trend-analysis** — \|
+- **github-workflow** — Complete GitHub workflow: auth, repos, issues, PRs, code review, CI, releases, and trend analysis."
+- **gstack-openclaw-retro** — Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and gro
+- **guard** — Full safety mode: destructive command warnings + directory-scoped edits. (gstack)"
+- **guidelines** — Dynamically discover and apply domain-specific guidelines based on the current task context.
+- **health** — Code quality dashboard. (gstack)
+- **implement** — Implement a piece of work based on a spec or set of tickets."
+- **implement-2** — Execute implementation tasks for a single batch with requirement tracing and constitution compliance. Returns results; does NOT update checkpoints or tasks.md.
+- **incident-response** — Handle production incidents — triage, mitigate, communicate, and write postmortems.
+- **java-knowledge-graph** — Analyze JVM projects (Java/Kotlin/Scala/Groovy) with tree-sitter parsing, supporting Maven/Gradle/Ant/Ivy, generating knowledge graphs with visualizations
+- **landing-report** — Read-only queue dashboard for workspace-aware ship. (gstack)
+- **learn** — Manage project learnings.
+- **office-hours** — YC Office Hours — two modes. (gstack)
+- **pair-agent** — Pair a remote AI agent with your browser. (gstack)
+- **parallel-ci-triage** — When GitHub Actions fails, fetch failing job logs and assign each failing job to a separate subagent that fixes its slice of the problem in parallel. Use for multi-job CI failures where jobs are indep
+- **plan-tune** — Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)"
+- **planning** — Create an implementation plan from a feature specification, with traceability checkpoint generation.
+- **pr-link-issue** — Append a GitHub issue link and its Linear ticket to the current PR's description. Use when asked to "link issue to pr", "fill in issue and linear in pr", "add issue refs to pr", or when given a GitHub
+- **request-refactor-plan** — Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe in
+- **resolving-merge-conflicts** — Use when you need to resolve an in-progress git merge/rebase conflict."
+- **retro** — Weekly engineering retrospective. (gstack)
+- **review** — Pre-landing PR review. (gstack)
+- **review-agent** — Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, o
+- **rewrite** — Guidelines for rewrite mode, including workflow, best practices, and risk mitigation strategies.
+- **ship** — Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)"
+- **spec** — Turn vague intent into a precise, executable spec in five phases. (gstack)
+- **specification** — Create or update the feature specification from a natural language feature description, with optional slicing for large features.
+- **spring-boot-scaffolding** — Reference guide for creating a new Spring Boot project during rewrite migration.
+- **struts-to-spring** — _无描述_
+- **tasks** — Generate detailed, organized tasks.md for feature implementation based on design documents, with plan-to-tasks traceability checkpoint.
+- **unfreeze** — Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)
+- **wizard** — Generate an interactive bash wizard that walks a human through a manual procedure — third-party setup, a one-off migration, an A→B state transition — opening URLs, capturing values, confirming each st
+- **writing-commit-messages** — Write clear, conventional commit messages with proper type prefixes, scopes, and body content.
+- **yeet** — Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`)."
+
+### 代码质量 / 安全 / Review (`03-code-quality/`)
+
+- **auditing-experiments-flags** — Audit PostHog experiments and feature flags for configuration issues, staleness, and best-practice violations. Read when the user asks to audit, health-check, or review experiments or feature flags, c
+- **auditing-security** — Perform a systematic security audit of a codebase, checking for OWASP Top 10 vulnerabilities, secrets exposure, and insecure patterns.
+- **azure-compliance** — Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks. WHEN: 
+- **backend-security-audit** — 审计后台管理系统 API 安全性，包括 SQL 注入、XSS、CORS、认证绕过、逻辑漏洞等。
+- **blog-writing-guide** — Write, review, and improve blog posts for the Sentry engineering blog following Sentry's specific writing standards, voice, and quality bar. Use this skill whenever someone asks to write a blog post, 
+- **browser-testing-with-devtools** — Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, 
+- **caveman-review** — >
+- **claude-settings-audit** — Analyze a repository to generate recommended Claude Code settings.json permissions. Use when setting up a new project, auditing existing settings, or determining which read-only bash commands to allow
+- **code-review** — Perform code reviews following Sentry engineering practices. Use when reviewing pull requests, examining code changes, or providing feedback on code quality. Covers security, performance, testing, and
+- **code-review-and-quality** — Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensi
+- **code-simplification** — Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code 
+- **code-simplifier** — Simplifies and refines code for clarity, consistency, and maintainability while preserving all functionality. Use when asked to "simplify code", "clean up code", "refactor for clarity", "improve reada
+- **contract-risk-review** — Review a contract from a specific party's perspective to identify unfavorable clauses, assess risk levels, and suggest modifications.
+- **cso** — Chief Security Officer mode. (gstack)
+- **data-science-toolkit** — Data science workflows: Jupyter live kernel, Excel parsing, AI service cost comparison, and contract risk review."
+- **debugging-and-error-recovery** — Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to findin
+- **debugging-local-replay** — >
+- **debugging-signals-pipeline** — >
+- **devex-review** — Live developer experience audit. (gstack)
+- **diagnosing-bugs** — Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
+- **django-access-review** — Django access control and IDOR security review. Use when reviewing Django views, DRF viewsets, ORM queries, or any Python/Django code handling user authorization. Trigger keywords: "IDOR", "access con
+- **django-perf-review** — Django performance code review. Use when asked to "review Django performance", "find N+1 queries", "optimize Django", "check queryset performance", "database performance", "Django ORM issues", or audi
+- **doubt-driven-development** — Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (product
+- **find-bugs** — Find bugs, security vulnerabilities, and code quality issues in local branch changes. Use when asked to review changes, find bugs, security review, or audit code on the current branch.
+- **firebase-security-rules-auditor** — A skill to evaluate how secure Firestore security rules are. Use this when Firestore security rules are updated to ensure that the generated rules are extremely secure and robust.
+- **gh-review-requests** — Fetch unread GitHub notifications for open PRs where review is requested from a specified team or opened by a team member. Use when asked to "find PRs I need to review", "show my review requests", "wh
+- **gha-security-review** — GitHub Actions security review for workflow exploitation vulnerabilities. Use when asked to "review GitHub Actions", "audit workflows", "check CI security", "GHA security", "workflow security review",
+- **github-code-review** — Review PRs: diffs, inline comments via gh or REST."
+- **gstack-openclaw-ceo-review** — Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.
+- **gstack-openclaw-investigate** — Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working.
+- **investigate** — Systematic debugging with root cause investigation. (gstack)
+- **ios-clean** — Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)"
+- **ios-design-review** — Visual design audit for iOS apps on real hardware. (gstack)
+- **ios-fix** — Autonomous iOS bug fixer. (gstack)
+- **ios-healthkit-workout-debug** — >
+- **ios-sync** — Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)
+- **iterate-pr** — Iterate on a PR until actionable CI passes and high/medium review feedback is addressed. Use for PR CI failures, review feedback, or green-check loops; do not wait for human approval, draft status, or
+- **jymo-coach-audit** — Use when reviewing Jymo AI coach chat test reports or auditing coach persona outputs. Covers safety rules, persona consistency, data integrity checks, and report annotation workflows."
+- **jymo-coach-chat-audit** — \|
+- **language-debugging** — Debug Python and Node.js applications: pdb, debugpy, node inspect, Chrome DevTools Protocol."
+- **llm-evaluation** — Evaluate LLMs: academic benchmarks (MMLU, GSM8K), output quality auditing, and systematic prompt optimization with DSPy."
+- **llm-prompt-audit** — Audit LLM-generated text outputs against persona, tone, safety, and accuracy rules. Produce structured reports with per-item suggestions."
+- **native-mcp** — Built-in MCP (Model Context Protocol) client that connects to external MCP servers, discovers their tools, and registers them as native Hermes Agent tools. Supports stdio and HTTP transports with auto
+- **node-inspect-debugger** — Debug Node.js via --inspect + Chrome DevTools Protocol CLI."
+- **opencode** — Delegate coding to OpenCode CLI (features, PR review)."
+- **parallel-code-review** — Run four parallel read-only subagents that each review the same diff from a different lens — security, performance, correctness, and readability — then merge findings into one report. Use before mergi
+- **plan-ceo-review** — CEO/founder-mode plan review. (gstack)
+- **plan-devex-review** — Interactive developer experience plan review. (gstack)
+- **plan-eng-review** — Eng manager-mode plan review. (gstack)
+- **playwright** — Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrappe
+- **playwright-interactive** — Persistent browser and Electron interaction through `js_repl` for fast iterative UI debugging."
+- **posthog-debugger** — Debug and inspect PostHog implementations on any website. Use this skill when a user wants to understand how PostHog is implemented on a page, troubleshoot tracking issues, verify configuration, check
+- **pr-writer** — Create or refresh reviewer-facing PR titles and descriptions. Use when opening a PR, updating its title or body, or preparing branch changes for review.
+- **python-debugpy** — Debug Python: pdb REPL + debugpy remote (DAP)."
+- **receiving-code-review** — Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative
+- **requesting-code-review** — Pre-commit review: security scan, quality gates, auto-fix."
+- **requesting-code-review-2** — Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+- **review** — Review code changes with the Bugbot or Security Review subagent.
+- **review-bugbot** — Review code changes with Bugbot subagent.
+- **review-security** — Review code changes with Security Review subagent.
+- **reviewing-code** — Perform a thorough code review focused on correctness, maintainability, performance, and best practices.
+- **security-and-hardening** — Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sess
+- **security-best-practices** — Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/repo
+- **security-ownership-map** — Analyze git repositories to build a security ownership topology (people-to-file), compute bus factor and sensitive-code ownership, and export CSV/JSON for graph databases and visualization. Trigger on
+- **security-review** — Security code review for vulnerabilities. Use when asked to "security review", "find vulnerabilities", "check for security issues", "audit security", "OWASP review", or review code for injection, XSS,
+- **seo-audit** — When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on-page SEO," "meta tag
+- **skill-scanner** — Scan agent skills for security issues. Use when asked to "scan a skill",
+- **software-development-methodologies** — Software development methodologies and patterns: systematic debugging, TDD, spike experiments, code simplification, subagent-driven development, planning, and common pitfalls (TDZ, streaming timeouts,
+- **subagent-driven-development** — Use when executing implementation plans with independent tasks. Dispatches fresh delegate_task per task with two-stage review (spec compliance then code quality).
+- **systematic-debugging** — Structured debugging methodology — reproduce, isolate, hypothesize, verify. Covers git bisect, binary search, logging, and minimal reproduction.
+- **systematic-debugging-2** — 4-phase root cause debugging: understand bugs before fixing."
+- **systematic-debugging-3** — Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+- **web-application-security** — Web application security testing and hardening for common vulnerabilities: XSS, SQL injection, NoSQL injection, CSRF, authentication bypass, information disclosure, and protocol-level attacks. Covers 
+- **writing-guidelines** — Review docs/prose for Writing Guidelines compliance. Use when asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing han
+
+### 前端 / UI / 设计 (`04-frontend-ui/`)
+
+- **ab-testing** — When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions "A/B test," "split test," "experiment," "test th
+- **agentic** — Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.
+- **ant** — Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications.
+- **api-and-interface-design** — Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or es
+- **artistic** — High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces.
+- **autoplan** — Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)
+- **banner-design** — Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Faceboo
+- **baoyu-infographic** — Infographics: 21 layouts x 21 styles (信息图, 可视化)."
+- **basic** — Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography.
+- **bento** — Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces.
+- **bold** — Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts.
+- **brainstorming** — You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
+- **brand** — Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.
+- **brand-guidelines** — Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting
+- **brandkit** — Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark
+- **cafe** — Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.
+- **claude-design** — Design one-off HTML artifacts (landing, deck, prototype).
+- **claymorphism** — Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces.
+- **clean** — Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter.
+- **codex** — A radically minimal, blank-canvas interface built as a pure edge-to-edge surface, with almost no color and typography carrying the visual weight. Black serves as the only filled color, the only divide
+- **codex-dream-skin** — Apply, launch, verify, repair, update, or restore a full decorative skin for the Windows Codex desktop app. Use when the user asks for a Codex theme that goes beyond official color settings, wants the
+- **codex-dream-skin-studio** — Install, customize, launch, verify, repair, update, or restore Codex Dream Skin Studio on macOS. Use when a user wants to turn a personal image into one continuous full-window Codex wallpaper with ada
+- **colorful** — Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences.
+- **contemporary** — Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.
+- **converting-css-modules-to-tailwind** — Migrate CSS Modules (.module.css/.module.scss) to Tailwind utility classes. Handles styles object removal, className interpolation, composition, and global overrides.
+- **converting-css-to-tailwind** — Convert plain CSS stylesheets to Tailwind CSS utility classes. Handles selectors, media queries, pseudo-classes, custom properties, and animations.
+- **corporate** — Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns.
+- **cosmic** — Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements.
+- **creative** — Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.
+- **creative-visual-generation** — Generate visual content: ASCII art/video, diagrams (Excalidraw, architecture), infographics, pixel art, 3D (p5js, Three.js), animations (Manim), HTML mockups (Sketch, Claude Design), design systems, a
+- **design** — Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js),
+- **design-an-interface** — Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions "des
+- **design-html** — Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)"
+- **design-shotgun** — Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)"
+- **design-system** — Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creati
+- **design-taste-frontend** — Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design system
+- **design-taste-frontend-v1** — The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default is `design-taste-frontend` (v2 experimental), which is a substantial rewrite. Use this v1 insta
+- **dithered** — Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals.
+- **doodle** — Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel.
+- **dramatic** — High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention.
+- **editorial** — Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences.
+- **enterprise** — Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.
+- **expressive** — Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure.
+- **fantasy** — Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements.
+- **fiction** — A playful, energetic, cartoonesque interface inspired by friendly children's-book illustrations — warm cream backgrounds, big bold custom display typography, saturated brand color blocks, thick black 
+- **figma** — Use the Figma MCP server to fetch design context, screenshots, variables, and assets from Figma, and to translate Figma nodes into production code. Trigger when a task involves Figma URLs, node IDs, d
+- **figma-code-connect** — Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code translation, or ask
+- **figma-code-connect-components** — Connects Figma design components to code components using Code Connect mapping tools. Use when user says "code connect", "connect this component to code", "map this component", "link component to code
+- **figma-create-design-system-rules** — Generates custom design system rules for the user's codebase. Use when user says "create design system rules", "generate rules for my project", "set up design rules", "customize design system guidelin
+- **figma-create-new-file** — Create a new blank Figma file. Use when the user wants to create a new Figma design or FigJam file, or when you need a new file before calling use_figma. Handles plan resolution via whoami if needed. 
+- **figma-create-new-file-2** — **MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `create_new_file` tool call. NEVER call `create_new_file` directly without loading this skill first. Trigger whenever the user want
+- **figma-design-to-code** — **MANDATORY prerequisite** — you MUST invoke this skill BEFORE calling the `get_design_context` Figma MCP tool. You MUST trigger this skill whenever the user wants to implement, build, port, or code u
+- **figma-generate-design** — Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page
+- **figma-generate-design-2** — Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page
+- **figma-generate-library** — Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build component libraries, set up theming (light/dark modes), document 
+- **figma-generate-library-2** — Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build component libraries, create individual components with proper var
+- **figma-implement-design** — Translates Figma designs into production-ready application code with 1:1 visual fidelity. Use when implementing UI code from Figma files, when user mentions "implement design", "generate code", "imple
+- **figma-implement-motion** — Translates Figma motion and animations into production-ready application code. Use when implementing animation/motion from a Figma design — user mentions "implement this motion", "add animation from F
+- **figma-swiftui** — SwiftUI ↔ Figma translation. Use whenever the user mentions Swift, SwiftUI, iOS, iPhone, or iPad — in EITHER direction — translating a Figma design into SwiftUI (design → code), or pushing SwiftUI vie
+- **figma-use** — **MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug f
+- **figma-use-2** — **MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug f
+- **figma-use-figjam** — This skill helps agents use Figma's use_figma MCP tool in the FigJam context. Can be used alongside figma-use which has foundational context for using the use_figma tool."
+- **figma-use-motion** — Motion / animation context for the `use_figma` MCP tool — animating Figma nodes via manual keyframes, animation styles, easing, and timeline duration. Load alongside figma-use whenever a task involves
+- **figma-use-slides** — This skill helps agents use Figma's use_figma MCP tool in the Slides context. Can be used alongside figma-use which has foundational context for using the use_figma tool."
+- **flat** — Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.
+- **friendly** — Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes.
+- **frontend-design** — Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defau
+- **frontend-mapping** — Build interactive map web apps with React, Leaflet, and real geospatial data. Covers isochrones, routing layers, dark-themed UI, and API proxying for CORS-blocked geoservices."
+- **frontend-ui-engineering** — Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components, implementing layouts, meeting WCAG accessibility requiremen
+- **full-output-enforcement** — Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged outp
+- **futuristic** — Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic.
+- **geometric** — Geometric, structured design with clean typography, neutral colors, precise shapes, and intuitive layouts that stay out of the way.
+- **glassmorphism** — Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance.
+- **gpt-taste** — Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento gri
+- **gradient** — Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.
+- **gstack-openclaw-office-hours** — Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.
+- **high-end-visual-design** — Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make
+- **image-to-code** — Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as close
+- **imagegen-frontend-mobile** — Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comforta
+- **imagegen-frontend-web** — Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE — generate ONE separate horizontal image FOR EVERY section. A landing page
+- **immersive** — An immersive, interactive, exhibit-style interface that blends storytelling, animation, and gamified elements to create a playful, experience-driven journey. The entire app sits on a single continuous
+- **impeccable** — A modern, graphic, editorial-poster aesthetic — warm and confident — built on alternating cream and burnt orange sections, an amber brand color."
+- **impeccable-10** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-11** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-12** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-13** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-14** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-2** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-3** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-4** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-5** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-6** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-7** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-8** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **impeccable-9** — Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we
+- **industrial-brutalist-ui** — Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dash
+- **integration-react-native** — PostHog integration for React Native applications
+- **interview-me** — Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an
+- **levels** — Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed.
+- **lingo** — Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.
+- **manual-vite-react-setup** — When create-vite fails due to Node version incompatibility or network issues, manually scaffold a minimal Vite + React + React Router project.
+- **material** — Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns.
+- **matrix** — A cyber-slick, dark-only Matrix-inspired interface defined by minimalist fashion, high-tech digital elements"
+- **migrate-radix-to-base** — Migrates React projects and components from Radix UI to Base UI. Use when asked to migrate from radix, move to base-ui, convert radix primitives, or switch a shadcn project's base library. Handles sin
+- **minimal** — Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.
+- **minimalist-ui** — Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.
+- **modern** — Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products.
+- **mono** — Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic.
+- **neobrutalism** — Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces.
+- **neon** — Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.
+- **neumorphism** — Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look.
+- **offers** — When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guarantee design, scarcity/urgency, naming, and payment structur
+- **pacman** — Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics.
+- **paper** — Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities.
+- **performance-optimization** — Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspect performance regressions, when Core Web Vitals or load time
+- **perspective** — Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism.
+- **plan-design-review** — Designer's eye plan review — interactive, like CEO and Eng review. (gstack)
+- **popular-web-designs** — 54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
+- **power** — High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for premium brand experiences.
+- **premium** — Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.
+- **professional** — Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.
+- **react-native-patterns** — Build mobile apps with React Native and Expo — navigation, platform-specific code, performance, and native modules.
+- **redesign-existing-projects** — Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS 
+- **refined** — Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.
+- **remotion-interactivity** — Best practices for writing Remotion animations that stay intuitive for agents and editable in Remotion Studio Visual Mode.
+- **remotion-markup** — Best practices for writing Remotion React Markup
+- **remotion-saas** — Building video apps with Remotion - framework, rendering and Player advice
+- **retro** — Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements.
+- **riso** — A playful, joyful, two-color risograph print aesthetic built on a single warm off-white paper surface running through every section"
+- **roku** — App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.
+- **sega** — A playful, arcade-inspired interface for games — built on the VT323 pixel typeface, hard-edged 0px corners, chunky pill buttons that physically press into solid offset blocks"
+- **shadcn** — Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns.
+- **shadcn-2** — Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI, including chat interfaces. Provides project context, component docs, and usage examples. Appli
+- **sketch** — Throwaway HTML mockups: 2-3 design variants to compare."
+- **sketch-2** — A friendly, hand-drawn sketch interface inspired by pencil illustrations on warm cream paper. Soft teal brand accents, hand-written display headings, rounded pill controls."
+- **skeumorphism** — Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces.
+- **sleek** — Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing.
+- **slides** — Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.
+- **spacious** — Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces.
+- **spec-driven-development** — Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague ide
+- **square** — Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication.
+- **stitch** — Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts.
+- **stitch-design-taste** — Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perp
+- **storytelling** — Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.
+- **supabase** — Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, 
+- **terracotta** — A sun-baked, clay-toned editorial interface built on warm cream surfaces, ink-brown headlines set in a display serif, and a single terracotta accent."
+- **tetris** — Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.
+- **threejs-browser-game-prototype** — Rapidly prototype a browser-based 3D game with Three.js using CDN (no build tools), including first-person controls, collision detection, raycaster interactions, and asset optimization pipelines.
+- **touchdesigner-mcp** — Control a running TouchDesigner instance via twozero MCP — create operators, set parameters, wire connections, execute Python, build real-time visuals. 36 native tools."
+- **ui-styling** — Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user inter
+- **ui-ux-pro-max** — UI/UX design intelligence for web and mobile. Searchable local database with 84 styles, 192 color palettes, 74 font pairings, 192 product types, 98 UX guidelines, 104 icon entries, 16 GSAP motion pres
+- **using-ui-stack** — Enforce a configuration-driven design system when generating UI. Ensures consistent spacing, colors, typography, dark mode, interactions, and accessibility across all AI-generated components.
+- **vercel-composition-patterns** — React composition patterns that scale. Use when refactoring components with
+- **vercel-optimize** — Use for Vercel cost and performance optimization on deployed projects, especially Next.js, SvelteKit, Nuxt, and limited Astro apps. Collect Vercel metrics, usage, project config, and code scan results
+- **vercel-react-best-practices** — React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patter
+- **vercel-react-native-skills** — React Native and Expo best practices for building performant mobile apps. Use
+- **vercel-react-view-transitions** — Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill 
+- **vercel-sandbox** — Run agent-browser + Chrome inside Vercel Sandbox microVMs for browser automation from any Vercel-deployed app. Use when the user needs browser automation in a Vercel app (Next.js, SvelteKit, Nuxt, Rem
+- **vibrant** — Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy.
+- **video-interaction-mapper** — >
+- **vintage** — 1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography.
+- **web-artifacts-builder** — Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state manag
+- **web-design-guidelines** — Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
+
+### 测试 / QA (`05-testing/`)
+
+- **adding-e2e-tests** — Set up Playwright end-to-end testing in a project, including test configuration, example tests, and CI integration.
+- **ai-output-audit** — Audit and improve AI-generated outputs for fluency, persona consistency, safety, factual accuracy, and user-instruction compliance.
+- **api-smoke-testing** — Start the dev server, discover API routes from the codebase, hit every endpoint, and report which ones return errors.
+- **browse** — Fast headless browser for QA testing and site dogfooding. (gstack)
+- **codebase-design** — Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-n
+- **design-review** — Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)"
+- **dogfood** — Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to "dogfood", "QA", "exploratory test", "find issues", "bug hunt", "test this app/site/pla
+- **fixing-broken-links** — Crawl all links in a file or project, test each for a valid HTTP response, report broken ones, and fix or remove them.
+- **grilling** — Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.
+- **gstack-upgrade** — Upgrade gstack to the latest version.
+- **hatch-pet** — Create, repair, validate, visually QA, and package Codex-compatible animated pets and pet spritesheets from character art, generated images, company or prospect brand cues, or visual references. Use w
+- **hermes-development** — Develop and extend Hermes Agent: configuration, skill authoring, kanban orchestration, project analysis, frontend mapping, QA auditing, and exploratory testing."
+- **ios-qa** — Live-device iOS QA for SwiftUI apps. (gstack)
+- **llm-batch-output-reviewer** — \|
+- **migrate-to-shoehorn** — Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.
+- **python-tdd-with-uv** — Test-driven development in Python using uv as the package manager. Covers the red-green-refactor cycle, vertical slicing, and uv project setup.
+- **qa** — Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wan
+- **qa-2** — Systematically QA test a web application and fix bugs found. (gstack)
+- **qa-only** — Report-only QA testing. (gstack)
+- **recording-browser-flow-as-test** — Execute a user flow step-by-step in Cursor's built-in browser while documenting each action, then emit a Playwright test that replays the same flow using stable selectors derived from the accessibilit
+- **setup-pre-commit** — Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit
+- **tdd** — Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
+- **test-driven-development** — TDD: enforce RED-GREEN-REFACTOR, tests before code."
+- **test-driven-development-2** — Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to
+- **updating-npm-package** — Safely update an npm package by checking npmjs.com for the latest version, reading release notes, and handling minor vs major upgrades differently. For minor updates, just do it. For major updates, fi
+- **visual-qa-testing** — Visually QA a web application by launching it in Cursor's built-in browser, taking screenshots, checking console errors, and auditing network requests. Use after making UI changes to verify they look 
+- **webapp-testing** — Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser l
+
+### DevOps / 基础设施 (`06-devops-infra/`)
+
+- **agentcore** — Run agent-browser on AWS Bedrock AgentCore cloud browsers. Use when the user wants to use AgentCore, run browser automation on AWS, use a cloud browser with AWS credentials, or needs a managed browser
+- **airunway-aks-setup** — Set up AI Runway on AKS — from bare cluster to running model. Covers cluster verification, controller install, GPU assessment, provider setup, and first deployment. WHEN: \"setup AI Runway\", \"onboar
+- **azure-cloud-migrate** — Assess and migrate cross-cloud workloads to Azure with reports and code conversion. Supports Lambda→Functions, Beanstalk/Heroku/App Engine→App Service, Fargate/Kubernetes/Cloud Run/Spring Boot→Contain
+- **azure-compute** — Azure VM/VMSS router. WHEN: create / provision / deploy / spin-up VM, recommend VM size, compare VM pricing, VMSS, scale set, autoscale, burstable, lightweight server, website, backend, GPU, machine l
+- **azure-cost** — Azure cost management: query costs, forecast spending, optimize to reduce waste. WHEN: \"Azure costs\", \"Azure bill\", \"cost breakdown\", \"how much am I spending\", \"forecast spending\", \"optimiz
+- **azure-deploy** — Execute Azure deployments for ALREADY-PREPARED applications that have existing .azure/deployment-plan.md and infrastructure files. DO NOT use this skill when the user asks to CREATE a new application 
+- **azure-diagnostics** — Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage. WHEN: debug production issues, troubleshoot app service, app service high CPU, app service deploy
+- **azure-enterprise-infra-planner** — Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource 
+- **azure-kubernetes** — Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure CNI O
+- **azure-kubernetes-automatic-readiness** — Assess Kubernetes workloads and cluster configuration for AKS Automatic compatibility. Identifies incompatibilities, generates fixes, and guides migration from AKS Standard to AKS Automatic. WHEN: mig
+- **azure-prepare** — Prepare azd-based Azure projects for deployment: generates azure.yaml, infrastructure (Bicep/Terraform), and Dockerfiles for the Azure Developer CLI (azd) workflow. USE ONLY when the user explicitly w
+- **azure-quotas** — Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection. WHEN: \"check quotas\", \"service limits\", \"current usage\", \"request quota inc
+- **azure-reliability** — Assess and improve the reliability posture of PaaS Applications (Azure Functions and Azure App Service). Scans deployed resources for zone redundancy, ZRS storage, health probes, and multi-region fail
+- **azure-upgrade** — Assess and upgrade Azure workloads between plans, tiers, or SKUs, or modernize Azure SDK dependencies in source code. WHEN: upgrade Consumption to Flex Consumption, upgrade Azure Functions plan, chang
+- **azure-validate** — Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), RBAC role assignments, managed identity permissions, and prerequisites before depl
+- **capacity** — Discovers available Azure OpenAI model capacity across regions and projects. Analyzes quota limits, compares availability, and recommends optimal deployment locations based on capacity requirements. U
+- **ci-cd-and-automation** — Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment stra
+- **cloudflare-deploy** — Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.
+- **convex-migration-helper** — Plans Convex schema and data migrations with widen-migrate-narrow and
+- **customize** — Interactive guided deployment flow for Azure OpenAI models with full customization control. Step-by-step selection of model version, SKU (GlobalStandard/Standard/ProvisionedManaged), capacity, RAI pol
+- **firebase-app-hosting-basics** — Deploy and manage web apps with Firebase App Hosting. Use this skill when deploying Next.js/Angular apps with backends.
+- **firebase-data-connect** — Builds and deploys Firebase SQL Connect (aka Firebase Data Connect) backends with PostgreSQL securely. Use when designing schemas with tables and relations, writing authorized queries and mutations, c
+- **firebase-hosting-basics** — Skill for working with Firebase Hosting (Classic). Use this when you want to deploy static web apps, Single Page Apps (SPAs), or simple microservices. Do NOT use for Firebase App Hosting.
+- **kubernetes-deploying** — Deploy applications to Kubernetes — Deployments, Services, Ingress, ConfigMaps, Secrets, health checks, and scaling.
+- **land-and-deploy** — Land and deploy workflow. (gstack)
+- **python-appservice-deploy** — Deploy Python (Flask/Django/FastAPI) code to Azure App Service Linux. WHEN: \"Flask App Service\", \"Django App Service\", \"FastAPI App Service\", \"deploy Python to App Service\". DO NOT USE FOR: Co
+- **render-deploy** — Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their applicatio
+- **sdk** — >-
+- **setting-up-ci** — Set up a GitHub Actions CI/CD pipeline with linting, testing, type-checking, and deployment steps.
+- **setting-up-terraform** — Set up Terraform infrastructure-as-code for cloud resources, including provider configuration, modules, state management, and CI integration.
+- **setup-deploy** — Configure deployment settings for /land-and-deploy.
+- **vercel-deploy** — Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
+- **winui-app** — Bootstrap, develop, and design modern WinUI 3 desktop applications with C# and the Windows App SDK using official Microsoft guidance, WinUI Gallery patterns, Windows App SDK samples, and CommunityTool
+
+### 文档 / Office / 内容 (`07-docs-office/`)
+
+- **ad-creative** — When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad c
+- **adding-api-docs** — Generate OpenAPI/Swagger documentation for an API, including endpoint schemas, request/response types, and interactive docs UI.
+- **adding-docker** — Dockerize an application with a production-ready Dockerfile, docker-compose setup, and .dockerignore.
+- **ads** — When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROA
+- **ai-seo** — When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine opti
+- **aso** — When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,
+- **canvas-design** — Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create ori
+- **chatgpt-apps** — Build, scaffold, refactor, and troubleshoot ChatGPT Apps SDK applications that combine an MCP server and widget UI. Use when Codex needs to design tools, register UI resources, wire the MCP Apps bridg
+- **chinese-pdf-generation** — Generate professional PDF documents with Chinese text on macOS using fpdf2, including environment workarounds and layout fixes.
+- **cold-email** — Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails
+- **community-marketing** — Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit,
+- **competitors** — When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparis
+- **content-strategy** — When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions "content strategy," "what should I write about," "con
+- **copy-editing** — When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 
+- **copywriting** — When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user s
+- **cro** — When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms.
+- **directory-submissions** — When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions "directory sub
+- **document-api-endpoint** — Document and type a Sentry API endpoint. Write or fix @extend_schema decorators, specify response TypedDicts, type request parameters, correct type drift between the declared schema and the runtime re
+- **document-generate** — Generate missing documentation from scratch for a feature, module, or entire project. (gstack)
+- **document-release** — Post-ship documentation update. (gstack)
+- **documentation-and-adrs** — Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to 
+- **docx** — Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files) or Word templates (.dotx files). Triggers include: any mention of 'Word doc', 'word document', 
+- **exporting-to-png** — Export code, terminal output, diagrams, or UI components to PNG images using headless browser rendering or CLI tools.
+- **free-tools** — When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions "engineering as marketing," "free t
+- **generating-images** — >-
+- **google-workspace** — Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python."
+- **handoff** — Compact the current conversation into a handoff document for another agent to pick up.
+- **image** — When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the us
+- **imagegen** — Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should
+- **imagegen-2** — Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should
+- **launch** — When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'b
+- **lead-magnets** — When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions "lead magnet," "gated content," "content upgrade," "downloadable," 
+- **llm-wiki** — Karpathy's LLM Wiki: build/query interlinked markdown KB."
+- **make-pdf** — Turn any markdown file into a publication-quality PDF. (gstack)
+- **marketing-council** — When the user wants multiple expert perspectives on a marketing question — a simulated board of advisors staffed by legendary marketers (Seth Godin, David Ogilvy, Eugene Schwartz, April Dunford, Rory 
+- **marketing-ideas** — When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strat
+- **marketing-plan** — When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions "marketing plan," "growth plan," "GTM plan," "go-to-market
+- **marketing-psychology** — When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,'
+- **media-content-creation** — Create and process media content: GIF search, YouTube transcripts, audio analysis (Songsee), music generation (HeartMuLa, AudioCraft), songwriting, blog monitoring, OCR, PDF editing, and PowerPoint cr
+- **nano-pdf** — Edit PDF text/typos/titles via nano-pdf CLI (NL prompts)."
+- **notion** — Notion API + ntn CLI: pages, databases, markdown, Workers."
+- **ocr-and-documents** — Extract text from PDFs and scanned documents. Use web_extract for remote URLs, pymupdf for local text-based PDFs, marker-pdf for OCR/scanned docs. For DOCX use python-docx, for PPTX see the powerpoint
+- **onboarding** — When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions "onboarding flow," "activation rate," "user activation,
+- **openai-docs** — Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest m
+- **openai-docs-2** — Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest m
+- **openai-docs-3** — Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest m
+- **pdf** — Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rota
+- **pdf-2** — Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplum
+- **popups** — When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversions," "modal optimizati
+- **powerpoint** — Create, read, edit .pptx decks, slides, notes, templates."
+- **pptx** — Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting te
+- **product-marketing** — When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my ta
+- **programmatic-seo** — When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "template pages," "pages at scale," "directory pages," "location p
+- **referrals** — When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mo
+- **revops** — When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'l
+- **sales-enablement** — When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behin
+- **schema** — When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich snippets," "schema.or
+- **security-threat-model** — Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the use
+- **seo-auditing** — Audit technical SEO — meta tags, structured data, Open Graph, sitemaps, robots.txt, performance, and accessibility signals.
+- **setup-matt-pocock-skills** — Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.
+- **signup** — When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "signup form optimizat
+- **social** — When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms, or wants to do social listening and engageme
+- **theme-factory** — Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact t
+- **verifying-markdown-formatting** — Verify that a Markdown file has correct formatting — headings, lists, links, code blocks, spacing, and consistent style.
+- **video** — When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 
+- **writing-copy** — Write marketing copy for landing pages, product descriptions, CTAs, emails, and app UI text.
+- **xlsx** — Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e.
+
+### 调研 / 联网 / 搜索 (`08-research-web/`)
+
+- **43chat** — 43Chat AI Agent 开放平台。你可以在这里像人一样社交：加好友、建群、聊天、发朋友圈。这不是一个冷冰冰的 API 平台，而是一个 AI 和人类平等互动的社交网络。适用场景：注册 Agent 账号、添加好友、创建群组、发送消息、参与讨论、发布朋友圈。触发词：提到"43chat"、"加好友"、"发消息"、"创建群"、"私聊"、"群聊"、"发朋友圈"等社交需求
+- **43comic** — 43漫画 — 对话式生成漫画。用户发来 SKILL.md 地址即可自动安装；未绑定时引导激活码；生成时逐步收集画风与故事，完成后返回 HTTPS 图片链接，作品同步至微信小程序「作品」。
+- **43farm** — 重生之 Agent 偷菜计划 — 43Farm 的完整 API 操作指南。包含种植、收获、偷菜、买地、卖出、查看好友、留言板等所有接口说明。
+- **43farm-cron-recovery** — 43Farm 心跳任务执行中遇到 Farm Token 过期时的自动恢复流程。用于 cron 触发的无人守候场景。
+- **43farm-gameplay-pitfalls** — 43Farm 实战中发现的玩法限制与用户交互坑点，补充官方文档未明确提及的机制。
+- **43farm-heartbeat-executor** — 43Farm 定时心跳任务执行器。被触发时直接调用内置脚本完成全部农场参与、事件处理、版本检测与 Token 自动恢复，避免逐条手写 API。
+- **43farm-heartbeat-robust** — 43Farm 心跳任务的可靠执行笔记。补充官方 43farm skill 脚本的隐形坎，确保收获/种植/偷菜真正执行。
+- **43swap** — 43Swap Agent 跳蚤市场 — 完整 API 操作指南。包含激活、挂单、报价、成交、市场浏览、媒体上传等所有接口说明。
+- **agent-reach** — >
+- **apple-notes** — Manage Apple Notes via memo CLI: create, search, edit."
+- **auditing-performance** — Audit and optimize application performance, including bundle size, rendering, database queries, and Core Web Vitals.
+- **chinese-university-research** — Research Chinese university rankings, major evaluations, and academic reputation. Covers domestic (软科, 校友会, 学科评估) and international rankings (QS, THE, US News).
+- **claude** — A research-journal aesthetic printed on warm stone — authoritative, editorial, almost achromatic. Pages live on warm ivory parchment (never pure white), with near-black slate as the dominant ink."
+- **cli-creator** — Build a composable CLI for Codex from API docs, an OpenAPI spec, existing curl examples, an SDK, a web app, an admin tool, or a local script. Use when the user wants Codex to create a command-line too
+- **co-marketing** — When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use when the user says 'co-marketing,' 'partner marketing,' 'joint campaign,' 'who sho
+- **competitor-profiling** — When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this comp
+- **customer-research** — When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts," "customer intervie
+- **design-consultation** — Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... 
+- **dogfood** — Exploratory QA of web apps: find bugs, evidence, reports."
+- **dspy** — Build complex AI systems with declarative programming, optimize prompts automatically, create modular RAG systems and agents with DSPy - Stanford NLP's framework for systematic LM programming
+- **generate-project-plan** — Generate a FigJam project plan board from a PRD plus codebase context. Interactive flow: research → propose sections → per-section deep research → per-section content + block-shape proposal → create F
+- **gif-search** — Search/download GIFs from Tenor via curl + jq."
+- **hackernews-frontpage** — Scrape the Hacker News front page (titles, points, comment counts).
+- **huggingface-hub** — HuggingFace hf CLI: search/download/upload models, datasets."
+- **kanban-worker** — Pitfalls, examples, and edge cases for Hermes Kanban workers. The lifecycle itself is auto-injected into every worker's system prompt as KANBAN_GUIDANCE (from agent/prompt_builder.py); this skill is w
+- **native-app-ui-clone** — Use when replicating native iOS/Android app UI from screenshots in HTML/CSS/JS. Covers scroll-driven animations, sticky headers, card folding, and exact layout physics."
+- **netlify-deploy** — Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user asks to deploy, host, publish, or link a site/repo on Netlify, including preview and production deploys.
+- **notion-meeting-intelligence** — Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.
+- **notion-research-documentation** — Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.
+- **obsidian** — Read, search, create, and edit notes in the Obsidian vault.
+- **obsidian-vault** — Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.
+- **open-gstack-browser** — Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.
+- **paywalls** — When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions "paywall," "upgrade screen," "upgrade modal," "upsell," "fe
+- **plan** — Plan mode: write an actionable markdown plan to .hermes/plans/, no execution. Bite-sized tasks, exact paths, complete code."
+- **posthog-onboarding-lead-research** — Research and qualify onboarding team referral leads for PostHog. Use this skill when a TAE receives a lead from the onboarding team and needs a full research brief before deciding how to engage. Trigg
+- **posthog-pls-big-fish** — Research, qualify, and suggest outreach for PostHog big fish product-led leads — large companies (500+ or 1000+ employees) using PostHog on free tier without a payment method. Use this skill when a TA
+- **private-local-rag-agent** — >
+- **prompt-engineering** — Write effective prompts for LLMs — structure, few-shot examples, chain-of-thought, system prompts, and output parsing.
+- **prospecting** — When the user wants to find, qualify, and build a list of prospects to reach out to — across B2B SaaS, general B2B, or local small businesses. Also use when the user mentions "prospecting," "build a p
+- **public-relations** — When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy (not pull requests). Also use when the user mentions 'PR,' 'public relations,' 'pre
+- **replay-ux-research** — Analyze Sentry session replays to surface UX patterns, pain points, and user journeys for a given product area. Use when asked to "show me how users use", "day in the life", "UX research", "replay res
+- **research** — Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading le
+- **research-knowledge-tools** — Research and knowledge management: arXiv papers, prediction markets (Polymarket), maps/geocoding, Google Workspace, Airtable, Notion, Obsidian, news access, app rankings, travel planning, and LLM Wiki
+- **research-paper-writing** — Write ML papers for NeurIPS/ICML/ICLR: design→submit."
+- **saving-workspace-context** — Automatically persist useful context — research, decisions, learnings, templates — to workspace files so knowledge survives across conversations.
+- **scrape** — Pull data from a web page. (gstack)
+- **setup-browser-cookies** — Import cookies from your real Chromium browser into the headless browse session. (gstack)
+- **setup-ts-deep-modules** — Wire dependency-cruiser into a TypeScript repo so each package is a deep module — implementation hidden in subfolders, reachable only through its entry-point files. User-invoked.
+- **skill-d21074dbb82c** — 无图形界面的 Agent 任务市场。发单端：创建图文音视创作类任务、推送支付链接、查看提交、选定结果；接单端：浏览任务、提交结果、查看收入。Agent 每个关键动作都需要主人明确同意后执行，不主动推进任何步骤。安装后需配置心跳定期拉事件通知。
+- **skillify** — Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)
+- **sync-gbrain** — Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)
+- **third-party-agent-skill-onboarding** — Install, register, claim, and verify third-party agent skill marketplaces (e.g. 才虫, 43Chat) that require API key credentials and periodic heartbeat polling.
+- **threejs-scene-editor** — Add interactive drag/rotate editing to a Three.js scene using TransformControls, allowing real-time furniture positioning and coordinate export to console. Solves the painful workflow of guessing hard
+- **web-news-direct-access** — \|
+- **web-search-fallbacks** — Reliable fallback paths when the primary web_search backend (SearXNG) is unavailable or blocked. Covers direct search APIs, weather APIs, and quick curl-based alternatives.
+- **writing-fragments** — Writing, explore — mine raw fragments, no structure yet.
+- **writing-plans** — Use when you have a spec or requirements for a multi-step task. Creates comprehensive implementation plans with bite-sized tasks, exact file paths, and complete code examples.
+- **writing-shape** — Writing, exploit — shape raw material into an article, paragraph by paragraph.
+- **writing-tests** — Analyze existing code and write comprehensive unit and integration tests for it. Detects the test framework, identifies untested code paths, and generates tests with proper mocking, edge cases, and as
+- **xurl** — X/Twitter via xurl CLI: post, search, DM, media, v2 API."
+
+### 分析 / 可观测 / 监控 (`09-analytics/`)
+
+- **adding-analytics** — Add PostHog analytics to a web application, including event tracking, page views, feature flags, and session replay.
+- **adding-error-tracking** — Add Sentry error tracking, performance monitoring, and source maps to a web application.
+- **adding-feature-flags** — Add feature flags to an application for gradual rollouts, A/B testing, and kill switches using PostHog, LaunchDarkly, or a simple local implementation.
+- **agents-md** — Creates and maintains concise AGENTS.md and CLAUDE.md project instruction files. Use when asked to create AGENTS.md, update AGENTS.md, maintain agent docs, set up CLAUDE.md, document repository agent 
+- **analytics** — When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "conversion tracking," "event trackin
+- **canary** — Post-deploy canary monitoring. (gstack)
+- **cleaning-up-stale-feature-flags** — Identify and clean up stale feature flags in a PostHog project. Use when the user wants to find unused, fully rolled out, or abandoned feature flags, review them for safety, and then disable or delete
+- **configuring-experiment-analytics** — Configures the analytics side of a PostHog experiment — exposure criteria (default `$feature_flag_called` vs custom exposure events), primary and secondary metrics, the supported metric types (count, 
+- **create-branch** — Create a git branch following Sentry naming conventions. Use when asked to "create a branch", "new branch", "start a branch", "make a branch", "switch to a new branch", or when starting new work on th
+- **creating-experiments** — Guides agents through the 3-step experiment creation flow: defining the hypothesis, configuring rollout, and setting up analytics. Delegates rollout decisions to configuring-experiment-rollout and met
+- **diagnosing-stacktrace-symbolication** — >
+- **error-tracking-android** — PostHog error tracking for Android
+- **error-tracking-angular** — PostHog error tracking for Angular
+- **error-tracking-flutter** — PostHog error tracking for Flutter
+- **error-tracking-go** — PostHog error tracking for Go
+- **error-tracking-hono** — PostHog error tracking for Hono
+- **error-tracking-nextjs** — PostHog error tracking for Next.js
+- **error-tracking-node** — PostHog error tracking for Node.js
+- **error-tracking-nuxt** — PostHog error tracking for Nuxt
+- **error-tracking-python** — PostHog error tracking for Python
+- **error-tracking-react** — PostHog error tracking for React
+- **error-tracking-react-native** — PostHog error tracking for React Native
+- **error-tracking-ruby** — PostHog error tracking for Ruby
+- **error-tracking-ruby-on-rails** — PostHog error tracking for Ruby on Rails
+- **error-tracking-svelte** — PostHog error tracking for Svelte
+- **error-tracking-web** — PostHog error tracking for Web (JavaScript)
+- **experiment-audit** — Audit a PostHog A/B experiment for a customer — verify config, exposure, attribution, and metrics. Trigger phrases include \"audit [customer]'s experiment\", \"audit the [name] experiment\", \"check e
+- **exploring-apm-traces** — >
+- **exploring-live-traffic** — Inspects PostHog Web analytics Live tab data — current users online, last-30-minutes pageviews, top pages, referrers, devices, browsers, countries, bot traffic, and the per-minute bot/users charts. Us
+- **exploring-llm-clusters** — Investigate AI observability clusters — understand usage patterns in AI/LLM traffic, compare cluster behavior, compute cost/latency metrics, and drill into individual traces within clusters.'
+- **exploring-llm-traces** — >
+- **feature-flags-android** — PostHog feature flags for Android applications
+- **feature-flags-api** — PostHog feature flags for API applications
+- **feature-flags-dotnet** — PostHog feature flags for .NET applications
+- **feature-flags-elixir** — PostHog feature flags for Elixir applications
+- **feature-flags-flutter** — PostHog feature flags for Flutter applications
+- **feature-flags-go** — PostHog feature flags for Go applications
+- **feature-flags-ios** — PostHog feature flags for iOS applications
+- **feature-flags-java** — PostHog feature flags for Java applications
+- **feature-flags-nextjs** — PostHog feature flags for Next.js applications
+- **feature-flags-nodejs** — PostHog feature flags for Node.js applications
+- **feature-flags-php** — PostHog feature flags for PHP applications
+- **feature-flags-python** — PostHog feature flags for Python applications
+- **feature-flags-react** — PostHog feature flags for React applications
+- **feature-flags-react-native** — PostHog feature flags for React Native applications
+- **feature-flags-ruby** — PostHog feature flags for Ruby applications
+- **feature-flags-rust** — PostHog feature flags for Rust applications
+- **feature-flags-web** — PostHog feature flags for Web (JavaScript) applications
+- **finding-deleted-feature-flags** — Find feature flags that were soft-deleted in the active project within a recent time window. Use when the user asks "what flags were deleted in the last N days", "show me recently deleted feature flag
+- **finding-experiments** — Resolves a PostHog experiment reference from natural language to a concrete experiment ID by browsing `experiment-list` (not feature-flag tools), with disambiguation when multiple experiments match. U
+- **instrument-error-tracking** — >-
+- **instrument-feature-flags** — >-
+- **instrument-llm-analytics** — >-
+- **instrument-product-analytics** — >-
+- **integration-android** — PostHog integration for Android applications
+- **integration-angular** — PostHog integration for Angular applications
+- **integration-astro-hybrid** — >-
+- **integration-astro-ssr** — PostHog integration for server-rendered Astro applications with API routes
+- **integration-astro-static** — PostHog integration for static Astro sites using SSG
+- **integration-astro-view-transitions** — PostHog integration for Astro with ClientRouter view transitions
+- **integration-django** — PostHog integration for Django applications
+- **integration-expo** — PostHog integration for Expo applications
+- **integration-fastapi** — PostHog integration for FastAPI applications
+- **integration-flask** — PostHog integration for Flask applications
+- **integration-javascript_node** — PostHog integration for server-side Node.js applications using posthog-node
+- **integration-javascript_web** — >-
+- **integration-laravel** — PostHog integration for Laravel applications
+- **integration-nextjs-app-router** — PostHog integration for Next.js App Router applications
+- **integration-nextjs-pages-router** — PostHog integration for Next.js Pages Router applications
+- **integration-nuxt-3.6** — PostHog integration for Nuxt versions 3.0 to 3.6
+- **integration-nuxt-4** — PostHog integration for Nuxt 4 applications
+- **integration-python** — PostHog integration for any Python application using the Python SDK
+- **integration-react-react-router-6** — PostHog integration for React Router v6 applications
+- **integration-react-react-router-7-data** — PostHog integration for React Router v7 - Data mode applications
+- **integration-react-react-router-7-declarative** — PostHog integration for React Router v7 - Declarative mode applications
+- **integration-react-react-router-7-framework** — PostHog integration for React Router v7 - Framework mode applications
+- **integration-react-tanstack-router-code-based** — >-
+- **integration-react-tanstack-router-file-based** — >-
+- **integration-react-vite** — PostHog integration for React applications built with Vite (no router)
+- **integration-ruby** — PostHog integration for any Ruby application using the Ruby SDK
+- **integration-ruby-on-rails** — PostHog integration for Ruby on Rails applications
+- **integration-sveltekit** — PostHog integration for SvelteKit applications
+- **integration-swift** — PostHog integration for Swift iOS and macOS applications
+- **integration-tanstack-start** — PostHog integration for TanStack Start full-stack applications
+- **integration-vue-3** — PostHog integration for Vue 3 applications
+- **investigate-metric** — >
+- **llm-analytics-setup** — PostHog LLM analytics for all supported providers
+- **logs-datadog** — PostHog logs for Datadog
+- **logs-go** — PostHog logs for Go
+- **logs-java** — PostHog logs for Java
+- **logs-nextjs** — PostHog logs for Next.js
+- **logs-nodejs** — PostHog logs for Node.js
+- **logs-other** — PostHog logs for Other Languages
+- **logs-python** — PostHog logs for Python
+- **monitoring-terminal-errors** — Watch running terminal processes for crashes and stack traces. When an error appears, navigate to the failing file and line, diagnose, and fix it automatically.
+- **monthly-to-annual** — Build the case for converting a PostHog monthly/PAYG customer to an annual prepaid credit plan. Pulls 12-24 months of invoice history from the data warehouse, runs the handbook eligibility check, proj
+- **observability-and-instrumentation** — Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence 
+- **omnibus-instrument-error-tracking** — >-
+- **omnibus-instrument-feature-flags** — >-
+- **omnibus-instrument-llm-analytics** — >-
+- **omnibus-instrument-product-analytics** — >-
+- **posthog-inbound-leads** — Evaluate and respond to inbound PostHog sales leads from Salesforce. Use this skill when any PostHog TAE needs to triage an inbound lead — deciding whether to qualify for a call, route to self-serve, 
+- **posthog-onboarding** — Help existing PostHog customers improve their PostHog instance. Triggers on "help [customer] improve their PostHog setup", "audit [company]'s PostHog instance", "create tracking plan for [company]", "
+- **posthog-pls-transition-leads** — Qualify and draft outreach for PostHog product-led leads who are hitting a billing transition — either startup program customers rolling off free credits, or users whose first invoice will be >= $2K. 
+- **posthog-survey-creator** — Create and configure surveys in PostHog through guided conversation. Use this skill when a user wants to create a survey, collect user feedback, run NPS/CSAT/CES/PMF surveys, gather product feedback, 
+- **presentation-creator** — Create data-driven presentation slides using React, Vite, and Recharts with Sentry branding. Use when asked to "create a presentation", "build slides", "make a deck", "create a data presentation", "bu
+- **pricing** — When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase
+- **prompt-optimizer** — Creates, optimizes, and iteratively refines agent prompts, system prompts, developer prompts, and reusable prompt templates. Use when asked to improve a prompt, optimize a system prompt, rewrite an ag
+- **pulse** — Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality.
+- **sentry** — Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry CLI; perform read-only queries using the `sentry` command
+- **signals-scout-ai-observability** — >
+- **signals-scout-error-tracking** — >
+- **signals-scout-feature-flags** — >
+- **signals-scout-observability-gaps** — >
+- **signals-scout-revenue-analytics** — >
+- **signals-scout-web-analytics** — >
+- **skill-writer** — Create, synthesize, and iteratively improve agent skills following the Agent Skills specification. Use when asked to "create a skill", "write a skill", "synthesize sources into a skill", "improve a sk
+- **sred-project-organizer** — Take a list of projects and their related documentation, and organize them into the SRED format for submission.
+- **sred-work-summary** — Go back through the previous year of work and create a Notion doc that groups relevant links into projects that can then be documented as SRED projects.
+- **to-tickets** — Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in one file per ticket local
+- **tools-and-features-hogql** — HogQL queries for PostHog analytics
+- **triage-frontend-issues** — Triage new issues in the Sentry `javascript` project by archiving non-actionable noise. Use when asked to "triage issues", "triage the javascript project", "archive non-actionable issues", "triage new
+- **typing-exclusion-worker** — Python typing exclusion worker: remove assigned mypy exclusion modules in small scoped batches, fix typing issues, run validation, and produce a structured completion summary. Use when running paralle
+- **user-deep-dive** — Deep dive on a PostHog user by email address. Analyze what they do, where they spend time, and what products they use.
+
+### 支付 / 认证 (`10-payments-auth/`)
+
+- **adding-auth** — Add authentication to a web application using NextAuth.js (Auth.js), including OAuth providers, session management, and protected routes.
+- **adding-stripe** — Integrate Stripe payments into a web application, including checkout sessions, webhooks, and customer portal.
+- **arxiv** — Search arXiv papers by keyword, author, category, or ID."
+- **aspnet-core** — Build, review, refactor, or architect ASP.NET Core web applications using current official guidance for .NET web development. Use when working on Blazor Web Apps, Razor Pages, MVC, Minimal APIs, contr
+- **churn-prevention** — When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' '
+- **connect-recommend** — >-
+- **design-md** — Author/validate/export Google's DESIGN.md token spec files.
+- **doc-coauthoring** — Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This wor
+- **doc-coauthoring-2** — Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This wor
+- **github-auth** — GitHub auth setup: HTTPS tokens, SSH keys, gh CLI login."
+- **hermes-agent-skill-authoring** — Author in-repo SKILL.md: frontmatter, validator, structure."
+- **linear** — Manage Linear issues, projects, and teams via the GraphQL API. Create, update, search, and organize issues. Uses API key auth (no OAuth needed). All operations via curl — no dependencies.
+- **sms** — When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use wh
+- **stripe-best-practices** — >-
+- **stripe-directory** — >-
+- **stripe-projects** — >
+- **upgrade-stripe** — Guide for upgrading Stripe API versions and SDKs
+- **vercel-cli-with-tokens** — Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. "deploy to vercel", "set up vercel", "a
+
+### 规划 / 架构 (`11-planning/`)
+
+- **architecture-decision-records** — Document technical decisions as Architecture Decision Records (ADRs) with context, options considered, and rationale.
+- **architecture-diagram** — Dark-themed SVG architecture/cloud/infra diagrams as HTML."
+- **brutalism** — Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism.
+- **context-engineering** — Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project.
+- **database-design** — Design database schemas — tables, relationships, indexes, constraints, and ORM setup. Covers relational design, normalization, and common patterns.
+- **dispatching-parallel-agents** — Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
+- **executing-plans** — Use when you have a written implementation plan to execute in a separate session with review checkpoints
+- **figma-generate-diagram** — MANDATORY prerequisite — load this skill BEFORE every `generate_diagram` tool call. NEVER call `generate_diagram` directly without loading this skill first. Trigger whenever the user asks to create, g
+- **grill-me** — A relentless interview to sharpen a plan or design.
+- **grill-with-docs** — A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.
+- **idea-refine** — Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a
+- **improve-codebase-architecture** — Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
+- **incremental-implementation** — Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big
+- **mcp-builder** — Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate externa
+- **notion-spec-to-implementation** — Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.
+- **planning-and-task-breakdown** — Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scop
+- **project-analysis-reporting** — Analyze a codebase/project directory and produce structured deliverables — technical analysis, business reports, project books, and product showcase materials. Covers code review, architecture analysi
+- **shipping-and-launch** — Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollb
+- **site-architecture** — When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions "sitemap," "site map," "visual sitemap,
+- **source-driven-development** — Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where c
+- **subagent-driven-development** — Use when executing implementation plans with independent tasks in the current session
+- **test-driven-development** — Use when implementing any feature or bugfix, before writing implementation code
+- **travel-experience-planning** — Plan experiential travel (fishing, farming, harvesting, festivals, trekking) with mandatory checks for seasonal regulations, moratoriums, and local constraints that could invalidate the itinerary.
+- **using-agent-skills** — Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are disco
+- **using-git-worktrees** — Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
+- **using-superpowers** — Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions
+- **verification-before-completion** — Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence
+- **writing-plans** — Use when you have a spec or requirements for a multi-step task, before touching code
+
+### Skill 创作 / Meta (`12-meta/`)
+
+- **create-rule** — >-
+- **create-skill** — >-
+- **plugin-creator** — Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, and baseline placeholders you can edit before publishing or testing. Use wh
+- **plugin-creator-2** — Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use w
+- **skill-creator** — Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill
+- **skill-creator-2** — Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflo
+- **skill-creator-3** — Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflo
+- **skill-installer** — Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (
+- **skill-installer-2** — Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (
+- **writing-skills** — Use when creating new skills, editing existing skills, or verifying skills work before deployment
+
+### 厂商集成 / 平台 (`13-integrations/`)
+
+- **account-handover** — Draft structured handover notes for transitioning a PostHog account from one TAM or CSM to another. Use this skill when a TAM needs to hand over an account, prepare a transition briefing, write handov
+- **algorithmic-art** — Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or
+- **analyzing-experiment-session-replays** — Analyze session replay patterns across experiment variants to understand user behavior differences. Use when the user wants to see how users interact with different experiment variants, identify usabi
+- **appinsights-instrumentation** — Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references. WHEN: how to instrument app, App Insights SDK, telemetry patte
+- **ascii-art** — ASCII art: pyfiglet, cowsay, boxes, image-to-ascii."
+- **assessing-heatmaps** — Assesses what a page's heatmap is telling you and recommends concrete changes. Pulls click / rageclick / scroll-depth data for a URL, names the hot elements by cross-referencing autocapture events on 
+- **auditing-endpoints** — >
+- **auditing-warehouse-data-health** — >
+- **authoring-log-alerts** — >
+- **authoring-signals-scouts** — >
+- **azure-ai** — Use for Azure AI: Search, Speech, OpenAI, Document Intelligence. Helps with search, vector/hybrid search, speech-to-text, text-to-speech, transcription, OCR. WHEN: AI Search, query search, vector sear
+- **azure-aigateway** — Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents. WHEN: semantic caching, token limit, content safety, load balancing, AI model governance, MCP rate limiting, jailb
+- **azure-kusto** — Query and analyze data in Azure Data Explorer (Kusto/ADX) using KQL for log analytics, telemetry, and time series analysis. WHEN: KQL queries, Kusto database queries, Azure Data Explorer, ADX clusters
+- **azure-resource-lookup** — List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like \"list the websites in my subscription\", \"list my web apps\", \"show my app services\", \"list virt
+- **azure-resource-visualizer** — Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources. WHEN: create architecture diagram, visualize Azure resources, 
+- **azure-storage** — Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Answers questions about storage access tiers (hot, cool, cold, archive), when to use each tier,
+- **batch-grill-me** — A relentless interview that asks every frontier question at once, round by round.
+- **blindspot-finder** — A demand-mining meta-skill that interviews the user BEFORE a project starts, surfaces the key questions they cannot ask themselves, then recommends a complete, evidence-backed toolchain of skills / si
+- **brand-guidelines** — Write copy following Sentry brand guidelines. Use when writing UI text, error messages, empty states, onboarding flows, 404 pages, documentation, marketing copy, or any user-facing content. Covers bot
+- **commit** — Use for every request to commit changes or draft a commit message. Creates Sentry-style conventional commits with issue references.
+- **configuring-experiment-rollout** — Configures the rollout shape of a PostHog experiment — the variant split (50/50, 80/20, A/B/C ratios), the overall rollout percentage that gates how many users enter the experiment, and the disambigua
+- **consuming-endpoints-from-client-code** — >
+- **convex** — Routes general Convex requests to the right project skill. Use when the user
+- **convex-create-component** — Builds reusable Convex components with isolated tables and app-facing APIs.
+- **convex-performance-audit** — Audits Convex performance for reads, subscriptions, write contention, and
+- **convex-quickstart** — Creates or adds Convex to an app. Use for new Convex projects, npm create
+- **convex-setup-auth** — Sets up Convex auth, identity mapping, and access control. Use for login, auth
+- **copying-flags-across-projects** — Copy a feature flag from one PostHog project to one or more target projects in the same organization. Use when the user wants to duplicate a flag, promote a flag from staging to production, sync flags
+- **creating-ai-subscription** — >
+- **creating-an-endpoint** — >
+- **creating-replay-vision-scanners** — Guides agents through creating and safely sizing a Replay Vision scanner: choosing the scanner type (monitor/classifier/scorer/summarizer), shaping the RecordingsQuery that selects sessions, and — cru
+- **deploy-model** — Unified Azure OpenAI model deployment skill with intelligent intent-based routing. Handles quick preset deployments, fully customized deployments (version/SKU/capacity/RAI policy), and capacity discov
+- **deploy-to-vercel** — Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
+- **designing-email-templates** — Author, save, and edit email templates in the PostHog workflows library — compose email design JSON with Liquid personalization and create and round-trip-edit templates over MCP. Use when asked to des
+- **diagnosing-ci-and-merge-bottlenecks** — >
+- **diagnosing-endpoint-performance** — >
+- **diagnosing-experiment-results** — Diagnoses bias, anomalies, and strange-looking results on a specific PostHog experiment. Covers empty / 0-exposure experiments, sample ratio mismatch, identity fragmentation, multi-variant exposure, u
+- **diagnosing-failed-warehouse-syncs** — >
+- **diagnosing-missing-recordings** — >
+- **diagnosing-sdk-health** — >
+- **downloading-batch-export-files** — >
+- **entra-agent-id** — Provision Microsoft Entra Agent Identity Blueprints, BlueprintPrincipals, and per-instance Agent Identities via Microsoft Graph, and configure OAuth 2.0 token exchange (fmi_path, OBO, cross-tenant) in
+- **entra-app-registration** — Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration. USE FOR: create app registration, register Azure AD app, configure OAuth, set up authentication, add API per
+- **exploring-autocapture-events** — >
+- **exploring-endpoint-execution-logs** — >
+- **exploring-llm-costs** — >
+- **exploring-llm-evaluations** — >
+- **exploring-signals-scouts** — >
+- **feature-usage-feed** — >
+- **finding-replay-for-issue** — >
+- **finding-sessions-to-watch** — >
+- **finetuning** — Fine-tune models on Azure AI Foundry using SFT (supervised), DPO (preference), or RFT (reinforcement with graders). Covers dataset preparation, training job submission, deployment, and evaluation. USE
+- **firebase-ai-logic-basics** — Official skill for integrating Firebase AI Logic (Gemini API) into web applications. Covers setup, multimodal inference, structured output, and security.
+- **firebase-auth-basics** — Guide for setting up and using Firebase Authentication. Use this skill when the user's app requires user sign-in, user management, or secure data access using auth rules.
+- **firebase-basics** — >-
+- **firebase-crashlytics** — Comprehensive guide for Firebase Crashlytics, including provisioning and SDK usage. Use this skill when the user needs help setting up Crashlytics, adding crash reporting, or using the Crashlytics SDK
+- **firebase-firestore** — >-
+- **firebase-remote-config-basics** — Comprehensive guide for Firebase Remote Config, including template management and SDK usage. Use this skill when the user needs help setting up Remote Config, managing feature flags, or updating app b
+- **formatting-insight-axes** — >
+- **grouping-noisy-errors** — >
+- **inbox-exploration** — >
+- **instrument-integration** — >-
+- **instrument-logs** — >-
+- **investigating-error-issue** — >
+- **investigating-replay** — >
+- **managing-endpoint-versions** — >
+- **managing-experiment-lifecycle** — Guides experiment state transitions: launching, pausing, resuming, ending, shipping variants, archiving, resetting, duplicating, and copying to another project. Covers preconditions, implications for 
+- **managing-path-cleaning-rules** — Inspects URL paths and proposes, tests, orders, and applies project-level path cleaning rules so dynamic segments (numeric IDs, UUIDs, slugs, dates) collapse into readable aliases. Use when the user s
+- **managing-subscriptions** — Manage PostHog subscriptions — scheduled email, Slack, or webhook deliveries of insight or dashboard snapshots, optionally with an AI-written summary attached to each delivery. Use when the user wants
+- **mediabunny** — Multimedia handling with the Mediabunny library
+- **microsoft-foundry** — Deploy, evaluate, fine-tune, and manage Foundry agents end-to-end with azd: hosted agent scaffold/run/deploy, prompt agent create, batch eval, continuous eval, prompt optimizer, Agent Optimizer scaffo
+- **omnibus-instrument-integration** — >-
+- **omnibus-instrument-logs** — >-
+- **parse-xlsx-stdlib** — Parse .xlsx files and generate charts using only Python standard libraries (no pandas, openpyxl, or matplotlib). Useful when the sandbox lacks external dependencies and pip install is blocked.
+- **planning-user-interviews** — Plan a user interview topic in PostHog — pick who to target (cohort, emails, or PostHog distinct IDs), draft what to ask about, and prepare the voice-agent context plus a question list. Use when the u
+- **preset** — Intelligently deploys Azure OpenAI models to optimal regions by analyzing capacity across all available regions. Automatically checks current region first and shows alternatives if needed. USE FOR: qu
+- **prototype** — Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
+- **python-requests-streaming-timeout** — \|
+- **querying-posthog-data** — Required reading before writing any HogQL/SQL or calling execute-sql against PostHog. Use whenever the user wants to search, find, or do complex aggregations PostHog entities (insights, dashboards, co
+- **remotion-best-practices** — Best practices for Remotion
+- **remotion-captions** — Dealing with captions in Remotion
+- **remotion-create** — Creating a new Remotion video
+- **remotion-docs** — Search and fetch Remotion documentation pages
+- **remotion-render** — Best practices for rendering videos
+- **remotion-upgrade** — Upgrade Remotion, its related packages, compatible Mediabunny packages, and installed Remotion Agent Skills. Use when asked to upgrade or update a Remotion project.
+- **scaffold-exercises** — Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course sect
+- **segment-anything-model** — SAM: zero-shot image segmentation via points, boxes, masks."
+- **setting-up-a-data-warehouse-source** — >
+- **setup-gbrain** — Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)"
+- **signals** — >
+- **signals-scout-anomaly-detection** — >
+- **signals-scout-csp-violations** — >
+- **signals-scout-data-pipelines** — >
+- **signals-scout-experiments** — >
+- **signals-scout-general** — >
+- **signals-scout-health-checks** — >
+- **signals-scout-inbox-validation** — >
+- **signals-scout-logs** — >
+- **signals-scout-replay-vision** — >
+- **signals-scout-session-replay** — >
+- **signals-scout-surveys** — >
+- **skills-store** — >-
+- **slack-gif-creator** — Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like "make me a G
+- **suggesting-data-imports** — Use when the user asks about revenue, payments, subscriptions, billing, CRM deals, support tickets, production database tables, or other data that PostHog does not collect natively. Also use when a qu
+- **supabase-postgres-best-practices** — Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.
+- **suppressing-noisy-errors** — >
+- **to-questionnaire** — Turn a decision you can't fully answer into a questionnaire for someone else to fill in.
+- **triaging-error-issues** — >
+- **triaging-visual-review-runs** — >
+- **tuning-incremental-sync-config** — >
+- **working-with-skills** — >-
+- **workload-analysis** — Generate comprehensive workload analysis visualizations for PostHog customer accounts. Use when user requests account analysis, workload breakdown, SDK analysis, spend allocation, or expansion opportu
+- **xcode-project-setup** — Safely modifies Xcode projects (.pbxproj) to add Swift Packages and link files. Use this skill whenever an iOS project needs dependencies installed (e.g. Firebase, Alamofire).
+
+### 金融 / 投资 (`14-finance/`)
+
+- **alphaear-deepear-lite** — Fetch the latest financial signals and transmission-chain analyses from DeepEar Lite. Use when the user needs immediate insights into financial market trends, stock performance factors, and reasoning 
+- **alphaear-logic-visualizer** — Create visualize finance logic diagrams (e.g., Draw.io XML) to explain complex finance transmission chains or finance logic flows.
+- **alphaear-news** — Fetch hot finance news, unified trends, and prediction financial market data. Use when the user needs real-time financial news, trend reports from multiple finance sources (Weibo, Zhihu, WallstreetCN,
+- **alphaear-predictor** — Market prediction skill using Kronos. Use when user needs finance market time-series forecasting or news-aware finance market adjustments.
+- **alphaear-reporter** — Plan, write, and edit professional financial reports; generate finance chart configurations. Use when condensing finance analysis into a structured output.
+- **alphaear-search** — Perform finance web searches and local context searches. Use when the user needs general finance info from the web (Jina/DDG/Baidu) or needs to retrieve finance information from a local document store
+- **alphaear-sentiment** — Analyze finance text sentiment using FinBERT or LLM. Use when the user needs to determine the sentiment (positive/negative/neutral) and score of financial text markets.
+- **alphaear-signal-tracker** — Track finance investment signal evolution and update logic based on new finance market information. Use when monitoring finance signals and determining if they are strengthened, weakened, or falsified
+- **alphaear-stock** — Search A-Share/HK/US finance stock tickers and retrieve finance stock price history. Use when user asks about finance stock codes, recent price changes, or specific company finance stock info.
+- **skill-creator** — Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.
+
+### 其他 / 未分类 (`99-misc/`)
+
+- **ai-service-cost-comparison** — \|
+- **airtable** — Airtable REST API via curl. Records CRUD, filters, upserts.
+- **aliyun-dashscope-video-pipeline** — Aliyun DashScope (Bailian) AI video generation pipeline - text script generation + async video synthesis with polling
+- **apple-reminders** — Apple Reminders via remindctl: add, list, complete."
+- **ascii-video** — ASCII video: convert video/audio to colored ASCII MP4/GIF."
+- **ask-matt** — Ask which skill or flow fits your situation. A router over the skills in this repo.
+- **audiocraft-audio-generation** — AudioCraft: MusicGen text-to-music, AudioGen text-to-sound."
+- **axolotl** — Expert guidance for fine-tuning LLMs with Axolotl - YAML configs, 100+ models, LoRA/QLoRA, DPO/KTO/ORPO/GRPO, multimodal support
+- **blogwatcher** — Monitor blogs and RSS/Atom feeds via blogwatcher-cli tool."
+- **chinese-app-miniprogram-rankings** — >
+- **claude-api** — \|-
+- **claude-code** — Delegate coding to Claude Code CLI (features, PRs)."
+- **claude-handoff** — Hand the current conversation off to a fresh background agent that picks up the work immediately.
+- **codebase-analysis** — >
+- **codebase-inspection** — Inspect codebases w/ pygount: LOC, languages, ratios."
+- **codex** — Delegate coding to OpenAI Codex CLI (features, PRs)."
+- **comfyui** — Generate images, video, and audio with ComfyUI — install, launch, manage nodes/models, run workflows with parameter injection. Uses the official comfy-cli for lifecycle and direct REST/WebSocket API f
+- **cross-platform-product-promotion** — 为开发者产品/AI工具/SaaS写多平台推广文案（知乎、掘金、力扣、Product Hunt、Reddit 等），支持手动发布，避免 spam。
+- **define-goal** — Help the user define a concrete, measurable goal before starting work, especially when they ask to use the goal tool, create a goal, set an objective, clarify success criteria, or turn a fuzzy intenti
+- **deprecation-and-migration** — Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existi
+- **domain-modeling** — Build and sharpen a project's domain model. Use when the user wants to pin down domain terminology or a ubiquitous language, record an architectural decision, or when another skill needs to maintain t
+- **edit-article** — Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft.
+- **electron-desktop-app** — \|
+- **electron-macos-build** — \|
+- **evaluating-llms-harness** — lm-eval-harness: benchmark LLMs (MMLU, GSM8K, etc.)."
+- **excalidraw** — Hand-drawn Excalidraw JSON diagrams (arch, flow, seq)."
+- **findmy** — Track Apple devices/AirTags via FindMy.app on macOS."
+- **fine-tuning-with-trl** — Fine-tune LLMs using reinforcement learning with TRL - SFT for instruction tuning, DPO for preference alignment, PPO/GRPO for reward optimization, and reward model training. Use when need RLHF, align 
+- **godmode** — Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN."
+- **heartmula** — Set up and run HeartMuLa, the open-source music generation model family (Suno-like). Generates full songs from lyrics + tags with multilingual support.
+- **hermes-agent** — Configure, extend, or contribute to Hermes Agent."
+- **hermes-cron-script-timeout-diagnosis** — Systematic workflow for investigating "Script timed out after Ns" errors from Hermes cron jobs that execute data-collection or long-running scripts.
+- **hermes-memory-migration** — Export and migrate Hermes Agent memory/profile files when switching machines or creating backups.
+- **himalaya** — Himalaya CLI: IMAP/SMTP email from terminal."
+- **humanizer** — Humanize text: strip AI-isms and add real voice."
+- **ideation** — Generate project ideas through creative constraints. Use when the user says 'I want to build something', 'give me a project idea', 'I'm bored', 'what should I make', 'inspire me', or any variant of 'I
+- **imessage** — Send and receive iMessages/SMS via the imsg CLI on macOS.
+- **internal-comms** — A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal com
+- **js-tdz-init-order** — Avoid JavaScript Temporal Dead Zone (TDZ) blackscreens in ES modules by correctly ordering init calls relative to let/const declarations.
+- **jupyter-live-kernel** — Iterative Python via live Jupyter kernel (hamelnb)."
+- **jupyter-notebook** — Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` t
+- **kanban-orchestrator** — Decomposition playbook + anti-temptation rules for an orchestrator profile routing work through Kanban. The "don't do the work yourself" rule and the basic lifecycle are auto-injected into every kanba
+- **linear** — Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear.
+- **llama-cpp** — llama.cpp local GGUF inference + HF Hub model discovery.
+- **llm-fine-tuning** — Fine-tune LLMs: framework selection (Unsloth, Axolotl, TRL), training methods (SFT, DPO, PPO, GRPO, LoRA/QLoRA), and experiment tracking with W&B."
+- **llm-inference-serving** — Serve and run LLMs locally: vLLM for high-throughput APIs, llama.cpp for GGUF/CPU inference, Outlines for structured generation, and OBLITERATUS for refusal removal."
+- **local-browser-fallback** — Control the user's local Safari/Chrome on macOS via terminal when the remote browser environment is blocked by IP/geo-restrictions, bot detection, or CAPTCHAs.
+- **local-personal-agent** — \|
+- **macos-computer-use** — \|
+- **macos-development** — Develop on macOS: Electron app building, computer-use desktop automation, and local browser fallback controls."
+- **manim-video** — Manim CE animations: 3Blue1Brown math/algo videos."
+- **maps** — Geocode, POIs, routes, timezones via OpenStreetMap/OSRM."
+- **migrate-to-codex** — Migrate supported instruction files, skills, agents, and MCP config into Codex project and global files.
+- **minecraft-modpack-server** — Set up a modded Minecraft server from a CurseForge/Modrinth server pack zip. Covers NeoForge/Forge install, Java version, JVM tuning, firewall, LAN config, backups, and launch scripts.
+- **notion-knowledge-capture** — Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.
+- **obliteratus** — OBLITERATUS: abliterate LLM refusals (diff-in-means)."
+- **openhue** — Control Philips Hue lights, scenes, rooms via OpenHue CLI."
+- **outlines** — Guarantee valid JSON/XML/code structure during generation, use Pydantic models for type-safe outputs, support local models (Transformers, vLLM), and maximize inference speed with Outlines - dottxt.ai'
+- **p5js** — p5.js sketches: gen art, shaders, interactive, 3D."
+- **pixel-art** — Convert images into retro pixel art with hardware-accurate palettes (NES, Game Boy, PICO-8, C64, etc.), and animate them into short videos. Presets cover arcade, SNES, and 10+ era-correct looks. Use `
+- **pokemon-player** — Play Pokemon games autonomously via headless emulation. Starts a game server, reads structured game state from RAM, makes strategic decisions, and sends button inputs — all from the terminal.
+- **polymarket** — Query Polymarket: markets, prices, orderbooks, history."
+- **pretext** — Use when building creative browser demos with @chenglou/pretext — DOM-free text layout for ASCII art, typographic flow around obstacles, text-as-geometry games, kinetic typography, and text-powered ge
+- **product-promotion-posting** — Cross-platform product promotion workflow for developer and social platforms (Zhihu, Juejin, LeetCode, Product Hunt, Reddit, etc.). Generates per-platform copy, uses browser automation to fill drafts,
+- **project-analysis-reporting** — Create polished, self-contained HTML reports and dashboards for business/project presentations, and discover/validate the user's current project portfolio from sessions and filesystem evidence.
+- **screenshot** — Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific capture capabilities are unavailable and an OS-leve
+- **serving-llms-vllm** — vLLM: high-throughput LLM serving, OpenAI API, quantization."
+- **simplify-code** — Parallel 3-agent cleanup of recent code changes."
+- **social-media-image-sourcing** — 为社交媒体内容寻找和验证配图的工作流。特别适用于微信朋友圈、小红书、Twitter 等平台的配图需求，使用免版权图片源并通过 AI Vision 验证图文匹配度。
+- **songsee** — Audio spectrograms/features (mel, chroma, MFCC) via CLI."
+- **songwriting-and-ai-music** — Songwriting craft and Suno AI music prompts."
+- **speech** — Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.
+- **spike** — Throwaway experiments to validate an idea before build."
+- **teach** — Teach the user a new skill or concept, within this workspace.
+- **teams-meeting-pipeline** — Operate the Teams meeting summary pipeline via Hermes CLI — summarize meetings, inspect pipeline status, replay jobs, manage Microsoft Graph subscriptions."
+- **template-skill** — Replace with description of the skill and when Claude should use it.
+- **terminal-credential-redaction** — 诊断终端工具对敏感凭证的输出脱敏行为，避免误以为凭证文件损坏。
+- **to-spec** — Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.
+- **transcribe** — Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in intervi
+- **triage** — Move issues and external PRs through a state machine of triage roles — categorise, verify, grill if needed, and write agent-ready briefs.
+- **ubiquitous-language** — Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user wants to define domai
+- **unsloth** — Expert guidance for fast fine-tuning with Unsloth - 2-5x faster training, 50-80% less memory, LoRA/QLoRA optimization
+- **user-project-discovery** — Recover and validate the user's current project portfolio when they ask about recent work, send bare paths, or refer to projects by name without context. Avoid guessing from memory alone; reconcile se
+- **wayfinder** — Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
+- **weights-and-biases** — W&B: log ML experiments, sweeps, model registry, dashboards."
+- **writing-beats** — Writing, exploit — assemble raw material into a journey of beats, grounding each term before a beat leans on it.
+- **writing-great-skills** — Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.
+- **xhs-ai-short-drama-operator** — 小红书AI恶搞短剧账号全自动运营流程，含选题、文案、AI绘图提示词、排期、数据反馈优化
+- **youtube-content** — YouTube transcripts to summaries, threads, blogs."
+- **yuanbao** — Yuanbao (元宝) groups: @mention users, query info/members."

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/notion-research-documentation/SKILL.md
+content_hash: 223f7902ec19
+category: 08-research-web

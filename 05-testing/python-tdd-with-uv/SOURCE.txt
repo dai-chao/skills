@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/python-tdd-with-uv/SKILL.md
+content_hash: 308a73c70ccb
+category: 05-testing

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/vercel-agent-skills/skills/vercel-optimize/SKILL.md
+content_hash: 3004ff145ea5
+category: 04-frontend-ui

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/signals-scout-data-pipelines/SKILL.md
+content_hash: 96416b888acb
+category: 13-integrations

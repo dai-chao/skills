@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/all/skills/error-tracking-ruby-on-rails/SKILL.md
+content_hash: 3279711b1958
+category: 09-analytics

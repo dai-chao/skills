@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/assessing-heatmaps/SKILL.md
+content_hash: e9d27f65f7e4
+category: 13-integrations

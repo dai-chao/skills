@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/commit/SKILL.md
+content_hash: 2110c0828f4b
+category: 13-integrations

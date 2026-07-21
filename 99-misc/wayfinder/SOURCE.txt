@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/wayfinder/SKILL.md
+content_hash: 55b9736798c1
+category: 99-misc

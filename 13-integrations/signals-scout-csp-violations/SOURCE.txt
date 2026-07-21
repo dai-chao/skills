@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/signals-scout-csp-violations/SKILL.md
+content_hash: b9ced8f57038
+category: 13-integrations

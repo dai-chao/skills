@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.system/skill-creator/SKILL.md
+content_hash: 17457d1bdbb6
+category: 12-meta

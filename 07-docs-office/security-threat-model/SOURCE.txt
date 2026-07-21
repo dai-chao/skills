@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/security-threat-model/SKILL.md
+content_hash: 6b900c55fae9
+category: 07-docs-office

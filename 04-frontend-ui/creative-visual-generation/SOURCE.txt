@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/creative/creative-visual-generation/SKILL.md
+content_hash: bd06d754c2b8
+category: 04-frontend-ui

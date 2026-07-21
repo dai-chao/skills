@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/productivity/linear/SKILL.md
+content_hash: f7ceb701e3ea
+category: 10-payments-auth

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/axolotl/SKILL.md
+content_hash: b13b6723d2a9
+category: 99-misc

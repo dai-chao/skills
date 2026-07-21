@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/cleaning-up-stale-feature-flags/SKILL.md
+content_hash: f6f2f7712762
+category: 09-analytics

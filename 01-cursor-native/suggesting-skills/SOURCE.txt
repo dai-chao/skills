@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/suggesting-skills/SKILL.md
+content_hash: 72ec3462c517
+category: 01-cursor-native

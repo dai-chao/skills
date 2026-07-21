@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/team/product-led-sales/account-handover/SKILL.md
+content_hash: 36d59c982a27
+category: 13-integrations

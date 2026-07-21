@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/data-science/data-science-toolkit/SKILL.md
+content_hash: b0af93849e4a
+category: 03-code-quality

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/nuxt-3.6/SKILL.md
+content_hash: 0f7d158bd0c5
+category: 09-analytics

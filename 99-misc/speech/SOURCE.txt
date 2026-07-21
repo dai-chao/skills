@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/speech/SKILL.md
+content_hash: 08199a384f55
+category: 99-misc

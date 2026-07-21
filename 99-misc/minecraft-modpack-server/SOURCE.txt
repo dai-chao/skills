@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/gaming/minecraft-modpack-server/SKILL.md
+content_hash: a8d238d49495
+category: 99-misc

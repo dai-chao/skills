@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: firebase-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/firebase-skills/skills/firebase-crashlytics/SKILL.md
+content_hash: f66d8bb403c6
+category: 13-integrations

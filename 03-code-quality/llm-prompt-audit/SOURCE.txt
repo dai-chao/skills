@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/llm-prompt-audit/SKILL.md
+content_hash: d123bc694263
+category: 03-code-quality

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/team/customer-success/posthog-debugger/SKILL.md
+content_hash: 19744232db81
+category: 03-code-quality

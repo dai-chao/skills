@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/managing-subscriptions/SKILL.md
+content_hash: cf5519da32a2
+category: 13-integrations

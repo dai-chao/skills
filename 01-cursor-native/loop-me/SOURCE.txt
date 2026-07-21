@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/in-progress/loop-me/SKILL.md
+content_hash: 460a24cf1dd4
+category: 01-cursor-native

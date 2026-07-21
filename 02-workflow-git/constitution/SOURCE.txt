@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.ghcp-appmod/skills/constitution/SKILL.md
+content_hash: 6f939540396b
+category: 02-workflow-git

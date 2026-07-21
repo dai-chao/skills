@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/grouping-noisy-errors/SKILL.md
+content_hash: 1d0123a94f31
+category: 13-integrations

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/django-perf-review/SKILL.md
+content_hash: 13b7b04af228
+category: 03-code-quality

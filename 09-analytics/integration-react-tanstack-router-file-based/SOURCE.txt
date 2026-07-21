@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/react-tanstack-router-file-based/SKILL.md
+content_hash: 25edc4a1983f
+category: 09-analytics

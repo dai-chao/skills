@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills-cursor/review/SKILL.md
+content_hash: e4af6677596b
+category: 03-code-quality

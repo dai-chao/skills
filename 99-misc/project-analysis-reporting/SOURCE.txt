@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/productivity/project-analysis-reporting/SKILL.md
+content_hash: 7ea93f6f4606
+category: 99-misc

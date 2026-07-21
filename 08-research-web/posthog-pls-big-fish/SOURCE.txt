@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/team/new-business-sales/big-fish-lead/SKILL.md
+content_hash: a9f0e5e033ce
+category: 08-research-web

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/plugins/cache/cursor-public/figma/07316dd2920d61303ca0e52812b31f5f341e7b15/skills/figma-implement-motion/SKILL.md
+content_hash: bf7fe07c4e86
+category: 04-frontend-ui

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/gaming/43farm-heartbeat-executor/SKILL.md
+content_hash: 2e3739355a79
+category: 08-research-web

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/test-driven-development/SKILL.md
+content_hash: 645d3ee7a89e
+category: 05-testing

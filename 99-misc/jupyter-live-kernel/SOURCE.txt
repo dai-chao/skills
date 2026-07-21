@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/jupyter-live-kernel/SKILL.md
+content_hash: df2b91a59a44
+category: 99-misc

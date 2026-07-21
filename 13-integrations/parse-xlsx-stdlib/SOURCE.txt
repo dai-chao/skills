@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/parse-xlsx-stdlib/SKILL.md
+content_hash: 23e3af76b757
+category: 13-integrations

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/network-request-auditing/SKILL.md
+content_hash: f23001600493
+category: 01-cursor-native

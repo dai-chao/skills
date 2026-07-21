@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: design-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/design-skills/skills/claude/SKILL.md
+content_hash: 307af26bc0bf
+category: 08-research-web

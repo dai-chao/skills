@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/misc/scaffold-exercises/SKILL.md
+content_hash: 59066789c6c4
+category: 13-integrations

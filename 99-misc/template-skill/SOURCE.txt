@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/template/SKILL.md
+content_hash: 4d4ab42ef6e2
+category: 99-misc

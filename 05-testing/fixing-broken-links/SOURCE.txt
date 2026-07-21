@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/fixing-broken-links/SKILL.md
+content_hash: a4a862a0bd84
+category: 05-testing

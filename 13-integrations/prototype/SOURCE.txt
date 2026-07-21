@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/prototype/SKILL.md
+content_hash: 86d04d3f9b52
+category: 13-integrations

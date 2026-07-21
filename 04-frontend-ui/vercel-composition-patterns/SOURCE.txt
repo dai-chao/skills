@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/vercel-agent-skills/skills/composition-patterns/SKILL.md
+content_hash: bdf71be24018
+category: 04-frontend-ui

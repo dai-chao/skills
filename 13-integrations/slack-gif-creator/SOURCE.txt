@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/skills/slack-gif-creator/SKILL.md
+content_hash: a66f5f027555
+category: 13-integrations

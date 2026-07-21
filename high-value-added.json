@@ -1,0 +1,1988 @@
+[
+  {
+    "name": "idea-refine",
+    "category": "11-planning",
+    "repo": "addyosmani",
+    "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a"
+  },
+  {
+    "name": "debugging-and-error-recovery",
+    "category": "03-code-quality",
+    "repo": "addyosmani",
+    "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to findin"
+  },
+  {
+    "name": "using-agent-skills",
+    "category": "11-planning",
+    "repo": "addyosmani",
+    "description": "Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are disco"
+  },
+  {
+    "name": "test-driven-development-2",
+    "category": "05-testing",
+    "repo": "addyosmani",
+    "description": "Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to"
+  },
+  {
+    "name": "planning-and-task-breakdown",
+    "category": "11-planning",
+    "repo": "addyosmani",
+    "description": "Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scop"
+  },
+  {
+    "name": "incremental-implementation",
+    "category": "11-planning",
+    "repo": "addyosmani",
+    "description": "Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big"
+  },
+  {
+    "name": "api-and-interface-design",
+    "category": "04-frontend-ui",
+    "repo": "addyosmani",
+    "description": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or es"
+  },
+  {
+    "name": "ci-cd-and-automation",
+    "category": "06-devops-infra",
+    "repo": "addyosmani",
+    "description": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment stra"
+  },
+  {
+    "name": "context-engineering",
+    "category": "11-planning",
+    "repo": "addyosmani",
+    "description": "Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project."
+  },
+  {
+    "name": "frontend-ui-engineering",
+    "category": "04-frontend-ui",
+    "repo": "addyosmani",
+    "description": "Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components, implementing layouts, meeting WCAG accessibility requiremen"
+  },
+  {
+    "name": "shipping-and-launch",
+    "category": "11-planning",
+    "repo": "addyosmani",
+    "description": "Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollb"
+  },
+  {
+    "name": "spec-driven-development",
+    "category": "04-frontend-ui",
+    "repo": "addyosmani",
+    "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague ide"
+  },
+  {
+    "name": "code-review-and-quality",
+    "category": "03-code-quality",
+    "repo": "addyosmani",
+    "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensi"
+  },
+  {
+    "name": "security-and-hardening",
+    "category": "03-code-quality",
+    "repo": "addyosmani",
+    "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sess"
+  },
+  {
+    "name": "deprecation-and-migration",
+    "category": "99-misc",
+    "repo": "addyosmani",
+    "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existi"
+  },
+  {
+    "name": "observability-and-instrumentation",
+    "category": "09-analytics",
+    "repo": "addyosmani",
+    "description": "Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence "
+  },
+  {
+    "name": "interview-me",
+    "category": "04-frontend-ui",
+    "repo": "addyosmani",
+    "description": "Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an"
+  },
+  {
+    "name": "code-simplification",
+    "category": "03-code-quality",
+    "repo": "addyosmani",
+    "description": "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code "
+  },
+  {
+    "name": "doubt-driven-development",
+    "category": "03-code-quality",
+    "repo": "addyosmani",
+    "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (product"
+  },
+  {
+    "name": "source-driven-development",
+    "category": "11-planning",
+    "repo": "addyosmani",
+    "description": "Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where c"
+  },
+  {
+    "name": "performance-optimization",
+    "category": "04-frontend-ui",
+    "repo": "addyosmani",
+    "description": "Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspect performance regressions, when Core Web Vitals or load time"
+  },
+  {
+    "name": "browser-testing-with-devtools",
+    "category": "03-code-quality",
+    "repo": "addyosmani",
+    "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, "
+  },
+  {
+    "name": "git-workflow-and-versioning",
+    "category": "02-workflow-git",
+    "repo": "addyosmani",
+    "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams. Use when cu"
+  },
+  {
+    "name": "documentation-and-adrs",
+    "category": "07-docs-office",
+    "repo": "addyosmani",
+    "description": "Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to "
+  },
+  {
+    "name": "using-git-worktrees",
+    "category": "11-planning",
+    "repo": "superpowers",
+    "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback"
+  },
+  {
+    "name": "test-driven-development",
+    "category": "11-planning",
+    "repo": "superpowers",
+    "description": "Use when implementing any feature or bugfix, before writing implementation code"
+  },
+  {
+    "name": "systematic-debugging-3",
+    "category": "03-code-quality",
+    "repo": "superpowers",
+    "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes"
+  },
+  {
+    "name": "using-superpowers",
+    "category": "11-planning",
+    "repo": "superpowers",
+    "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions"
+  },
+  {
+    "name": "dispatching-parallel-agents",
+    "category": "11-planning",
+    "repo": "superpowers",
+    "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies"
+  },
+  {
+    "name": "executing-plans",
+    "category": "11-planning",
+    "repo": "superpowers",
+    "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints"
+  },
+  {
+    "name": "finishing-a-development-branch",
+    "category": "02-workflow-git",
+    "repo": "superpowers",
+    "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup"
+  },
+  {
+    "name": "brainstorming",
+    "category": "04-frontend-ui",
+    "repo": "superpowers",
+    "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.\""
+  },
+  {
+    "name": "writing-plans",
+    "category": "11-planning",
+    "repo": "superpowers",
+    "description": "Use when you have a spec or requirements for a multi-step task, before touching code"
+  },
+  {
+    "name": "requesting-code-review-2",
+    "category": "03-code-quality",
+    "repo": "superpowers",
+    "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements"
+  },
+  {
+    "name": "receiving-code-review",
+    "category": "03-code-quality",
+    "repo": "superpowers",
+    "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative"
+  },
+  {
+    "name": "writing-skills",
+    "category": "12-meta",
+    "repo": "superpowers",
+    "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment"
+  },
+  {
+    "name": "verification-before-completion",
+    "category": "11-planning",
+    "repo": "superpowers",
+    "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence"
+  },
+  {
+    "name": "subagent-driven-development",
+    "category": "11-planning",
+    "repo": "superpowers",
+    "description": "Use when executing implementation plans with independent tasks in the current session"
+  },
+  {
+    "name": "corporate",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns."
+  },
+  {
+    "name": "paper",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities."
+  },
+  {
+    "name": "ant",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications."
+  },
+  {
+    "name": "gradient",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth."
+  },
+  {
+    "name": "power",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for premium brand experiences."
+  },
+  {
+    "name": "flat",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces."
+  },
+  {
+    "name": "lingo",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces."
+  },
+  {
+    "name": "pacman",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics."
+  },
+  {
+    "name": "spacious",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces."
+  },
+  {
+    "name": "professional",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity."
+  },
+  {
+    "name": "editorial",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences."
+  },
+  {
+    "name": "enterprise",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards."
+  },
+  {
+    "name": "impeccable",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "A modern, graphic, editorial-poster aesthetic — warm and confident — built on alternating cream and burnt orange sections, an amber brand color.\""
+  },
+  {
+    "name": "friendly",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes."
+  },
+  {
+    "name": "terracotta",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "A sun-baked, clay-toned editorial interface built on warm cream surfaces, ink-brown headlines set in a display serif, and a single terracotta accent.\""
+  },
+  {
+    "name": "sleek",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing."
+  },
+  {
+    "name": "dithered",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals."
+  },
+  {
+    "name": "claude",
+    "category": "08-research-web",
+    "repo": "design-skills",
+    "description": "A research-journal aesthetic printed on warm stone — authoritative, editorial, almost achromatic. Pages live on warm ivory parchment (never pure white), with near-black slate as the dominant ink.\""
+  },
+  {
+    "name": "tetris",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts."
+  },
+  {
+    "name": "square",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication."
+  },
+  {
+    "name": "neumorphism",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look."
+  },
+  {
+    "name": "cosmic",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements."
+  },
+  {
+    "name": "codex",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "A radically minimal, blank-canvas interface built as a pure edge-to-edge surface, with almost no color and typography carrying the visual weight. Black serves as the only filled color, the only divide"
+  },
+  {
+    "name": "shadcn",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns."
+  },
+  {
+    "name": "vintage",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography."
+  },
+  {
+    "name": "pulse",
+    "category": "09-analytics",
+    "repo": "design-skills",
+    "description": "Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality."
+  },
+  {
+    "name": "sega",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "A playful, arcade-inspired interface for games — built on the VT323 pixel typeface, hard-edged 0px corners, chunky pill buttons that physically press into solid offset blocks\""
+  },
+  {
+    "name": "basic",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography."
+  },
+  {
+    "name": "geometric",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Geometric, structured design with clean typography, neutral colors, precise shapes, and intuitive layouts that stay out of the way."
+  },
+  {
+    "name": "dramatic",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention."
+  },
+  {
+    "name": "futuristic",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic."
+  },
+  {
+    "name": "riso",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "A playful, joyful, two-color risograph print aesthetic built on a single warm off-white paper surface running through every section\""
+  },
+  {
+    "name": "skeumorphism",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces."
+  },
+  {
+    "name": "agentic",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows."
+  },
+  {
+    "name": "minimal",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus."
+  },
+  {
+    "name": "glassmorphism",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance."
+  },
+  {
+    "name": "clean",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter."
+  },
+  {
+    "name": "expressive",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure."
+  },
+  {
+    "name": "cafe",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience."
+  },
+  {
+    "name": "stitch",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts."
+  },
+  {
+    "name": "storytelling",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys."
+  },
+  {
+    "name": "bento",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces."
+  },
+  {
+    "name": "bold",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts."
+  },
+  {
+    "name": "mono",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic."
+  },
+  {
+    "name": "neon",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces."
+  },
+  {
+    "name": "retro",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements."
+  },
+  {
+    "name": "refined",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes."
+  },
+  {
+    "name": "colorful",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences."
+  },
+  {
+    "name": "claymorphism",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces."
+  },
+  {
+    "name": "immersive",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "An immersive, interactive, exhibit-style interface that blends storytelling, animation, and gamified elements to create a playful, experience-driven journey. The entire app sits on a single continuous"
+  },
+  {
+    "name": "creative",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects."
+  },
+  {
+    "name": "modern",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products."
+  },
+  {
+    "name": "fiction",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "A playful, energetic, cartoonesque interface inspired by friendly children's-book illustrations — warm cream backgrounds, big bold custom display typography, saturated brand color blocks, thick black "
+  },
+  {
+    "name": "contemporary",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts."
+  },
+  {
+    "name": "roku",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows."
+  },
+  {
+    "name": "levels",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed."
+  },
+  {
+    "name": "neobrutalism",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces."
+  },
+  {
+    "name": "artistic",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces."
+  },
+  {
+    "name": "matrix",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "A cyber-slick, dark-only Matrix-inspired interface defined by minimalist fashion, high-tech digital elements\""
+  },
+  {
+    "name": "premium",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language."
+  },
+  {
+    "name": "material",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns."
+  },
+  {
+    "name": "sketch-2",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "A friendly, hand-drawn sketch interface inspired by pencil illustrations on warm cream paper. Soft teal brand accents, hand-written display headings, rounded pill controls.\""
+  },
+  {
+    "name": "perspective",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism."
+  },
+  {
+    "name": "doodle",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel."
+  },
+  {
+    "name": "vibrant",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy."
+  },
+  {
+    "name": "fantasy",
+    "category": "04-frontend-ui",
+    "repo": "design-skills",
+    "description": "Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements."
+  },
+  {
+    "name": "brutalism",
+    "category": "11-planning",
+    "repo": "design-skills",
+    "description": "Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism."
+  },
+  {
+    "name": "alphaear-reporter",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Plan, write, and edit professional financial reports; generate finance chart configurations. Use when condensing finance analysis into a structured output."
+  },
+  {
+    "name": "alphaear-search",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Perform finance web searches and local context searches. Use when the user needs general finance info from the web (Jina/DDG/Baidu) or needs to retrieve finance information from a local document store"
+  },
+  {
+    "name": "alphaear-sentiment",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Analyze finance text sentiment using FinBERT or LLM. Use when the user needs to determine the sentiment (positive/negative/neutral) and score of financial text markets."
+  },
+  {
+    "name": "alphaear-predictor",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Market prediction skill using Kronos. Use when user needs finance market time-series forecasting or news-aware finance market adjustments."
+  },
+  {
+    "name": "alphaear-deepear-lite",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Fetch the latest financial signals and transmission-chain analyses from DeepEar Lite. Use when the user needs immediate insights into financial market trends, stock performance factors, and reasoning "
+  },
+  {
+    "name": "alphaear-logic-visualizer",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Create visualize finance logic diagrams (e.g., Draw.io XML) to explain complex finance transmission chains or finance logic flows."
+  },
+  {
+    "name": "skill-creator",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets."
+  },
+  {
+    "name": "alphaear-stock",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Search A-Share/HK/US finance stock tickers and retrieve finance stock price history. Use when user asks about finance stock codes, recent price changes, or specific company finance stock info."
+  },
+  {
+    "name": "alphaear-signal-tracker",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Track finance investment signal evolution and update logic based on new finance market information. Use when monitoring finance signals and determining if they are strengthened, weakened, or falsified"
+  },
+  {
+    "name": "alphaear-news",
+    "category": "14-finance",
+    "repo": "finance",
+    "description": "Fetch hot finance news, unified trends, and prediction financial market data. Use when the user needs real-time financial news, trend reports from multiple finance sources (Weibo, Zhihu, WallstreetCN,"
+  },
+  {
+    "name": "pair-agent",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Pair a remote AI agent with your browser. (gstack)"
+  },
+  {
+    "name": "benchmark",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Performance regression detection using the browse daemon. (gstack)"
+  },
+  {
+    "name": "design-html",
+    "category": "04-frontend-ui",
+    "repo": "gstack",
+    "description": "Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)\""
+  },
+  {
+    "name": "plan-tune",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)\""
+  },
+  {
+    "name": "design-shotgun",
+    "category": "04-frontend-ui",
+    "repo": "gstack",
+    "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)\""
+  },
+  {
+    "name": "plan-design-review",
+    "category": "04-frontend-ui",
+    "repo": "gstack",
+    "description": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)"
+  },
+  {
+    "name": "autoplan",
+    "category": "04-frontend-ui",
+    "repo": "gstack",
+    "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)"
+  },
+  {
+    "name": "design-consultation",
+    "category": "08-research-web",
+    "repo": "gstack",
+    "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... "
+  },
+  {
+    "name": "learn",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Manage project learnings."
+  },
+  {
+    "name": "freeze",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Restrict file edits to a specific directory for the session. (gstack)"
+  },
+  {
+    "name": "ios-qa",
+    "category": "05-testing",
+    "repo": "gstack",
+    "description": "Live-device iOS QA for SwiftUI apps. (gstack)"
+  },
+  {
+    "name": "careful",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Safety guardrails for destructive commands. (gstack)"
+  },
+  {
+    "name": "cso",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Chief Security Officer mode. (gstack)"
+  },
+  {
+    "name": "canary",
+    "category": "09-analytics",
+    "repo": "gstack",
+    "description": "Post-deploy canary monitoring. (gstack)"
+  },
+  {
+    "name": "gstack-openclaw-investigate",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working."
+  },
+  {
+    "name": "gstack-openclaw-office-hours",
+    "category": "04-frontend-ui",
+    "repo": "gstack",
+    "description": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written."
+  },
+  {
+    "name": "gstack-openclaw-ceo-review",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan."
+  },
+  {
+    "name": "gstack-openclaw-retro",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and gro"
+  },
+  {
+    "name": "open-gstack-browser",
+    "category": "08-research-web",
+    "repo": "gstack",
+    "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in."
+  },
+  {
+    "name": "diagram",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)\""
+  },
+  {
+    "name": "investigate",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Systematic debugging with root cause investigation. (gstack)"
+  },
+  {
+    "name": "context-restore",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Restore working context saved earlier by /context-save. (gstack)"
+  },
+  {
+    "name": "document-release",
+    "category": "07-docs-office",
+    "repo": "gstack",
+    "description": "Post-ship documentation update. (gstack)"
+  },
+  {
+    "name": "health",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Code quality dashboard. (gstack)"
+  },
+  {
+    "name": "gstack-upgrade",
+    "category": "05-testing",
+    "repo": "gstack",
+    "description": "Upgrade gstack to the latest version."
+  },
+  {
+    "name": "land-and-deploy",
+    "category": "06-devops-infra",
+    "repo": "gstack",
+    "description": "Land and deploy workflow. (gstack)"
+  },
+  {
+    "name": "codex",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "OpenAI Codex CLI wrapper — three modes. (gstack)"
+  },
+  {
+    "name": "spec",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Turn vague intent into a precise, executable spec in five phases. (gstack)"
+  },
+  {
+    "name": "qa-2",
+    "category": "05-testing",
+    "repo": "gstack",
+    "description": "Systematically QA test a web application and fix bugs found. (gstack)"
+  },
+  {
+    "name": "scrape",
+    "category": "08-research-web",
+    "repo": "gstack",
+    "description": "Pull data from a web page. (gstack)"
+  },
+  {
+    "name": "qa-only",
+    "category": "05-testing",
+    "repo": "gstack",
+    "description": "Report-only QA testing. (gstack)"
+  },
+  {
+    "name": "skillify",
+    "category": "08-research-web",
+    "repo": "gstack",
+    "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)"
+  },
+  {
+    "name": "sync-gbrain",
+    "category": "08-research-web",
+    "repo": "gstack",
+    "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)"
+  },
+  {
+    "name": "setup-browser-cookies",
+    "category": "08-research-web",
+    "repo": "gstack",
+    "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)"
+  },
+  {
+    "name": "ios-fix",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Autonomous iOS bug fixer. (gstack)"
+  },
+  {
+    "name": "hackernews-frontpage",
+    "category": "08-research-web",
+    "repo": "gstack",
+    "description": "Scrape the Hacker News front page (titles, points, comment counts)."
+  },
+  {
+    "name": "ios-clean",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)\""
+  },
+  {
+    "name": "setup-gbrain",
+    "category": "13-integrations",
+    "repo": "gstack",
+    "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)\""
+  },
+  {
+    "name": "document-generate",
+    "category": "07-docs-office",
+    "repo": "gstack",
+    "description": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)"
+  },
+  {
+    "name": "review",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Pre-landing PR review. (gstack)"
+  },
+  {
+    "name": "plan-ceo-review",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "CEO/founder-mode plan review. (gstack)"
+  },
+  {
+    "name": "office-hours",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "YC Office Hours — two modes. (gstack)"
+  },
+  {
+    "name": "landing-report",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Read-only queue dashboard for workspace-aware ship. (gstack)"
+  },
+  {
+    "name": "retro",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Weekly engineering retrospective. (gstack)"
+  },
+  {
+    "name": "ios-design-review",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Visual design audit for iOS apps on real hardware. (gstack)"
+  },
+  {
+    "name": "devex-review",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Live developer experience audit. (gstack)"
+  },
+  {
+    "name": "benchmark-models",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Cross-model benchmark for gstack skills. (gstack)"
+  },
+  {
+    "name": "plan-devex-review",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Interactive developer experience plan review. (gstack)"
+  },
+  {
+    "name": "ios-sync",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)"
+  },
+  {
+    "name": "browse",
+    "category": "05-testing",
+    "repo": "gstack",
+    "description": "Fast headless browser for QA testing and site dogfooding. (gstack)"
+  },
+  {
+    "name": "design-review",
+    "category": "05-testing",
+    "repo": "gstack",
+    "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)\""
+  },
+  {
+    "name": "ship",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)\""
+  },
+  {
+    "name": "plan-eng-review",
+    "category": "03-code-quality",
+    "repo": "gstack",
+    "description": "Eng manager-mode plan review. (gstack)"
+  },
+  {
+    "name": "guard",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Full safety mode: destructive command warnings + directory-scoped edits. (gstack)\""
+  },
+  {
+    "name": "make-pdf",
+    "category": "07-docs-office",
+    "repo": "gstack",
+    "description": "Turn any markdown file into a publication-quality PDF. (gstack)"
+  },
+  {
+    "name": "unfreeze",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)"
+  },
+  {
+    "name": "context-save",
+    "category": "02-workflow-git",
+    "repo": "gstack",
+    "description": "Save working context. (gstack)"
+  },
+  {
+    "name": "setup-deploy",
+    "category": "06-devops-infra",
+    "repo": "gstack",
+    "description": "Configure deployment settings for /land-and-deploy."
+  },
+  {
+    "name": "entra-agent-id",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Provision Microsoft Entra Agent Identity Blueprints, BlueprintPrincipals, and per-instance Agent Identities via Microsoft Graph, and configure OAuth 2.0 token exchange (fmi_path, OBO, cross-tenant) in"
+  },
+  {
+    "name": "azure-diagnostics",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage. WHEN: debug production issues, troubleshoot app service, app service high CPU, app service deploy"
+  },
+  {
+    "name": "azure-reliability",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Assess and improve the reliability posture of PaaS Applications (Azure Functions and Azure App Service). Scans deployed resources for zone redundancy, ZRS storage, health probes, and multi-region fail"
+  },
+  {
+    "name": "azure-cost",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Azure cost management: query costs, forecast spending, optimize to reduce waste. WHEN: \\\"Azure costs\\\", \\\"Azure bill\\\", \\\"cost breakdown\\\", \\\"how much am I spending\\\", \\\"forecast spending\\\", \\\"optimiz"
+  },
+  {
+    "name": "azure-compliance",
+    "category": "03-code-quality",
+    "repo": "azure-skills",
+    "description": "Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks. WHEN: "
+  },
+  {
+    "name": "microsoft-foundry",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Deploy, evaluate, fine-tune, and manage Foundry agents end-to-end with azd: hosted agent scaffold/run/deploy, prompt agent create, batch eval, continuous eval, prompt optimizer, Agent Optimizer scaffo"
+  },
+  {
+    "name": "deploy-model",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Unified Azure OpenAI model deployment skill with intelligent intent-based routing. Handles quick preset deployments, fully customized deployments (version/SKU/capacity/RAI policy), and capacity discov"
+  },
+  {
+    "name": "preset",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Intelligently deploys Azure OpenAI models to optimal regions by analyzing capacity across all available regions. Automatically checks current region first and shows alternatives if needed. USE FOR: qu"
+  },
+  {
+    "name": "capacity",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Discovers available Azure OpenAI model capacity across regions and projects. Analyzes quota limits, compares availability, and recommends optimal deployment locations based on capacity requirements. U"
+  },
+  {
+    "name": "customize",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Interactive guided deployment flow for Azure OpenAI models with full customization control. Step-by-step selection of model version, SKU (GlobalStandard/Standard/ProvisionedManaged), capacity, RAI pol"
+  },
+  {
+    "name": "finetuning",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Fine-tune models on Azure AI Foundry using SFT (supervised), DPO (preference), or RFT (reinforcement with graders). Covers dataset preparation, training job submission, deployment, and evaluation. USE"
+  },
+  {
+    "name": "appinsights-instrumentation",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configuration references. WHEN: how to instrument app, App Insights SDK, telemetry patte"
+  },
+  {
+    "name": "azure-quotas",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection. WHEN: \\\"check quotas\\\", \\\"service limits\\\", \\\"current usage\\\", \\\"request quota inc"
+  },
+  {
+    "name": "azure-deploy",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Execute Azure deployments for ALREADY-PREPARED applications that have existing .azure/deployment-plan.md and infrastructure files. DO NOT use this skill when the user asks to CREATE a new application "
+  },
+  {
+    "name": "azure-compute",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Azure VM/VMSS router. WHEN: create / provision / deploy / spin-up VM, recommend VM size, compare VM pricing, VMSS, scale set, autoscale, burstable, lightweight server, website, backend, GPU, machine l"
+  },
+  {
+    "name": "azure-validate",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), RBAC role assignments, managed identity permissions, and prerequisites before depl"
+  },
+  {
+    "name": "azure-resource-lookup",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like \\\"list the websites in my subscription\\\", \\\"list my web apps\\\", \\\"show my app services\\\", \\\"list virt"
+  },
+  {
+    "name": "entra-app-registration",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration. USE FOR: create app registration, register Azure AD app, configure OAuth, set up authentication, add API per"
+  },
+  {
+    "name": "azure-kubernetes",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API server, Azure CNI O"
+  },
+  {
+    "name": "azure-kubernetes-automatic-readiness",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Assess Kubernetes workloads and cluster configuration for AKS Automatic compatibility. Identifies incompatibilities, generates fixes, and guides migration from AKS Standard to AKS Automatic. WHEN: mig"
+  },
+  {
+    "name": "azure-aigateway",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents. WHEN: semantic caching, token limit, content safety, load balancing, AI model governance, MCP rate limiting, jailb"
+  },
+  {
+    "name": "azure-ai",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Use for Azure AI: Search, Speech, OpenAI, Document Intelligence. Helps with search, vector/hybrid search, speech-to-text, text-to-speech, transcription, OCR. WHEN: AI Search, query search, vector sear"
+  },
+  {
+    "name": "azure-storage",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Answers questions about storage access tiers (hot, cool, cold, archive), when to use each tier,"
+  },
+  {
+    "name": "python-appservice-deploy",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Deploy Python (Flask/Django/FastAPI) code to Azure App Service Linux. WHEN: \\\"Flask App Service\\\", \\\"Django App Service\\\", \\\"FastAPI App Service\\\", \\\"deploy Python to App Service\\\". DO NOT USE FOR: Co"
+  },
+  {
+    "name": "airunway-aks-setup",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Set up AI Runway on AKS — from bare cluster to running model. Covers cluster verification, controller install, GPU assessment, provider setup, and first deployment. WHEN: \\\"setup AI Runway\\\", \\\"onboar"
+  },
+  {
+    "name": "azure-cloud-migrate",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Assess and migrate cross-cloud workloads to Azure with reports and code conversion. Supports Lambda→Functions, Beanstalk/Heroku/App Engine→App Service, Fargate/Kubernetes/Cloud Run/Spring Boot→Contain"
+  },
+  {
+    "name": "azure-messaging",
+    "category": "02-workflow-git",
+    "repo": "azure-skills",
+    "description": "Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration problems. "
+  },
+  {
+    "name": "azure-upgrade",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Assess and upgrade Azure workloads between plans, tiers, or SKUs, or modernize Azure SDK dependencies in source code. WHEN: upgrade Consumption to Flex Consumption, upgrade Azure Functions plan, chang"
+  },
+  {
+    "name": "azure-enterprise-infra-planner",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource "
+  },
+  {
+    "name": "azure-prepare",
+    "category": "06-devops-infra",
+    "repo": "azure-skills",
+    "description": "Prepare azd-based Azure projects for deployment: generates azure.yaml, infrastructure (Bicep/Terraform), and Dockerfiles for the Azure Developer CLI (azd) workflow. USE ONLY when the user explicitly w"
+  },
+  {
+    "name": "azure-resource-visualizer",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between individual resources. WHEN: create architecture diagram, visualize Azure resources, "
+  },
+  {
+    "name": "azure-kusto",
+    "category": "13-integrations",
+    "repo": "azure-skills",
+    "description": "Query and analyze data in Azure Data Explorer (Kusto/ADX) using KQL for log analytics, telemetry, and time series analysis. WHEN: KQL queries, Kusto database queries, Azure Data Explorer, ADX clusters"
+  },
+  {
+    "name": "remotion-captions",
+    "category": "13-integrations",
+    "repo": "remotion-skills",
+    "description": "Dealing with captions in Remotion"
+  },
+  {
+    "name": "mediabunny",
+    "category": "13-integrations",
+    "repo": "remotion-skills",
+    "description": "Multimedia handling with the Mediabunny library"
+  },
+  {
+    "name": "remotion-best-practices",
+    "category": "13-integrations",
+    "repo": "remotion-skills",
+    "description": "Best practices for Remotion"
+  },
+  {
+    "name": "remotion-create",
+    "category": "13-integrations",
+    "repo": "remotion-skills",
+    "description": "Creating a new Remotion video"
+  },
+  {
+    "name": "remotion-markup",
+    "category": "04-frontend-ui",
+    "repo": "remotion-skills",
+    "description": "Best practices for writing Remotion React Markup"
+  },
+  {
+    "name": "remotion-docs",
+    "category": "13-integrations",
+    "repo": "remotion-skills",
+    "description": "Search and fetch Remotion documentation pages"
+  },
+  {
+    "name": "remotion-render",
+    "category": "13-integrations",
+    "repo": "remotion-skills",
+    "description": "Best practices for rendering videos"
+  },
+  {
+    "name": "remotion-upgrade",
+    "category": "13-integrations",
+    "repo": "remotion-skills",
+    "description": "Upgrade Remotion, its related packages, compatible Mediabunny packages, and installed Remotion Agent Skills. Use when asked to upgrade or update a Remotion project."
+  },
+  {
+    "name": "remotion-saas",
+    "category": "04-frontend-ui",
+    "repo": "remotion-skills",
+    "description": "Building video apps with Remotion - framework, rendering and Player advice"
+  },
+  {
+    "name": "remotion-interactivity",
+    "category": "04-frontend-ui",
+    "repo": "remotion-skills",
+    "description": "Best practices for writing Remotion animations that stay intuitive for agents and editable in Remotion Studio Visual Mode."
+  },
+  {
+    "name": "supabase-postgres-best-practices",
+    "category": "13-integrations",
+    "repo": "supabase-skills",
+    "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations."
+  },
+  {
+    "name": "supabase",
+    "category": "04-frontend-ui",
+    "repo": "supabase-skills",
+    "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, "
+  },
+  {
+    "name": "design-taste-frontend-v1",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default is `design-taste-frontend` (v2 experimental), which is a substantial rewrite. Use this v1 insta"
+  },
+  {
+    "name": "gpt-taste",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento gri"
+  },
+  {
+    "name": "stitch-design-taste",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perp"
+  },
+  {
+    "name": "full-output-enforcement",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged outp"
+  },
+  {
+    "name": "image-to-code",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as close"
+  },
+  {
+    "name": "imagegen-frontend-mobile",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comforta"
+  },
+  {
+    "name": "imagegen-frontend-web",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE — generate ONE separate horizontal image FOR EVERY section. A landing page"
+  },
+  {
+    "name": "minimalist-ui",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows."
+  },
+  {
+    "name": "design-taste-frontend",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design system"
+  },
+  {
+    "name": "industrial-brutalist-ui",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dash"
+  },
+  {
+    "name": "redesign-existing-projects",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS "
+  },
+  {
+    "name": "brandkit",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark"
+  },
+  {
+    "name": "high-end-visual-design",
+    "category": "04-frontend-ui",
+    "repo": "taste-skill",
+    "description": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make"
+  },
+  {
+    "name": "competitor-profiling",
+    "category": "08-research-web",
+    "repo": "marketingskills",
+    "description": "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this comp"
+  },
+  {
+    "name": "marketing-psychology",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,'"
+  },
+  {
+    "name": "ads",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROA"
+  },
+  {
+    "name": "programmatic-seo",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location p"
+  },
+  {
+    "name": "offers",
+    "category": "04-frontend-ui",
+    "repo": "marketingskills",
+    "description": "When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guarantee design, scarcity/urgency, naming, and payment structur"
+  },
+  {
+    "name": "site-architecture",
+    "category": "11-planning",
+    "repo": "marketingskills",
+    "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \"sitemap,\" \"site map,\" \"visual sitemap,"
+  },
+  {
+    "name": "video",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' "
+  },
+  {
+    "name": "cold-email",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails"
+  },
+  {
+    "name": "marketing-loops",
+    "category": "01-cursor-native",
+    "repo": "marketingskills",
+    "description": "When the user wants to set up a recurring, self-running marketing workflow — a repeatable loop an AI agent runs on a cadence (weekly, daily, on a trigger) rather than a one-off task. Also use when the"
+  },
+  {
+    "name": "marketing-council",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants multiple expert perspectives on a marketing question — a simulated board of advisors staffed by legendary marketers (Seth Godin, David Ogilvy, Eugene Schwartz, April Dunford, Rory "
+  },
+  {
+    "name": "seo-audit",
+    "category": "03-code-quality",
+    "repo": "marketingskills",
+    "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tag"
+  },
+  {
+    "name": "copywriting",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user s"
+  },
+  {
+    "name": "ab-testing",
+    "category": "04-frontend-ui",
+    "repo": "marketingskills",
+    "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test th"
+  },
+  {
+    "name": "product-marketing",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my ta"
+  },
+  {
+    "name": "sms",
+    "category": "10-payments-auth",
+    "repo": "marketingskills",
+    "description": "When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use wh"
+  },
+  {
+    "name": "paywalls",
+    "category": "08-research-web",
+    "repo": "marketingskills",
+    "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"fe"
+  },
+  {
+    "name": "launch",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'b"
+  },
+  {
+    "name": "referrals",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mo"
+  },
+  {
+    "name": "signup",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimizat"
+  },
+  {
+    "name": "emails",
+    "category": "01-cursor-native",
+    "repo": "marketingskills",
+    "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurtur"
+  },
+  {
+    "name": "public-relations",
+    "category": "08-research-web",
+    "repo": "marketingskills",
+    "description": "When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy (not pull requests). Also use when the user mentions 'PR,' 'public relations,' 'pre"
+  },
+  {
+    "name": "copy-editing",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' "
+  },
+  {
+    "name": "directory-submissions",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions \"directory sub"
+  },
+  {
+    "name": "co-marketing",
+    "category": "08-research-web",
+    "repo": "marketingskills",
+    "description": "When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use when the user says 'co-marketing,' 'partner marketing,' 'joint campaign,' 'who sho"
+  },
+  {
+    "name": "marketing-ideas",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strat"
+  },
+  {
+    "name": "image",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the us"
+  },
+  {
+    "name": "content-strategy",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"con"
+  },
+  {
+    "name": "schema",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \"schema markup,\" \"structured data,\" \"JSON-LD,\" \"rich snippets,\" \"schema.or"
+  },
+  {
+    "name": "social",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms, or wants to do social listening and engageme"
+  },
+  {
+    "name": "ad-creative",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad c"
+  },
+  {
+    "name": "customer-research",
+    "category": "08-research-web",
+    "repo": "marketingskills",
+    "description": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \"customer research,\" \"ICP research,\" \"talk to customers,\" \"analyze transcripts,\" \"customer intervie"
+  },
+  {
+    "name": "marketing-plan",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions \"marketing plan,\" \"growth plan,\" \"GTM plan,\" \"go-to-market"
+  },
+  {
+    "name": "popups",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimizati"
+  },
+  {
+    "name": "free-tools",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions \"engineering as marketing,\" \"free t"
+  },
+  {
+    "name": "ai-seo",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine opti"
+  },
+  {
+    "name": "lead-magnets",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" "
+  },
+  {
+    "name": "sales-enablement",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behin"
+  },
+  {
+    "name": "aso",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,"
+  },
+  {
+    "name": "cro",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms."
+  },
+  {
+    "name": "community-marketing",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit,"
+  },
+  {
+    "name": "revops",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'l"
+  },
+  {
+    "name": "pricing",
+    "category": "09-analytics",
+    "repo": "marketingskills",
+    "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase"
+  },
+  {
+    "name": "churn-prevention",
+    "category": "10-payments-auth",
+    "repo": "marketingskills",
+    "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' '"
+  },
+  {
+    "name": "onboarding",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,"
+  },
+  {
+    "name": "competitors",
+    "category": "07-docs-office",
+    "repo": "marketingskills",
+    "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparis"
+  },
+  {
+    "name": "analytics",
+    "category": "09-analytics",
+    "repo": "marketingskills",
+    "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"conversion tracking,\" \"event trackin"
+  },
+  {
+    "name": "prospecting",
+    "category": "08-research-web",
+    "repo": "marketingskills",
+    "description": "When the user wants to find, qualify, and build a list of prospects to reach out to — across B2B SaaS, general B2B, or local small businesses. Also use when the user mentions \"prospecting,\" \"build a p"
+  },
+  {
+    "name": "firebase-auth-basics",
+    "category": "13-integrations",
+    "repo": "firebase-skills",
+    "description": "Guide for setting up and using Firebase Authentication. Use this skill when the user's app requires user sign-in, user management, or secure data access using auth rules."
+  },
+  {
+    "name": "firebase-ai-logic-basics",
+    "category": "13-integrations",
+    "repo": "firebase-skills",
+    "description": "Official skill for integrating Firebase AI Logic (Gemini API) into web applications. Covers setup, multimodal inference, structured output, and security."
+  },
+  {
+    "name": "xcode-project-setup",
+    "category": "13-integrations",
+    "repo": "firebase-skills",
+    "description": "Safely modifies Xcode projects (.pbxproj) to add Swift Packages and link files. Use this skill whenever an iOS project needs dependencies installed (e.g. Firebase, Alamofire)."
+  },
+  {
+    "name": "firebase-remote-config-basics",
+    "category": "13-integrations",
+    "repo": "firebase-skills",
+    "description": "Comprehensive guide for Firebase Remote Config, including template management and SDK usage. Use this skill when the user needs help setting up Remote Config, managing feature flags, or updating app b"
+  },
+  {
+    "name": "firebase-security-rules-auditor",
+    "category": "03-code-quality",
+    "repo": "firebase-skills",
+    "description": "A skill to evaluate how secure Firestore security rules are. Use this when Firestore security rules are updated to ensure that the generated rules are extremely secure and robust."
+  },
+  {
+    "name": "firebase-hosting-basics",
+    "category": "06-devops-infra",
+    "repo": "firebase-skills",
+    "description": "Skill for working with Firebase Hosting (Classic). Use this when you want to deploy static web apps, Single Page Apps (SPAs), or simple microservices. Do NOT use for Firebase App Hosting."
+  },
+  {
+    "name": "firebase-firestore",
+    "category": "13-integrations",
+    "repo": "firebase-skills",
+    "description": ">-"
+  },
+  {
+    "name": "firebase-basics",
+    "category": "13-integrations",
+    "repo": "firebase-skills",
+    "description": ">-"
+  },
+  {
+    "name": "firebase-data-connect",
+    "category": "06-devops-infra",
+    "repo": "firebase-skills",
+    "description": "Builds and deploys Firebase SQL Connect (aka Firebase Data Connect) backends with PostgreSQL securely. Use when designing schemas with tables and relations, writing authorized queries and mutations, c"
+  },
+  {
+    "name": "firebase-crashlytics",
+    "category": "13-integrations",
+    "repo": "firebase-skills",
+    "description": "Comprehensive guide for Firebase Crashlytics, including provisioning and SDK usage. Use this skill when the user needs help setting up Crashlytics, adding crash reporting, or using the Crashlytics SDK"
+  },
+  {
+    "name": "firebase-app-hosting-basics",
+    "category": "06-devops-infra",
+    "repo": "firebase-skills",
+    "description": "Deploy and manage web apps with Firebase App Hosting. Use this skill when deploying Next.js/Angular apps with backends."
+  },
+  {
+    "name": "impeccable-2",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-3",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-4",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-5",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-6",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-7",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-8",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-9",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-10",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-11",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-12",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-13",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "impeccable-14",
+    "category": "04-frontend-ui",
+    "repo": "impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers we"
+  },
+  {
+    "name": "ui-ux-pro-max",
+    "category": "04-frontend-ui",
+    "repo": "ui-ux-pro-max",
+    "description": "UI/UX design intelligence for web and mobile. Searchable local database with 84 styles, 192 color palettes, 74 font pairings, 192 product types, 98 UX guidelines, 104 icon entries, 16 GSAP motion pres"
+  },
+  {
+    "name": "design",
+    "category": "04-frontend-ui",
+    "repo": "ui-ux-pro-max",
+    "description": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js),"
+  },
+  {
+    "name": "banner-design",
+    "category": "04-frontend-ui",
+    "repo": "ui-ux-pro-max",
+    "description": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Faceboo"
+  },
+  {
+    "name": "ui-styling",
+    "category": "04-frontend-ui",
+    "repo": "ui-ux-pro-max",
+    "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user inter"
+  },
+  {
+    "name": "brand",
+    "category": "04-frontend-ui",
+    "repo": "ui-ux-pro-max",
+    "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides."
+  },
+  {
+    "name": "slides",
+    "category": "04-frontend-ui",
+    "repo": "ui-ux-pro-max",
+    "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies."
+  },
+  {
+    "name": "design-system",
+    "category": "04-frontend-ui",
+    "repo": "ui-ux-pro-max",
+    "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creati"
+  },
+  {
+    "name": "caveman-compress",
+    "category": "01-cursor-native",
+    "repo": "caveman",
+    "description": ">"
+  },
+  {
+    "name": "cavecrew",
+    "category": "01-cursor-native",
+    "repo": "caveman",
+    "description": ">"
+  },
+  {
+    "name": "caveman-stats",
+    "category": "01-cursor-native",
+    "repo": "caveman",
+    "description": ">"
+  },
+  {
+    "name": "caveman",
+    "category": "01-cursor-native",
+    "repo": "caveman",
+    "description": ">"
+  },
+  {
+    "name": "caveman-help",
+    "category": "01-cursor-native",
+    "repo": "caveman",
+    "description": ">"
+  },
+  {
+    "name": "caveman-review",
+    "category": "03-code-quality",
+    "repo": "caveman",
+    "description": ">"
+  },
+  {
+    "name": "caveman-commit",
+    "category": "02-workflow-git",
+    "repo": "caveman",
+    "description": ">"
+  },
+  {
+    "name": "convex-setup-auth",
+    "category": "13-integrations",
+    "repo": "convex-skills",
+    "description": "Sets up Convex auth, identity mapping, and access control. Use for login, auth"
+  },
+  {
+    "name": "convex-migration-helper",
+    "category": "06-devops-infra",
+    "repo": "convex-skills",
+    "description": "Plans Convex schema and data migrations with widen-migrate-narrow and"
+  },
+  {
+    "name": "convex",
+    "category": "13-integrations",
+    "repo": "convex-skills",
+    "description": "Routes general Convex requests to the right project skill. Use when the user"
+  },
+  {
+    "name": "convex-create-component",
+    "category": "13-integrations",
+    "repo": "convex-skills",
+    "description": "Builds reusable Convex components with isolated tables and app-facing APIs."
+  },
+  {
+    "name": "convex-quickstart",
+    "category": "13-integrations",
+    "repo": "convex-skills",
+    "description": "Creates or adds Convex to an app. Use for new Convex projects, npm create"
+  },
+  {
+    "name": "convex-performance-audit",
+    "category": "13-integrations",
+    "repo": "convex-skills",
+    "description": "Audits Convex performance for reads, subscriptions, write contention, and"
+  },
+  {
+    "name": "core",
+    "category": "01-cursor-native",
+    "repo": "agent-browser",
+    "description": "Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill, type, select), extr"
+  },
+  {
+    "name": "agentcore",
+    "category": "06-devops-infra",
+    "repo": "agent-browser",
+    "description": "Run agent-browser on AWS Bedrock AgentCore cloud browsers. Use when the user wants to use AgentCore, run browser automation on AWS, use a cloud browser with AWS credentials, or needs a managed browser"
+  },
+  {
+    "name": "vercel-sandbox",
+    "category": "04-frontend-ui",
+    "repo": "agent-browser",
+    "description": "Run agent-browser + Chrome inside Vercel Sandbox microVMs for browser automation from any Vercel-deployed app. Use when the user needs browser automation in a Vercel app (Next.js, SvelteKit, Nuxt, Rem"
+  },
+  {
+    "name": "slack",
+    "category": "01-cursor-native",
+    "repo": "agent-browser",
+    "description": "Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search conversations, or autom"
+  },
+  {
+    "name": "derive-client",
+    "category": "01-cursor-native",
+    "repo": "agent-browser",
+    "description": "Reverse-engineer a website's internal API by recording browser traffic into a HAR file, then generate a standalone client or CLI that calls the endpoints directly, with no browser needed after the fir"
+  },
+  {
+    "name": "electron",
+    "category": "01-cursor-native",
+    "repo": "agent-browser",
+    "description": "Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with an Electron app, autom"
+  },
+  {
+    "name": "dogfood",
+    "category": "05-testing",
+    "repo": "agent-browser",
+    "description": "Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to \"dogfood\", \"QA\", \"exploratory test\", \"find issues\", \"bug hunt\", \"test this app/site/pla"
+  },
+  {
+    "name": "agent-browser",
+    "category": "01-cursor-native",
+    "repo": "agent-browser",
+    "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web a"
+  },
+  {
+    "name": "shadcn-2",
+    "category": "04-frontend-ui",
+    "repo": "shadcn-ui",
+    "description": "Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI, including chat interfaces. Provides project context, component docs, and usage examples. Appli"
+  },
+  {
+    "name": "migrate-radix-to-base",
+    "category": "04-frontend-ui",
+    "repo": "shadcn-ui",
+    "description": "Migrates React projects and components from Radix UI to Base UI. Use when asked to migrate from radix, move to base-ui, convert radix primitives, or switch a shadcn project's base library. Handles sin"
+  }
+]

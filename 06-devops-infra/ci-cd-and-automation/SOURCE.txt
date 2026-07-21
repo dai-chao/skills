@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: addyosmani
+source_path: /Users/chao/Desktop/skills/_tmp_sources/addyosmani/skills/ci-cd-and-automation/SKILL.md
+content_hash: 6a3b179662eb
+category: 06-devops-infra

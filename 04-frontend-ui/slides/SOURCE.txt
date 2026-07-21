@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: ui-ux-pro-max
+source_path: /Users/chao/Desktop/skills/_tmp_sources/ui-ux-pro-max/.claude/skills/slides/SKILL.md
+content_hash: 1d017fa64446
+category: 04-frontend-ui

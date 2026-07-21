@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/exploring-llm-costs/SKILL.md
+content_hash: b639ba30aa83
+category: 13-integrations

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/github-auth/SKILL.md
+content_hash: 33a2b8344ccb
+category: 10-payments-auth

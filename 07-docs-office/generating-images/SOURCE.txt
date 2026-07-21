@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/generating-images/SKILL.md
+content_hash: 9e579fe60398
+category: 07-docs-office

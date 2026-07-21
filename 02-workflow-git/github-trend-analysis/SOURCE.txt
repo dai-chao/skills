@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/github-trend-analysis/SKILL.md
+content_hash: f39852a3f482
+category: 02-workflow-git

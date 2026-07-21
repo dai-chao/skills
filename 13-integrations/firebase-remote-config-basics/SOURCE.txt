@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: firebase-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/firebase-skills/skills/firebase-remote-config-basics/SKILL.md
+content_hash: f2cac188ec84
+category: 13-integrations

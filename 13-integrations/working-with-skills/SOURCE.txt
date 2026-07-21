@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/working-with-skills/SKILL.md
+content_hash: 8e020f83c11f
+category: 13-integrations

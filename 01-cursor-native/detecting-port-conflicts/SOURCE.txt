@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/detecting-port-conflicts/SKILL.md
+content_hash: e353a817bad6
+category: 01-cursor-native

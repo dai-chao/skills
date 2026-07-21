@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/backend-security-audit/SKILL.md
+content_hash: ae1bba56e2c9
+category: 03-code-quality

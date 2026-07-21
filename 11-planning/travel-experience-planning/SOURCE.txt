@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/travel-experience-planning/SKILL.md
+content_hash: 4eb771e45e0e
+category: 11-planning

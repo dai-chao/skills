@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/ascii-art/SKILL.md
+content_hash: 6effe4a791a2
+category: 13-integrations

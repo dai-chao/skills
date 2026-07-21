@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.curated/notion-knowledge-capture/SKILL.md
+content_hash: b8b8f6d133f9
+category: 99-misc

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/parallel-ci-triage/SKILL.md
+content_hash: 50124107883f
+category: 02-workflow-git

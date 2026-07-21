@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/hermes-memory-migration/SKILL.md
+content_hash: 79a72c1bab2d
+category: 99-misc

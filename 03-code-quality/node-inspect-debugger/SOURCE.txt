@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/node-inspect-debugger/SKILL.md
+content_hash: 17c347a75a11
+category: 03-code-quality

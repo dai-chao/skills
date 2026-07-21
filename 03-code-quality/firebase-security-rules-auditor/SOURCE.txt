@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: firebase-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/firebase-skills/skills/firebase-security-rules-auditor/SKILL.md
+content_hash: 7e76cc605d13
+category: 03-code-quality

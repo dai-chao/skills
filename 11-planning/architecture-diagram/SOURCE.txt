@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/architecture-diagram/SKILL.md
+content_hash: bb3ba92d1f5c
+category: 11-planning

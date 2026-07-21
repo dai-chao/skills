@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/exploring-llm-evaluations/SKILL.md
+content_hash: aaf99019262e
+category: 13-integrations

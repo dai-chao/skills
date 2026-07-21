@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/gaming/43farm-gameplay-pitfalls/SKILL.md
+content_hash: d6d9c6fb0edb
+category: 08-research-web

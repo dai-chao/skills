@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/dark-mode-testing/SKILL.md
+content_hash: aeeda4408caa
+category: 01-cursor-native

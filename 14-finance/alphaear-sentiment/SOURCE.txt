@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: finance
+source_path: /Users/chao/Desktop/skills/_tmp_sources/finance/skills/alphaear-sentiment/SKILL.md
+content_hash: 479014311f91
+category: 14-finance

@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: azure-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/azure-skills/.github/plugins/azure-skills/skills/azure-quotas/SKILL.md
+content_hash: 3b58fea24244
+category: 06-devops-infra

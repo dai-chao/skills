@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/diagnosing-bugs/SKILL.md
+content_hash: 77f2ef3211c1
+category: 03-code-quality

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/in-progress/claude-handoff/SKILL.md
+content_hash: 6c855abc75dc
+category: 99-misc

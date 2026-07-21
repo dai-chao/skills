@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/auditing-performance/SKILL.md
+content_hash: bc32ded73347
+category: 08-research-web

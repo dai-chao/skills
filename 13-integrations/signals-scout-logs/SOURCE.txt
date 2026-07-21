@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/signals-scout-logs/SKILL.md
+content_hash: 1828864c8590
+category: 13-integrations

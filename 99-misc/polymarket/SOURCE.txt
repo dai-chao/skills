@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/polymarket/SKILL.md
+content_hash: 17acfc208955
+category: 99-misc

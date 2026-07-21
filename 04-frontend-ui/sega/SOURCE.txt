@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: design-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/design-skills/skills/sega/SKILL.md
+content_hash: 47c5cdab1278
+category: 04-frontend-ui

@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: finance
+source_path: /Users/chao/Desktop/skills/_tmp_sources/finance/skills/alphaear-signal-tracker/SKILL.md
+content_hash: d1c4bcd0af9d
+category: 14-finance

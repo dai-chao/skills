@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/gaming/pokemon-player/SKILL.md
+content_hash: 963c8221ca29
+category: 99-misc

@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/comfyui/SKILL.md
+content_hash: e3de58d87324
+category: 99-misc

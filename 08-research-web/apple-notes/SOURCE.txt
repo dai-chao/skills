@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/apple-notes/SKILL.md
+content_hash: 233a3ad81fae
+category: 08-research-web

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/reviewing-code/SKILL.md
+content_hash: 9da9bea2b57c
+category: 03-code-quality

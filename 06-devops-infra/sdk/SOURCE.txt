@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills-cursor/sdk/SKILL.md
+content_hash: 6bc18c0bbbbc
+category: 06-devops-infra

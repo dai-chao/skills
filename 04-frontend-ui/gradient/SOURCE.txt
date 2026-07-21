@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: design-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/design-skills/skills/gradient/SKILL.md
+content_hash: 2e50eb41cde2
+category: 04-frontend-ui

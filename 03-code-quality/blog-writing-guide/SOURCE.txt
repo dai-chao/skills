@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/blog-writing-guide/SKILL.md
+content_hash: 144f0f7e75f1
+category: 03-code-quality

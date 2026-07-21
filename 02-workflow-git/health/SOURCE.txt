@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/health/SKILL.md
+content_hash: da751d72e543
+category: 02-workflow-git

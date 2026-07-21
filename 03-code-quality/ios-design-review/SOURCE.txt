@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/ios-design-review/SKILL.md
+content_hash: 7e910f5879b9
+category: 03-code-quality

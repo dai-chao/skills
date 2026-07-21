@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/debugging-local-replay/SKILL.md
+content_hash: f45ab0c9fd9a
+category: 03-code-quality

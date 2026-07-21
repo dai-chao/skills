@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/code-simplifier/SKILL.md
+content_hash: 595875cf4d50
+category: 03-code-quality

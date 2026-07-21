@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/misc/migrate-to-shoehorn/SKILL.md
+content_hash: ac04b3f45105
+category: 05-testing

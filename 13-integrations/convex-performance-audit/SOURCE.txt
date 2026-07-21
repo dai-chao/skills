@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: convex-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/convex-skills/skills/convex-performance-audit/SKILL.md
+content_hash: 526ea3285fc4
+category: 13-integrations

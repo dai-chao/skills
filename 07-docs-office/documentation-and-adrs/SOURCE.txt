@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: addyosmani
+source_path: /Users/chao/Desktop/skills/_tmp_sources/addyosmani/skills/documentation-and-adrs/SKILL.md
+content_hash: e858e2365af5
+category: 07-docs-office

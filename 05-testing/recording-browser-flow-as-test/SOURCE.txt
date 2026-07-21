@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/recording-browser-flow-as-test/SKILL.md
+content_hash: 21591bea841d
+category: 05-testing

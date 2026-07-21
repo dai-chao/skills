@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/anthropics-skills/skills/internal-comms/SKILL.md
+content_hash: 965e18658e8c
+category: 99-misc

@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: gstack
+source_path: /Users/chao/Desktop/skills/_tmp_sources/gstack/land-and-deploy/SKILL.md
+content_hash: c0e496e6a10a
+category: 06-devops-infra

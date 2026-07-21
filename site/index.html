@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skill Café — Agent Skills 目录</title>
+  <meta name="description" content="搜索、浏览、下载 Agent Skills。热门、排名、最近更新一站搞定。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="top-strip">
+    Skill Café · 精选 Agent Skills 合集
+    <span> — 搜索 · 排名 · 一键下载</span>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#" data-view="home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>Skill Café</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#explore" data-view="explore" data-tab="all">探索</a></li>
+        <li><a href="#rank" data-view="explore" data-tab="rank">排名</a></li>
+        <li><a href="#hot" data-view="explore" data-tab="hot">热门</a></li>
+        <li><a href="#recent" data-view="explore" data-tab="recent">最近更新</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn btn-ghost-dark hide-sm" type="button" data-view="explore" data-tab="all">浏览全部</button>
+        <button class="btn btn-dark" type="button" id="btnFocusSearch">搜索</button>
+        <button class="nav-toggle" type="button" id="navToggle" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <div class="view active" id="view-home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="hero-kicker">Agent Skills Directory</div>
+            <h1>像点单一样，找到你的下一个 Skill</h1>
+            <p class="hero-lead">
+              温暖咖啡馆气质的目录站：搜索、排名、热门与最近更新，一键下载单个 skill 到本地。
+            </p>
+            <div class="hero-cta">
+              <button class="btn btn-primary btn-lg" type="button" data-view="explore" data-tab="all">开始探索</button>
+              <button class="btn btn-outline btn-lg" type="button" data-view="explore" data-tab="rank">查看排行榜</button>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="合集概览">
+            <div>
+              <h2>今日特调</h2>
+              <p>按内容去重的精选技能包，覆盖 Cursor、工程方法论、设计、营销与云集成。</p>
+            </div>
+            <div class="stat-row">
+              <div class="stat"><strong id="statTotal">—</strong><span>Skills</span></div>
+              <div class="stat"><strong id="statCats">—</strong><span>分类</span></div>
+              <div class="stat"><strong id="statHot">—</strong><span>热门 Top</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>热门精选</h2>
+              <p>按热度分排序 · 安装量与新鲜度加权</p>
+            </div>
+            <button class="btn btn-outline" type="button" data-view="explore" data-tab="hot">查看更多</button>
+          </div>
+          <div class="grid" id="homeHot"></div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="container">
+          <h2>排行榜 · Rewards 时刻</h2>
+          <p>金标留给真正出众的 skill。按人气排名，挑出最值得先装的那一杯。</p>
+          <div class="band-actions">
+            <button class="btn btn-on-dark" type="button" data-view="explore" data-tab="rank">打开排名</button>
+            <button class="btn btn-outline-on-dark" type="button" data-view="explore" data-tab="recent">最近更新</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>最近更新</h2>
+              <p>刚烘培出炉的技能包</p>
+            </div>
+            <button class="btn btn-outline" type="button" data-view="explore" data-tab="recent">全部最近</button>
+          </div>
+          <div class="grid" id="homeRecent"></div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>人气排名 Top 10</h2>
+              <p>Gold 留给前三名</p>
+            </div>
+          </div>
+          <div class="rank-list" id="homeRank"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- EXPLORE -->
+    <div class="view" id="view-explore">
+      <div class="subnav">
+        <div class="container subnav-inner" role="tablist">
+          <button class="tab active" type="button" data-tab="all" role="tab">全部</button>
+          <button class="tab" type="button" data-tab="rank" role="tab">排名</button>
+          <button class="tab" type="button" data-tab="hot" role="tab">热门</button>
+          <button class="tab" type="button" data-tab="recent" role="tab">最近更新</button>
+        </div>
+      </div>
+
+      <div class="container toolbar">
+        <div class="toolbar-row">
+          <div class="search-wrap">
+            <label for="searchInput" aria-hidden="true">⌕</label>
+            <input id="searchInput" type="search" placeholder="搜索 skill 名称、描述、分类…" autocomplete="off" />
+          </div>
+          <select id="categoryFilter" class="filter-select" aria-label="分类筛选">
+            <option value="">全部分类</option>
+          </select>
+          <select id="sortSelect" class="filter-select" aria-label="排序">
+            <option value="rank">按排名</option>
+            <option value="hot">按热门</option>
+            <option value="recent">按最近更新</option>
+            <option value="name">按名称</option>
+          </select>
+        </div>
+        <div class="result-meta" id="resultMeta">加载中…</div>
+      </div>
+
+      <section class="section" style="padding-top:0">
+        <div class="container">
+          <div id="exploreGrid" class="grid"></div>
+          <div id="exploreRank" class="rank-list" hidden></div>
+          <div id="exploreEmpty" class="state-box" hidden>
+            <strong>没有找到相关 skill</strong>
+            试试别的关键词，或清空筛选。
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>About</h3>
+          <p>Skill Café 是本机 Agent Skills 合集的前端目录。视觉系统灵感来自 Starbucks 设计规范：暖奶油画布、四阶绿与金色仪式感。</p>
+        </div>
+        <div>
+          <h3>Browse</h3>
+          <ul>
+            <li><a href="#" data-view="explore" data-tab="all">全部 Skills</a></li>
+            <li><a href="#" data-view="explore" data-tab="rank">排行榜</a></li>
+            <li><a href="#" data-view="explore" data-tab="hot">热门</a></li>
+            <li><a href="#" data-view="explore" data-tab="recent">最近更新</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Install</h3>
+          <p>下载后复制到 <code style="color:#dfc49d">~/.cursor/skills/</code> 或项目 <code style="color:#dfc49d">.cursor/skills/</code> 即可启用。</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© Skill Café · Local skills directory</span>
+        <span id="footerStamp">—</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="frap" type="button" id="frapBtn" title="回到搜索" aria-label="搜索">⌕</button>
+
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" type="button" id="modalClose" aria-label="关闭">×</button>
+      <h2 id="modalTitle">Skill</h2>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-meta" id="modalMeta"></div>
+      <pre class="modal-preview" id="modalPreview">加载预览…</pre>
+      <div class="modal-actions">
+        <button class="btn btn-primary" type="button" id="modalDownload">下载 Skill</button>
+        <button class="btn btn-outline" type="button" id="modalDownloadMd">仅下载 SKILL.md</button>
+        <button class="btn btn-ghost-dark" type="button" id="modalClose2">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: marketingskills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/marketingskills/skills/marketing-psychology/SKILL.md
+content_hash: 50553ef10326
+category: 07-docs-office

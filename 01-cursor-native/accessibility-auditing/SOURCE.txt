@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/accessibility-auditing/SKILL.md
+content_hash: 5fd9826b8184
+category: 01-cursor-native

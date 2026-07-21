@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/autonomous-ai-agents/hermes-development/SKILL.md
+content_hash: 6294ff49cbbb
+category: 05-testing

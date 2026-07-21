@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/tailing-build-output/SKILL.md
+content_hash: 0adba11d4b4c
+category: 01-cursor-native

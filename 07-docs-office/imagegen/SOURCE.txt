@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/openai-skills/skills/.system/imagegen/SKILL.md
+content_hash: fc5ac954d87a
+category: 07-docs-office

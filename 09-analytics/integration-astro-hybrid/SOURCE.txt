@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/posthog/integration/skills/astro-hybrid/SKILL.md
+content_hash: 52bc7e12755f
+category: 09-analytics

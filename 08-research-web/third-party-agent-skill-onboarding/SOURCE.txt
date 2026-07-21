@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/third-party-agent-skill-onboarding/SKILL.md
+content_hash: 98dde776a188
+category: 08-research-web

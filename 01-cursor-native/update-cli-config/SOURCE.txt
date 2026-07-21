@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.cursor/skills-cursor/update-cli-config/SKILL.md
+content_hash: 6577ab36c2e1
+category: 01-cursor-native

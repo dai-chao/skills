@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/dspy/SKILL.md
+content_hash: 1e5d0d675f6e
+category: 08-research-web

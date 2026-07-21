@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/creating-experiments/SKILL.md
+content_hash: a23cfded6360
+category: 09-analytics

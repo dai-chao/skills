@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/investigating-error-issue/SKILL.md
+content_hash: 28f0eb47edb1
+category: 13-integrations

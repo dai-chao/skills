@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/verifying-markdown-formatting/SKILL.md
+content_hash: 17c112c884ae
+category: 07-docs-office

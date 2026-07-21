@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/adding-api-docs/SKILL.md
+content_hash: 3ca829df90e8
+category: 07-docs-office

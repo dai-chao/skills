@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/converting-css-to-tailwind/SKILL.md
+content_hash: b17408196359
+category: 04-frontend-ui

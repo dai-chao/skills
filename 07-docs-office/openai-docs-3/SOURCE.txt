@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.codex/skills/.system/openai-docs/SKILL.md
+content_hash: 23f978a8e891
+category: 07-docs-office

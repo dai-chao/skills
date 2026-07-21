@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/in-progress/setup-ts-deep-modules/SKILL.md
+content_hash: 094772d2084b
+category: 08-research-web

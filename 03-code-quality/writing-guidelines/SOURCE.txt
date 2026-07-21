@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/vercel-agent-skills/skills/writing-guidelines/SKILL.md
+content_hash: 29f58ed0b13c
+category: 03-code-quality

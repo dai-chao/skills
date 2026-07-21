@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/gaming/43farm-cron-recovery/SKILL.md
+content_hash: c9a15f353a71
+category: 08-research-web

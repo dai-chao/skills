@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/engineering/tdd/SKILL.md
+content_hash: a78e613a3673
+category: 05-testing

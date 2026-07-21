@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/social-media/xhs-ai-short-drama-operator/SKILL.md
+content_hash: c55a8be890e5
+category: 99-misc

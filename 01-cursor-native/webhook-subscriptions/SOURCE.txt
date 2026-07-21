@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/devops/webhook-subscriptions/SKILL.md
+content_hash: b9c36377cdc3
+category: 01-cursor-native

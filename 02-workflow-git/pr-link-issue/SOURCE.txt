@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/pr-link-issue/SKILL.md
+content_hash: 737ae2bdb9bd
+category: 02-workflow-git

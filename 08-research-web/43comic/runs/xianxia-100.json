@@ -1,0 +1,1314 @@
+{
+  "series": "碎星海仙侠志",
+  "worldBible": "碎星海为三界裂缝汇聚之处，星屑坠海化灵，门派争夺「星汐」以图飞升。正道悬衡宗、邪道赤烬教对峙，散修与灵兽杂居岛屿。各集独立短故事，偶见同名地点与传闻串场；调性玄幻爽感兼人情执念，忌血腥细描。",
+  "params": {
+    "gridType": "grid_6",
+    "artStylePreset": "ink",
+    "storyboardStyle": "creative",
+    "protagonistGender": "auto"
+  },
+  "episodes": [
+    {
+      "n": 1,
+      "title": "潮生剑",
+      "storyText": "碎星海上，年轻剑修阿潮捡到一把被浪磨亮的断剑。入夜，剑身浮出旧日主人影像，求他把剑送回悬衡宗塔下。途遇赤烬教弟子抢夺星汐，断剑擅自出鞘挡住邪火。他咬牙拔剑，一剑劈开浪花封住敌手退路。黎明把断剑插回塔下石缝，浪声像在道谢；潮水里多出一柄未署名的新剑。"
+    },
+    {
+      "n": 2,
+      "title": "灯鱼渡",
+      "storyText": "迷雾渔岛上，采药人小筠误入灯鱼群，灯鱼只肯带心无妄念者穿过雾航。她想起哥哥吞伪丹后失明，心乱灯灭。小筠把药囊沉海，只留清心药，灯鱼重新亮起，引她到对岸旧医寮。屋内轻咳——失明的哥哥正守着半成品真丹，等她带回一味人间药草。"
+    },
+    {
+      "n": 3,
+      "title": "石约",
+      "storyText": "悬衡宗外门弟子石行看守禁碑，碑上刻着「不得妄动」。某夜石碑裂出细缝，漏出小星灵求他保守秘密三天。赤烬教夜探外门，他用星尘幻假碑影骗走探子，手背却刻上星纹。第三日小星灵散成光雨入碑：守约者，亦可破禁。禁碑缝合，星纹仍热。"
+    },
+    {
+      "n": 4,
+      "title": "鹤不归",
+      "storyText": "老散修白翁养通灵白鹤，每年清明飞回碎星海等故人。今年鹤迟迟不归，他循残羽找到半毁阵台，少年正用鹤羽催阵求渡劫。白翁把自己残存寿元丹捏碎洒进阵中，白鹤破雾叼走阵心火种。渡劫成假象，少年保住命；鹤落肩上，羽上沾着陈年茶香。"
+    },
+    {
+      "n": 5,
+      "title": "雨市换骨",
+      "storyText": "碎星海雨市只在暴雨时开摊，买卖「一日之命」。剑姬青霜拿半枚命签换换骨散洗锁灵咒。摊主说代价是今夜之前的记忆。她签下名，咒散骨轻，却忘了为何入海。雨停市散，腰间另半签刻着自己的字：明日再来，记得恨谁。雾里有人招手，她不认得，却觉得该拔剑。"
+    },
+    {
+      "n": 6,
+      "title": "潮灯寨",
+      "storyText": "潮灯寨每夜点燃百盏蚌灯指路。少年阿杰发现一盏灯不灭也不动，跟着走出礁石迷路圈，遇到被困的商船。船主酬他星汐碎晶，阿杰却只取一滴灯油——那灯一夜之间竟生出细小的灯苗人形，轻声叫他「掌灯人」。"
+    },
+    {
+      "n": 7,
+      "title": "盐骨渡",
+      "storyText": "盐客阿禾背盐过盐骨渡，渡口鬼修索「过路魂」。她把盐袋打开，盐粒在月光下排成护阵，鬼修退开。次日渡口立起盐冢，冢顶插着她掉落的草绳，风吹作笑声。"
+    },
+    {
+      "n": 8,
+      "title": "星汐债",
+      "storyText": "赌徒陆沉欠赤烬教一笔星汐债，期限到夜。他潜入悬衡宗外廊偷碑文拓片抵债，却遇见巡夜女修。两人僵持时天降流星雨，拓片自燃成灰，债契也燃尽。女修说：有些债，星空已替你还了。"
+    },
+    {
+      "n": 9,
+      "title": "雾港刀",
+      "storyText": "雾港铸刀匠把女儿的乳名铸进刀柄。刀被海盗抢走，女儿病危。铸刀匠提空鞘走进雾，以身为砧唤回刀魂。刀穿雾归来，刃上全是锈，柄上乳名却亮着。女儿退烧，匠人倒在门槛，笑着说刀回家了。"
+    },
+    {
+      "n": 10,
+      "title": "海祠狸",
+      "storyText": "小岛海祠里住着一只报恩狸妖，每逢渔季替渔人补网。新来的捕妖人要拆祠，狸妖变作孩童挡在门前。渔人们放下叉，改把新网挂上祠檐。捕妖人空手而归，夜里梦见狸妖把一枚潮珠塞进他靴里：别再来了。"
+    },
+    {
+      "n": 11,
+      "title": "折帆夜",
+      "storyText": "商船折帆困在暗礁。账房先生阿算不会水，却用账本纸叠成纸船载着罗盘漂去求援。纸船遇灯鱼，灯鱼驮回真正的救援船。事后阿算发现账本少了一页——那页写着他偷偷记下的一句：愿人皆有回航。"
+    },
+    {
+      "n": 12,
+      "title": "礁心琴",
+      "storyText": "盲琴师在礁心洞中弹琴，星汐随音聚散。赤烬教想夺走琴弦炼器，琴师弹断最后一根弦，把自己的听力换回流光护住洞口。他再也听不见海，却摸到洞壁新生的琴纹在振动。"
+    },
+    {
+      "n": 13,
+      "title": "悬衡雨",
+      "storyText": "外门弟子在悬衡雨中跑腿送信，雨点会拷问心意。他心里装着「想回家」三个字，雨却放他过门——原来宗门早知他根骨不行，此信是师父写的出山许可。雨停，信封里掉出一颗回乡用的温石。"
+    },
+    {
+      "n": 14,
+      "title": "赤烬契",
+      "storyText": "少年误签赤烬契，指尖出现燃纹。老仆用自己余温压住燃纹一夜，纹移到仆人手背。天亮少年醒来，老仆已成灰烬人形的温暖石像，掌心刻着：契可转，心不可卖。"
+    },
+    {
+      "n": 15,
+      "title": "采星人",
+      "storyText": "采星人夜里用竹竿捞落星，卖给散修。这夜他捞到会说话的星子，求他把自己扔回天。他犹豫后照做，第二天竹竿梢头长出一片不会落的小星叶，够他吃一年安稳饭。"
+    },
+    {
+      "n": 16,
+      "title": "潮音寺",
+      "storyText": "潮音寺钟声能安抚暴走灵兽。小沙弥撞钟时漏了一拍，灵兽冲进僧寮。他改用梆子补上节奏，灵兽伏地而眠。方丈把梆子交给他：有时缺的一拍，比圆满的钟更救人。"
+    },
+    {
+      "n": 17,
+      "title": "沉香舟",
+      "storyText": "沉香舟载着病修去药屿，船底漏香。船娘用自己头发浸香堵住裂缝，发尽船到。病修痊愈回来，送她一匣生发丹，她却把丹撒进海里：发会再长，香却不能回头。"
+    },
+    {
+      "n": 18,
+      "title": "碑下猫",
+      "storyText": "禁碑下卧着一只石猫，摸它头可问一事。书生问「如何高中」，石猫不语；改问「娘亲可安」，石猫眨眼，远处传来家信车铃声。书生顿悟：有些问题，答案不在名利。"
+    },
+    {
+      "n": 19,
+      "title": "墨潮卷",
+      "storyText": "画师画碎星海，画中潮水真的漫出纸面。他忙用空白宣纸吸墨，救出将被卷走的路人。画毁了，他在废纸边写：宁画假海，不淹真人。翌日照样支摊，只改画晴空。"
+    },
+    {
+      "n": 20,
+      "title": "梭鱼信",
+      "storyText": "恋人隔海，托梭鱼传信。梭鱼被赤烬教截走，改信诱敌。女修识破字迹僵硬，回信只写一个「等」。男修见字即退，避过埋伏。梭鱼后来自己游回，腹中还是那封未改的原信。"
+    },
+    {
+      "n": 21,
+      "title": "晒盐女",
+      "storyText": "晒盐女发现盐田里长出透明花，摘下可照见人真心。公子来求花求婚，花里映出他眼里的地契。她把花投回盐田，田中万花齐谢，只留一朵朝她开的小小白花。"
+    },
+    {
+      "n": 22,
+      "title": "夜渔火",
+      "storyText": "夜渔人点火诱鱼，火中跳出火灵求「灭我一次真灭」。他捧水去灭，火灵化作温暖手套贴在他冻伤的手上。此后他改白天打渔，夜里只留一盏小灯给人指路。"
+    },
+    {
+      "n": 23,
+      "title": "龟背路",
+      "storyText": "巨龟每隔十年浮出碎星海当桥。赶路的母女迟到，龟已欲沉。小女孩把随身糖饼放龟鼻上，龟多停一刻。上岸后糖饼不见，龟甲上多了一块糖色花纹。"
+    },
+    {
+      "n": 24,
+      "title": "风铎阵",
+      "storyText": "山门风铎乱鸣示警。弟子以为大敌，冲出去却见一群逃难孩童。风铎其实是在报「需救援」。他们收剑开门，风铎恢复齐声，像松了一口气。"
+    },
+    {
+      "n": 25,
+      "title": "雪荼瓶",
+      "storyText": "药瓶雪荼能冻住毒性半日。游医把最后的雪荼给了中毒的仇家孩子。仇家提刀又放下，留下半袋米：债记下，命先还你。"
+    },
+    {
+      "n": 26,
+      "title": "竹筏咒",
+      "storyText": "竹筏被下坠沉咒，越划越低。筏上书生把科举文章烧掉当柴，火光破咒。他笑：文章可再写，人沉了就没了。灰烬里浮起未燃完的一句：天下为公。"
+    },
+    {
+      "n": 27,
+      "title": "影修袖",
+      "storyText": "影修能藏人于袖。逃生时袖中挤满村民，他袖口撕裂，自己的影子漏出去引开追兵。天亮村民平安，影修只剩半寸影子，却说够用了。"
+    },
+    {
+      "n": 28,
+      "title": "苔灯桥",
+      "storyText": "古桥苔藓会发光，照见过桥人谎言。官差逼供，桥上全暗；乞儿说实话要饭，苔灯大亮。官差扔下文书：这案，桥已审完。"
+    },
+    {
+      "n": 29,
+      "title": "霜牙谷",
+      "storyText": "霜牙谷灵狼护着受伤的猎户一夜。猎户醒来把猎弓折断留下，狼把一枚掉落的牙放在弓旁当别离礼。谷外猎人们从此绕道。"
+    },
+    {
+      "n": 30,
+      "title": "船钉谣",
+      "storyText": "修船女哼船钉谣，钉子便钉得稳。海盗强迫她封死商船舱门，她改唱葬曲，钉子尽数退出。海盗船自己散架，她靠木板漂回港，嘴里还哼着修船的调子。"
+    },
+    {
+      "n": 31,
+      "title": "月蚀杯",
+      "storyText": "月蚀时饮月蚀杯可梦见未来一刻。将军梦见自己屠城，惊醒把城门打开放百姓走。天亮敌军退去，他摔碎月蚀杯：宁可不知未来，也不做梦见的人。"
+    },
+    {
+      "n": 32,
+      "title": "茧海丝",
+      "storyText": "海茧抽出的丝能续命一日。织娘把丝全织成襁褓给早产儿，自己却发热倒下。孩子第一声啼哭时，她颊边长出细细海丝，像新的开始。"
+    },
+    {
+      "n": 33,
+      "title": "镜潮馆",
+      "storyText": "镜潮馆每面镜子映不同年龄的自己。少年盯着「得意的未来」不走，老馆主打碎那面镜：活着的路，不在玻璃里。碎片里只剩当下惊慌的眼睛，他反而跑出门去。"
+    },
+    {
+      "n": 34,
+      "title": "粮舟祭",
+      "storyText": "饥年运粮舟要祭一人。大家都推新人。新人自己跳海前把粮仓锁链解开，船因减重更高。他抓住浮木，众人把绳抛下——原来船不需要祭品，需要勇气。"
+    },
+    {
+      "n": 35,
+      "title": "砂漏心",
+      "storyText": "砂漏心能把痛苦延后。寡妇连开三枚砂漏，痛苦堆到极限爆开成雨，浇活了亡夫留的药田。她站在田里说：延后可以，但不能取消。"
+    },
+    {
+      "n": 36,
+      "title": "羽贼",
+      "storyText": "羽贼专偷灵禽尾羽卖钱。最后一次他偷白鹤羽，鹤却不追，只看他。他想起母亲病床，把羽送回还附上一袋米。翌日窗台放着一片不会换钱的普通鸡毛，和一包草药。"
+    },
+    {
+      "n": 37,
+      "title": "井龙歇",
+      "storyText": "古井龙一年来一次歇息，讨一口干净水。村人为求雨往井里扔脏物。孩子偷偷吊下清水桶。龙饮后留下三尺青苗雨，只浇那孩子家的薄田。"
+    },
+    {
+      "n": 38,
+      "title": "哭灯塔",
+      "storyText": "灯塔点火人死了，继任者不会点。他坐在塔里哭，泪滴进油盏，灯自己亮了。渔船归港，说今夜的光带咸味，却更暖。"
+    },
+    {
+      "n": 39,
+      "title": "贝壳讼",
+      "storyText": "两家争一只巨贝产权。县令把贝放回海：活物无主。巨贝吐出两枚珍珠各滚到两家脚边，争端平息。县令笑：海比我判得公。"
+    },
+    {
+      "n": 40,
+      "title": "赤绳渡",
+      "storyText": "月老分馆开在碎星海，卖红绳。姑娘买绳想绑住出征的人，店员改递给她归期符。出征人活着回来，说海上总梦见符上的日子。"
+    },
+    {
+      "n": 41,
+      "title": "炭笔仙",
+      "storyText": "穷画童用炭笔在沙滩画仙鹤，鹤影飞起驱散海雾。富商要买炭笔，童子把笔折断扔海：能救人的笔，不卖。次日潮水送回完整炭笔，笔端多了一点白。"
+    },
+    {
+      "n": 42,
+      "title": "听潮蜗",
+      "storyText": "听潮蜗可贴耳听远方亲人。士兵听见表妹嫁人的鼓乐，把蜗放生：听懂了，就不该再听。蜗爬回沙里，留下一个细小的笑涡。"
+    },
+    {
+      "n": 43,
+      "title": "秤海人",
+      "storyText": "商人用灵魂秤称货，短一两扣一份命。伙计偷偷在秤盘下粘盐粒，帮穷客回一点。东家怒打伙计，秤却自断。客人们用断秤当柴，煮了第一锅公平粥。"
+    },
+    {
+      "n": 44,
+      "title": "忘川匙",
+      "storyText": "忘川匙能开遗忘之门。母亲想忘掉丧子之痛，最终只忘掉孩子的病痛样子，记住了他的笑声。她说：这已是最好的遗忘。"
+    },
+    {
+      "n": 45,
+      "title": "浪里衙",
+      "storyText": "浪里衙审讯落水冤魂。书生替冤魂作证，自己差点被留作证人。判官放他走：阳间少一个说谎的，比阴间多一个证人更值。"
+    },
+    {
+      "n": 46,
+      "title": "青花罩",
+      "storyText": "瓶妖青花罩保护主人家不受邪侵。主人要把它卖给赤烬教炼器，罩自爆成瓷片铺满门槛。邪氣踩上去寸步难行。主人跪着收瓷片，第一次喊它「家人」。"
+    },
+    {
+      "n": 47,
+      "title": "寄居蟹",
+      "storyText": "修士把神识寄居蟹壳逃亡。蟹想回潮间带，修士只好随它爬行三日，学会捡食与躲鸟。神识归体后，他在丹房养了一只寄居蟹，不再嫌慢。"
+    },
+    {
+      "n": 48,
+      "title": "晒月光",
+      "storyText": "村女把湿衣晒在月光里，衣服沾月华能避瘟。豪绅抢衣去卖，衣在他手中发黑。他被迫送回，村女把衣剪成条给每户门楣：月华不认强盗。"
+    },
+    {
+      "n": 49,
+      "title": "绳梯崖",
+      "storyText": "断崖绳梯只允「心轻者」攀。背着金币的客商怎么也上不去，扔掉钱袋后一步登顶。崖顶庙祝指着钱袋说：它比你更想掉下去。"
+    },
+    {
+      "n": 50,
+      "title": "雾笛",
+      "storyText": "雾笛一吹，迷航者聚拢。笛手吹到肺伤，仍不肯停。后来他把笛孔堵上一半，声音小了，命长了，迷航者也学会互相喊话了。"
+    },
+    {
+      "n": 51,
+      "title": "偷年贼",
+      "storyText": "偷年贼偷别人的未来一年去续命。最后他偷到的是孤儿「明年能吃饱」的愿望，良心发现把年岁吐还。孤儿门外多了一袋粮，袋上写：今年先够。"
+    },
+    {
+      "n": 52,
+      "title": "铁线莲",
+      "storyText": "铁线莲缠住走火入魔者，逼他冷静。族人要剪藤救他，藤越缠越紧。他自己喊「别剪」，慢慢自行出关。藤退后开花，每一朵像一句别慌。"
+    },
+    {
+      "n": 53,
+      "title": "哑鼓",
+      "storyText": "战鼓破了变哑鼓，敲无声。鼓手改用手语指挥进退，士兵反而更齐。战后鼓皮补好，他仍保留手语：有些令，不适合太吵。"
+    },
+    {
+      "n": 54,
+      "title": "退潮书",
+      "storyText": "退潮时沙滩显字，写着谁家有难。渔民按字去救，次日又显新字。官差来查邪术，字突然写出「官差家中锅糊了」。官差飞奔回家，从此不禁。"
+    },
+    {
+      "n": 55,
+      "title": "骨笛阵",
+      "storyText": "骨笛阵能召唤亡者回忆而非亡者本身。寡妇吹笛见亡夫笑貌，满足后把笛埋进花圃。花开如笑，比回忆更活。"
+    },
+    {
+      "n": 56,
+      "title": "青萍舟",
+      "storyText": "一片青萍当舟，载蚂蚁过河。书生见了把硕大行囊扔掉，改学青萍：够到岸即可。他后来中科举，殿试对策第一句便是「载重不如载志」。"
+    },
+    {
+      "n": 57,
+      "title": "锁魂灯",
+      "storyText": "锁魂灯锁住害怕的人魂，使人听话。小厮打碎灯罩放走众魂，自己魂也被风吹散半缕。少主用灯油喂他，半缕魂慢慢长回：原来勇气也可续命。"
+    },
+    {
+      "n": 58,
+      "title": "藤桥誓",
+      "storyText": "两村仇杀，藤桥是唯一相连。孩子在桥上玩，两村人同时冲去救，仇刀相撞却停住。孩子说以后只准桥上笑，藤桥开花了一个季节。"
+    },
+    {
+      "n": 59,
+      "title": "冰蚕被",
+      "storyText": "冰蚕被能退高热。医者把自己的被给了疫村，连夜受寒。愈后村民送来一百床普通棉被：我们学不会冰蚕，但学会了送暖。"
+    },
+    {
+      "n": 60,
+      "title": "渔火讼",
+      "storyText": "两船争渔火航道打官司。判官令两船同夜熄火，看谁先撞礁。两船互相喊方位，都平安。判官说：航道本该共享喊声，不是独霸火光。"
+    },
+    {
+      "n": 61,
+      "title": "星屑粥",
+      "storyText": "乞儿用星屑煮粥，味苦却能饱腹一夜。富户嘲笑，夜里却因失眠来讨半碗。乞儿分他：苦的是提醒，不是惩罚。"
+    },
+    {
+      "n": 62,
+      "title": "白帽浪",
+      "storyText": "白帽浪专掀恶船。海盗洗白做商后浪仍追。他救了落水孩，浪第一次绕开。他懂了：洗名不如做事。"
+    },
+    {
+      "n": 63,
+      "title": "泥菩萨",
+      "storyText": "码头泥菩萨被雨泡塌，香火断绝。脚夫用货箱板重塑简陋泥胎，旁人笑难看。当夜风暴，泥胎却稳如锚。脚夫说：好看救不了船。"
+    },
+    {
+      "n": 64,
+      "title": "追日靴",
+      "storyText": "追日靴能多跑一个时辰。信使把靴子让给送药的人，自己改走夜路迟到受罚。药到病除，受罚的杖印旁被人悄悄敷了药。"
+    },
+    {
+      "n": 65,
+      "title": "棚户星",
+      "storyText": "贫民棚顶开出小小星花，摘下可换一夜安眠。霸者来采，花不亮。孩子们轮流守夜讲故事，花才开：安眠来自安心。"
+    },
+    {
+      "n": 66,
+      "title": "裂帛咒",
+      "storyText": "裂帛咒专破誓约之衣。负心人衣在婚礼上自裂。缝衣女当场扔出备好的粗布衣：穿这个重新做人。负心人跪着接过，第一次像样。"
+    },
+    {
+      "n": 67,
+      "title": "蟹将军",
+      "storyText": "蟹将军带领蟹群护堤。孩童偷蟹被钳住不伤。家长赔礼加固堤坝，蟹将军松开：执法是为堤，不为怒。"
+    },
+    {
+      "n": 68,
+      "title": "芦花甲",
+      "storyText": "芦花织成的软甲能挡流言不能挡刃。言官被围攻时披甲出面，刃刺不进，流言自散。他脱甲归还织女：甲该给更需要的人。"
+    },
+    {
+      "n": 69,
+      "title": "回音井",
+      "storyText": "回音井只重复真心话。讼棍练习假话失败，气得要填井。村民围住：井比你重要。讼棍后来改行卖糖，井里第一次回出笑声。"
+    },
+    {
+      "n": 70,
+      "title": "纸马驿",
+      "storyText": "纸马驿的纸马可跑一夜。书生烧掉纸马取暖救人，自己走着赶考仍中榜。考官问何以勤勉，他答：有次没有马。"
+    },
+    {
+      "n": 71,
+      "title": "海落梅",
+      "storyText": "海边忽然落梅，梅瓣可止血。军阵抢梅，百姓受伤更重。医者把梅捣成膏分发，抢的人空手。翌年梅只落在医馆后院。"
+    },
+    {
+      "n": 72,
+      "title": "钟摆心",
+      "storyText": "钟摆心使人情绪来回摆。友人按住他的胸口说「停」，摆幅渐小。他送给友人一块停摆的表：你比钟准。"
+    },
+    {
+      "n": 73,
+      "title": "盲灯人",
+      "storyText": "盲人做点灯工，靠触温辨油量。有人恶作剧换冷水，他触知后只添正确的油，说：恶趣味费油。恶作剧的人羞得自己去担了三月油。"
+    },
+    {
+      "n": 74,
+      "title": "跳蚤市",
+      "storyText": "跳蚤市卖「用过的运气」。女孩买「一次勇气」去告白失败，却交到真心朋友。摊主退钱，她拒收：勇气没用错地方。"
+    },
+    {
+      "n": 75,
+      "title": "沙漏雨",
+      "storyText": "沙漏雨从上头村子漏到下头，时间流速不同。上头人匆忙，下头人从容。两村联姻后约定共用水钟：时间该一起过。"
+    },
+    {
+      "n": 76,
+      "title": "旧帆魂",
+      "storyText": "旧帆有前船主的执念。新船主想撕掉，帆自己补裂口救了船。他织进新线却留旧痕：执念若救人，就留下。"
+    },
+    {
+      "n": 77,
+      "title": "草环约",
+      "storyText": "孩子用草环约定长大同游碎星海。一人成贵人忘约，草环在他腕上发芽刺痒。他微服归来赴约，芽变成花。"
+    },
+    {
+      "n": 78,
+      "title": "黑潮引",
+      "storyText": "黑潮引路人入迷魂。老向导反向走，把迷者带出。有人笑他方法怪，他说：迷阵里，常见的路最危险。"
+    },
+    {
+      "n": 79,
+      "title": "豆灯笼",
+      "storyText": "豆粒做成的灯笼只亮三尺，却够夜读。富家千灯熄灭的停电夜，豆灯笼照亮半条街。孩子说：小灯团结起来就不小。"
+    },
+    {
+      "n": 80,
+      "title": "衔泥燕",
+      "storyText": "燕子衔泥修桥缝。匠人起初赶鸟，后来留缝给燕。桥更牢，燕窝成了桥的印记。碑文刻：人也要给别人留缝。"
+    },
+    {
+      "n": 81,
+      "title": "半面妆",
+      "storyText": "狐妖半面妆骗人，遇知她来历仍愿同行的少年，卸妆。少年说：另一半我也想看。她第一次用完整的脸笑。"
+    },
+    {
+      "n": 82,
+      "title": "雪债",
+      "storyText": "去年借邻居一筐炭，今年以一筐雪相还作玩笑。邻居把雪化水浇树，树那年果甜。玩笑变成敬意。"
+    },
+    {
+      "n": 83,
+      "title": "路牌精",
+      "storyText": "路牌成精乱指路，被拆。小个子路牌精哭着说只想有人看它。村民把它立回岔路，并写「也可问问旁边的人」。它老实了。"
+    },
+    {
+      "n": 84,
+      "title": "锅巴阵",
+      "storyText": "锅巴阵用焦香诱敌。逃亡者抛锅巴引开追踪犬，自己饿着走。获救后厨师终身免费供他锅巴，美名曰：军功粮。"
+    },
+    {
+      "n": 85,
+      "title": "静口罩",
+      "storyText": "静口罩让人说不出谎，也说不出安慰。医者改造开口，只禁谎。病人听到真话虽难受，康复却快。"
+    },
+    {
+      "n": 86,
+      "title": "冬汛桥",
+      "storyText": "冬汛冲桥，工匠跳入水中做人柱撑木。得救后他拒立塑像，只要桥边加一条绳：下次换绳子撑，别换人。"
+    },
+    {
+      "n": 87,
+      "title": "蜜蜡信",
+      "storyText": "蜜蜡封的海信被晒化，字糊了。送信人凭记忆口述，收信人哭着说比原信更全——记忆补上了蜡吃掉的温柔。"
+    },
+    {
+      "n": 88,
+      "title": "蒲公英",
+      "storyText": "蒲公英修把心愿乘风送走。他自己的心愿是「别再负责别人的愿」。风把所有愿吹回他怀里，他只好继续送，并学会先写自己的一愿：愿人皆自知。"
+    },
+    {
+      "n": 89,
+      "title": "锁潮闸",
+      "storyText": "锁潮闸年久，管理员私自卖零件。涨潮夜他潜入水中用身体堵住缺口。退潮后人们让他继续做管理员：知道错处的人，修得最快。"
+    },
+    {
+      "n": 90,
+      "title": "白纸伞",
+      "storyText": "白纸伞映出示弱者的护身光。恶棍抢伞，光不显。他把伞还给老人，光在老人身侧亮起。恶棍第一次站在光外觉得冷。"
+    },
+    {
+      "n": 91,
+      "title": "秤砣梦",
+      "storyText": "商人梦见秤砣成精来讨公平。醒来他把秤送官检定，短两曝光。他破产后摆小摊，招牌写：梦里合格。"
+    },
+    {
+      "n": 92,
+      "title": "潮间寺",
+      "storyText": "潮间寺只在退潮出现。信徒匆忙许愿，潮涨寺没。小和尚教人在陆地上许同样的愿：寺教的是急切，不是灵验。"
+    },
+    {
+      "n": 93,
+      "title": "鱼税",
+      "storyText": "官员抽鱼税苛刻。渔婆交一条会说话的鱼，鱼当众讲官员贪墨。官员逃，鱼跃回海里，税册被潮改写成「透明」。"
+    },
+    {
+      "n": 94,
+      "title": "火折子",
+      "storyText": "火折子只为救命亮。旅人屡次用它点烟失败。直到雪夜救人，火折子自动燃起。他扔了烟杆：原来资格在用法。"
+    },
+    {
+      "n": 95,
+      "title": "藤甲童",
+      "storyText": "孩童披藤甲玩骑士，真挡住了落石。大人想买甲去打仗，孩子不肯：玩的盔甲一打仗就死。他削竹做防护棚，把「玩」变成「护」。"
+    },
+    {
+      "n": 96,
+      "title": "返魂香",
+      "storyText": "返魂香极贵，富翁买来求亡妻一见。烟雾里亡妻只说「别糟蹋钱，去养弃婴」。他捐掉香，建了育幼堂，堂名取亡妻小名。"
+    },
+    {
+      "n": 97,
+      "title": "北风旗",
+      "storyText": "北风旗指示安全航向，被商人涂改骗人。旗成精自己撕掉涂料，恢复本色。船队跟着真旗走，商人的假图漂在海上像笑话。"
+    },
+    {
+      "n": 98,
+      "title": "卵石誓",
+      "storyText": "情侣各持半边卵石誓不相弃。战乱失散十年，重逢时两半竟自己合拢。他们把石挂在村口：给失散的人看，合得拢的不少。"
+    },
+    {
+      "n": 99,
+      "title": "最后一网",
+      "storyText": "老渔把最后一网定为「放生网」，专捕伤鱼治疗再放。年轻渔嘲笑，后来风暴中被老渔网住从浪里拖回。年轻人改行学医：网也可以是手。"
+    },
+    {
+      "n": 100,
+      "title": "碎星归",
+      "storyText": "流浪修士走遍碎星海百岛，收集别人丢掉的执念石。堆积成丘时，石群自己排成归途星图。他沿着星图回到故乡废墟，执念石化作灯火，照亮重建的第一晚。灯下他写下首集的浪声：从此故事，人人可续。"
+    }
+  ],
+  "jobs": [
+    {
+      "n": 1,
+      "title": "碎星海上，年轻剑修阿潮捡到一把被浪磨亮的",
+      "jobId": "j1728564po3pmp4",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1728564po3pmp4.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 2,
+      "title": "迷雾渔岛上，采药人小筠误入灯鱼群，灯鱼只",
+      "jobId": "j17293922alq9nj",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j17293922alq9nj.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 3,
+      "title": "悬衡宗外门弟子石行看守禁碑，碑上刻着「不",
+      "jobId": "j173022gqepg1q5",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j173022gqepg1q5.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 4,
+      "title": "老散修白翁养通灵白鹤，每年清明飞回碎星海",
+      "jobId": "j173113fnw2apx9",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j173113fnw2apx9.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 5,
+      "title": "碎星海雨市只在暴雨时开摊，买卖「一日之命",
+      "jobId": "j173155om7ctyof",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j173155om7ctyof.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 6,
+      "title": "潮灯寨每夜点燃百盏蚌灯指路。少年阿杰发现",
+      "jobId": "j1732382948wgzp",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1732382948wgzp.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 7,
+      "title": "盐客阿禾背盐过盐骨渡，渡口鬼修索「过路魂",
+      "jobId": "j173321qbe2vqk6",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j173321qbe2vqk6.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 8,
+      "title": "赌徒陆沉欠赤烬教一笔星汐债，期限到夜。他",
+      "jobId": "j17340429z5u8zt",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j17340429z5u8zt.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 9,
+      "title": "雾港铸刀匠把女儿的乳名铸进刀柄。刀被海盗",
+      "jobId": "j17344670qlr9pl",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j17344670qlr9pl.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 10,
+      "title": "小岛海祠里住着一只报恩狸妖，每逢渔季替渔",
+      "jobId": "j173538ki4jgcmy",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j173538ki4jgcmy.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 11,
+      "title": "商船折帆困在暗礁。账房先生阿算不会水，却",
+      "jobId": "j17362934wqoo3w",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j17362934wqoo3w.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 12,
+      "title": "盲琴师在礁心洞中弹琴，星汐随音聚散。赤烬",
+      "jobId": "j173712msqubn6a",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j173712msqubn6a.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 13,
+      "title": "外门弟子在悬衡雨中跑腿送信，雨点会拷问心",
+      "jobId": "j173804gko5m30u",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j173804gko5m30u.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 14,
+      "title": "少年误签赤烬契，指尖出现燃纹。老仆用自己",
+      "jobId": "j173847f5t0jtpk",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j173847f5t0jtpk.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 15,
+      "title": "采星人夜里用竹竿捞落星，卖给散修。这夜他",
+      "jobId": "j173937r68eyerl",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j173937r68eyerl.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 16,
+      "title": "潮音寺钟声能安抚暴走灵兽。小沙弥撞钟时漏",
+      "jobId": "j174028l6xcf9uy",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j174028l6xcf9uy.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 17,
+      "title": "沉香舟载着病修去药屿，船底漏香。船娘用自",
+      "jobId": "j174111dgrg8lx4",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j174111dgrg8lx4.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 18,
+      "title": "禁碑下卧着一只石猫，摸它头可问一事。书生",
+      "jobId": "j174154xhykr5q7",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j174154xhykr5q7.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 19,
+      "title": "画师画碎星海，画中潮水真的漫出纸面。他忙",
+      "jobId": "j174237ngz8c4bx",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j174237ngz8c4bx.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 20,
+      "title": "恋人隔海，托梭鱼传信。梭鱼被赤烬教截走，",
+      "jobId": "j17432042pg6cie",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j17432042pg6cie.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 21,
+      "title": "晒盐女发现盐田里长出透明花，摘下可照见人",
+      "jobId": "j1744023ehrt4az",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1744023ehrt4az.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 22,
+      "title": "夜渔人点火诱鱼，火中跳出火灵求「灭我一次",
+      "jobId": "j174445yvmty901",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j174445yvmty901.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 23,
+      "title": "巨龟每隔十年浮出碎星海当桥。赶路的母女迟",
+      "jobId": "j174528ncwl5q7c",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j174528ncwl5q7c.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 24,
+      "title": "山门风铎乱鸣示警。弟子以为大敌，冲出去却",
+      "jobId": "j174610hzvznbg9",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j174610hzvznbg9.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 25,
+      "title": "药瓶雪荼能冻住毒性半日。游医把最后的雪荼",
+      "jobId": "j17465388c83cmy",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j17465388c83cmy.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 26,
+      "title": "竹筏被下坠沉咒，越划越低。筏上书生把科举",
+      "jobId": "j174736uanqv8h6",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j174736uanqv8h6.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 27,
+      "title": "影修能藏人于袖。逃生时袖中挤满村民，他袖",
+      "jobId": "j174819bun3s3xe",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j174819bun3s3xe.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 28,
+      "title": "古桥苔藓会发光，照见过桥人谎言。官差逼供",
+      "jobId": "j1749026vtrtnee",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1749026vtrtnee.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 29,
+      "title": "霜牙谷灵狼护着受伤的猎户一夜。猎户醒来把",
+      "jobId": "j1749448v9orq0t",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1749448v9orq0t.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 30,
+      "title": "修船女哼船钉谣，钉子便钉得稳。海盗强迫她",
+      "jobId": "j175027qpdzha20",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175027qpdzha20.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 31,
+      "title": "月蚀时饮月蚀杯可梦见未来一刻。将军梦见自",
+      "jobId": "j175232ecia60pk",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175232ecia60pk.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 32,
+      "title": "海茧抽出的丝能续命一日。织娘把丝全织成襁",
+      "jobId": "j175315egzi90s6",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175315egzi90s6.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 33,
+      "title": "镜潮馆每面镜子映不同年龄的自己。少年盯着",
+      "jobId": "j175358c8dwvbp6",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175358c8dwvbp6.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 34,
+      "title": "饥年运粮舟要祭一人。大家都推新人。新人自",
+      "jobId": "j175441pj3co3ap",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175441pj3co3ap.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 35,
+      "title": "砂漏心能把痛苦延后。寡妇连开三枚砂漏，痛",
+      "jobId": "j175524avtyztoo",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175524avtyztoo.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 36,
+      "title": "羽贼专偷灵禽尾羽卖钱。最后一次他偷白鹤羽",
+      "jobId": "j175607gyugw99t",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175607gyugw99t.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 37,
+      "title": "古井龙一年来一次歇息，讨一口干净水。村人",
+      "jobId": "j175650n0holu7y",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175650n0holu7y.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 38,
+      "title": "灯塔点火人死了，继任者不会点。他坐在塔里",
+      "jobId": "j175741llyve7nh",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175741llyve7nh.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 39,
+      "title": "两家争一只巨贝产权。县令把贝放回海：活物",
+      "jobId": "j1758249qxxfi2w",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1758249qxxfi2w.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 40,
+      "title": "月老分馆开在碎星海，卖红绳。姑娘买绳想绑",
+      "jobId": "j175907vbt7t0vy",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j175907vbt7t0vy.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 41,
+      "title": "穷画童用炭笔在沙滩画仙鹤，鹤影飞起驱散海",
+      "jobId": "j1759496tl0uqg3",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1759496tl0uqg3.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 42,
+      "title": "听潮蜗可贴耳听远方亲人。士兵听见表妹嫁人",
+      "jobId": "j180040h8v98187",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j180040h8v98187.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 43,
+      "title": "商人用灵魂秤称货，短一两扣一份命。伙计偷",
+      "jobId": "j180123kqej9ui9",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j180123kqej9ui9.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 44,
+      "title": "忘川匙能开遗忘之门。母亲想忘掉丧子之痛，",
+      "jobId": "j1802147v2unytx",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1802147v2unytx.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 45,
+      "title": "浪里衙审讯落水冤魂。书生替冤魂作证，自己",
+      "jobId": "j180256bkjcfo48",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j180256bkjcfo48.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 46,
+      "title": "瓶妖青花罩保护主人家不受邪侵。主人要把它",
+      "jobId": "j180339hdti20zj",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j180339hdti20zj.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 47,
+      "title": "修士把神识寄居蟹壳逃亡。蟹想回潮间带，修",
+      "jobId": "j180438i7o5lebq",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j180438i7o5lebq.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 48,
+      "title": "村女把湿衣晒在月光里，衣服沾月华能避瘟。",
+      "jobId": "j180529yl0wfhgj",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j180529yl0wfhgj.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 49,
+      "title": "断崖绳梯只允「心轻者」攀。背着金币的客商",
+      "jobId": "j18062043li5aq9",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j18062043li5aq9.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 50,
+      "title": "雾笛一吹，迷航者聚拢。笛手吹到肺伤，仍不",
+      "jobId": "j180702gwiw7xvx",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j180702gwiw7xvx.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 51,
+      "title": "偷年贼偷别人的未来一年去续命。最后他偷到",
+      "jobId": "j180754peg6j5zz",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j180754peg6j5zz.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 52,
+      "title": "铁线莲缠住走火入魔者，逼他冷静。族人要剪",
+      "jobId": "j1808379jqgsz8r",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1808379jqgsz8r.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 53,
+      "title": "战鼓破了变哑鼓，敲无声。鼓手改用手语指挥",
+      "jobId": "j180920wdfblw6e",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j180920wdfblw6e.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 54,
+      "title": "退潮时沙滩显字，写着谁家有难。渔民按字去",
+      "jobId": "j181003n1jnwiok",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181003n1jnwiok.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 55,
+      "title": "骨笛阵能召唤亡者回忆而非亡者本身。寡妇吹",
+      "jobId": "j1810461jli86o3",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1810461jli86o3.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 56,
+      "title": "一片青萍当舟，载蚂蚁过河。书生见了把硕大",
+      "jobId": "j181121fh992puv",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181121fh992puv.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 57,
+      "title": "锁魂灯锁住害怕的人魂，使人听话。小厮打碎",
+      "jobId": "j181204a3jvak5v",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181204a3jvak5v.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 58,
+      "title": "两村仇杀，藤桥是唯一相连。孩子在桥上玩，",
+      "jobId": "j181255gf47tz3s",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181255gf47tz3s.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 59,
+      "title": "冰蚕被能退高热。医者把自己的被给了疫村，",
+      "jobId": "j181338nkcitah4",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181338nkcitah4.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 60,
+      "title": "两船争渔火航道打官司。判官令两船同夜熄火",
+      "jobId": "j1814204hhy0cyz",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1814204hhy0cyz.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 61,
+      "title": "乞儿用星屑煮粥，味苦却能饱腹一夜。富户嘲",
+      "jobId": "j181503uxk1ynm9",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181503uxk1ynm9.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 62,
+      "title": "白帽浪专掀恶船。海盗洗白做商后浪仍追。他",
+      "jobId": "j181546lvv6ko40",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181546lvv6ko40.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 63,
+      "title": "码头泥菩萨被雨泡塌，香火断绝。脚夫用货箱",
+      "jobId": "j1816291bh3kue6",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1816291bh3kue6.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 64,
+      "title": "追日靴能多跑一个时辰。信使把靴子让给送药",
+      "jobId": "j181720xhwpw341",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181720xhwpw341.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 65,
+      "title": "贫民棚顶开出小小星花，摘下可换一夜安眠。",
+      "jobId": "j181803aefhiaxe",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181803aefhiaxe.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 66,
+      "title": "裂帛咒专破誓约之衣。负心人衣在婚礼上自裂",
+      "jobId": "j1818450whgjchw",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1818450whgjchw.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 67,
+      "title": "蟹将军带领蟹群护堤。孩童偷蟹被钳住不伤。",
+      "jobId": "j181928yzz43lrn",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j181928yzz43lrn.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 68,
+      "title": "芦花织成的软甲能挡流言不能挡刃。言官被围",
+      "jobId": "j1822541fjp2bu0",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1822541fjp2bu0.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 69,
+      "title": "回音井只重复真心话。讼棍练习假话失败，气",
+      "jobId": "j18234581hqr2of",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j18234581hqr2of.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 70,
+      "title": "纸马驿的纸马可跑一夜。书生烧掉纸马取暖救",
+      "jobId": "j182428w18pjh1p",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j182428w18pjh1p.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 71,
+      "title": "海边忽然落梅，梅瓣可止血。军阵抢梅，百姓",
+      "jobId": "j1825100ztnj3gn",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1825100ztnj3gn.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 72,
+      "title": "钟摆心使人情绪来回摆。友人按住他的胸口说",
+      "jobId": "j182601l3vjf1fp",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j182601l3vjf1fp.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 73,
+      "title": "盲人做点灯工，靠触温辨油量。有人恶作剧换",
+      "jobId": "j182644gr473ayz",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j182644gr473ayz.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 74,
+      "title": "跳蚤市卖「用过的运气」。女孩买「一次勇气",
+      "jobId": "j182735qw38cgz6",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j182735qw38cgz6.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 75,
+      "title": "沙漏雨从上头村子漏到下头，时间流速不同。",
+      "jobId": "j182818z6ksgf77",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j182818z6ksgf77.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 76,
+      "title": "旧帆有前船主的执念。新船主想撕掉，帆自己",
+      "jobId": "j1829010lu1k0u5",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1829010lu1k0u5.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 77,
+      "title": "孩子用草环约定长大同游碎星海。一人成贵人",
+      "jobId": "j182944i8l7rlcm",
+      "status": "done",
+      "imageUrl": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/f6/20260714/d689c36f/faca2d8f-d569-4fc2-b319-50ff768510ea_0.png?Expires=1784111423&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=bIIBRSJeX0Q7igFSFg82ipr1w%2F0%3D",
+      "detail": "绘制完成，正在归档…"
+    },
+    {
+      "n": 78,
+      "title": "黑潮引路人入迷魂。老向导反向走，把迷者带",
+      "jobId": "j183028m24nrtz9",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j183028m24nrtz9.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 79,
+      "title": "豆粒做成的灯笼只亮三尺，却够夜读。富家千",
+      "jobId": "j183110po1ihs2m",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j183110po1ihs2m.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 80,
+      "title": "燕子衔泥修桥缝。匠人起初赶鸟，后来留缝给",
+      "jobId": "j1831532x96kacf",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1831532x96kacf.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 81,
+      "title": "狐妖半面妆骗人，遇知她来历仍愿同行的少年",
+      "jobId": "j1832362bpi7l55",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1832362bpi7l55.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 82,
+      "title": "去年借邻居一筐炭，今年以一筐雪相还作玩笑",
+      "jobId": "j1834429ycbcchj",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1834429ycbcchj.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 83,
+      "title": "路牌成精乱指路，被拆。小个子路牌精哭着说",
+      "jobId": "j183524tt1a4bp7",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j183524tt1a4bp7.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 84,
+      "title": "锅巴阵用焦香诱敌。逃亡者抛锅巴引开追踪犬",
+      "jobId": "j1836078oaw8w4s",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1836078oaw8w4s.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 85,
+      "title": "静口罩让人说不出谎，也说不出安慰。医者改",
+      "jobId": "j183651pv4ln6ar",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j183651pv4ln6ar.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 86,
+      "title": "冬汛冲桥，工匠跳入水中做人柱撑木。得救后",
+      "jobId": "j183733omen6065",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j183733omen6065.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 87,
+      "title": "蜜蜡封的海信被晒化，字糊了。送信人凭记忆",
+      "jobId": "j183817sgxuc5lt",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j183817sgxuc5lt.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 88,
+      "title": "蒲公英修把心愿乘风送走。他自己的心愿是「",
+      "jobId": "j183859j3wf980y",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j183859j3wf980y.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 89,
+      "title": "锁潮闸年久，管理员私自卖零件。涨潮夜他潜",
+      "jobId": "j183942b0pd7fus",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j183942b0pd7fus.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 90,
+      "title": "白纸伞映出示弱者的护身光。恶棍抢伞，光不",
+      "jobId": "j1840251f0kblon",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1840251f0kblon.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 91,
+      "title": "商人梦见秤砣成精来讨公平。醒来他把秤送官",
+      "jobId": "j184107wag3loo5",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j184107wag3loo5.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 92,
+      "title": "潮间寺只在退潮出现。信徒匆忙许愿，潮涨寺",
+      "jobId": "j184313ni4rird4",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j184313ni4rird4.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 93,
+      "title": "官员抽鱼税苛刻。渔婆交一条会说话的鱼，鱼",
+      "jobId": "j184421aiwuei0v",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j184421aiwuei0v.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 94,
+      "title": "火折子只为救命亮。旅人屡次用它点烟失败。",
+      "jobId": "j184528466hqyfw",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j184528466hqyfw.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 95,
+      "title": "孩童披藤甲玩骑士，真挡住了落石。大人想买",
+      "jobId": "j184612o04oqnas",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j184612o04oqnas.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 96,
+      "title": "返魂香极贵，富翁买来求亡妻一见。烟雾里亡",
+      "jobId": "j184655178o4cve",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j184655178o4cve.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 97,
+      "title": "北风旗指示安全航向，被商人涂改骗人。旗成",
+      "jobId": "j184738i9bajkxv",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j184738i9bajkxv.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 98,
+      "title": "情侣各持半边卵石誓不相弃。战乱失散十年，",
+      "jobId": "j184828ryttzpdd",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j184828ryttzpdd.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 99,
+      "title": "老渔把最后一网定为「放生网」，专捕伤鱼治",
+      "jobId": "j184911fxp3zkgi",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j184911fxp3zkgi.jpg",
+      "detail": "生成完成"
+    },
+    {
+      "n": 100,
+      "title": "流浪修士走遍碎星海百岛，收集别人丢掉的执",
+      "jobId": "j1849545h8ztfxa",
+      "status": "done",
+      "imageUrl": "https://comic-static.43music.vip/comics/oCnJ43R9f4b-QlFXR3Jo_HOU2xM0/j1849545h8ztfxa.jpg",
+      "detail": "生成完成"
+    }
+  ]
+}

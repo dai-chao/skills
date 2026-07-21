@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/Desktop/Codex-Dream-Skin/macos/SKILL.md
+content_hash: fd7e79975efa
+category: 04-frontend-ui

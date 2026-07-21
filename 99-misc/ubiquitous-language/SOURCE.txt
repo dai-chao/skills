@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/deprecated/ubiquitous-language/SKILL.md
+content_hash: d6bf6dfb126c
+category: 99-misc

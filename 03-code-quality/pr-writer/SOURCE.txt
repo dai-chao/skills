@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/pr-writer/SKILL.md
+content_hash: b2f76f08aff2
+category: 03-code-quality

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/awesome-cursor-skills/resources/adding-analytics/SKILL.md
+content_hash: b9b6c875f697
+category: 09-analytics

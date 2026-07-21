@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/godmode/SKILL.md
+content_hash: ce90c465f2eb
+category: 99-misc

@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/mattpocock-skills/skills/personal/obsidian-vault/SKILL.md
+content_hash: f3ee46c0225a
+category: 08-research-web

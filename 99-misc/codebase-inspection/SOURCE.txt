@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/codebase-inspection/SKILL.md
+content_hash: 75ddea9cec05
+category: 99-misc

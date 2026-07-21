@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/chinese-pdf-generation/SKILL.md
+content_hash: 6a564c1a6f44
+category: 07-docs-office

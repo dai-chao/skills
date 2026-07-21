@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/chinese-app-miniprogram-rankings/SKILL.md
+content_hash: 4749a53b0c95
+category: 99-misc

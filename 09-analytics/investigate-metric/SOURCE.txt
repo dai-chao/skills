@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/omnibus/investigate-metric/SKILL.md
+content_hash: dcb8d4359f36
+category: 09-analytics

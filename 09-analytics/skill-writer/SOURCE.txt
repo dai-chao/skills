@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/sentry-skills/skills/skill-writer/SKILL.md
+content_hash: ffaa255a91e4
+category: 09-analytics

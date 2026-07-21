@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/qa/ai-output-audit/SKILL.md
+content_hash: a7ba8c22f9c2
+category: 05-testing

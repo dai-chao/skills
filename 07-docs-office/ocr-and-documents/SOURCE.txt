@@ -1,0 +1,4 @@
+origin: local
+source_path: /Users/chao/.hermes/skills/.archive/ocr-and-documents/SKILL.md
+content_hash: 099475014c4a
+category: 07-docs-office

@@ -1,0 +1,5 @@
+origin: git-high-value
+repo: convex-skills
+source_path: /Users/chao/Desktop/skills/_tmp_sources/convex-skills/skills/convex-quickstart/SKILL.md
+content_hash: 6e611fcde8ac
+category: 13-integrations

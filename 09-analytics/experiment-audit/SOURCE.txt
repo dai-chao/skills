@@ -1,0 +1,4 @@
+origin: git
+source_path: /Users/chao/Desktop/skills/_tmp_sources/posthog-skills/skills/team/customer-success/impersonation-toolkit/SKILL.md
+content_hash: 74e3e33b2027
+category: 09-analytics
