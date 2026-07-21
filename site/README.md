@@ -21,6 +21,12 @@ python3 -m http.server 8765
 - 预览 `SKILL.md`
 - 下载单个 skill（zip 整包，或仅 md）
 
+## UI 栈
+
+- 设计：Starbucks 色板（`星巴克.md`）
+- 组件：[Shoelace](https://shoelace.style/)（Button / Input / Select / Tab / Dialog / Badge / Alert）
+- 图标：[Lucide](https://lucide.dev/)
+
 ## 结构
 
 ```

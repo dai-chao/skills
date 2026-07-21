@@ -6426,6 +6426,15 @@
     "source": "/Users/chao/Desktop/skills/12-meta/skill-installer-2/SKILL.md"
   },
   {
+    "name": "update-all-skills",
+    "original_name": "update-all-skills",
+    "category": "12-meta",
+    "category_label": "Skill 创作 / Meta",
+    "description": "Updates all Agent Skills installed on the machine across Cursor, Claude, Hermes, Codex, skills.sh, Agent Reach, and known remote packs. Use when the user asks to update/upgrade/sync skills.",
+    "origin": "local",
+    "source": "/Users/chao/Desktop/skills/12-meta/update-all-skills/SKILL.md"
+  },
+  {
     "name": "writing-skills",
     "original_name": "writing-skills",
     "category": "12-meta",

@@ -1,0 +1,2 @@
+# 本地创建：update-all-skills
+# 跨平台更新本机已安装 Agent Skills 的元 skill

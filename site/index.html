@@ -1,70 +1,119 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="sl-theme-skillcafe">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skill Café — Agent Skills 目录</title>
-  <meta name="description" content="搜索、浏览、下载 Agent Skills。热门、排名、最近更新一站搞定。" />
+  <meta name="description" content="搜索、浏览、下载 Agent Skills。热门、最近更新一站搞定。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/github.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+  <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.5/dist/purify.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js" defer></script>
+  <!-- Umami: https://stats.safeclaude.net/ -->
+  <script defer src="https://stats.safeclaude.net/script.js" data-website-id="376674da-044b-4da3-954e-ae590153bbf0"></script>
 </head>
 <body>
-  <div class="top-strip">
-    Skill Café · 精选 Agent Skills 合集
-    <span> — 搜索 · 排名 · 一键下载</span>
-  </div>
+  <div class="page-shell">
 
   <header class="nav" id="nav">
     <div class="nav-inner">
       <a class="brand" href="#" data-view="home">
-        <span class="brand-mark" aria-hidden="true">S</span>
-        <span>Skill Café</span>
+        <span class="brand-mark" aria-hidden="true"><i data-lucide="coffee"></i></span>
+        <span class="brand-text">
+          <strong>Skill Café</strong>
+        </span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#explore" data-view="explore" data-tab="all">探索</a></li>
-        <li><a href="#rank" data-view="explore" data-tab="rank">排名</a></li>
-        <li><a href="#hot" data-view="explore" data-tab="hot">热门</a></li>
-        <li><a href="#recent" data-view="explore" data-tab="recent">最近更新</a></li>
-      </ul>
+
+      <nav class="nav-links" aria-label="nav">
+        <a href="#explore" data-view="explore" data-tab="all"><i data-lucide="compass"></i><span data-i18n="navExplore" data-i18n-text>探索</span></a>
+        <a href="#hot" data-view="explore" data-tab="hot"><i data-lucide="flame"></i><span data-i18n="navHot" data-i18n-text>热门</span></a>
+        <a href="#recent" data-view="explore" data-tab="recent"><i data-lucide="sparkles"></i><span data-i18n="navRecent" data-i18n-text>最近</span></a>
+      </nav>
+
       <div class="nav-actions">
-        <button class="btn btn-ghost-dark hide-sm" type="button" data-view="explore" data-tab="all">浏览全部</button>
-        <button class="btn btn-dark" type="button" id="btnFocusSearch">搜索</button>
-        <button class="nav-toggle" type="button" id="navToggle" aria-label="菜单">
-          <span></span><span></span><span></span>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-set-lang="zh">中文</button>
+          <button type="button" class="lang-btn" data-set-lang="en">EN</button>
+        </div>
+        <sl-button size="small" variant="default" data-view="explore" data-tab="all" class="hide-sm">
+          <i data-lucide="layout-grid" slot="prefix"></i>
+          <span data-i18n="browseAll" data-i18n-text>浏览全部</span>
+        </sl-button>
+        <sl-button size="small" variant="neutral" id="btnFocusSearch">
+          <i data-lucide="search" slot="prefix"></i>
+          <span data-i18n="search" data-i18n-text>搜索</span>
+        </sl-button>
+        <button class="nav-toggle" type="button" id="navToggle" data-i18n-aria="menu" aria-label="菜单">
+          <i data-lucide="menu"></i>
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HOME -->
     <div class="view active" id="view-home">
       <section class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-icon-grid" id="heroIconGrid"></div>
+        </div>
         <div class="container hero-grid">
-          <div>
-            <div class="hero-kicker">Agent Skills Directory</div>
-            <h1>像点单一样，找到你的下一个 Skill</h1>
-            <p class="hero-lead">
-              温暖咖啡馆气质的目录站：搜索、排名、热门与最近更新，一键下载单个 skill 到本地。
-            </p>
+          <div class="hero-copy">
+            <sl-badge variant="success" pill>
+              <i data-lucide="leaf" class="icon-xs"></i>
+              <span data-i18n="heroBadge" data-i18n-text>Agent Skills 目录</span>
+            </sl-badge>
+            <h1>
+              <span data-i18n="heroTitle1" data-i18n-text>像点单一样，</span><br />
+              <em data-i18n="heroTitle2" data-i18n-text>找到下一个 Skill</em>
+            </h1>
             <div class="hero-cta">
-              <button class="btn btn-primary btn-lg" type="button" data-view="explore" data-tab="all">开始探索</button>
-              <button class="btn btn-outline btn-lg" type="button" data-view="explore" data-tab="rank">查看排行榜</button>
+              <sl-button variant="primary" size="large" data-view="explore" data-tab="all">
+                <span data-i18n="startExplore" data-i18n-text>开始探索</span>
+                <i data-lucide="arrow-right" slot="suffix"></i>
+              </sl-button>
+              <sl-button variant="default" size="large" outline class="on-dark-outline" data-view="explore" data-tab="hot">
+                <i data-lucide="flame" slot="prefix"></i>
+                <span data-i18n="viewHot" data-i18n-text>查看热门</span>
+              </sl-button>
+            </div>
+            <div class="hero-trust">
+              <div><i data-lucide="package"></i><span id="statTotal">—</span> <span data-i18n="trustSkills" data-i18n-text>skills</span></div>
+              <div><i data-lucide="folders"></i><span id="statCats">—</span> <span data-i18n="trustCats" data-i18n-text>分类</span></div>
+              <div><i data-lucide="zap"></i><span data-i18n="trustHot" data-i18n-text>热门 Top</span> <span id="statHot">60</span></div>
             </div>
           </div>
-          <aside class="hero-panel" aria-label="合集概览">
-            <div>
-              <h2>今日特调</h2>
-              <p>按内容去重的精选技能包，覆盖 Cursor、工程方法论、设计、营销与云集成。</p>
+
+          <aside class="hero-panel">
+            <div class="hero-panel-glow" aria-hidden="true"></div>
+            <div class="hero-panel-top">
+              <sl-badge variant="warning" pill class="gold-badge">
+                <i data-lucide="star" class="icon-xs"></i>
+                Rewards
+              </sl-badge>
+              <h2 data-i18n="todaySpecial" data-i18n-text>今日特调</h2>
+              <p data-i18n="todaySpecialDesc" data-i18n-text>覆盖 Cursor、工程方法论、设计、营销与云集成的精选技能包。</p>
             </div>
-            <div class="stat-row">
-              <div class="stat"><strong id="statTotal">—</strong><span>Skills</span></div>
-              <div class="stat"><strong id="statCats">—</strong><span>分类</span></div>
-              <div class="stat"><strong id="statHot">—</strong><span>热门 Top</span></div>
-            </div>
+            <div class="hero-featured" id="heroFeatured"></div>
           </aside>
+        </div>
+      </section>
+
+      <section class="section cats-strip">
+        <div class="container">
+          <div class="section-head compact">
+            <div>
+              <h2><i data-lucide="shapes"></i> <span data-i18n="browseByCat" data-i18n-text>按分类逛</span></h2>
+              <p data-i18n="browseByCatSub" data-i18n-text>点一下即可进入探索页筛选</p>
+            </div>
+          </div>
+          <div class="cat-pills" id="homeCats"></div>
         </div>
       </section>
 
@@ -72,89 +121,84 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>热门精选</h2>
-              <p>按热度分排序 · 安装量与新鲜度加权</p>
+              <h2><i data-lucide="flame"></i> <span data-i18n="hotPicks" data-i18n-text>热门精选</span></h2>
+              <p data-i18n="hotPicksSub" data-i18n-text>安装量 × 新鲜度加权</p>
             </div>
-            <button class="btn btn-outline" type="button" data-view="explore" data-tab="hot">查看更多</button>
+            <sl-button variant="default" outline size="small" data-view="explore" data-tab="hot">
+              <span data-i18n="viewMore" data-i18n-text>查看更多</span>
+              <i data-lucide="chevron-right" slot="suffix"></i>
+            </sl-button>
           </div>
           <div class="grid" id="homeHot"></div>
         </div>
       </section>
 
-      <section class="band">
-        <div class="container">
-          <h2>排行榜 · Rewards 时刻</h2>
-          <p>金标留给真正出众的 skill。按人气排名，挑出最值得先装的那一杯。</p>
-          <div class="band-actions">
-            <button class="btn btn-on-dark" type="button" data-view="explore" data-tab="rank">打开排名</button>
-            <button class="btn btn-outline-on-dark" type="button" data-view="explore" data-tab="recent">最近更新</button>
-          </div>
-        </div>
-      </section>
-
       <section class="section">
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>最近更新</h2>
-              <p>刚烘培出炉的技能包</p>
+              <h2><i data-lucide="sparkles"></i> <span data-i18n="recentUpdates" data-i18n-text>最近更新</span></h2>
+              <p data-i18n="recentSub" data-i18n-text>刚烘焙出炉</p>
             </div>
-            <button class="btn btn-outline" type="button" data-view="explore" data-tab="recent">全部最近</button>
+            <sl-button variant="default" outline size="small" data-view="explore" data-tab="recent">
+              <span data-i18n="allRecent" data-i18n-text>全部最近</span>
+              <i data-lucide="chevron-right" slot="suffix"></i>
+            </sl-button>
           </div>
           <div class="grid" id="homeRecent"></div>
         </div>
       </section>
-
-      <section class="section" style="padding-top:0">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>人气排名 Top 10</h2>
-              <p>Gold 留给前三名</p>
-            </div>
-          </div>
-          <div class="rank-list" id="homeRank"></div>
-        </div>
-      </section>
     </div>
 
-    <!-- EXPLORE -->
     <div class="view" id="view-explore">
       <div class="subnav">
-        <div class="container subnav-inner" role="tablist">
-          <button class="tab active" type="button" data-tab="all" role="tab">全部</button>
-          <button class="tab" type="button" data-tab="rank" role="tab">排名</button>
-          <button class="tab" type="button" data-tab="hot" role="tab">热门</button>
-          <button class="tab" type="button" data-tab="recent" role="tab">最近更新</button>
+        <div class="container">
+          <sl-tab-group id="exploreTabs">
+            <sl-tab slot="nav" panel="all" data-tab="all"><i data-lucide="layout-grid" class="icon-sm"></i> <span data-i18n="tabAll" data-i18n-text>全部</span></sl-tab>
+            <sl-tab slot="nav" panel="hot" data-tab="hot"><i data-lucide="flame" class="icon-sm"></i> <span data-i18n="tabHot" data-i18n-text>热门</span></sl-tab>
+            <sl-tab slot="nav" panel="recent" data-tab="recent"><i data-lucide="sparkles" class="icon-sm"></i> <span data-i18n="tabRecent" data-i18n-text>最近更新</span></sl-tab>
+            <sl-tab-panel name="all"></sl-tab-panel>
+            <sl-tab-panel name="hot"></sl-tab-panel>
+            <sl-tab-panel name="recent"></sl-tab-panel>
+          </sl-tab-group>
         </div>
       </div>
 
       <div class="container toolbar">
-        <div class="toolbar-row">
-          <div class="search-wrap">
-            <label for="searchInput" aria-hidden="true">⌕</label>
-            <input id="searchInput" type="search" placeholder="搜索 skill 名称、描述、分类…" autocomplete="off" />
+        <div class="toolbar-card">
+          <div class="toolbar-row">
+            <sl-input id="searchInput" class="toolbar-search" clearable data-i18n-placeholder="searchPh" placeholder="搜索 skill 名称、描述、分类…" size="medium">
+              <i data-lucide="search" slot="prefix"></i>
+            </sl-input>
+            <sl-select id="categoryFilter" class="toolbar-select" data-i18n-placeholder="allCats" placeholder="全部分类" clearable size="medium">
+              <i data-lucide="folder-tree" slot="prefix"></i>
+              <sl-option value="">全部分类</sl-option>
+            </sl-select>
+            <sl-select id="sortSelect" class="toolbar-select" value="hot" size="medium">
+              <i data-lucide="arrow-up-down" slot="prefix"></i>
+              <sl-option value="hot">按热门</sl-option>
+              <sl-option value="recent">按最近更新</sl-option>
+              <sl-option value="name">按名称</sl-option>
+            </sl-select>
           </div>
-          <select id="categoryFilter" class="filter-select" aria-label="分类筛选">
-            <option value="">全部分类</option>
-          </select>
-          <select id="sortSelect" class="filter-select" aria-label="排序">
-            <option value="rank">按排名</option>
-            <option value="hot">按热门</option>
-            <option value="recent">按最近更新</option>
-            <option value="name">按名称</option>
-          </select>
+          <div class="result-meta" id="resultMeta"><span data-i18n="loading" data-i18n-text>加载中…</span></div>
         </div>
-        <div class="result-meta" id="resultMeta">加载中…</div>
       </div>
 
-      <section class="section" style="padding-top:0">
+      <section class="section section-tight">
         <div class="container">
           <div id="exploreGrid" class="grid"></div>
-          <div id="exploreRank" class="rank-list" hidden></div>
           <div id="exploreEmpty" class="state-box" hidden>
-            <strong>没有找到相关 skill</strong>
-            试试别的关键词，或清空筛选。
+            <div class="state-icon"><i data-lucide="search-x"></i></div>
+            <strong data-i18n="emptyTitle" data-i18n-text>没有找到相关 skill</strong>
+            <p data-i18n="emptyHint" data-i18n-text>试试别的关键词，或清空筛选。</p>
+          </div>
+          <div class="pager" id="pager" hidden>
+            <div class="pager-sentinel" id="pagerSentinel" aria-hidden="true"></div>
+            <div class="pager-status" id="pagerStatus">
+              <span class="pager-spinner" id="pagerSpinner" hidden></span>
+              <span class="pager-meta" id="pagerMeta"></span>
+            </div>
           </div>
         </div>
       </section>
@@ -165,48 +209,66 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3>About</h3>
-          <p>Skill Café 是本机 Agent Skills 合集的前端目录。视觉系统灵感来自 Starbucks 设计规范：暖奶油画布、四阶绿与金色仪式感。</p>
+          <div class="footer-brand">
+            <span class="brand-mark sm"><i data-lucide="coffee"></i></span>
+            <strong>Skill Café</strong>
+          </div>
         </div>
         <div>
-          <h3>Browse</h3>
+          <h3 data-i18n="footerBrowse" data-i18n-text>Browse</h3>
           <ul>
-            <li><a href="#" data-view="explore" data-tab="all">全部 Skills</a></li>
-            <li><a href="#" data-view="explore" data-tab="rank">排行榜</a></li>
-            <li><a href="#" data-view="explore" data-tab="hot">热门</a></li>
-            <li><a href="#" data-view="explore" data-tab="recent">最近更新</a></li>
+            <li><a href="#" data-view="explore" data-tab="all"><i data-lucide="layout-grid"></i><span data-i18n="footerAll" data-i18n-text>全部 Skills</span></a></li>
+            <li><a href="#" data-view="explore" data-tab="hot"><i data-lucide="flame"></i><span data-i18n="tabHot" data-i18n-text>热门</span></a></li>
+            <li><a href="#" data-view="explore" data-tab="recent"><i data-lucide="sparkles"></i><span data-i18n="tabRecent" data-i18n-text>最近更新</span></a></li>
           </ul>
         </div>
         <div>
-          <h3>Install</h3>
-          <p>下载后复制到 <code style="color:#dfc49d">~/.cursor/skills/</code> 或项目 <code style="color:#dfc49d">.cursor/skills/</code> 即可启用。</p>
+          <h3 data-i18n="footerInstall" data-i18n-text>Install</h3>
+          <p data-i18n="footerInstallText" data-i18n-text>下载后复制到 ~/.cursor/skills/ 或项目 .cursor/skills/。</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© Skill Café · Local skills directory</span>
+        <span>© Skill Café</span>
         <span id="footerStamp">—</span>
       </div>
     </div>
   </footer>
 
-  <button class="frap" type="button" id="frapBtn" title="回到搜索" aria-label="搜索">⌕</button>
-
-  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal">
-      <button class="modal-close" type="button" id="modalClose" aria-label="关闭">×</button>
-      <h2 id="modalTitle">Skill</h2>
-      <p class="modal-desc" id="modalDesc"></p>
-      <div class="modal-meta" id="modalMeta"></div>
-      <pre class="modal-preview" id="modalPreview">加载预览…</pre>
-      <div class="modal-actions">
-        <button class="btn btn-primary" type="button" id="modalDownload">下载 Skill</button>
-        <button class="btn btn-outline" type="button" id="modalDownloadMd">仅下载 SKILL.md</button>
-        <button class="btn btn-ghost-dark" type="button" id="modalClose2">关闭</button>
+  <sl-dialog id="modal" label="Skill" class="skill-dialog">
+    <div class="modal-head">
+      <div class="modal-icon" id="modalIcon"></div>
+      <div>
+        <h2 id="modalTitle">Skill</h2>
+        <p class="modal-desc" id="modalDesc"></p>
       </div>
     </div>
-  </div>
+    <div class="modal-meta" id="modalMeta"></div>
+    <div class="modal-preview-wrap">
+      <div class="preview-label"><i data-lucide="file-code-2"></i> <span data-i18n="previewLabel" data-i18n-text>SKILL.md 预览</span></div>
+      <div class="modal-preview markdown-body" id="modalPreview">…</div>
+    </div>
+    <div slot="footer" class="modal-actions">
+      <sl-button variant="primary" id="modalDownload">
+        <i data-lucide="download" slot="prefix"></i>
+        <span data-i18n="downloadZip" data-i18n-text>下载 Zip</span>
+      </sl-button>
+      <sl-button variant="default" outline id="modalDownloadMd">
+        <i data-lucide="file-text" slot="prefix"></i>
+        <span data-i18n="downloadMd" data-i18n-text>仅 SKILL.md</span>
+      </sl-button>
+      <sl-button variant="default" id="modalClose2"><span data-i18n="close" data-i18n-text>关闭</span></sl-button>
+    </div>
+  </sl-dialog>
 
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-  <script src="js/app.js"></script>
+  <sl-alert id="toast" variant="primary" duration="3000" closable>
+    <i data-lucide="check-circle-2" slot="icon"></i>
+    <strong id="toastTitle">OK</strong>
+    <div id="toastMsg"></div>
+  </sl-alert>
+
+  <script src="js/i18n.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
+  <script src="js/app.js" defer></script>
+</div>
 </body>
 </html>

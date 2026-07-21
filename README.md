@@ -1,6 +1,6 @@
 # Agent Skills 合集
 
-> 共整理 **928** 个 skill（按内容去重）。含本机已装 + GitHub 精选 + **高价值补强**（skills.sh 热榜 / 工程方法论 / 设计 / 金融等）。
+> 共整理 **929** 个 skill（按内容去重）。含本机已装 + GitHub 精选 + **高价值补强**（skills.sh 热榜 / 工程方法论 / 设计 / 金融等）。
 
 ## 分类一览
 
@@ -17,7 +17,7 @@
 | `09-analytics/` | 分析 / 可观测 / 监控 | 124 |
 | `10-payments-auth/` | 支付 / 认证 | 18 |
 | `11-planning/` | 规划 / 架构 | 28 |
-| `12-meta/` | Skill 创作 / Meta | 10 |
+| `12-meta/` | Skill 创作 / Meta | 11 |
 | `13-integrations/` | 厂商集成 / 平台 | 113 |
 | `14-finance/` | 金融 / 投资 | 10 |
 | `99-misc/` | 其他 / 未分类 | 90 |
@@ -786,6 +786,8 @@ cp -R 04-frontend-ui/<skill-name> ~/.cursor/skills/
 
 ### Skill 创作 / Meta (`12-meta/`)
 
+
+- **update-all-skills** — Updates all Agent Skills installed on the machine across Cursor, Claude, Hermes, Codex, skills.sh, Agent Reach, and known remote packs.
 - **create-rule** — >-
 - **create-skill** — >-
 - **plugin-creator** — Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, and baseline placeholders you can edit before publishing or testing. Use wh
