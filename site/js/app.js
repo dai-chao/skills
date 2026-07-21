@@ -792,28 +792,32 @@
       state.data = await res.json();
       state.skills = state.data.skills || [];
       state.byId = indexSkills(state.skills);
-      requestIdleCallback
-        ? requestIdleCallback(() => {
-            ensureSorted("hot");
-            ensureSorted("recent");
-            ensureSorted("name");
-          })
-        : setTimeout(() => {
-            ensureSorted("hot");
-            ensureSorted("recent");
-            ensureSorted("name");
-          }, 0);
+      const warmSort = () => {
+        ensureSorted("hot");
+        ensureSorted("recent");
+        ensureSorted("name");
+      };
+      // Safari 等浏览器无 requestIdleCallback，不能直接引用该标识符
+      if (typeof window.requestIdleCallback === "function") {
+        window.requestIdleCallback(warmSort);
+      } else {
+        setTimeout(warmSort, 0);
+      }
 
       fillCategories();
       I18n()?.applyDom();
       renderHome();
     } catch (err) {
+      const localHint =
+        location.hostname === "localhost" || location.hostname === "127.0.0.1"
+          ? `<pre style="text-align:left;background:#fff;padding:1rem;border-radius:12px;display:inline-block;margin-top:1rem">cd ~/Desktop/skills
+python3 -m http.server 8765</pre>`
+          : `<p style="margin-top:1rem;color:rgba(0,0,0,.55)">请稍后刷新重试。若持续失败，可能是部署尚未完成或网络异常。</p>`;
       $("main").innerHTML = `
         <div class="container state-box" style="padding:4rem 1rem">
           <strong>Unable to load skills data / 无法加载数据</strong>
           <p>${escapeHtml(err.message)}</p>
-          <pre style="text-align:left;background:#fff;padding:1rem;border-radius:12px;display:inline-block;margin-top:1rem">cd ~/Desktop/skills
-python3 -m http.server 8765</pre>
+          ${localHint}
         </div>`;
     }
   }
