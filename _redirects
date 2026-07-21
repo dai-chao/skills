@@ -1,0 +1,6 @@
+# Render Static Site redirects / rewrites
+# https://render.com/docs/redirects-rewrites
+
+/                 /site/index.html   302
+/site             /site/index.html   200
+/site/            /site/index.html   200
