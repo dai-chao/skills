@@ -275,27 +275,23 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">
-            <span class="brand-mark sm"><i data-lucide="coffee"></i></span>
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <a class="footer-brand" href="#" data-view="home">
+          <span class="brand-mark sm" aria-hidden="true"><i data-lucide="coffee"></i></span>
+          <span class="footer-brand-text">
             <strong>Skill Café</strong>
-          </div>
-        </div>
-        <div>
-          <h3 data-i18n="footerBrowse" data-i18n-text>Browse</h3>
-          <ul>
-            <li><a href="#" data-view="explore" data-tab="all"><i data-lucide="layout-grid"></i><span data-i18n="footerAll" data-i18n-text>全部 Skills</span></a></li>
-            <li><a href="#" data-view="explore" data-tab="hot"><i data-lucide="flame"></i><span data-i18n="tabHot" data-i18n-text>热门</span></a></li>
-            <li><a href="#" data-view="explore" data-tab="recent"><i data-lucide="sparkles"></i><span data-i18n="tabRecent" data-i18n-text>最近更新</span></a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 data-i18n="footerInstall" data-i18n-text>Install</h3>
-          <p data-i18n="footerInstallText" data-i18n-text>下载后复制到 ~/.cursor/skills/ 或项目 .cursor/skills/。</p>
-        </div>
+            <small data-i18n="footerTagline" data-i18n-text>像点单一样找 Skill</small>
+          </span>
+        </a>
+        <nav class="footer-nav" aria-label="footer">
+          <a href="#" data-view="explore" data-tab="all" data-i18n="footerAll" data-i18n-text>全部 Skills</a>
+          <a href="#" data-view="explore" data-tab="hot" data-i18n="tabHot" data-i18n-text>热门</a>
+          <a href="#" data-view="explore" data-tab="recent" data-i18n="tabRecent" data-i18n-text>最近更新</a>
+        </nav>
       </div>
+
+
       <div class="footer-bottom">
         <span>© Skill Café</span>
         <span id="footerStamp">—</span>
