@@ -1,0 +1,24 @@
+{
+  "name": "Skill Café",
+  "short_name": "Skill Café",
+  "description": "Agent Skills 目录 — 搜索、预览、下载",
+  "start_url": "/site/index.html",
+  "display": "standalone",
+  "background_color": "#F2F0EB",
+  "theme_color": "#006241",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

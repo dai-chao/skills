@@ -2,8 +2,8 @@
 window.SkillCafeI18n = (() => {
   const STR = {
     zh: {
-      docTitle: "Skill Café — Agent Skills 目录",
-      docDesc: "搜索、浏览、下载 Agent Skills。热门、最近更新一站搞定。",
+      docTitle: "Skill Café — Agent Skills 目录 | 搜索、浏览、下载",
+      docDesc: "Skill Café 精选 Agent Skills 目录：按分类搜索、预览 SKILL.md、一键下载 Zip。覆盖 Cursor、工程、设计、营销与云集成。",
       stripMain: "Skill Café · 精选 Agent Skills",
       stripSub: "搜索 · 热门 · 一键下载",
       brandSub: "本地技能目录",
@@ -92,8 +92,8 @@ window.SkillCafeI18n = (() => {
       },
     },
     en: {
-      docTitle: "Skill Café — Agent Skills Directory",
-      docDesc: "Search, browse, and download Agent Skills. Trending and recent updates.",
+      docTitle: "Skill Café — Agent Skills Directory | Search & Download",
+      docDesc: "Curated Agent Skills directory: search by category, preview SKILL.md, download Zip. Cursor, engineering, design, marketing, and cloud.",
       stripMain: "Skill Café · Curated Agent Skills",
       stripSub: "Search · Trending · Download",
       brandSub: "Local Skills Directory",
