@@ -396,32 +396,36 @@
 
   function lockBodyScroll(lock) {
     const body = document.body;
+    // 不改 overflow / 不隐藏滚动条，避免开关弹窗时滚动条显隐导致页面左右抖动
+    // 背景滚动由弹窗上的 wheel 拦截 + 下方 touch 拦截完成
     if (lock) {
       if (body.dataset.scrollLocked === "1") return;
       body.dataset.scrollLocked = "1";
       body.dataset.scrollY = String(window.scrollY || window.pageYOffset || 0);
-      body.style.position = "fixed";
-      body.style.top = `-${body.dataset.scrollY}px`;
-      body.style.left = "0";
-      body.style.right = "0";
-      body.style.width = "100%";
-      body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
-      document.documentElement.style.overscrollBehavior = "none";
     } else {
       if (body.dataset.scrollLocked !== "1") return;
-      const y = parseInt(body.dataset.scrollY || "0", 10) || 0;
       body.dataset.scrollLocked = "0";
-      body.style.position = "";
-      body.style.top = "";
-      body.style.left = "";
-      body.style.right = "";
-      body.style.width = "";
-      body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-      document.documentElement.style.overscrollBehavior = "";
-      window.scrollTo(0, y);
+      body.dataset.scrollY = "";
     }
+  }
+
+  function onLockTouchMove(e) {
+    if (document.body.dataset.scrollLocked !== "1") return;
+    // 允许预览区内部滚动
+    if (e.target.closest?.(".modal-preview")) return;
+    e.preventDefault();
+  }
+
+  function onLockWheel(e) {
+    if (document.body.dataset.scrollLocked !== "1") return;
+    if (e.target.closest?.("sl-dialog") || e.target.closest?.(".skill-dialog")) return;
+    e.preventDefault();
+  }
+
+  function onLockScroll() {
+    if (document.body.dataset.scrollLocked !== "1") return;
+    const y = parseInt(document.body.dataset.scrollY || "0", 10) || 0;
+    if ((window.scrollY || 0) !== y) window.scrollTo(0, y);
   }
 
   function splitFrontmatter(md) {
@@ -635,11 +639,23 @@
     });
 
     $("#modalClose2")?.addEventListener("click", () => $("#modal")?.hide());
+    $("#modal")?.addEventListener("sl-after-show", () => {
+      // Shoelace 会给 body 加 paddingRight 补偿滚动条；已有 scrollbar-gutter 时会「双重缩进」
+      document.body.style.paddingRight = "0px";
+      document.documentElement.style.paddingRight = "0px";
+    });
     $("#modal")?.addEventListener("sl-after-hide", () => {
       lockBodyScroll(false);
       state.current = null;
+      document.body.style.paddingRight = "";
+      document.documentElement.style.paddingRight = "";
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     });
-    // Prevent wheel/touch from reaching the page behind the overlay
+    // 弹窗打开时拦截背景滚动（不隐藏滚动条，避免布局抖动）
+    document.addEventListener("touchmove", onLockTouchMove, { passive: false });
+    document.addEventListener("wheel", onLockWheel, { passive: false });
+    window.addEventListener("scroll", onLockScroll, { passive: true });
     $("#modal")?.addEventListener(
       "wheel",
       (e) => {
