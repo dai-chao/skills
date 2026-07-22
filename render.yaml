@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: skill-cafe
+    runtime: node
+    # 不用 rootDir：需同时读取 site/ 与各 skill 分类目录
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DASHSCOPE_API_KEY
+        sync: false
+      - key: BAILIAN_MODEL
+        value: qwen-plus

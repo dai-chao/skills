@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "defaults": {
+    "per_topic": 3,
+    "sortBy": "stars",
+    "min_stars": 10,
+    "language": null,
+    "skip_existing_names": true
+  },
+  "topics": [
+    {
+      "id": "video",
+      "query": "remotion video",
+      "category": "07-docs-office",
+      "per_topic": 3,
+      "min_stars": 0
+    },
+    {
+      "id": "video-ffmpeg",
+      "query": "ffmpeg video editing",
+      "category": "07-docs-office",
+      "per_topic": 2,
+      "min_stars": 0
+    },
+    {
+      "id": "figma",
+      "query": "figma design to code",
+      "category": "04-frontend-ui",
+      "per_topic": 3
+    },
+    {
+      "id": "security-review",
+      "query": "security audit review",
+      "category": "03-code-quality",
+      "per_topic": 3
+    },
+    {
+      "id": "testing",
+      "query": "playwright testing qa",
+      "category": "05-testing",
+      "per_topic": 2
+    },
+    {
+      "id": "devops",
+      "query": "deploy docker kubernetes",
+      "category": "06-devops-infra",
+      "per_topic": 2
+    },
+    {
+      "id": "research",
+      "query": "web research search",
+      "category": "08-research-web",
+      "per_topic": 2
+    },
+    {
+      "id": "planning",
+      "query": "planning architecture spec",
+      "category": "11-planning",
+      "per_topic": 2
+    },
+    {
+      "id": "skill-meta",
+      "query": "writing skills skill creator",
+      "category": "12-meta",
+      "per_topic": 2
+    }
+  ]
+}

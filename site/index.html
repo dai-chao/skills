@@ -142,12 +142,42 @@
               <span data-i18n="heroTitle1" data-i18n-text>像点单一样，</span><br />
               <em data-i18n="heroTitle2" data-i18n-text>找到下一个 Skill</em>
             </h1>
-            <div class="hero-cta">
-              <sl-button variant="primary" size="large" data-view="explore" data-tab="all">
+            <form class="ask-box" id="askForm" autocomplete="off">
+              <label class="visually-hidden" for="askInput" data-i18n="askLabel" data-i18n-text>AI 点单</label>
+              <div class="ask-row">
+                <span class="ask-ico" aria-hidden="true"><i data-lucide="coffee"></i></span>
+                <input
+                  id="askInput"
+                  class="ask-input"
+                  type="text"
+                  maxlength="200"
+                  data-i18n-placeholder="askPh"
+                  placeholder="跟我说你想做什么，例如：做视频…"
+                />
+                <button type="submit" class="ask-send" id="askSend" data-i18n-aria="askSend" aria-label="发送">
+                  <i data-lucide="send"></i>
+                </button>
+              </div>
+              <div class="ask-tips" id="askTips">
+                <button type="button" class="ask-tip" data-ask="做视频">做视频</button>
+                <button type="button" class="ask-tip" data-ask="代码审查">代码审查</button>
+                <button type="button" class="ask-tip" data-ask="写 commit message">写 commit</button>
+                <button type="button" class="ask-tip" data-ask="Figma 转代码">Figma 转代码</button>
+              </div>
+            </form>
+            <div class="ask-panel" id="askPanel" hidden>
+              <div class="ask-panel-status" id="askStatus"></div>
+              <div class="ask-panel-summary" id="askSummary"></div>
+              <div class="ask-clarify" id="askClarify" hidden></div>
+              <div class="ask-skills" id="askSkills"></div>
+              <div class="ask-web" id="askWeb" hidden></div>
+            </div>
+            <div class="hero-cta hero-cta-secondary">
+              <sl-button variant="default" size="medium" outline class="on-dark-outline" data-view="explore" data-tab="all">
                 <span data-i18n="startExplore" data-i18n-text>开始探索</span>
                 <i data-lucide="arrow-right" slot="suffix"></i>
               </sl-button>
-              <sl-button variant="default" size="large" outline class="on-dark-outline" data-view="explore" data-tab="hot">
+              <sl-button variant="default" size="medium" outline class="on-dark-outline" data-view="explore" data-tab="hot">
                 <i data-lucide="flame" slot="prefix"></i>
                 <span data-i18n="viewHot" data-i18n-text>查看热门</span>
               </sl-button>

@@ -557,6 +557,171 @@
     }
   }
 
+  function bindAskUi() {
+    const form = $("#askForm");
+    const input = $("#askInput");
+    const send = $("#askSend");
+    const panel = $("#askPanel");
+    const statusEl = $("#askStatus");
+    const summaryEl = $("#askSummary");
+    const clarifyEl = $("#askClarify");
+    const skillsEl = $("#askSkills");
+    const webEl = $("#askWeb");
+    if (!form || !input || !panel) return;
+
+    let lastQuery = "";
+    let busy = false;
+
+    function setBusy(v) {
+      busy = v;
+      if (send) send.disabled = v;
+      input.disabled = v;
+    }
+
+    function modeLabel(mode) {
+      if (mode === "local") return t("askModeLocal");
+      if (mode === "clarify") return t("askModeClarify");
+      if (mode === "web") return t("askModeWeb");
+      return "";
+    }
+
+    function renderAskResult(data) {
+      panel.hidden = false;
+      panel.classList.remove("is-loading");
+      statusEl.textContent = modeLabel(data.mode);
+      summaryEl.textContent = data.summary || "";
+
+      const options = data.clarify_options || [];
+      if (data.mode === "clarify" && options.length) {
+        clarifyEl.hidden = false;
+        clarifyEl.innerHTML = options
+          .map(
+            (opt) =>
+              `<button type="button" class="ask-chip" data-clarify="${escapeHtml(opt)}">${escapeHtml(opt)}</button>`
+          )
+          .join("");
+      } else {
+        clarifyEl.hidden = true;
+        clarifyEl.innerHTML = "";
+      }
+
+      const skills = data.skills || [];
+      if (skills.length) {
+        const langZh = (I18n()?.getLang?.() || "zh") === "zh";
+        skillsEl.innerHTML = skills
+          .map((s) => {
+            const desc = langZh
+              ? s.description_zh || s.description || ""
+              : s.description || s.description_zh || "";
+            return `<button type="button" class="ask-skill" data-action="preview" data-id="${escapeHtml(s.id)}">
+              <div>
+                <strong>${escapeHtml(s.title || s.name)}</strong>
+                <span class="meta">${escapeHtml(s.category_label || s.category || "")}</span>
+              </div>
+              <span class="ask-view">${escapeHtml(t("askView"))}</span>
+              <span class="desc">${escapeHtml(String(desc).slice(0, 120))}</span>
+            </button>`;
+          })
+          .join("");
+      } else {
+        skillsEl.innerHTML = "";
+      }
+
+      if (data.mode === "web" && data.web) {
+        webEl.hidden = false;
+        const sources = (data.web.sources || [])
+          .filter((s) => s.url)
+          .map(
+            (s) =>
+              `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+                s.title || s.url
+              )}</a>`
+          )
+          .join("");
+        webEl.innerHTML = `${escapeHtml(data.web.text || t("askEmpty"))}${
+          sources
+            ? `<div class="ask-web-sources"><strong>${escapeHtml(t("askSources"))}</strong>${sources}</div>`
+            : ""
+        }`;
+      } else {
+        webEl.hidden = true;
+        webEl.innerHTML = "";
+      }
+    }
+
+    function showAskError(message) {
+      panel.hidden = false;
+      panel.classList.remove("is-loading");
+      statusEl.textContent = t("askError");
+      summaryEl.textContent = message;
+      clarifyEl.hidden = true;
+      clarifyEl.innerHTML = "";
+      skillsEl.innerHTML = "";
+      webEl.hidden = true;
+      webEl.innerHTML = "";
+    }
+
+    async function runAsk(query, clarify = null) {
+      const q = String(query || "").trim();
+      if (!q || busy) return;
+      lastQuery = q;
+      input.value = q;
+      setBusy(true);
+      panel.hidden = false;
+      panel.classList.add("is-loading");
+      statusEl.textContent = "…";
+      summaryEl.textContent = t("askSearching");
+      clarifyEl.hidden = true;
+      clarifyEl.innerHTML = "";
+      skillsEl.innerHTML = "";
+      webEl.hidden = true;
+      webEl.innerHTML = "";
+
+      try {
+        const res = await fetch("/api/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: q, clarify }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          showAskError(data.error || (res.status >= 500 ? t("askNeedServer") : t("askError")));
+          return;
+        }
+        renderAskResult(data);
+        trackEvent("ask", { mode: data.mode });
+      } catch (_err) {
+        showAskError(t("askNeedServer"));
+      } finally {
+        setBusy(false);
+      }
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      runAsk(input.value);
+    });
+
+    $("#askTips")?.addEventListener("click", (e) => {
+      const tip = e.target.closest("[data-ask]");
+      if (!tip) return;
+      runAsk(tip.getAttribute("data-ask"));
+    });
+
+    clarifyEl?.addEventListener("click", (e) => {
+      const chip = e.target.closest("[data-clarify]");
+      if (!chip) return;
+      runAsk(lastQuery || input.value, chip.getAttribute("data-clarify"));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "j") {
+        e.preventDefault();
+        input.focus();
+      }
+    });
+  }
+
   function bindEvents() {
     document.body.addEventListener("click", (e) => {
       const langBtn = e.target.closest("[data-set-lang]");
@@ -782,7 +947,9 @@
     initHeroMarquee();
 
     bindEvents();
+    bindAskUi();
     refreshChromeIcons(document.querySelector(".nav"));
+    refreshChromeIcons(document.querySelector(".hero-copy"));
     refreshChromeIcons(document.querySelector(".subnav"));
     refreshChromeIcons(document.querySelector(".footer"));
 
@@ -810,8 +977,9 @@
     } catch (err) {
       const localHint =
         location.hostname === "localhost" || location.hostname === "127.0.0.1"
-          ? `<pre style="text-align:left;background:#fff;padding:1rem;border-radius:12px;display:inline-block;margin-top:1rem">cd ~/Desktop/skills
-python3 -m http.server 8765</pre>`
+          ? `<pre style="text-align:left;background:#fff;padding:1rem;border-radius:12px;display:inline-block;margin-top:1rem">cd ~/Desktop/skills/server
+npm install && npm start
+# → http://localhost:3000/site/</pre>`
           : `<p style="margin-top:1rem;color:rgba(0,0,0,.55)">请稍后刷新重试。若持续失败，可能是部署尚未完成或网络异常。</p>`;
       $("main").innerHTML = `
         <div class="container state-box" style="padding:4rem 1rem">
