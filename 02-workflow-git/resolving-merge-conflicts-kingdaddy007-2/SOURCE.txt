@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: Kingdaddy007
+github_url: https://github.com/Kingdaddy007/Antigravity-OS/tree/main/global/skills/resolving-merge-conflicts
+skillsmp_url: https://skillsmp.com/creators/kingdaddy007/antigravity-os/global-skills-resolving-merge-conflicts
+skillsmp_id: kingdaddy007-antigravity-os-global-skills-resolving-merge-conflicts-skill-md
+stars: 2
+source_path: /Users/chao/Desktop/skills/02-workflow-git/resolving-merge-conflicts-kingdaddy007-2/SKILL.md
+content_hash: 78a737b94a69
+category: 02-workflow-git

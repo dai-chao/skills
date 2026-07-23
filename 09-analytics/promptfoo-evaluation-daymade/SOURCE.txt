@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: daymade
+github_url: https://github.com/daymade/claude-code-skills/tree/main/promptfoo-evaluation
+skillsmp_url: https://skillsmp.com/creators/daymade/claude-code-skills/promptfoo-evaluation
+skillsmp_id: daymade-claude-code-skills-promptfoo-evaluation-skill-md
+stars: 1277
+source_path: /Users/chao/Desktop/skills/09-analytics/promptfoo-evaluation-daymade/SKILL.md
+content_hash: dfe42fda246f
+category: 09-analytics

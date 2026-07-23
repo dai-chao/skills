@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: seanchiuai
+github_url: https://github.com/seanchiuai/openclaude/tree/main/.claude/skills/auth
+skillsmp_url: https://skillsmp.com/creators/seanchiuai/openclaude/claude-skills-auth
+skillsmp_id: seanchiuai-openclaude-claude-skills-auth-skill-md
+stars: 14
+source_path: /Users/chao/Desktop/skills/10-payments-auth/auth/SKILL.md
+content_hash: c3e76440da32
+category: 10-payments-auth

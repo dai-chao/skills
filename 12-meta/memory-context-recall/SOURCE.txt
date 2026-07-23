@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: djinilabs
+github_url: https://github.com/djinilabs/helpmaton/tree/main/apps/backend/src/skills/memory-context-recall
+skillsmp_url: https://skillsmp.com/creators/djinilabs/helpmaton/apps-backend-src-skills-memory-context-recall
+skillsmp_id: djinilabs-helpmaton-apps-backend-src-skills-memory-context-recall-skill-md
+stars: 8
+source_path: /Users/chao/Desktop/skills/12-meta/memory-context-recall/SKILL.md
+content_hash: 80664fdb7b01
+category: 12-meta

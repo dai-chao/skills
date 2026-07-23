@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: mattgierhart
+github_url: https://github.com/mattgierhart/PRD-driven-context-engineering/tree/main/.claude/skills/prd-v06-architecture-design
+skillsmp_url: https://skillsmp.com/creators/mattgierhart/prd-driven-context-engineering/claude-skills-prd-v06-architecture-design
+skillsmp_id: mattgierhart-prd-driven-context-engineering-claude-skills-prd-v06-architecture-design-skill-md
+stars: 207
+source_path: /Users/chao/Desktop/skills/11-planning/prd-v06-architecture-design/SKILL.md
+content_hash: 6244b0ea8aa5
+category: 11-planning

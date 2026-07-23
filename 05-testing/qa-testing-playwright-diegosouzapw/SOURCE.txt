@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: diegosouzapw
+github_url: https://github.com/diegosouzapw/awesome-omni-skill/tree/main/skills/testing-security/qa-testing-playwright
+skillsmp_url: https://skillsmp.com/creators/diegosouzapw/awesome-omni-skill/skills-testing-security-qa-testing-playwright
+skillsmp_id: diegosouzapw-awesome-omni-skill-skills-testing-security-qa-testing-playwright-skill-md
+stars: 48
+source_path: /Users/chao/Desktop/skills/05-testing/qa-testing-playwright-diegosouzapw/SKILL.md
+content_hash: a4115a762866
+category: 05-testing

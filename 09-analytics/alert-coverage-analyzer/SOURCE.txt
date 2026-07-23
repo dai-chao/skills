@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: razorpay
+github_url: https://github.com/razorpay/trino-gateway/tree/master/.agents/skills/alert-coverage-analyzer
+skillsmp_url: https://skillsmp.com/creators/razorpay/trino-gateway/agents-skills-alert-coverage-analyzer
+skillsmp_id: razorpay-trino-gateway-agents-skills-alert-coverage-analyzer-skill-md
+stars: 31
+source_path: /Users/chao/Desktop/skills/09-analytics/alert-coverage-analyzer/SKILL.md
+content_hash: 5f64fc732726
+category: 09-analytics

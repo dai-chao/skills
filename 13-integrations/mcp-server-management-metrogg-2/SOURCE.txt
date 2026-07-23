@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: metrogg
+github_url: https://github.com/metrogg/AgentHub/tree/main/infra/manager-agent/skills/mcp-server-management
+skillsmp_url: https://skillsmp.com/creators/metrogg/agenthub/infra-manager-agent-skills-mcp-server-management
+skillsmp_id: metrogg-agenthub-infra-manager-agent-skills-mcp-server-management-skill-md
+stars: 18
+source_path: /Users/chao/Desktop/skills/13-integrations/mcp-server-management-metrogg-2/SKILL.md
+content_hash: f0a2bf0065bb
+category: 13-integrations

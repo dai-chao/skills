@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: advanced-security
+github_url: https://github.com/advanced-security/codeql-development-mcp-server/tree/main/.github/skills/validate-ql-mcp-server-tools-queries
+skillsmp_url: https://skillsmp.com/creators/advanced-security/codeql-development-mcp-server/github-skills-validate-ql-mcp-server-tools-queries
+skillsmp_id: advanced-security-codeql-development-mcp-server-github-skills-validate-ql-mcp-server-tools-queries-skill-md
+stars: 27
+source_path: /Users/chao/Desktop/skills/13-integrations/validate-ql-mcp-server-tools-queries/SKILL.md
+content_hash: d6c72e24e568
+category: 13-integrations

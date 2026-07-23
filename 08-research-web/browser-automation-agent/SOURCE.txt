@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: besoeasy
+github_url: https://github.com/besoeasy/open-skills/tree/main/skills/browser-automation-agent
+skillsmp_url: https://skillsmp.com/creators/besoeasy/open-skills/skills-browser-automation-agent
+skillsmp_id: besoeasy-open-skills-skills-browser-automation-agent-skill-md
+stars: 127
+source_path: /Users/chao/Desktop/skills/08-research-web/browser-automation-agent/SKILL.md
+content_hash: 4f16ed173d86
+category: 08-research-web

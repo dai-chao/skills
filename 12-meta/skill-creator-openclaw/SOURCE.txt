@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: openclaw
+github_url: https://github.com/openclaw/openclaw/tree/main/skills/skill-creator
+skillsmp_url: https://skillsmp.com/creators/openclaw/openclaw/skills-skill-creator
+skillsmp_id: openclaw-openclaw-skills-skill-creator-skill-md
+stars: 383220
+source_path: /Users/chao/Desktop/skills/12-meta/skill-creator-openclaw/SKILL.md
+content_hash: d15b25d332d8
+category: 12-meta

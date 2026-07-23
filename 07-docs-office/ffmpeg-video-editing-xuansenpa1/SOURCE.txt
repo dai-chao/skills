@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: xuansenpa1
+github_url: https://github.com/xuansenpa1/skillrevise/tree/main/data/skillsbench/tasks/multilingual-video-dubbing/environment/skills/ffmpeg-video-editing
+skillsmp_url: https://skillsmp.com/creators/xuansenpa1/skillrevise/data-skillsbench-tasks-multilingual-video-dubbing-environment-skills-ffmpeg-video-editing
+skillsmp_id: xuansenpa1-skillrevise-data-skillsbench-tasks-multilingual-video-dubbing-environment-skills-ffmpeg-video-editing-skill-md
+stars: 52
+source_path: /Users/chao/Desktop/skills/07-docs-office/ffmpeg-video-editing-xuansenpa1/SKILL.md
+content_hash: 3b56c8b577f0
+category: 07-docs-office

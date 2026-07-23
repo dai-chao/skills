@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: MayaDispeler
+github_url: https://github.com/MayaDispeler/TheOrqestra/tree/main/skills/product-requirements
+skillsmp_url: https://skillsmp.com/creators/mayadispeler/theorqestra/skills-product-requirements
+skillsmp_id: mayadispeler-theorqestra-skills-product-requirements-skill-md
+stars: 3
+source_path: /Users/chao/Desktop/skills/11-planning/product-requirements/SKILL.md
+content_hash: 513534a2d0e3
+category: 11-planning

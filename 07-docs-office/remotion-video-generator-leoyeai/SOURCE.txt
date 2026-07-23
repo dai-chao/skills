@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: LeoYeAI
+github_url: https://github.com/LeoYeAI/openclaw-master-skills/tree/main/skills/remotion-video-generator
+skillsmp_url: https://skillsmp.com/creators/leoyeai/openclaw-master-skills/skills-remotion-video-generator
+skillsmp_id: leoyeai-openclaw-master-skills-skills-remotion-video-generator-skill-md
+stars: 2081
+source_path: /Users/chao/Desktop/skills/07-docs-office/remotion-video-generator-leoyeai/SKILL.md
+content_hash: f5f3613c8521
+category: 07-docs-office

@@ -1,0 +1,155 @@
+<script>
+// ============================================================
+// Skill 学习导览 — 固定 JS 骨架（v3）
+// 数据（fileData / flowSteps / totalSections）由 build-report.py 注入在本段之前。
+// 本骨架只包含交互函数，不再硬编码任何示例数据。
+// ============================================================
+
+// 兜底：直接打开骨架预览时不报错
+if (typeof window.fileData === 'undefined') { window.fileData = {}; }
+if (typeof window.flowSteps === 'undefined') { window.flowSteps = []; }
+
+// ===== 滚动进入动画 =====
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+// ===== 顶部进度条 =====
+const progressBar = document.getElementById('progress-bar');
+function updateProgress() {
+  const s = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
+  if (progressBar) progressBar.style.width = (h > 0 ? (s / h) * 100 : 0) + '%';
+}
+function updateProgressBar() { updateProgress(); }
+window.addEventListener('scroll', () => requestAnimationFrame(updateProgress), { passive: true });
+
+// ===== 导航圆点 =====
+const sections = document.querySelectorAll('.section');
+const dots = document.querySelectorAll('.nav-dot');
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+    }
+  });
+}, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+sections.forEach(s => sectionObserver.observe(s));
+dots.forEach(d => d.addEventListener('click', () => {
+  document.getElementById(d.dataset.target)?.scrollIntoView({ behavior: 'smooth' });
+}));
+
+// ===== 键盘导航 ←/→ ↑/↓ =====
+const sectionIds = Array.from(sections).map(s => s.id);
+document.addEventListener('keydown', e => {
+  if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+  const currentIdx = sectionIds.findIndex(id => {
+    const el = document.getElementById(id);
+    const r = el.getBoundingClientRect();
+    return r.top <= 100 && r.bottom > 100;
+  });
+  if ((e.key === 'ArrowDown' || e.key === 'ArrowRight') && currentIdx < sectionIds.length - 1) {
+    document.getElementById(sectionIds[currentIdx + 1]).scrollIntoView({ behavior: 'smooth' }); e.preventDefault();
+  }
+  if ((e.key === 'ArrowUp' || e.key === 'ArrowLeft') && currentIdx > 0) {
+    document.getElementById(sectionIds[currentIdx - 1]).scrollIntoView({ behavior: 'smooth' }); e.preventDefault();
+  }
+});
+
+// ===== 模块 02：文件夹分组展开/折叠 =====
+function toggleFolder(toggle) {
+  const folder = toggle.closest('.ft-folder');
+  if (!folder) return;
+  const children = folder.querySelector('.ft-children');
+  if (!children) return;
+  if (folder.classList.contains('open')) {
+    children.style.maxHeight = children.scrollHeight + 'px';
+    requestAnimationFrame(() => { children.style.maxHeight = '0'; });
+    folder.classList.remove('open'); toggle.textContent = '▸';
+  } else {
+    folder.classList.add('open'); toggle.textContent = '▾';
+    children.style.maxHeight = children.scrollHeight + 'px';
+    setTimeout(() => { children.style.maxHeight = 'none'; }, 300);
+  }
+}
+
+// ===== 模块 03：运行流程为静态全展示，无需 JS（已移除自动播放） =====
+
+// ===== 模块 04：文档结构地图展开/折叠 =====
+function toggleStruct(el) {
+  const detail = el.querySelector('.struct-section-detail');
+  if (!detail) return;
+  if (detail.classList.contains('show')) { detail.classList.remove('show'); }
+  else {
+    document.querySelectorAll('.struct-section-detail.show').forEach(d => d.classList.remove('show'));
+    detail.classList.add('show');
+  }
+}
+
+// ===== 模块 04：文件卡片展开/折叠 =====
+function toggleFileCard(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.file-card-chevron');
+  if (!body) return;
+  if (body.style.display !== 'none') {
+    body.style.maxHeight = body.scrollHeight + 'px';
+    requestAnimationFrame(() => { body.style.maxHeight = '0'; body.style.opacity = '0'; });
+    setTimeout(() => { body.style.display = 'none'; body.style.maxHeight = ''; body.style.opacity = ''; }, 300);
+    if (chevron) chevron.textContent = '▾';
+  } else {
+    body.style.display = 'block'; body.style.maxHeight = '0'; body.style.opacity = '0';
+    requestAnimationFrame(() => { body.style.maxHeight = body.scrollHeight + 'px'; body.style.opacity = '1'; });
+    setTimeout(() => { body.style.maxHeight = 'none'; }, 300);
+    if (chevron) chevron.textContent = '▴';
+  }
+}
+
+// ===== 模块 05：大师视角卡片展开/折叠 =====
+function togglePerspective(card) {
+  const body = card.querySelector('.perspective-body');
+  const chevron = card.querySelector('.perspective-chevron');
+  if (!body) return;
+  if (body.classList.contains('show')) {
+    body.classList.remove('show');
+    body.style.display = 'none';
+    if (chevron) chevron.textContent = '▾';
+  } else {
+    body.classList.add('show');
+    body.style.display = 'block';
+    if (chevron) chevron.textContent = '▴';
+  }
+}
+
+// ===== 术语提示 =====
+const tooltip = document.createElement('div');
+tooltip.className = 'tooltip'; tooltip.style.display = 'none';
+document.body.appendChild(tooltip);
+document.querySelectorAll('.term').forEach(term => {
+  term.addEventListener('mouseenter', e => showTooltip(e.target));
+  term.addEventListener('mouseleave', () => hideTooltip());
+  term.addEventListener('click', e => {
+    e.stopPropagation();
+    (tooltip.style.display === 'block' && tooltip._t === e.target) ? hideTooltip() : showTooltip(e.target);
+  });
+});
+function showTooltip(t) {
+  tooltip.textContent = t.dataset.definition; tooltip.style.display = 'block'; tooltip._t = t;
+  const r = t.getBoundingClientRect();
+  tooltip.style.position = 'fixed'; tooltip.style.zIndex = '10000';
+  const tr = tooltip.getBoundingClientRect();
+  let top = r.top - tr.height - 8, left = r.left + (r.width / 2) - (tr.width / 2);
+  if (top < 8) top = r.bottom + 8;
+  left = Math.max(8, Math.min(left, window.innerWidth - tr.width - 8));
+  tooltip.style.top = top + 'px'; tooltip.style.left = left + 'px';
+}
+function hideTooltip() { tooltip.style.display = 'none'; tooltip._t = null; }
+document.addEventListener('click', () => hideTooltip());
+
+// ===== 初始化 =====
+updateProgress();
+</script>
+</body>
+</html>

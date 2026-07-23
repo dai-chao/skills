@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: virgo777
+github_url: https://github.com/virgo777/buddyme/tree/master/buddyMe/skill_library/skills/markitdown-skill-1.0.1
+skillsmp_url: https://skillsmp.com/creators/virgo777/buddyme/buddyme-skill-library-skills-markitdown-skill-1-0-1
+skillsmp_id: virgo777-buddyme-buddyme-skill-library-skills-markitdown-skill-1-0-1-skill-md
+stars: 437
+source_path: /Users/chao/Desktop/skills/07-docs-office/markitdown-skill/SKILL.md
+content_hash: 2e152e9690a4
+category: 07-docs-office

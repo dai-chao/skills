@@ -1,0 +1,4 @@
+interface:
+  display_name: "前端产品验收"
+  short_description: "基于 PRD 和浏览器证据验收业务流程"
+  default_prompt: "使用 $frontend-product-acceptance 基于 PRD 和浏览器 QA 证据验收这个前端功能。"

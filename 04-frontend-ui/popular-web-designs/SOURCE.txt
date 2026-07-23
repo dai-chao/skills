@@ -1,4 +1,5 @@
-origin: local
-source_path: /Users/chao/.hermes/skills/.archive/popular-web-designs/SKILL.md
-content_hash: 6f2b79a9d8a2
-category: 04-frontend-ui
+origin: https://github.com/VoltAgent/awesome-design-md
+source_path: design-md/*/DESIGN.md
+synced_at: 2026-07-23
+license: MIT (upstream)
+note: DESIGN.md brand templates curated from VoltAgent/awesome-design-md for local Agent Skills use

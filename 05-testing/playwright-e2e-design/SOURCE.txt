@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: curiositech
+github_url: https://github.com/curiositech/windags-skills/tree/main/skills/playwright-e2e-design
+skillsmp_url: https://skillsmp.com/creators/curiositech/windags-skills/skills-playwright-e2e-design
+skillsmp_id: curiositech-windags-skills-skills-playwright-e2e-design-skill-md
+stars: 7
+source_path: /Users/chao/Desktop/skills/05-testing/playwright-e2e-design/SKILL.md
+content_hash: 3dd515cf7dab
+category: 05-testing

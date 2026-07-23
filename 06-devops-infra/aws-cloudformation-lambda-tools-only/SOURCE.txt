@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: tools-only
+github_url: https://github.com/tools-only/X-Skills/tree/main/development/devops/1178-name-skill_951bbdf8
+skillsmp_url: https://skillsmp.com/creators/tools-only/x-skills/development-devops-1178-name-skill-951bbdf8
+skillsmp_id: tools-only-x-skills-development-devops-1178-name-skill-951bbdf8-skill-md
+stars: 6
+source_path: /Users/chao/Desktop/skills/06-devops-infra/aws-cloudformation-lambda-tools-only/SKILL.md
+content_hash: 951bbdf8c1eb
+category: 06-devops-infra

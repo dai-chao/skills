@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "terms": {
+    "设计": ["design", "designs", "ui", "style", "styling", "样式", "界面", "前端"],
+    "ui": ["设计", "样式", "design", "style", "styling", "界面", "frontend"],
+    "样式": ["style", "styling", "css", "design", "ui", "设计"],
+    "界面": ["ui", "design", "设计", "interface", "前端"],
+    "风格": ["style", "design", "设计", "ui", "theme"],
+    "前端": ["frontend", "front-end", "ui", "设计", "react", "web"],
+    "页面": ["page", "landing", "ui", "设计", "frontend"],
+    "design": ["设计", "样式", "ui", "styling", "前端"],
+    "style": ["样式", "设计", "styling", "ui", "css"],
+    "styling": ["样式", "style", "设计", "ui", "css"],
+    "css": ["样式", "style", "styling"],
+    "frontend": ["前端", "ui", "设计", "front-end"],
+
+    "测试": ["test", "testing", "qa", "e2e", "单测", "unit"],
+    "单测": ["unit", "test", "testing", "测试"],
+    "test": ["测试", "testing", "qa", "单测"],
+    "testing": ["测试", "test", "qa"],
+    "qa": ["测试", "test", "quality"],
+
+    "提交": ["commit", "git", "conventional"],
+    "分支": ["branch", "git", "checkout"],
+    "合并": ["merge", "pr", "pull request", "git"],
+    "pr": ["pull request", "merge", "git", "code review"],
+    "git": ["提交", "分支", "commit", "pr", "merge", "仓库"],
+    "commit": ["提交", "git", "message"],
+    "审查": ["review", "code review", "pr", "audit"],
+    "review": ["审查", "code review", "pr", "audit"],
+
+    "安全": ["security", "audit", "vuln", "漏洞", "owasp"],
+    "漏洞": ["vuln", "security", "cve", "安全"],
+    "重构": ["refactor", "refactoring", "清理"],
+    "质量": ["quality", "lint", "review", "code quality"],
+    "security": ["安全", "audit", "漏洞"],
+    "refactor": ["重构", "refactoring"],
+
+    "部署": ["deploy", "deployment", "ci", "cd", "发布"],
+    "运维": ["devops", "ops", "infra", "sre", "运维"],
+    "容器": ["docker", "container", "k8s", "kubernetes"],
+    "docker": ["容器", "container", "部署"],
+    "k8s": ["kubernetes", "容器", "集群"],
+    "ci": ["cd", "pipeline", "github actions", "部署"],
+    "devops": ["运维", "deploy", "infra", "ci"],
+    "deploy": ["部署", "发布", "ci", "cd"],
+
+    "文档": ["docs", "documentation", "markdown", "readme", "写作"],
+    "写作": ["write", "writing", "docs", "文档", "文案"],
+    "视频": ["video", "remotion", "manim", "动画"],
+    "幻灯片": ["slides", "ppt", "presentation", "演示"],
+    "docs": ["文档", "documentation", "markdown"],
+    "video": ["视频", "remotion", "动画"],
+
+    "调研": ["research", "搜索", "search", "查", "资料"],
+    "搜索": ["search", "调研", "research", "find"],
+    "联网": ["web", "search", "browser", "调研"],
+    "research": ["调研", "搜索", "search"],
+    "search": ["搜索", "调研", "find"],
+
+    "监控": ["monitor", "monitoring", "metrics", "可观测", "observability"],
+    "日志": ["log", "logs", "logging", "监控"],
+    "分析": ["analytics", "analysis", "metrics", "统计"],
+    "可观测": ["observability", "监控", "tracing", "metrics"],
+    "metrics": ["监控", "指标", "analytics"],
+    "analytics": ["分析", "统计", "metrics"],
+
+    "支付": ["payment", "payments", "stripe", "billing", "checkout"],
+    "登录": ["login", "auth", "signin", "认证", "oauth"],
+    "认证": ["auth", "authentication", "登录", "oauth", "权限"],
+    "权限": ["auth", "rbac", "permission", "认证"],
+    "auth": ["认证", "登录", "oauth", "权限"],
+    "payment": ["支付", "stripe", "billing"],
+    "stripe": ["支付", "payment", "billing"],
+
+    "规划": ["plan", "planning", "架构", "方案"],
+    "架构": ["architecture", "规划", "design", "方案"],
+    "方案": ["plan", "proposal", "rfc", "规划"],
+    "architecture": ["架构", "规划", "system design"],
+    "plan": ["规划", "方案", "planning"],
+
+    "技能": ["skill", "skills", "agent skill"],
+    "skill": ["技能", "agent", "skills"],
+    "提示词": ["prompt", "prompts", "prompt engineering"],
+    "prompt": ["提示词", "prompts"],
+
+    "集成": ["integration", "integrations", "sdk", "api", "对接"],
+    "对接": ["integration", "api", "sdk", "集成"],
+    "api": ["接口", "integration", "sdk"],
+    "integration": ["集成", "对接", "sdk"],
+
+    "金融": ["finance", "fintech", "投资", "trading"],
+    "股票": ["stock", "stocks", "trading", "投资", "finance"],
+    "投资": ["invest", "finance", "股票", "trading"],
+    "finance": ["金融", "投资", "fintech"],
+
+    "cursor": ["agent", "规则", "hooks", "ide"],
+    "规则": ["rules", "cursor", "hooks", "规范"],
+    "音乐": ["music", "audio", "song", "音频"],
+    "音频": ["audio", "music", "sound"],
+    "动画": ["animation", "motion", "视频", "remotion"],
+    "figma": ["设计", "ui", "design", "设计稿"],
+    "react": ["前端", "frontend", "组件", "ui"],
+    "组件": ["component", "react", "ui", "前端"]
+  },
+  "category_keywords": {
+    "01-cursor-native": [
+      "cursor", "agent", "rules", "hooks", "技能", "skill", "规则", "ide", "原生"
+    ],
+    "02-workflow-git": [
+      "git", "commit", "pr", "pull request", "merge", "branch", "rebase",
+      "提交", "分支", "合并", "工作流", "changelog", "conventional"
+    ],
+    "03-code-quality": [
+      "review", "lint", "security", "audit", "refactor", "quality",
+      "审查", "安全", "漏洞", "重构", "质量", "code review"
+    ],
+    "04-frontend-ui": [
+      "设计", "ui", "样式", "风格", "界面", "前端", "页面", "组件",
+      "design", "style", "styling", "css", "frontend", "react", "landing",
+      "figma", "动画", "animation", "theme", "design system", "设计系统"
+    ],
+    "05-testing": [
+      "测试", "单测", "e2e", "qa", "test", "testing", "unit", "playwright",
+      "jest", "assert", "覆盖率", "回归"
+    ],
+    "06-devops-infra": [
+      "部署", "运维", "容器", "docker", "k8s", "kubernetes", "ci", "cd",
+      "devops", "infra", "deploy", "服务器", "pipeline", "发布"
+    ],
+    "07-docs-office": [
+      "文档", "写作", "视频", "幻灯片", "markdown", "docs", "video", "slides",
+      "ppt", "remotion", "office", "文案", "演示"
+    ],
+    "08-research-web": [
+      "调研", "搜索", "联网", "research", "search", "web", "browser",
+      "资料", "爬虫", "查找"
+    ],
+    "09-analytics": [
+      "监控", "日志", "分析", "可观测", "metrics", "analytics", "logging",
+      "observability", "tracing", "指标", "统计"
+    ],
+    "10-payments-auth": [
+      "支付", "登录", "认证", "权限", "auth", "payment", "stripe", "oauth",
+      "billing", "checkout", "rbac"
+    ],
+    "11-planning": [
+      "规划", "架构", "方案", "plan", "architecture", "rfc", "设计方案",
+      "roadmap", "系统设计"
+    ],
+    "12-meta": [
+      "skill", "技能", "prompt", "提示词", "meta", "创建skill", "agent skill"
+    ],
+    "13-integrations": [
+      "集成", "对接", "api", "sdk", "integration", "平台", "webhook", "第三方"
+    ],
+    "14-finance": [
+      "金融", "股票", "投资", "finance", "trading", "fintech", "行情"
+    ],
+    "99-misc": [
+      "misc", "其他", "工具", "utility"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: GreptimeTeam
+github_url: https://github.com/GreptimeTeam/docs/tree/main/skills/greptimedb-quickstart
+skillsmp_url: https://skillsmp.com/creators/greptimeteam/docs/skills-greptimedb-quickstart
+skillsmp_id: greptimeteam-docs-skills-greptimedb-quickstart-skill-md
+stars: 50
+source_path: /Users/chao/Desktop/skills/06-devops-infra/greptimedb-quickstart/SKILL.md
+content_hash: c315321b3beb
+category: 06-devops-infra

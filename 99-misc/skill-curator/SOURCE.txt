@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: laolaoshiren
+github_url: https://github.com/laolaoshiren/claude-code-skills-zh/tree/main/skills/skill-curator
+skillsmp_url: https://skillsmp.com/creators/laolaoshiren/claude-code-skills-zh/skills-skill-curator
+skillsmp_id: laolaoshiren-claude-code-skills-zh-skills-skill-curator-skill-md
+stars: 640
+source_path: /Users/chao/Desktop/skills/99-misc/skill-curator/SKILL.md
+content_hash: 133266289307
+category: 99-misc

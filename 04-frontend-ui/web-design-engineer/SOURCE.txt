@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: naibarn
+github_url: https://github.com/naibarn/SmartSpecPro/tree/main/skills/web-design-engineer
+skillsmp_url: https://skillsmp.com/creators/naibarn/smartspecpro/skills-web-design-engineer
+skillsmp_id: naibarn-smartspecpro-skills-web-design-engineer-skill-md
+stars: 0
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/web-design-engineer/SKILL.md
+content_hash: c9f288e6cdd0
+category: 04-frontend-ui

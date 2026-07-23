@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: FlipsideCrypto
+github_url: https://github.com/FlipsideCrypto/near-intents-cli/tree/main/skills/near-intents-trading
+skillsmp_url: https://skillsmp.com/creators/flipsidecrypto/near-intents-cli/skills-near-intents-trading
+skillsmp_id: flipsidecrypto-near-intents-cli-skills-near-intents-trading-skill-md
+stars: 1
+source_path: /Users/chao/Desktop/skills/14-finance/near-intents-trading-flipsidecrypto-2/SKILL.md
+content_hash: f20b93e63181
+category: 14-finance

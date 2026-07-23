@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: anthropics
+github_url: https://github.com/anthropics/skills/tree/main/skills/skill-creator
+skillsmp_url: https://skillsmp.com/creators/anthropics/skills/skills-skill-creator
+skillsmp_id: anthropics-skills-skills-skill-creator-skill-md
+stars: 162047
+source_path: /Users/chao/Desktop/skills/12-meta/skill-creator-anthropics/SKILL.md
+content_hash: dcd4803e61e9
+category: 12-meta

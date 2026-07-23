@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: vudovn
+github_url: https://github.com/vudovn/ag-kit/tree/main/.agents/skills/nextjs-react-expert
+skillsmp_url: https://skillsmp.com/creators/vudovn/ag-kit/agents-skills-nextjs-react-expert
+skillsmp_id: vudovn-ag-kit-agents-skills-nextjs-react-expert-skill-md
+stars: 7820
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/nextjs-react-expert/SKILL.md
+content_hash: 1db0736663af
+category: 04-frontend-ui

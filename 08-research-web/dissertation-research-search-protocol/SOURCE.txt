@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: JonasLee12
+github_url: https://github.com/JonasLee12/research-agent-starter-kit/tree/main/.agents/skills/dissertation-research-search-protocol
+skillsmp_url: https://skillsmp.com/creators/jonaslee12/research-agent-starter-kit/agents-skills-dissertation-research-search-protocol
+skillsmp_id: jonaslee12-research-agent-starter-kit-agents-skills-dissertation-research-search-protocol-skill-md
+stars: 8
+source_path: /Users/chao/Desktop/skills/08-research-web/dissertation-research-search-protocol/SKILL.md
+content_hash: d94951503aa4
+category: 08-research-web

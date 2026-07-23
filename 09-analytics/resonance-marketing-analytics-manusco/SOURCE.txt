@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: manusco
+github_url: https://github.com/manusco/resonance/tree/main/.agents/skills/marketing/analytics
+skillsmp_url: https://skillsmp.com/creators/manusco/resonance/agents-skills-marketing-analytics
+skillsmp_id: manusco-resonance-agents-skills-marketing-analytics-skill-md
+stars: 36
+source_path: /Users/chao/Desktop/skills/09-analytics/resonance-marketing-analytics-manusco/SKILL.md
+content_hash: 93508a1fac95
+category: 09-analytics

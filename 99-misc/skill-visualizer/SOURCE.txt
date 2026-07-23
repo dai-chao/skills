@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: Gtato-ai
+github_url: https://github.com/Gtato-ai/skill-visualizer
+skillsmp_url: https://skillsmp.com/creators/gtato-ai/skill-visualizer/skill
+skillsmp_id: gtato-ai-skill-visualizer-skill-md
+stars: 8
+source_path: /Users/chao/Desktop/skills/99-misc/skill-visualizer/SKILL.md
+content_hash: 2c9f55dbc038
+category: 99-misc

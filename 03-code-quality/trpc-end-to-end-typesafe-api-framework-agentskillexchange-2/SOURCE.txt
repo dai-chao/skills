@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: agentskillexchange
+github_url: https://github.com/agentskillexchange/skills/tree/main/skills/trpc-end-to-end-typesafe-api-framework
+skillsmp_url: https://skillsmp.com/creators/agentskillexchange/skills/skills-trpc-end-to-end-typesafe-api-framework
+skillsmp_id: agentskillexchange-skills-skills-trpc-end-to-end-typesafe-api-framework-skill-md
+stars: 18
+source_path: /Users/chao/Desktop/skills/03-code-quality/trpc-end-to-end-typesafe-api-framework-agentskillexchange-2/SKILL.md
+content_hash: bc5224666aab
+category: 03-code-quality

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: affaan-m
+github_url: https://github.com/affaan-m/ECC/tree/main/skills/security-review
+skillsmp_url: https://skillsmp.com/creators/affaan-m/ecc/skills-security-review
+skillsmp_id: affaan-m-ecc-skills-security-review-skill-md
+stars: 230575
+source_path: /Users/chao/Desktop/skills/03-code-quality/security-review-affaan-m/SKILL.md
+content_hash: fe6f9151fb15
+category: 03-code-quality

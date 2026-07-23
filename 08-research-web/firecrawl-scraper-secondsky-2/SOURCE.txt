@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: secondsky
+github_url: https://github.com/secondsky/claude-skills/tree/main/plugins/firecrawl-scraper/skills/firecrawl-scraper
+skillsmp_url: https://skillsmp.com/creators/secondsky/claude-skills/plugins-firecrawl-scraper-skills-firecrawl-scraper
+skillsmp_id: secondsky-claude-skills-plugins-firecrawl-scraper-skills-firecrawl-scraper-skill-md
+stars: 190
+source_path: /Users/chao/Desktop/skills/08-research-web/firecrawl-scraper-secondsky-2/SKILL.md
+content_hash: e34809376b2e
+category: 08-research-web

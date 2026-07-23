@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: testland
+github_url: https://github.com/testland/qa/tree/main/plugins/qa-multi-tenancy/skills/row-level-security-postgres-reference
+skillsmp_url: https://skillsmp.com/creators/testland/qa/plugins-qa-multi-tenancy-skills-row-level-security-postgres-reference
+skillsmp_id: testland-qa-plugins-qa-multi-tenancy-skills-row-level-security-postgres-reference-skill-md
+stars: 1
+source_path: /Users/chao/Desktop/skills/10-payments-auth/row-level-security-postgres-reference-testland/SKILL.md
+content_hash: c12deb582847
+category: 10-payments-auth

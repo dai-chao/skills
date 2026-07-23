@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: wshobson
+github_url: https://github.com/wshobson/agents/tree/main/plugins/llm-application-dev/skills/prompt-engineering-patterns
+skillsmp_url: https://skillsmp.com/creators/wshobson/agents/plugins-llm-application-dev-skills-prompt-engineering-patterns
+skillsmp_id: wshobson-agents-plugins-llm-application-dev-skills-prompt-engineering-patterns-skill-md
+stars: 37983
+source_path: /Users/chao/Desktop/skills/12-meta/prompt-engineering-patterns-wshobson/SKILL.md
+content_hash: 6a210b15be01
+category: 12-meta

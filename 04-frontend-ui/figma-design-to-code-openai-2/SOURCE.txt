@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: openai
+github_url: https://github.com/openai/plugins/tree/main/plugins/figma/skills/figma-design-to-code
+skillsmp_url: https://skillsmp.com/creators/openai/plugins/plugins-figma-skills-figma-design-to-code
+skillsmp_id: openai-plugins-plugins-figma-skills-figma-design-to-code-skill-md
+stars: 4579
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/figma-design-to-code-openai-2/SKILL.md
+content_hash: 863d576bbe52
+category: 04-frontend-ui

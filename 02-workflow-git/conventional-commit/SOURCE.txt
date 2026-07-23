@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: osolmaz
+github_url: https://github.com/osolmaz/tools/tree/main/agents/skills/conventional-commit
+skillsmp_url: https://skillsmp.com/creators/osolmaz/tools/agents-skills-conventional-commit
+skillsmp_id: osolmaz-tools-agents-skills-conventional-commit-skill-md
+stars: 8
+source_path: /Users/chao/Desktop/skills/02-workflow-git/conventional-commit/SKILL.md
+content_hash: ff6809229cc8
+category: 02-workflow-git

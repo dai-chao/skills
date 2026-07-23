@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: vuralserhat86
+github_url: https://github.com/vuralserhat86/antigravity-agentic-skills/tree/main/skills/performance_engineering
+skillsmp_url: https://skillsmp.com/creators/vuralserhat86/antigravity-agentic-skills/skills-performance-engineering
+skillsmp_id: vuralserhat86-antigravity-agentic-skills-skills-performance-engineering-skill-md
+stars: 43
+source_path: /Users/chao/Desktop/skills/05-testing/performance-engineering-vuralserhat86-2/SKILL.md
+content_hash: cc7c9c3b81bd
+category: 05-testing

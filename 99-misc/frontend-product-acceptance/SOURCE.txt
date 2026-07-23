@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: LI-S-H
+github_url: https://github.com/LI-S-H/my-skills/tree/master/frontend-agent-skill-kit/frontend-product-acceptance
+skillsmp_url: https://skillsmp.com/creators/li-s-h/my-skills/frontend-agent-skill-kit-frontend-product-acceptance
+skillsmp_id: li-s-h-my-skills-frontend-agent-skill-kit-frontend-product-acceptance-skill-md
+stars: 4
+source_path: /Users/chao/Desktop/skills/99-misc/frontend-product-acceptance/SKILL.md
+content_hash: 89b84678c133
+category: 99-misc

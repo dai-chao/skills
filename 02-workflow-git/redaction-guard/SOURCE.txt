@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: microsoft
+github_url: https://github.com/microsoft/sre-agent/tree/main/labs/zava-learning/sre-config/agent-config/skills/redaction-guard
+skillsmp_url: https://skillsmp.com/creators/microsoft/sre-agent/labs-zava-learning-sre-config-agent-config-skills-redaction-guard
+skillsmp_id: microsoft-sre-agent-labs-zava-learning-sre-config-agent-config-skills-redaction-guard-skill-md
+stars: 134
+source_path: /Users/chao/Desktop/skills/02-workflow-git/redaction-guard/SKILL.md
+content_hash: aee80cd3f74b
+category: 02-workflow-git

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: Auctalis
+github_url: https://github.com/Auctalis/nocturnusai/tree/main/.claude/skills/nocturnusai-memory
+skillsmp_url: https://skillsmp.com/creators/auctalis/nocturnusai/claude-skills-nocturnusai-memory
+skillsmp_id: auctalis-nocturnusai-claude-skills-nocturnusai-memory-skill-md
+stars: 3
+source_path: /Users/chao/Desktop/skills/12-meta/nocturnusai-memory-auctalis-2/SKILL.md
+content_hash: b1fe7a53cb13
+category: 12-meta

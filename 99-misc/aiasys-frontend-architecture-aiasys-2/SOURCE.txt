@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: AIAsys
+github_url: https://github.com/AIAsys/AIASys/tree/main/.team-skills/aiasys-frontend-architecture
+skillsmp_url: https://skillsmp.com/creators/aiasys/aiasys/team-skills-aiasys-frontend-architecture
+skillsmp_id: aiasys-aiasys-team-skills-aiasys-frontend-architecture-skill-md
+stars: 20
+source_path: /Users/chao/Desktop/skills/99-misc/aiasys-frontend-architecture-aiasys-2/SKILL.md
+content_hash: 01d78d013534
+category: 99-misc

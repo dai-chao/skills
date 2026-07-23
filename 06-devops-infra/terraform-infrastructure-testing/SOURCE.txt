@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: PramodDutta
+github_url: https://github.com/PramodDutta/qaskills/tree/main/seed-skills/terraform-testing
+skillsmp_url: https://skillsmp.com/creators/pramoddutta/qaskills/seed-skills-terraform-testing
+skillsmp_id: pramoddutta-qaskills-seed-skills-terraform-testing-skill-md
+stars: 177
+source_path: /Users/chao/Desktop/skills/06-devops-infra/terraform-infrastructure-testing/SKILL.md
+content_hash: 1b710800a916
+category: 06-devops-infra

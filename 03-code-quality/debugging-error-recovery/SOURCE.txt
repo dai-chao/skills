@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: srednoff888-art
+github_url: https://github.com/srednoff888-art/srednoff-os/tree/main/.codex/skills/debugging-error-recovery
+skillsmp_url: https://skillsmp.com/creators/srednoff888-art/srednoff-os/codex-skills-debugging-error-recovery
+skillsmp_id: srednoff888-art-srednoff-os-codex-skills-debugging-error-recovery-skill-md
+stars: 1
+source_path: /Users/chao/Desktop/skills/03-code-quality/debugging-error-recovery/SKILL.md
+content_hash: 16f603cf13f0
+category: 03-code-quality

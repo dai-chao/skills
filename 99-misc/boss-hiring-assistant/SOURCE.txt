@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: waltonwang-debug
+github_url: https://github.com/waltonwang-debug/boss-hiring-assistant-skill
+skillsmp_url: https://skillsmp.com/creators/waltonwang-debug/boss-hiring-assistant-skill/skill
+skillsmp_id: waltonwang-debug-boss-hiring-assistant-skill-skill-md
+stars: 15
+source_path: /Users/chao/Desktop/skills/99-misc/boss-hiring-assistant/SKILL.md
+content_hash: f0bddc67ef74
+category: 99-misc

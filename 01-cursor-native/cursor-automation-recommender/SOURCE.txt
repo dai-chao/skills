@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: thanhtai9606
+github_url: https://github.com/thanhtai9606/iiot-platform/tree/main/.cursor/skills/cursor-automation-recommender
+skillsmp_url: https://skillsmp.com/creators/thanhtai9606/iiot-platform/cursor-skills-cursor-automation-recommender
+skillsmp_id: thanhtai9606-iiot-platform-cursor-skills-cursor-automation-recommender-skill-md
+stars: 1
+source_path: /Users/chao/Desktop/skills/01-cursor-native/cursor-automation-recommender/SKILL.md
+content_hash: 861f40ee46a9
+category: 01-cursor-native

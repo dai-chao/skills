@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: sandys
+github_url: https://github.com/sandys/kappal/tree/main/skills/kappal
+skillsmp_url: https://skillsmp.com/creators/sandys/kappal/skills-kappal
+skillsmp_id: sandys-kappal-skills-kappal-skill-md
+stars: 115
+source_path: /Users/chao/Desktop/skills/06-devops-infra/kappal/SKILL.md
+content_hash: 631fb9f17f38
+category: 06-devops-infra

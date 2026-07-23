@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: elaraai
+github_url: https://github.com/elaraai/east-plugin/tree/main/skills/east-node-io
+skillsmp_url: https://skillsmp.com/creators/elaraai/east-plugin/skills-east-node-io
+skillsmp_id: elaraai-east-plugin-skills-east-node-io-skill-md
+stars: 1
+source_path: /Users/chao/Desktop/skills/13-integrations/east-node-io-elaraai-2/SKILL.md
+content_hash: 5116d2a5ca23
+category: 13-integrations

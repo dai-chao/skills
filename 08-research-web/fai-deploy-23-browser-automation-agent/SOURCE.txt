@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: frootai
+github_url: https://github.com/frootai/frootai/tree/main/skills/fai-deploy-23-browser-automation-agent
+skillsmp_url: https://skillsmp.com/creators/frootai/frootai/skills-fai-deploy-23-browser-automation-agent
+skillsmp_id: frootai-frootai-skills-fai-deploy-23-browser-automation-agent-skill-md
+stars: 7
+source_path: /Users/chao/Desktop/skills/08-research-web/fai-deploy-23-browser-automation-agent/SKILL.md
+content_hash: 5b53958944ba
+category: 08-research-web

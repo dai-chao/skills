@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: ForceInjection
+github_url: https://github.com/ForceInjection/domain-driven-design-skills/tree/main/relative-skills/claude-skill-registry/skills/testing/architecture-carlheath-ogmios
+skillsmp_url: https://skillsmp.com/creators/forceinjection/domain-driven-design-skills/relative-skills-claude-skill-registry-skills-testing-architecture-carlheath-ogmios
+skillsmp_id: forceinjection-domain-driven-design-skills-relative-skills-claude-skill-registry-skills-testing-architecture-carlheath-ogmios-skill-md
+stars: 19
+source_path: /Users/chao/Desktop/skills/11-planning/architecture/SKILL.md
+content_hash: 90d4062851b9
+category: 11-planning

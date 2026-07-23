@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: jonasalessi
+github_url: https://github.com/jonasalessi/skills/tree/main/skills/tailwind-ui-guide
+skillsmp_url: https://skillsmp.com/creators/jonasalessi/skills/skills-tailwind-ui-guide
+skillsmp_id: jonasalessi-skills-skills-tailwind-ui-guide-skill-md
+stars: 0
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/tailwind-ui-guide/SKILL.md
+content_hash: a127130abe85
+category: 04-frontend-ui

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: tdimino
+github_url: https://github.com/tdimino/claude-code-minoan/tree/main/skills/core-development/dag-typesafe
+skillsmp_url: https://skillsmp.com/creators/tdimino/claude-code-minoan/skills-core-development-dag-typesafe
+skillsmp_id: tdimino-claude-code-minoan-skills-core-development-dag-typesafe-skill-md
+stars: 38
+source_path: /Users/chao/Desktop/skills/03-code-quality/dag-typesafe-tdimino/SKILL.md
+content_hash: 229929efcdcd
+category: 03-code-quality

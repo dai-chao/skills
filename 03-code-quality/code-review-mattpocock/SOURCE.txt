@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: mattpocock
+github_url: https://github.com/mattpocock/skills/tree/main/skills/engineering/code-review
+skillsmp_url: https://skillsmp.com/creators/mattpocock/skills/skills-engineering-code-review
+skillsmp_id: mattpocock-skills-skills-engineering-code-review-skill-md
+stars: 175391
+source_path: /Users/chao/Desktop/skills/03-code-quality/code-review-mattpocock/SKILL.md
+content_hash: 6a65cc61114f
+category: 03-code-quality

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: lennney
+github_url: https://github.com/lennney/gate-all-skills/tree/master/skills/website/error-handling
+skillsmp_url: https://skillsmp.com/creators/lennney/gate-all-skills/skills-website-error-handling
+skillsmp_id: lennney-gate-all-skills-skills-website-error-handling-skill-md
+stars: 1
+source_path: /Users/chao/Desktop/skills/03-code-quality/error-handling/SKILL.md
+content_hash: aab7e0580290
+category: 03-code-quality

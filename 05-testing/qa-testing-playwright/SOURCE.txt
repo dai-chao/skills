@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: vasilyu1983
+github_url: https://github.com/vasilyu1983/AI-Agents-public/tree/main/frameworks/shared-skills/skills/qa-testing-playwright
+skillsmp_url: https://skillsmp.com/creators/vasilyu1983/ai-agents-public/frameworks-shared-skills-skills-qa-testing-playwright
+skillsmp_id: vasilyu1983-ai-agents-public-frameworks-shared-skills-skills-qa-testing-playwright-skill-md
+stars: 67
+source_path: /Users/chao/Desktop/skills/05-testing/qa-testing-playwright/SKILL.md
+content_hash: 7c74ab02a8ac
+category: 05-testing

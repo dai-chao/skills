@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: bidewio
+github_url: https://github.com/bidewio/better-openclaw/tree/main/skills/firecrawl-scrape
+skillsmp_url: https://skillsmp.com/creators/bidewio/better-openclaw/skills-firecrawl-scrape
+skillsmp_id: bidewio-better-openclaw-skills-firecrawl-scrape-skill-md
+stars: 57
+source_path: /Users/chao/Desktop/skills/08-research-web/firecrawl-scrape/SKILL.md
+content_hash: bf1f427d70a7
+category: 08-research-web

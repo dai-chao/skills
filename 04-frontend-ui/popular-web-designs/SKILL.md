@@ -1,214 +1,211 @@
 ---
 name: popular-web-designs
-description: 54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
-version: 1.0.0
-author: Hermes Agent + Teknium (design systems sourced from VoltAgent/awesome-design-md)
+title: Popular Web Designs · 品牌设计模板
+description: >
+  74 real-brand DESIGN.md design systems (Stripe, Linear, Vercel, Starbucks, Nike, Tesla…).
+  Use whenever the user wants UI/pages that look like a known brand, asks for 「像 X 一样」「X 风格」
+  「build like Stripe/Linear/…」, landing/dashboard/marketing pages with a brand aesthetic,
+  or wants to drop a DESIGN.md into a project. Always load templates/<brand>.md before coding.
+  Source: VoltAgent/awesome-design-md (MIT). Keywords: 设计, UI, ui, 样式, 风格, 界面, UI设计, 品牌设计, 设计系统, DESIGN.md, design, style, styling, css, brand UI.
 license: MIT
-tags: [design, css, html, ui, web-development, design-systems, templates]
-platforms: [linux, macos, windows]
-triggers:
-  - build a page that looks like
-  - make it look like stripe
-  - design like linear
-  - vercel style
-  - create a UI
-  - web design
-  - landing page
-  - dashboard design
-  - website styled like
+metadata:
+  author: local
+  upstream: https://github.com/VoltAgent/awesome-design-md
+  synced_at: 2026-07-23
+  template_count: 74
 ---
 
-# Popular Web Designs
+# Popular Web Designs（品牌 DESIGN.md 库）
 
-54 real-world design systems ready for use when generating HTML/CSS. Each template captures a
-site's complete visual language: color palette, typography hierarchy, component styles, spacing
-system, shadows, responsive behavior, and practical agent prompts with exact CSS values.
+来自 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 的 **74** 份品牌设计系统。每份是 Google Stitch 风格的 `DESIGN.md`：气质、色板、字体层级、组件、间距、阴影、Do/Don't、响应式、Agent Prompt。
 
-## Related design skills
+**不要凭记忆「大概像某某品牌」**——先打开对应 `templates/<brand>.md`，再按其中 token 实现。
 
-- **`claude-design`** — use for the design *process and taste* (scoping a brief,
-  producing variants, verifying a local HTML artifact, avoiding AI-design slop).
-  Pair it with this skill when the user wants a thoughtfully-designed page styled
-  after a known brand: `claude-design` drives the workflow, this skill supplies
-  the visual vocabulary.
-- **`design-md`** — use when the deliverable is a formal DESIGN.md token spec
-  file, not a rendered artifact.
+## 何时使用
 
-## How to Use
+- 「做成 Stripe / Linear / Starbucks / Nike 那种感觉」
+- 「用某某品牌的 DESIGN.md 生成页面」
+- 落地页、营销站、Dashboard、文档站需要可复现的视觉语言
+- 用户丢来 awesome-design-md / getdesign.md 链接或品牌名
 
-1. Pick a design from the catalog below
-2. Load it: `skill_view(name="popular-web-designs", file_path="templates/<site>.md")`
-3. Use the design tokens and component specs when generating HTML
-4. Pair with the `generative-widgets` skill to serve the result via cloudflared tunnel
+## 工作流（必须）
 
-Each template includes a **Hermes Implementation Notes** block at the top with:
-- CDN font substitute and Google Fonts `<link>` tag (ready to paste)
-- CSS font-family stacks for primary and monospace
-- Reminders to use `write_file` for HTML creation and `browser_vision` for verification
+1. **选模板**：从下方目录匹配品牌；模糊时问用户 1 个澄清，或按场景推荐（见文末）。
+2. **读全文**：`templates/<brand>.md`（整份；不要只扫标题）。
+3. **实现**：把色板写成 CSS variables；字体按文内 stack（专有字体用文内 fallback / Google Fonts 替代）；组件状态（hover/focus/disabled）按 Section 4。
+4. **约束**：遵守该模板的 Do's and Don'ts；不要混搭第二个品牌的主色/主字体。
+5. **可选**：用户要求「写入项目」时，把该文件复制为项目根目录 `DESIGN.md`。
 
-## HTML Generation Pattern
+## 相关 skill
+
+- `claude-design` / `impeccable` / `design-taste-frontend`：设计流程与品味；本 skill 提供**具体品牌词汇表**。
+- 单风格抽象（`minimal`、`neon`…）：用户未点名品牌时可用；点名品牌时优先本库。
+
+## HTML 落地提示
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title</title>
-  <!-- Paste the Google Fonts <link> from the template's Hermes notes -->
-  <link href="https://fonts.googleapis.com/css2?family=..." rel="stylesheet">
-  <style>
-    /* Apply the template's color palette as CSS custom properties */
-    :root {
-      --color-bg: #ffffff;
-      --color-text: #171717;
-      --color-accent: #533afd;
-      /* ... more from template Section 2 */
-    }
-    /* Apply typography from template Section 3 */
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      color: var(--color-text);
-      background: var(--color-bg);
-    }
-    /* Apply component styles from template Section 4 */
-    /* Apply layout from template Section 5 */
-    /* Apply shadows from template Section 6 */
-  </style>
-</head>
-<body>
-  <!-- Build using component specs from the template -->
-</body>
-</html>
+:root {
+  /* 从模板 Section 2 填入 */
+  --color-bg: …;
+  --color-text: …;
+  --color-accent: …;
+}
+body {
+  /* 从模板 Section 3 填入 font-family / size / weight / tracking */
+}
 ```
 
-Write the file with `write_file`, serve with the `generative-widgets` workflow (cloudflared tunnel),
-and verify the result with `browser_vision` to confirm visual accuracy.
+专有字体不可用 CDN 时：用模板里的 fallback，或常见替代（Geist→Geist/Inter，sohne→Source Sans 3，Circular/Cereal→DM Sans）。**字重、字号、字距比字体名更重要。**
 
-## Font Substitution Reference
+---
 
-Most sites use proprietary fonts unavailable via CDN. Each template maps to a Google Fonts
-substitute that preserves the design's character. Common mappings:
+## 设计目录（74）
 
-| Proprietary Font | CDN Substitute | Character |
-|---|---|---|
-| Geist / Geist Sans | Geist (on Google Fonts) | Geometric, compressed tracking |
-| Geist Mono | Geist Mono (on Google Fonts) | Clean monospace, ligatures |
-| sohne-var (Stripe) | Source Sans 3 | Light weight elegance |
-| Berkeley Mono | JetBrains Mono | Technical monospace |
-| Airbnb Cereal VF | DM Sans | Rounded, friendly geometric |
-| Circular (Spotify) | DM Sans | Geometric, warm |
-| figmaSans | Inter | Clean humanist |
-| Pin Sans (Pinterest) | DM Sans | Friendly, rounded |
-| NVIDIA-EMEA | Inter (or Arial system) | Industrial, clean |
-| CoinbaseDisplay/Sans | DM Sans | Geometric, trustworthy |
-| UberMove | DM Sans | Bold, tight |
-| HashiCorp Sans | Inter | Enterprise, neutral |
-| waldenburgNormal (Sanity) | Space Grotesk | Geometric, slightly condensed |
-| IBM Plex Sans/Mono | IBM Plex Sans/Mono | Available on Google Fonts |
-| Rubik (Sentry) | Rubik | Available on Google Fonts |
+路径均为 `templates/<file>`。
 
-When a template's CDN font matches the original (Inter, IBM Plex, Rubik, Geist), no
-substitution loss occurs. When a substitute is used (DM Sans for Circular, Source Sans 3
-for sohne-var), follow the template's weight, size, and letter-spacing values closely —
-those carry more visual identity than the specific font face.
+### AI & LLM
 
-## Design Catalog
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `claude.md` | Claude | 暖陶土强调色、干净编辑向 |
+| `cohere.md` | Cohere | 鲜活渐变、数据仪表盘感 |
+| `elevenlabs.md` | ElevenLabs | 暗色电影感、声波美学 |
+| `minimax.md` | Minimax | 大胆暗色 + 霓虹 |
+| `mistral.ai.md` | Mistral AI | 法式极简、紫调 |
+| `ollama.md` | Ollama | 终端优先、单色 |
+| `opencode.ai.md` | OpenCode | 开发者暗色主题 |
+| `replicate.md` | Replicate | 白画布、代码向 |
+| `runwayml.md` | Runway | 电影节编辑感、暗色英雄区 |
+| `together.ai.md` | Together AI | 技术蓝图感 |
+| `voltagent.md` | VoltAgent | 虚空黑 + 翠绿、终端风 |
+| `x.ai.md` | xAI | 冷峻单色未来感 |
 
-### AI & Machine Learning
+### Developer Tools & IDEs
 
-| Template | Site | Style |
-|---|---|---|
-| `claude.md` | Anthropic Claude | Warm terracotta accent, clean editorial layout |
-| `cohere.md` | Cohere | Vibrant gradients, data-rich dashboard aesthetic |
-| `elevenlabs.md` | ElevenLabs | Dark cinematic UI, audio-waveform aesthetics |
-| `minimax.md` | Minimax | Bold dark interface with neon accents |
-| `mistral.ai.md` | Mistral AI | French-engineered minimalism, purple-toned |
-| `ollama.md` | Ollama | Terminal-first, monochrome simplicity |
-| `opencode.ai.md` | OpenCode AI | Developer-centric dark theme, full monospace |
-| `replicate.md` | Replicate | Clean white canvas, code-forward |
-| `runwayml.md` | RunwayML | Cinematic dark UI, media-rich layout |
-| `together.ai.md` | Together AI | Technical, blueprint-style design |
-| `voltagent.md` | VoltAgent | Void-black canvas, emerald accent, terminal-native |
-| `x.ai.md` | xAI | Stark monochrome, futuristic minimalism, full monospace |
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `cursor.md` | Cursor | 暗色界面、渐变点缀 |
+| `expo.md` | Expo | 暗色、紧字距、代码中心 |
+| `lovable.md` | Lovable | 活泼渐变、友好开发感 |
+| `raycast.md` | Raycast | 暗色 chrome、鲜艳渐变 |
+| `superhuman.md` | Superhuman | 高端暗色、键盘优先、紫光 |
+| `vercel.md` | Vercel | 黑白精密、Geist |
+| `warp.md` | Warp | 暗色 IDE、块状命令 UI |
+| `slack.md` | Slack | 协作产品感（上游收录） |
 
-### Developer Tools & Platforms
+### Backend / Data / DevOps
 
-| Template | Site | Style |
-|---|---|---|
-| `cursor.md` | Cursor | Sleek dark interface, gradient accents |
-| `expo.md` | Expo | Dark theme, tight letter-spacing, code-centric |
-| `linear.app.md` | Linear | Ultra-minimal dark-mode, precise, purple accent |
-| `lovable.md` | Lovable | Playful gradients, friendly dev aesthetic |
-| `mintlify.md` | Mintlify | Clean, green-accented, reading-optimized |
-| `posthog.md` | PostHog | Playful branding, developer-friendly dark UI |
-| `raycast.md` | Raycast | Sleek dark chrome, vibrant gradient accents |
-| `resend.md` | Resend | Minimal dark theme, monospace accents |
-| `sentry.md` | Sentry | Dark dashboard, data-dense, pink-purple accent |
-| `supabase.md` | Supabase | Dark emerald theme, code-first developer tool |
-| `superhuman.md` | Superhuman | Premium dark UI, keyboard-first, purple glow |
-| `vercel.md` | Vercel | Black and white precision, Geist font system |
-| `warp.md` | Warp | Dark IDE-like interface, block-based command UI |
-| `zapier.md` | Zapier | Warm orange, friendly illustration-driven |
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `clickhouse.md` | ClickHouse | 黄强调、技术文档风 |
+| `composio.md` | Composio | 现代暗色 + 彩色集成图标 |
+| `hashicorp.md` | HashiCorp | 企业干净黑白 |
+| `mongodb.md` | MongoDB | 绿叶品牌、文档向 |
+| `posthog.md` | PostHog | 活泼刺猬、开发者暗色 |
+| `sanity.md` | Sanity | 暗色编辑营销、珊瑚红 CTA |
+| `sentry.md` | Sentry | 暗色仪表盘、粉紫强调 |
+| `supabase.md` | Supabase | 暗翠绿、代码优先 |
 
-### Infrastructure & Cloud
+### Productivity & SaaS
 
-| Template | Site | Style |
-|---|---|---|
-| `clickhouse.md` | ClickHouse | Yellow-accented, technical documentation style |
-| `composio.md` | Composio | Modern dark with colorful integration icons |
-| `hashicorp.md` | HashiCorp | Enterprise-clean, black and white |
-| `mongodb.md` | MongoDB | Green leaf branding, developer documentation focus |
-| `sanity.md` | Sanity | Red accent, content-first editorial layout |
-| `stripe.md` | Stripe | Signature purple gradients, weight-300 elegance |
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `cal.md` | Cal.com | 干净中性、开发者简洁 |
+| `intercom.md` | Intercom | 友好蓝、会话 UI |
+| `linear.app.md` | Linear | 超极简、精密紫强调 |
+| `mintlify.md` | Mintlify | 干净绿强调、阅读优化 |
+| `notion.md` | Notion | 暖极简、衬线标题 |
+| `resend.md` | Resend | 极简暗色、等宽点缀 |
+| `zapier.md` | Zapier | 暖橙、插画友好 |
 
-### Design & Productivity
+### Design & Creative
 
-| Template | Site | Style |
-|---|---|---|
-| `airtable.md` | Airtable | Colorful, friendly, structured data aesthetic |
-| `cal.md` | Cal.com | Clean neutral UI, developer-oriented simplicity |
-| `clay.md` | Clay | Organic shapes, soft gradients, art-directed layout |
-| `figma.md` | Figma | Vibrant multi-color, playful yet professional |
-| `framer.md` | Framer | Bold black and blue, motion-first, design-forward |
-| `intercom.md` | Intercom | Friendly blue palette, conversational UI patterns |
-| `miro.md` | Miro | Bright yellow accent, infinite canvas aesthetic |
-| `notion.md` | Notion | Warm minimalism, serif headings, soft surfaces |
-| `pinterest.md` | Pinterest | Red accent, masonry grid, image-first layout |
-| `webflow.md` | Webflow | Blue-accented, polished marketing site aesthetic |
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `airtable.md` | Airtable | 彩色友好、结构化数据 |
+| `clay.md` | Clay | 有机形、软渐变、艺术指导 |
+| `figma.md` | Figma | 多色活泼且专业 |
+| `framer.md` | Framer | 大胆黑蓝、动效优先 |
+| `miro.md` | Miro | 明黄强调、无限画布 |
+| `webflow.md` | Webflow | 蓝强调、打磨营销站 |
 
 ### Fintech & Crypto
 
-| Template | Site | Style |
-|---|---|---|
-| `coinbase.md` | Coinbase | Clean blue identity, trust-focused, institutional feel |
-| `kraken.md` | Kraken | Purple-accented dark UI, data-dense dashboards |
-| `revolut.md` | Revolut | Sleek dark interface, gradient cards, fintech precision |
-| `wise.md` | Wise | Bright green accent, friendly and clear |
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `binance.md` | Binance | Binance 黄 + 单色、交易台紧迫感 |
+| `coinbase.md` | Coinbase | 干净蓝、信任机构感 |
+| `kraken.md` | Kraken | 紫强调暗色、数据密 |
+| `mastercard.md` | Mastercard | 暖奶油画布、轨道胶囊形 |
+| `revolut.md` | Revolut | 暗色精致、渐变卡片 |
+| `stripe.md` | Stripe | 紫渐变、字重 300 优雅 |
+| `wise.md` | Wise | 亮绿强调、清晰友好 |
 
-### Enterprise & Consumer
+### E-commerce & Retail
 
-| Template | Site | Style |
-|---|---|---|
-| `airbnb.md` | Airbnb | Warm coral accent, photography-driven, rounded UI |
-| `apple.md` | Apple | Premium white space, SF Pro, cinematic imagery |
-| `bmw.md` | BMW | Dark premium surfaces, precise engineering aesthetic |
-| `ibm.md` | IBM | Carbon design system, structured blue palette |
-| `nvidia.md` | NVIDIA | Green-black energy, technical power aesthetic |
-| `spacex.md` | SpaceX | Stark black and white, full-bleed imagery, futuristic |
-| `spotify.md` | Spotify | Vibrant green on dark, bold type, album-art-driven |
-| `uber.md` | Uber | Bold black and white, tight type, urban energy |
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `airbnb.md` | Airbnb | 暖珊瑚、摄影驱动、圆角 |
+| `meta.md` | Meta | 摄影优先、明暗二分、Meta Blue CTA |
+| `nike.md` | Nike | 单色、巨大大写 Futura、全出血图 |
+| `shopify.md` | Shopify | 暗色电影感、霓虹绿、超细 display |
+| `starbucks.md` | Starbucks | 四阶绿、暖奶油画布、SoDoSans |
 
-## Choosing a Design
+### Media & Consumer Tech
 
-Match the design to the content:
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `apple.md` | Apple | 大留白、SF Pro、电影感影像 |
+| `hp.md` | HP | 纯白、Electric Blue CTA、几何字 |
+| `ibm.md` | IBM | Carbon、结构化蓝 |
+| `nvidia.md` | NVIDIA | 绿黑能量、技术力量感 |
+| `pinterest.md` | Pinterest | 红强调、瀑布流、图像优先 |
+| `playstation.md` | PlayStation | 三表面频道布局、青 hover 缩放 |
+| `spacex.md` | SpaceX | 冷峻黑白、全出血、未来感 |
+| `spotify.md` | Spotify | 暗底鲜绿、大胆字体、专辑艺术 |
+| `theverge.md` | The Verge | 酸薄荷 + 紫外、Manuka display |
+| `uber.md` | Uber | 大胆黑白、紧字距、都市能量 |
+| `vodafone.md` | Vodafone | 纪念碑式大写、Vodafone Red 色带 |
+| `wired.md` | WIRED | 纸白宽报密度、自定义衬线、墨蓝链接 |
 
-- **Developer tools / dashboards:** Linear, Vercel, Supabase, Raycast, Sentry
-- **Documentation / content sites:** Mintlify, Notion, Sanity, MongoDB
-- **Marketing / landing pages:** Stripe, Framer, Apple, SpaceX
-- **Dark mode UIs:** Linear, Cursor, ElevenLabs, Warp, Superhuman
-- **Light / clean UIs:** Vercel, Stripe, Notion, Cal.com, Replicate
-- **Playful / friendly:** PostHog, Figma, Lovable, Zapier, Miro
-- **Premium / luxury:** Apple, BMW, Stripe, Superhuman, Revolut
-- **Data-dense / dashboards:** Sentry, Kraken, Cohere, ClickHouse
-- **Monospace / terminal aesthetic:** Ollama, OpenCode, x.ai, VoltAgent
+### Automotive
+
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `bmw.md` | BMW | 暗色高端、德系精密 |
+| `bmw-m.md` | BMW M | 赛车对比、M 色强调 |
+| `bugatti.md` | Bugatti | 影院黑、单色禁欲、巨幅 display |
+| `ferrari.md` | Ferrari | 黑白明暗编辑、Ferrari Red 极度克制 |
+| `lamborghini.md` | Lamborghini | 真黑教堂、金强调、Neo-Grotesk |
+| `renault.md` | Renault | 极光渐变、零圆角按钮 |
+| `tesla.md` | Tesla | 极简减法、全视口摄影 |
+
+### Retro Web（怀旧）
+
+| 文件 | 品牌 | 风格一句话 |
+|------|------|------------|
+| `dell-1996.md` | Dell (1996) | 目录时代企业站、色块卡片、GIF 贴纸感 |
+| `nintendo-2001.md` | Nintendo (2001) | Y2K 主机镀铬、半调导航、像素欢迎气泡 |
+
+---
+
+## 按场景快选
+
+| 场景 | 优先模板 |
+|------|----------|
+| 开发者工具 / Dashboard | `linear.app` `vercel` `supabase` `raycast` `sentry` `cursor` |
+| 文档 / 内容站 | `mintlify` `notion` `sanity` `mongodb` `wired` |
+| 营销落地页 | `stripe` `framer` `apple` `spacex` `shopify` |
+| 暗色产品 UI | `linear.app` `elevenlabs` `warp` `superhuman` `voltagent` |
+| 浅色干净 | `vercel` `stripe` `notion` `cal` `replicate` |
+| 活泼友好 | `posthog` `figma` `lovable` `zapier` `miro` |
+| 高端奢侈 | `apple` `bmw` `bugatti` `ferrari` `lamborghini` `stripe` |
+| 零售 / 消费品牌 | `starbucks` `nike` `airbnb` `meta` `mastercard` |
+| 终端 / 等宽美学 | `ollama` `opencode.ai` `x.ai` `voltagent` |
+| 怀旧 / 复古 Web | `dell-1996` `nintendo-2001` |
+
+## 许可与归属
+
+- 上游：[VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)（MIT）
+- 模板为公开站点视觉的分析文档，**不主张拥有任何品牌视觉商标**；生成 UI 时勿冒充官方产品
+- 同步信息见同目录 `SOURCE.txt`

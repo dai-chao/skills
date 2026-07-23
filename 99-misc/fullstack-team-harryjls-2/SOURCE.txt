@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: HarryJLS
+github_url: https://github.com/HarryJLS/ai_messy/tree/main/skills/fullstack-team
+skillsmp_url: https://skillsmp.com/creators/harryjls/ai_messy/skills-fullstack-team
+skillsmp_id: harryjls-ai-messy-skills-fullstack-team-skill-md
+stars: 3
+source_path: /Users/chao/Desktop/skills/99-misc/fullstack-team-harryjls-2/SKILL.md
+content_hash: 22d6f5f36be5
+category: 99-misc

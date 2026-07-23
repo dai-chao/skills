@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: itzzritik
+github_url: https://github.com/itzzritik/OrderWorder/tree/main/.agent/skills/nextjs-react-expert
+skillsmp_url: https://skillsmp.com/creators/itzzritik/orderworder/agent-skills-nextjs-react-expert
+skillsmp_id: itzzritik-orderworder-agent-skills-nextjs-react-expert-skill-md
+stars: 131
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/nextjs-react-expert-itzzritik/SKILL.md
+content_hash: e3efd7e71d2d
+category: 04-frontend-ui

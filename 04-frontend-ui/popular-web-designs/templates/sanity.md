@@ -1,17 +1,4 @@
-# Design System: Sanity
-
-
-> **Hermes Agent — Implementation Notes**
->
-> The original site uses proprietary fonts. For self-contained HTML output, use these CDN substitutes:
-> - **Primary:** `Space Grotesk` | **Mono:** `IBM Plex Mono`
-> - **Font stack (CSS):** `font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;`
-> - **Mono stack (CSS):** `font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;`
-> ```html
-> <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-> ```
-> Use `write_file` to create HTML, serve via `generative-widgets` skill (cloudflared tunnel).
-> Verify visual accuracy with `browser_vision` after generating.
+# Design System Inspired by Sanity
 
 ## 1. Visual Theme & Atmosphere
 

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: paulorsv01
+github_url: https://github.com/paulorsv01/agents-letras/tree/main/skills/web/tailwind-ui
+skillsmp_url: https://skillsmp.com/creators/paulorsv01/agents-letras/skills-web-tailwind-ui
+skillsmp_id: paulorsv01-agents-letras-skills-web-tailwind-ui-skill-md
+stars: 1
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/tailwind-ui/SKILL.md
+content_hash: 8884536b4627
+category: 04-frontend-ui

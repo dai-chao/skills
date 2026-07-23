@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: nowledge-co
+github_url: https://github.com/nowledge-co/con-terminal/tree/main/skills/changelog-release-notes
+skillsmp_url: https://skillsmp.com/creators/nowledge-co/con-terminal/skills-changelog-release-notes
+skillsmp_id: nowledge-co-con-terminal-skills-changelog-release-notes-skill-md
+stars: 496
+source_path: /Users/chao/Desktop/skills/07-docs-office/changelog-release-notes-nowledge-co-3/SKILL.md
+content_hash: a04be9d87256
+category: 07-docs-office

@@ -10,6 +10,8 @@
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#006241" />
   <meta name="color-scheme" content="light" />
+  <!-- Optional: override AI API base (local default is http://localhost:3000) -->
+  <!-- <meta name="skill-cafe-api" content="http://localhost:3000" /> -->
   <link rel="canonical" href="https://skills-hymr.onrender.com/site/" />
 
   <!-- Icons -->
@@ -43,7 +45,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/github.min.css" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=20260723h" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
   <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js" defer></script>
@@ -88,7 +90,7 @@
   }
   </script>
 </head>
-<body>
+<body data-cafe-view="home">
   <div class="page-shell">
 
   <header class="nav" id="nav">
@@ -101,9 +103,8 @@
       </a>
 
       <nav class="nav-links" aria-label="nav">
-        <a href="#explore" data-view="explore" data-tab="all"><i data-lucide="compass"></i><span data-i18n="navExplore" data-i18n-text>探索</span></a>
-        <a href="#hot" data-view="explore" data-tab="hot"><i data-lucide="flame"></i><span data-i18n="navHot" data-i18n-text>热门</span></a>
-        <a href="#recent" data-view="explore" data-tab="recent"><i data-lucide="sparkles"></i><span data-i18n="navRecent" data-i18n-text>最近</span></a>
+        <a href="#explore" data-view="explore"><i data-lucide="compass"></i><span data-i18n="navExplore" data-i18n-text>探索</span></a>
+        <a href="#all" data-view="all" data-tab="all"><i data-lucide="layout-grid"></i><span data-i18n="tabAll" data-i18n-text>全部</span></a>
       </nav>
 
       <div class="nav-actions">
@@ -111,10 +112,6 @@
           <button type="button" class="lang-btn" data-set-lang="zh">中文</button>
           <button type="button" class="lang-btn" data-set-lang="en">EN</button>
         </div>
-        <sl-button size="small" variant="default" data-view="explore" data-tab="all" class="hide-sm">
-          <i data-lucide="layout-grid" slot="prefix"></i>
-          <span data-i18n="browseAll" data-i18n-text>浏览全部</span>
-        </sl-button>
         <sl-button size="small" variant="neutral" id="btnFocusSearch">
           <i data-lucide="search" slot="prefix"></i>
           <span data-i18n="search" data-i18n-text>搜索</span>
@@ -142,44 +139,14 @@
               <span data-i18n="heroTitle1" data-i18n-text>像点单一样，</span><br />
               <em data-i18n="heroTitle2" data-i18n-text>找到下一个 Skill</em>
             </h1>
-            <form class="ask-box" id="askForm" autocomplete="off">
-              <label class="visually-hidden" for="askInput" data-i18n="askLabel" data-i18n-text>AI 点单</label>
-              <div class="ask-row">
-                <span class="ask-ico" aria-hidden="true"><i data-lucide="coffee"></i></span>
-                <input
-                  id="askInput"
-                  class="ask-input"
-                  type="text"
-                  maxlength="200"
-                  data-i18n-placeholder="askPh"
-                  placeholder="跟我说你想做什么，例如：做视频…"
-                />
-                <button type="submit" class="ask-send" id="askSend" data-i18n-aria="askSend" aria-label="发送">
-                  <i data-lucide="send"></i>
-                </button>
-              </div>
-              <div class="ask-tips" id="askTips">
-                <button type="button" class="ask-tip" data-ask="做视频">做视频</button>
-                <button type="button" class="ask-tip" data-ask="代码审查">代码审查</button>
-                <button type="button" class="ask-tip" data-ask="写 commit message">写 commit</button>
-                <button type="button" class="ask-tip" data-ask="Figma 转代码">Figma 转代码</button>
-              </div>
-            </form>
-            <div class="ask-panel" id="askPanel" hidden>
-              <div class="ask-panel-status" id="askStatus"></div>
-              <div class="ask-panel-summary" id="askSummary"></div>
-              <div class="ask-clarify" id="askClarify" hidden></div>
-              <div class="ask-skills" id="askSkills"></div>
-              <div class="ask-web" id="askWeb" hidden></div>
-            </div>
-            <div class="hero-cta hero-cta-secondary">
-              <sl-button variant="default" size="medium" outline class="on-dark-outline" data-view="explore" data-tab="all">
-                <span data-i18n="startExplore" data-i18n-text>开始探索</span>
-                <i data-lucide="arrow-right" slot="suffix"></i>
+            <div class="hero-cta">
+              <sl-button variant="primary" size="large" id="heroAskCta">
+                <span data-i18n="askGreeting" data-i18n-text>想点什么？</span>
+                <i data-lucide="arrow-down" slot="suffix"></i>
               </sl-button>
-              <sl-button variant="default" size="medium" outline class="on-dark-outline" data-view="explore" data-tab="hot">
-                <i data-lucide="flame" slot="prefix"></i>
-                <span data-i18n="viewHot" data-i18n-text>查看热门</span>
+              <sl-button variant="default" size="large" outline class="on-dark-outline" data-view="explore">
+                <i data-lucide="compass" slot="prefix"></i>
+                <span data-i18n="startExplore" data-i18n-text>开始探索</span>
               </sl-button>
             </div>
             <div class="hero-trust">
@@ -204,12 +171,76 @@
         </div>
       </section>
 
+      <section class="section ask-section" id="ask-section">
+        <div class="container ask-shell">
+          <div class="ask-greeting">
+            <h2 class="ask-greeting-title" data-i18n="askGreeting" data-i18n-text>想点什么？</h2>
+          </div>
+          <p class="ask-greeting-sub" data-i18n="askSectionSub" data-i18n-text>用一句话说需求，优先匹配站内 skill；没有再帮你联网找</p>
+
+          <div class="ask-counter">
+            <form class="ask-box" id="askForm" autocomplete="off">
+              <label class="visually-hidden" for="askInput" data-i18n="askLabel" data-i18n-text>AI 点单</label>
+              <div class="ask-composer">
+                <textarea
+                  id="askInput"
+                  class="ask-input"
+                  rows="2"
+                  maxlength="200"
+                  data-i18n-placeholder="askPh"
+                  placeholder="今天想让 Skill 帮你做什么？"
+                ></textarea>
+                <div class="ask-toolbar">
+                  <span class="ask-toolbar-hint" data-i18n="askHint" data-i18n-text>Enter 发送 · Shift+Enter 换行</span>
+                  <button type="submit" class="ask-send" id="askSend" data-i18n-aria="askSend" aria-label="发送">
+                    <i data-lucide="arrow-up"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="ask-tips" id="askTips">
+              <button type="button" class="ask-tip" data-ask="做视频" data-i18n="askTipVideo" data-i18n-text>做视频</button>
+              <button type="button" class="ask-tip" data-ask="代码审查" data-i18n="askTipReview" data-i18n-text>代码审查</button>
+              <button type="button" class="ask-tip" data-ask="写 commit message" data-i18n="askTipCommit" data-i18n-text>写 commit</button>
+              <button type="button" class="ask-tip" data-ask="Figma 转代码" data-i18n="askTipFigma" data-i18n-text>Figma 转代码</button>
+            </div>
+          </div>
+
+          <div class="ask-results" id="askPanel" hidden>
+            <div class="ask-results-head">
+              <div class="ask-results-head-main">
+                <span class="ask-badge" id="askStatus"></span>
+                <p class="ask-summary" id="askSummary"></p>
+              </div>
+              <button type="button" class="ask-explore-clear" id="askClear" data-i18n="askClear" data-i18n-text>退出点单</button>
+            </div>
+            <div class="ask-loading" id="askLoading" hidden aria-live="polite">
+              <div class="ask-annulus" aria-hidden="true">
+                <span class="ask-annulus-arc ask-annulus-arc--1"></span>
+                <span class="ask-annulus-arc ask-annulus-arc--2"></span>
+                <span class="ask-annulus-arc ask-annulus-arc--3"></span>
+                <span class="ask-annulus-arc ask-annulus-arc--4"></span>
+                <span class="ask-annulus-arc ask-annulus-arc--5"></span>
+                <span class="ask-annulus-arc ask-annulus-arc--6"></span>
+                <span class="ask-annulus-arc ask-annulus-arc--7"></span>
+              </div>
+              <p class="ask-loading-label" data-i18n="askSearching" data-i18n-text>正在理解需求并搜索站内 skills…</p>
+            </div>
+            <div class="grid" id="askSkills"></div>
+            <div class="ask-pager" id="askPager" hidden></div>
+            <div class="ask-web" id="askWeb" hidden></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="view" id="view-explore">
       <section class="section cats-strip">
         <div class="container">
           <div class="section-head compact">
             <div>
               <h2><i data-lucide="shapes"></i> <span data-i18n="browseByCat" data-i18n-text>按分类逛</span></h2>
-              <p data-i18n="browseByCatSub" data-i18n-text>点一下即可进入探索页筛选</p>
+              <p data-i18n="browseByCatSub" data-i18n-text>点一下即可进入全部页筛选</p>
             </div>
           </div>
           <div class="cat-pills" id="homeCats"></div>
@@ -223,7 +254,7 @@
               <h2><i data-lucide="flame"></i> <span data-i18n="hotPicks" data-i18n-text>热门精选</span></h2>
               <p data-i18n="hotPicksSub" data-i18n-text>安装量 × 新鲜度加权</p>
             </div>
-            <sl-button variant="default" outline size="small" data-view="explore" data-tab="hot">
+            <sl-button variant="default" outline size="small" data-view="all" data-tab="hot">
               <span data-i18n="viewMore" data-i18n-text>查看更多</span>
               <i data-lucide="chevron-right" slot="suffix"></i>
             </sl-button>
@@ -239,7 +270,7 @@
               <h2><i data-lucide="sparkles"></i> <span data-i18n="recentUpdates" data-i18n-text>最近更新</span></h2>
               <p data-i18n="recentSub" data-i18n-text>刚烘焙出炉</p>
             </div>
-            <sl-button variant="default" outline size="small" data-view="explore" data-tab="recent">
+            <sl-button variant="default" outline size="small" data-view="all" data-tab="recent">
               <span data-i18n="allRecent" data-i18n-text>全部最近</span>
               <i data-lucide="chevron-right" slot="suffix"></i>
             </sl-button>
@@ -249,7 +280,7 @@
       </section>
     </div>
 
-    <div class="view" id="view-explore">
+    <div class="view" id="view-all">
       <div class="subnav">
         <div class="container">
           <sl-tab-group id="exploreTabs">
@@ -304,31 +335,6 @@
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-top">
-        <a class="footer-brand" href="#" data-view="home">
-          <span class="brand-mark sm" aria-hidden="true"><i data-lucide="coffee"></i></span>
-          <span class="footer-brand-text">
-            <strong>Skill Café</strong>
-            <small data-i18n="footerTagline" data-i18n-text>像点单一样找 Skill</small>
-          </span>
-        </a>
-        <nav class="footer-nav" aria-label="footer">
-          <a href="#" data-view="explore" data-tab="all" data-i18n="footerAll" data-i18n-text>全部 Skills</a>
-          <a href="#" data-view="explore" data-tab="hot" data-i18n="tabHot" data-i18n-text>热门</a>
-          <a href="#" data-view="explore" data-tab="recent" data-i18n="tabRecent" data-i18n-text>最近更新</a>
-        </nav>
-      </div>
-
-
-      <div class="footer-bottom">
-        <span>© Skill Café</span>
-        <span id="footerStamp">—</span>
-      </div>
-    </div>
-  </footer>
-
   <sl-dialog id="modal" label="Skill" class="skill-dialog">
     <div class="modal-head">
       <div class="modal-icon" id="modalIcon"></div>
@@ -361,9 +367,9 @@
     <div id="toastMsg"></div>
   </sl-alert>
 
-  <script src="js/i18n.js"></script>
+  <script src="js/i18n.js?v=20260723e"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <script src="js/app.js?v=20260723g" defer></script>
 </div>
 </body>
 </html>

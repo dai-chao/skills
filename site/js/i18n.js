@@ -19,24 +19,37 @@ window.SkillCafeI18n = (() => {
       startExplore: "开始探索",
       viewHot: "查看热门",
       askLabel: "AI 点单",
-      askPh: "跟我说你想做什么，例如：做视频…",
+      askSectionTitle: "AI 点单",
+      askGreeting: "想点什么？",
+      askSectionSub: "用一句话说需求，优先匹配站内 skill；没有再帮你联网找",
+      askPh: "今天想让 Skill 帮你做什么？",
+      askHint: "Enter 发送 · Shift+Enter 换行",
       askSend: "发送",
       askSearching: "正在理解需求并搜索站内 skills…",
       askModeLocal: "Café 现货",
-      askModeClarify: "请选一个方向",
       askModeWeb: "站外发现",
       askEmpty: "站内暂无匹配，已尝试联网搜索。",
       askError: "请求失败",
-      askNeedServer: "需要启动后端服务后才能 AI 点单：cd server && npm start",
+      askNeedServer: "需要启动后端 API：cd ~/Desktop/skillsServer && npm start（前端保持 http://localhost:8765/site/）",
       askView: "查看",
       askSources: "来源",
+      askWebOpen: "打开来源",
+      askTipVideo: "做视频",
+      askTipReview: "代码审查",
+      askTipCommit: "写 commit",
+      askTipFigma: "Figma 转代码",
+      askClear: "退出点单",
+      askPagePrev: "上一页",
+      askPageNext: "下一页",
+      askPageMeta: "第 {page}/{total} 页 · 共 {count} 个",
+      askMatchMeta: "AI 点单",
       trustSkills: "skills",
       trustCats: "分类",
       trustHot: "热门 Top",
       todaySpecial: "今日特调",
       todaySpecialDesc: "覆盖 Cursor、工程方法论、设计、营销与云集成的精选技能包。",
       browseByCat: "按分类逛",
-      browseByCatSub: "点一下即可进入探索页筛选",
+      browseByCatSub: "点一下即可进入全部页筛选",
       hotPicks: "热门精选",
       hotPicksSub: "安装量 × 新鲜度加权",
       viewMore: "查看更多",
@@ -124,24 +137,37 @@ window.SkillCafeI18n = (() => {
       startExplore: "Start exploring",
       viewHot: "View trending",
       askLabel: "AI order",
-      askPh: "Tell me what you need, e.g. make a video…",
+      askSectionTitle: "AI Order",
+      askGreeting: "What can I get you?",
+      askSectionSub: "Describe what you need in one sentence. We match local skills first, then search the web.",
+      askPh: "How can Skill Café help you today?",
+      askHint: "Enter to send · Shift+Enter for newline",
       askSend: "Send",
       askSearching: "Understanding your need and searching local skills…",
       askModeLocal: "In stock",
-      askModeClarify: "Pick a direction",
       askModeWeb: "Found elsewhere",
       askEmpty: "Nothing local — tried the web.",
       askError: "Request failed",
-      askNeedServer: "Start the backend first: cd server && npm start",
+      askNeedServer: "Start the API first: cd ~/Desktop/skillsServer && npm start (keep frontend at http://localhost:8765/site/)",
       askView: "View",
       askSources: "Sources",
+      askWebOpen: "Open source",
+      askTipVideo: "Make video",
+      askTipReview: "Code review",
+      askTipCommit: "Write commit",
+      askTipFigma: "Figma to code",
+      askClear: "Clear ask",
+      askPagePrev: "Prev",
+      askPageNext: "Next",
+      askPageMeta: "Page {page}/{total} · {count} skills",
+      askMatchMeta: "AI ask",
       trustSkills: "skills",
       trustCats: "categories",
       trustHot: "Trending Top",
       todaySpecial: "Today's special",
       todaySpecialDesc: "Curated packs across Cursor, engineering methods, design, marketing, and cloud integrations.",
       browseByCat: "Browse by category",
-      browseByCatSub: "Tap to filter in Explore",
+      browseByCatSub: "Tap to filter in All",
       hotPicks: "Trending picks",
       hotPicksSub: "Installs × freshness weighted",
       viewMore: "View more",
@@ -224,7 +250,13 @@ window.SkillCafeI18n = (() => {
 
   function t(key) {
     const table = STR[lang] || STR.en;
-    return table[key] ?? STR.en[key] ?? key;
+    const val = table[key] ?? STR.en[key];
+    return val == null ? key : val;
+  }
+
+  function hasTranslation(key) {
+    const table = STR[lang] || STR.en;
+    return Object.prototype.hasOwnProperty.call(table, key) || Object.prototype.hasOwnProperty.call(STR.en, key);
   }
 
   function catLabel(catId, fallback) {
@@ -251,6 +283,7 @@ window.SkillCafeI18n = (() => {
 
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
+      if (!hasTranslation(key)) return;
       const val = t(key);
       if (el.hasAttribute("data-i18n-text")) {
         el.textContent = val;
@@ -266,13 +299,16 @@ window.SkillCafeI18n = (() => {
 
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
       const key = el.getAttribute("data-i18n-placeholder");
+      if (!hasTranslation(key)) return;
       const val = t(key);
       el.setAttribute("placeholder", val);
       if ("placeholder" in el) el.placeholder = val;
     });
 
     document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
-      el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
+      const key = el.getAttribute("data-i18n-aria");
+      if (!hasTranslation(key)) return;
+      el.setAttribute("aria-label", t(key));
     });
 
     document.querySelectorAll("[data-set-lang]").forEach((btn) => {

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: shuyu-labs
+github_url: https://github.com/shuyu-labs/WebCode/tree/main/skills/claude/office-to-md
+skillsmp_url: https://skillsmp.com/creators/shuyu-labs/webcode/skills-claude-office-to-md
+skillsmp_id: shuyu-labs-webcode-skills-claude-office-to-md-skill-md
+stars: 281
+source_path: /Users/chao/Desktop/skills/07-docs-office/office-to-md/SKILL.md
+content_hash: e89583d827c2
+category: 07-docs-office

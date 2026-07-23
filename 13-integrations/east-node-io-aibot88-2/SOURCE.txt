@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: aibot88
+github_url: https://github.com/aibot88/sec_skill_store/tree/main/skills/claudskills/east-node-io
+skillsmp_url: https://skillsmp.com/creators/aibot88/sec_skill_store/skills-claudskills-east-node-io
+skillsmp_id: aibot88-sec-skill-store-skills-claudskills-east-node-io-skill-md
+stars: 3
+source_path: /Users/chao/Desktop/skills/13-integrations/east-node-io-aibot88-2/SKILL.md
+content_hash: f0b0f275148c
+category: 13-integrations

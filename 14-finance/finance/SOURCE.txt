@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: xg-gh-25
+github_url: https://github.com/xg-gh-25/SwarmAI/tree/main/backend/skills/s_finance
+skillsmp_url: https://skillsmp.com/creators/xg-gh-25/swarmai/backend-skills-s-finance
+skillsmp_id: xg-gh-25-swarmai-backend-skills-s-finance-skill-md
+stars: 25
+source_path: /Users/chao/Desktop/skills/14-finance/finance/SKILL.md
+content_hash: 020a4d985784
+category: 14-finance

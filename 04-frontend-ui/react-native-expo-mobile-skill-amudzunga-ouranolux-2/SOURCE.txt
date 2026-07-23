@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: amudzunga-Ouranolux
+github_url: https://github.com/amudzunga-Ouranolux/BetRight/tree/main/betright_claude_self_building_system/.claude/skills/react-native-expo-mobile-skill
+skillsmp_url: https://skillsmp.com/creators/amudzunga-ouranolux/betright/betright-claude-self-building-system-claude-skills-react-native-expo-mobile-skill
+skillsmp_id: amudzunga-ouranolux-betright-betright-claude-self-building-system-claude-skills-react-native-expo-mobile-skill-skill-md
+stars: 0
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/react-native-expo-mobile-skill-amudzunga-ouranolux-2/SKILL.md
+content_hash: a1281d287f69
+category: 04-frontend-ui

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: modbender
+github_url: https://github.com/modbender/skill-library-mcp/tree/main/data/crypto-trading-optimizer
+skillsmp_url: https://skillsmp.com/creators/modbender/skill-library-mcp/data-crypto-trading-optimizer
+skillsmp_id: modbender-skill-library-mcp-data-crypto-trading-optimizer-skill-md
+stars: 10
+source_path: /Users/chao/Desktop/skills/14-finance/crypto-trading-optimizer-modbender/SKILL.md
+content_hash: 38d04b682d3b
+category: 14-finance

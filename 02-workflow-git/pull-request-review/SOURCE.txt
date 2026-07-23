@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: ruby-git
+github_url: https://github.com/ruby-git/ruby-git/tree/main/.github/skills/pull-request-review
+skillsmp_url: https://skillsmp.com/creators/ruby-git/ruby-git/github-skills-pull-request-review
+skillsmp_id: ruby-git-ruby-git-github-skills-pull-request-review-skill-md
+stars: 1796
+source_path: /Users/chao/Desktop/skills/02-workflow-git/pull-request-review/SKILL.md
+content_hash: e72cba1138bc
+category: 02-workflow-git

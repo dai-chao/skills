@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: VenTheZone
+github_url: https://github.com/VenTheZone/pi-dots/tree/main/pi-dotfiles-niche-skills/skills/browser-automation-agent
+skillsmp_url: https://skillsmp.com/creators/venthezone/pi-dots/pi-dotfiles-niche-skills-skills-browser-automation-agent
+skillsmp_id: venthezone-pi-dots-pi-dotfiles-niche-skills-skills-browser-automation-agent-skill-md
+stars: 42
+source_path: /Users/chao/Desktop/skills/08-research-web/browser-automation-agent-venthezone/SKILL.md
+content_hash: 2248e540553d
+category: 08-research-web

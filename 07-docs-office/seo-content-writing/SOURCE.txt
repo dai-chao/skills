@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: NeverSight
+github_url: https://github.com/NeverSight/learn-skills.dev/tree/main/data/skills-md/aaaaqwq/claude-code-skills/seo-content-writing
+skillsmp_url: https://skillsmp.com/creators/neversight/learn-skills.dev/data-skills-md-aaaaqwq-claude-code-skills-seo-content-writing
+skillsmp_id: neversight-learn-skills-dev-data-skills-md-aaaaqwq-claude-code-skills-seo-content-writing-skill-md
+stars: 185
+source_path: /Users/chao/Desktop/skills/07-docs-office/seo-content-writing/SKILL.md
+content_hash: 151bc40f0fc2
+category: 07-docs-office

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: petrkindlmann
+github_url: https://github.com/petrkindlmann/qa-skills/tree/main/skills/accessibility-testing
+skillsmp_url: https://skillsmp.com/creators/petrkindlmann/qa-skills/skills-accessibility-testing
+skillsmp_id: petrkindlmann-qa-skills-skills-accessibility-testing-skill-md
+stars: 34
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/accessibility-testing-petrkindlmann/SKILL.md
+content_hash: 04f0a8faffba
+category: 04-frontend-ui

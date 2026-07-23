@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: ducminhgd
+github_url: https://github.com/ducminhgd/tutorial-notes/tree/main/.claude/skills/product-ideation
+skillsmp_url: https://skillsmp.com/creators/ducminhgd/tutorial-notes/claude-skills-product-ideation
+skillsmp_id: ducminhgd-tutorial-notes-claude-skills-product-ideation-skill-md
+stars: 3
+source_path: /Users/chao/Desktop/skills/11-planning/product-ideation/SKILL.md
+content_hash: 57b0ca853c57
+category: 11-planning

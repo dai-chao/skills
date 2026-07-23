@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: aiskillstore
+github_url: https://github.com/aiskillstore/marketplace/tree/main/skills/babakbar/react-native-mobile-development
+skillsmp_url: https://skillsmp.com/creators/aiskillstore/marketplace/skills-babakbar-react-native-mobile-development
+skillsmp_id: aiskillstore-marketplace-skills-babakbar-react-native-mobile-development-skill-md
+stars: 384
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/react-native-mobile-development-aiskillstore-2/SKILL.md
+content_hash: 686ac527aa18
+category: 04-frontend-ui

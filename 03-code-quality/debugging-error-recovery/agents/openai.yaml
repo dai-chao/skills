@@ -1,0 +1,7 @@
+interface:
+  display_name: "Debugging Error Recovery"
+  short_description: "Programming workflow for Debugging Error Recovery"
+  default_prompt: "Use $debugging-error-recovery to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

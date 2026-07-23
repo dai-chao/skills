@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: girijashankarj
+github_url: https://github.com/girijashankarj/cursor-handbook/tree/main/.cursor/skills/devops/automation-helper
+skillsmp_url: https://skillsmp.com/creators/girijashankarj/cursor-handbook/cursor-skills-devops-automation-helper
+skillsmp_id: girijashankarj-cursor-handbook-cursor-skills-devops-automation-helper-skill-md
+stars: 26
+source_path: /Users/chao/Desktop/skills/01-cursor-native/automation-helper/SKILL.md
+content_hash: 7de3aacd0dd1
+category: 01-cursor-native

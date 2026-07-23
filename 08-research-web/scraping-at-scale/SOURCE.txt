@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: yale-som-hpc
+github_url: https://github.com/yale-som-hpc/claude-code-marketplace/tree/main/plugins/hpc/skills/scraping-at-scale
+skillsmp_url: https://skillsmp.com/creators/yale-som-hpc/claude-code-marketplace/plugins-hpc-skills-scraping-at-scale
+skillsmp_id: yale-som-hpc-claude-code-marketplace-plugins-hpc-skills-scraping-at-scale-skill-md
+stars: 5
+source_path: /Users/chao/Desktop/skills/08-research-web/scraping-at-scale/SKILL.md
+content_hash: f6c71963f7c5
+category: 08-research-web

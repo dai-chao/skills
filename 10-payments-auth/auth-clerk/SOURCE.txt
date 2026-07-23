@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: GunjanGrunge
+github_url: https://github.com/GunjanGrunge/rrq/tree/main/skills/auth-clerk
+skillsmp_url: https://skillsmp.com/creators/gunjangrunge/rrq/skills-auth-clerk
+skillsmp_id: gunjangrunge-rrq-skills-auth-clerk-skill-md
+stars: 3
+source_path: /Users/chao/Desktop/skills/10-payments-auth/auth-clerk/SKILL.md
+content_hash: 8e6e80b306a2
+category: 10-payments-auth

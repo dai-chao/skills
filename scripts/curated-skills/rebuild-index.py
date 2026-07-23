@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SITE_JSON = ROOT / "site" / "data" / "skills.json"
 CATALOG_JSON = ROOT / "catalog.json"
+SYNONYMS_JSON = ROOT / "site" / "data" / "search-synonyms.json"
 
 CATEGORIES = [
     ("01-cursor-native", "Cursor 原生能力"),
@@ -44,12 +45,51 @@ def parse_frontmatter(text: str) -> dict:
     if end < 0:
         return {}
     block = text[3:end].strip()
-    meta = {}
-    for line in block.splitlines():
+    meta: dict[str, str] = {}
+    key: str | None = None
+    folded: list[str] = []
+    folded_style: str | None = None  # '>' or '|'
+
+    def flush() -> None:
+        nonlocal key, folded, folded_style
+        if key is None:
+            return
+        if folded_style:
+            # YAML folded (>) → join with spaces; literal (|) → keep newlines
+            body = "\n".join(folded).strip()
+            meta[key] = " ".join(body.split()) if folded_style == ">" else body
+        key = None
+        folded = []
+        folded_style = None
+
+    for raw in block.splitlines():
+        line = raw.rstrip()
+        if folded_style is not None:
+            # continuation: indented, or blank line inside block
+            if not line.strip():
+                folded.append("")
+                continue
+            if line.startswith(" ") or line.startswith("\t"):
+                folded.append(line.strip())
+                continue
+            flush()
+
         if ":" not in line:
             continue
         k, v = line.split(":", 1)
-        meta[k.strip()] = v.strip().strip("\"'")
+        k, v = k.strip(), v.strip()
+        if not k:
+            continue
+        if v in (">", "|"):
+            flush()
+            key = k
+            folded_style = v
+            folded = []
+            continue
+        flush()
+        meta[k] = v.strip().strip("\"'")
+
+    flush()
     return meta
 
 
@@ -83,6 +123,17 @@ def list_files(skill_dir: Path, limit: int = 40) -> list[str]:
     return files
 
 
+def load_category_keywords() -> dict[str, list[str]]:
+    if not SYNONYMS_JSON.exists():
+        return {}
+    try:
+        data = json.loads(SYNONYMS_JSON.read_text(encoding="utf-8"))
+        raw = data.get("category_keywords") or {}
+        return {str(k): [str(x) for x in (v or [])] for k, v in raw.items()}
+    except Exception:
+        return {}
+
+
 def load_prev() -> dict[str, dict]:
     if not SITE_JSON.exists():
         return {}
@@ -92,6 +143,7 @@ def load_prev() -> dict[str, dict]:
 
 def main() -> int:
     prev = load_prev()
+    cat_keywords = load_category_keywords()
     skills = []
     catalog = []
 
@@ -121,7 +173,7 @@ def main() -> int:
                         description = line[:300]
                         break
 
-            title = title_from_name(meta.get("name") or name)
+            title = (meta.get("title") or "").strip() or title_from_name(meta.get("name") or name)
             origin = read_origin(skill_dir)
             files = list_files(skill_dir)
             st = skill_md.stat()
@@ -133,6 +185,11 @@ def main() -> int:
             hot = old.get("hot", float(popularity) if popularity else 0)
             rank = old.get("rank", 0)
             description_zh = old.get("description_zh") or ""
+            # Refresh Chinese blurb when frontmatter description carries CJK keywords
+            if re.search(r"[\u4e00-\u9fff]", description):
+                description_zh = description[:400]
+
+            search_keywords = list(cat_keywords.get(cat_id) or [])
 
             skills.append(
                 {
@@ -151,6 +208,7 @@ def main() -> int:
                     "hot": hot,
                     "rank": rank,
                     "description_zh": description_zh,
+                    "search_keywords": search_keywords,
                 }
             )
             catalog.append(

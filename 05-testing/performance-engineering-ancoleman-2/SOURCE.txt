@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: ancoleman
+github_url: https://github.com/ancoleman/ai-design-components/tree/main/skills/performance-engineering
+skillsmp_url: https://skillsmp.com/creators/ancoleman/ai-design-components/skills-performance-engineering
+skillsmp_id: ancoleman-ai-design-components-skills-performance-engineering-skill-md
+stars: 387
+source_path: /Users/chao/Desktop/skills/05-testing/performance-engineering-ancoleman-2/SKILL.md
+content_hash: a396452603cb
+category: 05-testing

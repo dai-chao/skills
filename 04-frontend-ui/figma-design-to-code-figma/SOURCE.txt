@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: figma
+github_url: https://github.com/figma/mcp-server-guide/tree/main/skills/figma-design-to-code
+skillsmp_url: https://skillsmp.com/creators/figma/mcp-server-guide/skills-figma-design-to-code
+skillsmp_id: figma-mcp-server-guide-skills-figma-design-to-code-skill-md
+stars: 1771
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/figma-design-to-code-figma/SKILL.md
+content_hash: 936bbe68b473
+category: 04-frontend-ui

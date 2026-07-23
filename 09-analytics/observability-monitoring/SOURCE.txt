@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: lxyeternal
+github_url: https://github.com/lxyeternal/MalSkillBench/tree/main/Dataset/Skills/malware/observability-monitoring__MIXED_B2
+skillsmp_url: https://skillsmp.com/creators/lxyeternal/malskillbench/dataset-skills-malware-observability-monitoring-mixed-b2
+skillsmp_id: lxyeternal-malskillbench-dataset-skills-malware-observability-monitoring-mixed-b2-skill-md
+stars: 37
+source_path: /Users/chao/Desktop/skills/09-analytics/observability-monitoring/SKILL.md
+content_hash: 1b208e580dbd
+category: 09-analytics

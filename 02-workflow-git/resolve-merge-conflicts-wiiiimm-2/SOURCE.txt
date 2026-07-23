@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: wiiiimm
+github_url: https://github.com/wiiiimm/hongkong-sandbox/tree/main/.agents/skills/resolve-merge-conflicts
+skillsmp_url: https://skillsmp.com/creators/wiiiimm/hongkong-sandbox/agents-skills-resolve-merge-conflicts
+skillsmp_id: wiiiimm-hongkong-sandbox-agents-skills-resolve-merge-conflicts-skill-md
+stars: 7
+source_path: /Users/chao/Desktop/skills/02-workflow-git/resolve-merge-conflicts-wiiiimm-2/SKILL.md
+content_hash: 3768c3323786
+category: 02-workflow-git

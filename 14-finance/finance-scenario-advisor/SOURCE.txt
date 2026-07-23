@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: AndrewNgGirl
+github_url: https://github.com/AndrewNgGirl/SkillLens/tree/main/skills/skill-scorer/examples/finance-scenario-advisor
+skillsmp_url: https://skillsmp.com/creators/andrewnggirl/skilllens/skills-skill-scorer-examples-finance-scenario-advisor
+skillsmp_id: andrewnggirl-skilllens-skills-skill-scorer-examples-finance-scenario-advisor-skill-md
+stars: 67
+source_path: /Users/chao/Desktop/skills/14-finance/finance-scenario-advisor/SKILL.md
+content_hash: 3234358849f4
+category: 14-finance

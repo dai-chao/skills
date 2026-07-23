@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: google-gemini
+github_url: https://github.com/google-gemini/gemini-cli/tree/main/.gemini/skills/code-reviewer
+skillsmp_url: https://skillsmp.com/creators/google-gemini/gemini-cli/gemini-skills-code-reviewer
+skillsmp_id: google-gemini-gemini-cli-gemini-skills-code-reviewer-skill-md
+stars: 106031
+source_path: /Users/chao/Desktop/skills/03-code-quality/code-reviewer/SKILL.md
+content_hash: d2bd763e7cfa
+category: 03-code-quality

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: RHEcosystemAppEng
+github_url: https://github.com/RHEcosystemAppEng/agentic-plugins/tree/main/rh-developer/skills/helm-deploy
+skillsmp_url: https://skillsmp.com/creators/rhecosystemappeng/agentic-plugins/rh-developer-skills-helm-deploy
+skillsmp_id: rhecosystemappeng-agentic-plugins-rh-developer-skills-helm-deploy-skill-md
+stars: 44
+source_path: /Users/chao/Desktop/skills/06-devops-infra/helm-deploy/SKILL.md
+content_hash: 18f2f8db289d
+category: 06-devops-infra

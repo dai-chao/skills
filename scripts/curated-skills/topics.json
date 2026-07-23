@@ -3,66 +3,155 @@
   "defaults": {
     "per_topic": 3,
     "sortBy": "stars",
-    "min_stars": 10,
+    "min_stars": 0,
     "language": null,
     "skip_existing_names": true
   },
   "topics": [
     {
-      "id": "video",
-      "query": "remotion video",
-      "category": "07-docs-office",
-      "per_topic": 3,
-      "min_stars": 0
-    },
-    {
-      "id": "video-ffmpeg",
-      "query": "ffmpeg video editing",
-      "category": "07-docs-office",
-      "per_topic": 2,
-      "min_stars": 0
-    },
-    {
-      "id": "figma",
-      "query": "figma design to code",
-      "category": "04-frontend-ui",
+      "id": "git-workflow",
+      "query": "git rebase merge conflict",
+      "category": "02-workflow-git",
       "per_topic": 3
     },
     {
-      "id": "security-review",
-      "query": "security audit review",
+      "id": "pr-review",
+      "query": "pull request review",
+      "category": "02-workflow-git",
+      "per_topic": 2
+    },
+    {
+      "id": "refactor",
+      "query": "refactor clean code",
       "category": "03-code-quality",
       "per_topic": 3
     },
     {
-      "id": "testing",
-      "query": "playwright testing qa",
+      "id": "typescript",
+      "query": "typescript typesafe",
+      "category": "03-code-quality",
+      "per_topic": 2
+    },
+    {
+      "id": "accessibility",
+      "query": "accessibility a11y wcag",
+      "category": "04-frontend-ui",
+      "per_topic": 2
+    },
+    {
+      "id": "animation-ui",
+      "query": "framer motion animation ui",
+      "category": "04-frontend-ui",
+      "per_topic": 2
+    },
+    {
+      "id": "mobile",
+      "query": "react native expo mobile",
+      "category": "04-frontend-ui",
+      "per_topic": 2
+    },
+    {
+      "id": "e2e",
+      "query": "cypress e2e testing",
       "category": "05-testing",
       "per_topic": 2
     },
     {
-      "id": "devops",
-      "query": "deploy docker kubernetes",
+      "id": "load-test",
+      "query": "performance load testing k6",
+      "category": "05-testing",
+      "per_topic": 2
+    },
+    {
+      "id": "kubernetes",
+      "query": "kubernetes helm deploy",
+      "category": "06-devops-infra",
+      "per_topic": 3
+    },
+    {
+      "id": "aws-cloud",
+      "query": "aws lambda cloudformation",
       "category": "06-devops-infra",
       "per_topic": 2
     },
     {
-      "id": "research",
-      "query": "web research search",
+      "id": "api-docs",
+      "query": "openapi swagger api docs",
+      "category": "07-docs-office",
+      "per_topic": 2
+    },
+    {
+      "id": "changelog",
+      "query": "changelog release notes",
+      "category": "07-docs-office",
+      "per_topic": 2
+    },
+    {
+      "id": "scraping",
+      "query": "web scraping crawl",
       "category": "08-research-web",
+      "per_topic": 3
+    },
+    {
+      "id": "llm-eval",
+      "query": "llm evaluation prompt",
+      "category": "09-analytics",
       "per_topic": 2
     },
     {
-      "id": "planning",
-      "query": "planning architecture spec",
+      "id": "posthog",
+      "query": "analytics posthog mixpanel",
+      "category": "09-analytics",
+      "per_topic": 2
+    },
+    {
+      "id": "supabase-auth",
+      "query": "supabase auth jwt",
+      "category": "10-payments-auth",
+      "per_topic": 2
+    },
+    {
+      "id": "system-design",
+      "query": "system design architecture",
       "category": "11-planning",
+      "per_topic": 3
+    },
+    {
+      "id": "mcp-tools",
+      "query": "mcp server tools",
+      "category": "13-integrations",
+      "per_topic": 3
+    },
+    {
+      "id": "database",
+      "query": "postgres sql database",
+      "category": "13-integrations",
       "per_topic": 2
     },
     {
-      "id": "skill-meta",
-      "query": "writing skills skill creator",
+      "id": "crypto-finance",
+      "query": "crypto trading bitcoin",
+      "category": "14-finance",
+      "per_topic": 2
+    },
+    {
+      "id": "prompt-eng",
+      "query": "prompt engineering",
       "category": "12-meta",
       "per_topic": 2
+    },
+    {
+      "id": "agent-memory",
+      "query": "agent memory context",
+      "category": "12-meta",
+      "per_topic": 2
+    },
+    {
+      "id": "zh-dev",
+      "query": "开发 前端",
+      "category": "99-misc",
+      "per_topic": 3,
+      "language": "zh"
     }
   ]
 }

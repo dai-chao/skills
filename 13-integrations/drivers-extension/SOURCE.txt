@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: WorkenAI
+github_url: https://github.com/WorkenAI/chats/tree/main/.agents/skills/drivers-extension
+skillsmp_url: https://skillsmp.com/creators/workenai/chats/agents-skills-drivers-extension
+skillsmp_id: workenai-chats-agents-skills-drivers-extension-skill-md
+stars: 0
+source_path: /Users/chao/Desktop/skills/13-integrations/drivers-extension/SKILL.md
+content_hash: 4bc57b6ed9eb
+category: 13-integrations

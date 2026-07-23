@@ -2,23 +2,35 @@
 
 星巴克风格的 Agent Skills 目录站，支持浏览、下载，以及「AI 点单」自然语言找 skill。
 
-## 推荐启动方式（含 AI）
+## 本地启动（前后端分离）
 
-需要 Node 18+，以及阿里云百炼 API Key（仅放服务端）：
+需要 Node 18+（后端），以及阿里云百炼 API Key（仅放服务端）。
+
+**终端 1 — 后端 API**（`~/Desktop/skillsServer`）
 
 ```bash
-cd ~/Desktop/skills/server
+cd ~/Desktop/skillsServer
 cp .env.example .env   # 编辑填入 DASHSCOPE_API_KEY
 npm install
 npm start
 ```
 
-打开：http://localhost:3000/site/
+**终端 2 — 前端静态站**
 
-- 健康检查：`/api/health`
-- AI 点单：首页输入框，或 `⌘/Ctrl+J`
+```bash
+cd ~/Desktop/skills
+python3 -m http.server 8765
+```
 
-> 纯静态预览（无 AI）仍可用：`cd ~/Desktop/skills && python3 -m http.server 8765` → http://localhost:8765/site/
+打开：http://localhost:8765/site/
+
+- 顶栏：**探索**（AI 点单）· **全部**（浏览 / 热门 / 最近）
+- 健康检查：http://localhost:3000/api/health
+- AI 点单：首页「想点什么」，或 `⌘/Ctrl+J`
+- 探索页：按分类逛 / 热门精选 / 最近更新
+- 前端默认请求 `http://localhost:3000/api/*`；可用 `window.SKILL_CAFE_API` 或 `<meta name="skill-cafe-api" content="...">` 覆盖
+
+> 不启后端也能浏览 / 下载，只是 AI 点单不可用。
 
 ## 功能
 
@@ -29,37 +41,28 @@ npm start
 
 ## Render 部署
 
-仓库已含 [`render.yaml`](../render.yaml)。在 [Render Dashboard](https://dashboard.render.com/)：
+后端在并列目录 [`skillsServer`](../../skillsServer)（本地 `~/Desktop/skillsServer`）。静态站与 API 可分开部署；API 需设置：
 
-1. **New → Blueprint**，连接本仓库并应用；或 **Web Service**（Root Directory 留空 / 仓库根，**不要**填 `server`）
-2. Build Command: `cd server && npm install`；Start: `cd server && npm start`
-3. Environment 添加密钥（Secret）：
+- `DASHSCOPE_API_KEY`
+- `SKILLS_ROOT`（指向本仓库检出根目录）
+- `CORS_ORIGIN`（前端站点 Origin）
 
-   - `DASHSCOPE_API_KEY` = 你的百炼 Key
-
-4. 部署完成后访问 `https://<你的服务>.onrender.com/site/`
-
-免费档 Web Service 有冷启动，首次请求可能稍慢。
-
-从旧的 **Static Site** 迁过来时：停用旧静态站，改用上述 Web Service（预览/下载与 API 需同一进程）。
+详见 `skillsServer/README.md`。
 
 ## UI 栈
 
 - 设计：Starbucks 色板（`星巴克.md`）
 - 组件：[Shoelace](https://shoelace.style/)
 - 图标：[Lucide](https://lucide.dev/)
-- 后端：Express（见 [`../server`](../server)）
+- 后端：Express API（见 `~/Desktop/skillsServer`）
 
 ## 结构
 
 ```
-skills/
-  server/           # Express：静态托管 + /api/ask
-  site/             # 前端
-    index.html
-    css/styles.css
-    js/app.js
-    data/skills.json
-  01-…/99-misc/     # skill 源文件
-  render.yaml
+Desktop/
+  skills/           # 本仓库：前端 + skill 源文件
+    site/
+    01-…/99-misc/
+    render.yaml
+  skillsServer/     # Express：仅 /api/*
 ```

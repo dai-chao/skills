@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: benjaminjackson
+github_url: https://github.com/benjaminjackson/writing-skills/tree/main/documentation/skills/write
+skillsmp_url: https://skillsmp.com/creators/benjaminjackson/writing-skills/documentation-skills-write
+skillsmp_id: benjaminjackson-writing-skills-documentation-skills-write-skill-md
+stars: 2
+source_path: /Users/chao/Desktop/skills/02-workflow-git/write/SKILL.md
+content_hash: 0bfa1304b2e2
+category: 02-workflow-git

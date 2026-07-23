@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: Harmitx7
+github_url: https://github.com/Harmitx7/tribunal-kit/tree/main/.agent/skills/testing-patterns
+skillsmp_url: https://skillsmp.com/creators/harmitx7/tribunal-kit/agent-skills-testing-patterns
+skillsmp_id: harmitx7-tribunal-kit-agent-skills-testing-patterns-skill-md
+stars: 3
+source_path: /Users/chao/Desktop/skills/05-testing/testing-patterns/SKILL.md
+content_hash: 1970c3b7d943
+category: 05-testing

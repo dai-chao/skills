@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: ComeOnOliver
+github_url: https://github.com/ComeOnOliver/skillshub/tree/main/skills/HoangNguyen0403/agent-skills-standard/system-design
+skillsmp_url: https://skillsmp.com/creators/comeonoliver/skillshub/skills-hoangnguyen0403-agent-skills-standard-system-design
+skillsmp_id: comeonoliver-skillshub-skills-hoangnguyen0403-agent-skills-standard-system-design-skill-md
+stars: 54
+source_path: /Users/chao/Desktop/skills/11-planning/system-design-architecture-standards-comeonoliver-2/SKILL.md
+content_hash: 27b53217c4a6
+category: 11-planning

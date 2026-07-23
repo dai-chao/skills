@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: anbeime
+github_url: https://github.com/anbeime/skill/tree/main/skills/remotion-video-enhancer/remotion-video-enhancer
+skillsmp_url: https://skillsmp.com/creators/anbeime/skill/skills-remotion-video-enhancer-remotion-video-enhancer
+skillsmp_id: anbeime-skill-skills-remotion-video-enhancer-remotion-video-enhancer-skill-md
+stars: 3824
+source_path: /Users/chao/Desktop/skills/07-docs-office/remotion-video-enhancer/SKILL.md
+content_hash: b435d88550db
+category: 07-docs-office

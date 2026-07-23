@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: a5c-ai
+github_url: https://github.com/a5c-ai/babysitter/tree/main/library/specializations/qa-testing-automation/skills/cypress-e2e
+skillsmp_url: https://skillsmp.com/creators/a5c-ai/babysitter/library-specializations-qa-testing-automation-skills-cypress-e2e
+skillsmp_id: a5c-ai-babysitter-library-specializations-qa-testing-automation-skills-cypress-e2e-skill-md
+stars: 1532
+source_path: /Users/chao/Desktop/skills/05-testing/cypress-e2e-testing/SKILL.md
+content_hash: 7c525c986e59
+category: 05-testing

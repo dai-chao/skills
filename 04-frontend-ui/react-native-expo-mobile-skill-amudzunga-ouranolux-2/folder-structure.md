@@ -1,0 +1,32 @@
+# Recommended Folder Structure
+
+```text
+src/
+  app/
+    _layout.tsx
+    auth/
+    onboarding/
+    tabs/
+    match/[fixtureId].tsx
+  core/
+    api/
+    auth/
+    config/
+    storage/
+    theme/
+    validation/
+  features/
+    home/
+    favourites/
+    matches/
+    match-detail/
+    predict/
+    insights/
+    live/
+    saved-predictions/
+    prediction-history/
+    profile/
+    settings/
+  components/
+  models/
+```

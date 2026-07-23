@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skill Visualizer — 可视化分析</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--color-bg:#FAF7F2;--color-bg-warm:#F5F0E8;--color-bg-code:#1E1E2E;--color-bg-graph:#FEFCF8;--color-text:#2C2A28;--color-text-secondary:#6B6560;--color-text-muted:#9E9790;--color-border:#E5DFD6;--color-border-light:#EEEBE5;--color-surface:#FFFFFF;--color-surface-warm:#FDF9F3;--color-role-entry:#D94F30;--color-role-reference:#2A7B9B;--color-role-script:#2D8B55;--color-role-config:#D4A843;--color-role-asset:#7B6DAA;--color-role-hook:#E06B56;--color-accent:#2A7B9B;--color-accent-hover:#236A86;--color-accent-light:#E4F2F7;--color-accent-muted:#5BA3BD;--color-success:#2D8B55;--color-success-light:#E8F5EE;--color-error:#C93B3B;--color-error-light:#FDE8E8;--color-info:#2A7B9B;--color-info-light:#E4F2F7;--color-edge-default:#C4BBB0;--color-edge-active:#2A7B9B;--heatmap-0:#FAF7F2;--heatmap-1:#FDE8E0;--heatmap-2:#F9C4B0;--heatmap-3:#F09070;--heatmap-4:#D94F30;--heatmap-5:#A83820;--font-display:'Bricolage Grotesque',Georgia,serif;--font-body:'DM Sans',-apple-system,sans-serif;--font-mono:'JetBrains Mono','Fira Code','Consolas',monospace;--text-xs:0.75rem;--text-sm:0.875rem;--text-base:1rem;--text-lg:1.125rem;--text-xl:1.25rem;--text-2xl:1.5rem;--text-3xl:1.875rem;--text-4xl:2.25rem;--text-5xl:3rem;--leading-tight:1.15;--leading-snug:1.3;--leading-normal:1.6;--space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--content-width:900px;--content-width-wide:1100px;--nav-height:50px;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-full:9999px;--shadow-sm:0 1px 2px rgba(44,42,40,0.05);--shadow-md:0 4px 12px rgba(44,42,40,0.08);--shadow-lg:0 8px 24px rgba(44,42,40,0.1);--shadow-glow:0 0 20px rgba(42,123,155,0.15);--ease-out:cubic-bezier(0.16,1,0.3,1);--ease-in-out:cubic-bezier(0.65,0,0.35,1);--duration-fast:150ms;--duration-normal:300ms;--duration-slow:500ms;--stagger-delay:120ms}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-snap-type:y proximity;scroll-behavior:smooth}
+body{font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-normal);color:var(--color-text);background:var(--color-bg);background-image:radial-gradient(ellipse at 20% 50%,rgba(42,123,155,0.03) 0%,transparent 50%)}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--color-border);border-radius:var(--radius-full)}
+pre,code{white-space:pre-wrap;word-break:break-word;overflow-x:hidden}
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-height);background:rgba(250,247,242,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-border-light);z-index:1000;display:flex;flex-direction:column}
+.progress-bar{height:3px;background:var(--color-accent);width:0;transition:width 100ms linear}
+.nav-inner{flex:1;display:flex;align-items:center;justify-content:space-between;padding:0 var(--space-6);max-width:var(--content-width-wide);margin:0 auto;width:100%}
+.nav-title{font-family:var(--font-display);font-weight:700;font-size:var(--text-sm);color:var(--color-text)}
+.nav-dots{display:flex;gap:var(--space-3)}
+.nav-dot{width:10px;height:10px;border-radius:50%;border:2px solid var(--color-text-muted);background:transparent;cursor:pointer;transition:all var(--duration-fast) var(--ease-out);padding:0}
+.nav-dot.active{border-color:var(--color-accent);background:var(--color-accent);box-shadow:0 0 8px rgba(42,123,155,0.3)}
+.nav-dot:hover{border-color:var(--color-accent);transform:scale(1.3)}
+.section{min-height:100vh;min-height:100dvh;scroll-snap-align:start;padding:var(--space-16) var(--space-6);padding-top:calc(var(--nav-height) + var(--space-12))}
+.section-content{max-width:var(--content-width);margin:0 auto}
+.section-content-wide{max-width:var(--content-width-wide);margin:0 auto}
+.section-header{margin-bottom:var(--space-10)}
+.section-num{font-family:var(--font-display);font-size:var(--text-5xl);font-weight:800;opacity:0.12;line-height:1}
+.section-title{font-family:var(--font-display);font-size:var(--text-4xl);font-weight:700;line-height:var(--leading-tight);margin-top:var(--space-2)}
+.section-subtitle{font-size:var(--text-lg);color:var(--color-text-secondary);margin-top:var(--space-3)}
+.animate-in{opacity:0;transform:translateY(20px);transition:opacity var(--duration-slow) var(--ease-out),transform var(--duration-slow) var(--ease-out)}
+.animate-in.visible{opacity:1;transform:translateY(0)}
+@keyframes nodePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes edgeFlow{from{stroke-dashoffset:20}to{stroke-dashoffset:0}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:var(--space-4);margin:var(--space-8) 0}
+.stat-card{background:var(--color-surface);border-radius:var(--radius-md);padding:var(--space-6);text-align:center;box-shadow:var(--shadow-sm);border:1px solid var(--color-border-light);transition:transform var(--duration-fast) var(--ease-out),box-shadow var(--duration-fast) var(--ease-out)}
+.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.stat-icon{font-size:2rem;margin-bottom:var(--space-2)}
+.stat-value{font-family:var(--font-display);font-size:var(--text-3xl);font-weight:700;color:var(--color-accent)}
+.stat-label{font-family:var(--font-mono);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.05em;color:var(--color-text-secondary);margin-top:var(--space-1)}
+.role-badge{display:inline-block;padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);color:white;font-family:var(--font-mono);font-size:var(--text-xs);font-weight:600;text-transform:uppercase;letter-spacing:0.05em}
+.trigger-tags{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-4)}
+.trigger-tag{background:var(--color-accent-light);color:var(--color-accent);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);font-family:var(--font-mono);font-size:var(--text-sm)}
+.graph-container{position:relative;background:var(--color-bg-graph);border-radius:var(--radius-lg);border:1px solid var(--color-border);overflow:hidden;margin:var(--space-8) 0}
+.graph-svg{width:100%;height:500px;display:block}
+.graph-svg text{pointer-events:none;user-select:none}
+.graph-node{cursor:pointer;transition:opacity var(--duration-normal) var(--ease-out)}
+.graph-node:hover circle{filter:brightness(1.15)}
+.graph-node.dimmed{opacity:0.2}
+.graph-node.selected circle{filter:url(#glow) brightness(1.1)}
+.graph-edge{stroke:var(--color-edge-default);stroke-width:1.5;fill:none;transition:stroke var(--duration-fast),stroke-width var(--duration-fast),opacity var(--duration-normal)}
+.graph-edge.highlighted{stroke:var(--color-edge-active);stroke-width:2.5;stroke-dasharray:8 4;animation:edgeFlow 1s linear infinite}
+.graph-edge.dimmed{opacity:0.08}
+.graph-legend{position:absolute;bottom:var(--space-4);left:var(--space-4);display:flex;flex-wrap:wrap;gap:var(--space-3);background:rgba(255,255,255,0.9);padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm);font-size:var(--text-xs)}
+.legend-item{display:flex;align-items:center;gap:var(--space-1)}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.graph-info-panel{position:absolute;top:0;right:0;bottom:0;width:320px;background:var(--color-surface);border-left:1px solid var(--color-border);padding:var(--space-6);overflow-y:auto;transform:translateX(100%);transition:transform var(--duration-normal) var(--ease-out);box-shadow:-4px 0 24px rgba(44,42,40,0.08)}
+.graph-info-panel.open{transform:translateX(0)}
+.graph-info-close{position:absolute;top:var(--space-3);right:var(--space-3);background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--color-text-muted);width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm)}
+.graph-info-close:hover{background:var(--color-border-light)}
+.info-filename{font-family:var(--font-mono);font-size:var(--text-xl);font-weight:700;margin-top:var(--space-2)}
+.info-summary{color:var(--color-text-secondary);margin:var(--space-4) 0;line-height:var(--leading-normal)}
+.info-stats{display:flex;flex-wrap:wrap;gap:var(--space-3);margin:var(--space-4) 0}
+.info-stat{font-size:var(--text-sm);color:var(--color-text-secondary);background:var(--color-bg);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full)}
+.info-connections{margin-top:var(--space-4)}
+.info-connections h4{font-family:var(--font-display);font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-2);text-transform:uppercase;letter-spacing:0.05em;color:var(--color-text-muted)}
+.connection-out,.connection-in{font-family:var(--font-mono);font-size:var(--text-sm);padding:var(--space-1) 0;color:var(--color-text-secondary)}
+.connection-out::before{content:"\2192 ";color:var(--color-accent)}
+.connection-in::before{content:"\2190 ";color:var(--color-role-entry)}
+.flow-timeline{margin:var(--space-8) 0}
+.flow-track{position:relative;padding-left:40px}
+.flow-track::before{content:"";position:absolute;left:15px;top:0;bottom:0;width:2px;background:var(--color-border)}
+.flow-phase{position:relative;padding:var(--space-4) 0 var(--space-8) var(--space-6);opacity:0.35;transition:opacity var(--duration-normal) var(--ease-out)}
+.flow-phase.active{opacity:1}
+.flow-phase.current .flow-phase-dot{animation:nodePulse 2s var(--ease-in-out) infinite;background:var(--color-accent);border-color:var(--color-accent);color:white}
+.flow-phase-dot{position:absolute;left:-40px;top:var(--space-4);width:32px;height:32px;border-radius:50%;background:var(--color-surface);border:2px solid var(--color-border);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:var(--text-xs);font-weight:600;transition:all var(--duration-normal) var(--ease-out);z-index:1}
+.flow-phase.active .flow-phase-dot{background:var(--color-accent-light);border-color:var(--color-accent);color:var(--color-accent)}
+.flow-phase-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700}
+.flow-phase-desc{color:var(--color-text-secondary);margin-top:var(--space-1)}
+.flow-phase-files{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-3)}
+.flow-file-tag{font-family:var(--font-mono);font-size:var(--text-xs);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);border:1.5px solid;background:var(--color-surface)}
+.flow-controls{display:flex;align-items:center;gap:var(--space-3);margin-top:var(--space-6);flex-wrap:wrap}
+.btn{font-family:var(--font-body);font-size:var(--text-sm);padding:var(--space-2) var(--space-5);border-radius:var(--radius-full);border:1.5px solid var(--color-border);background:var(--color-surface);color:var(--color-text);cursor:pointer;transition:all var(--duration-fast) var(--ease-out);font-weight:500}
+.btn:hover{border-color:var(--color-accent);color:var(--color-accent);box-shadow:var(--shadow-sm)}
+.btn:disabled{opacity:0.4;cursor:default}
+.btn-primary{background:var(--color-accent);color:white;border-color:var(--color-accent)}
+.btn-primary:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:white}
+.flow-progress-text{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-text-muted)}
+.file-cards{display:flex;flex-direction:column;gap:var(--space-4);margin:var(--space-8) 0}
+.file-card{background:var(--color-surface);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1px solid var(--color-border-light);overflow:hidden;transition:box-shadow var(--duration-fast)}
+.file-card:hover{box-shadow:var(--shadow-md)}
+.file-card-header{display:flex;align-items:center;justify-content:space-between;padding:var(--space-4) var(--space-5);cursor:pointer;transition:background var(--duration-fast)}
+.file-card-header:hover{background:var(--color-bg)}
+.file-card-left{display:flex;align-items:center;gap:var(--space-3)}
+.file-card-name{font-family:var(--font-mono);font-weight:600;font-size:var(--text-sm)}
+.file-card-right{display:flex;align-items:center;gap:var(--space-3)}
+.file-card-stat{font-size:var(--text-xs);color:var(--color-text-muted)}
+.file-card-chevron{font-size:var(--text-lg);color:var(--color-text-muted);transition:transform var(--duration-fast)}
+.file-card-body{padding:0 var(--space-5) var(--space-5);transition:max-height var(--duration-normal) var(--ease-out),opacity var(--duration-normal) var(--ease-out);overflow:hidden}
+.file-card-body h4{font-family:var(--font-display);font-size:var(--text-sm);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--color-text-muted);margin:var(--space-5) 0 var(--space-2)}
+.file-card-body p{color:var(--color-text-secondary);line-height:var(--leading-normal)}
+.snippet-code{background:var(--color-bg-code);color:#CDD6F4;padding:var(--space-4);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:var(--text-sm);line-height:1.6;margin:var(--space-2) 0}
+.snippet-explanation{font-style:italic;color:var(--color-text-muted);font-size:var(--text-sm);margin-top:var(--space-2)}
+.code-keyword{color:#CBA6F7}.code-string{color:#A6E3A1}.code-function{color:#89B4FA}.code-comment{color:#6C7086}.code-property{color:#F9E2AF}.code-operator{color:#94E2D5}
+.pattern-tags{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.pattern-tag{background:var(--color-bg);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);font-size:var(--text-xs);font-family:var(--font-mono);color:var(--color-text-secondary);border:1px solid var(--color-border-light)}
+.connection-list{display:flex;flex-direction:column;gap:var(--space-1)}
+.matrix-container{margin:var(--space-8) 0;position:relative}
+.matrix-wrapper{overflow-x:auto;border-radius:var(--radius-md);border:1px solid var(--color-border-light)}
+.matrix-table{border-collapse:collapse;width:100%}
+.matrix-table th,.matrix-table td{padding:var(--space-3);text-align:center;font-size:var(--text-xs);border:1px solid var(--color-border-light)}
+.matrix-corner{background:var(--color-surface)}
+.matrix-col-header{background:var(--color-surface);font-family:var(--font-mono);font-weight:600}
+.matrix-row-header{background:var(--color-surface);font-family:var(--font-mono);font-weight:600;text-align:left!important;white-space:nowrap;position:sticky;left:0;z-index:1}
+.matrix-cell{cursor:pointer;transition:all var(--duration-fast);min-width:70px;height:52px;position:relative}
+.matrix-cell:hover{outline:2px solid var(--color-accent);outline-offset:-2px;z-index:2}
+.matrix-cell.highlighted{outline:3px solid var(--color-accent);z-index:3}
+.matrix-value{font-family:var(--font-mono);font-weight:600;font-size:var(--text-xs);color:white;text-shadow:0 1px 2px rgba(0,0,0,0.3)}
+.matrix-detail{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--color-surface);border-radius:var(--radius-md);padding:var(--space-5);box-shadow:var(--shadow-lg);border:1px solid var(--color-border);z-index:10;max-width:420px;width:92%;animation:fadeInUp var(--duration-normal) var(--ease-out)}
+.matrix-detail-close{position:absolute;top:var(--space-2);right:var(--space-2);background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--color-text-muted)}
+.matrix-detail-title{font-family:var(--font-mono);font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-3)}
+.matrix-detail-body{font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-normal)}
+.matrix-detail-body ul{margin-top:var(--space-2);padding-left:var(--space-5)}
+.matrix-detail-body li{margin:var(--space-1) 0}
+.matrix-legend{display:flex;align-items:center;gap:var(--space-3);margin-top:var(--space-4);flex-wrap:wrap}
+.matrix-legend-label{font-size:var(--text-xs);color:var(--color-text-muted);font-family:var(--font-mono)}
+.ml-item{width:48px;height:24px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--color-text-secondary);border-radius:3px}
+.callout{display:flex;gap:var(--space-4);padding:var(--space-5) var(--space-6);border-radius:var(--radius-md);border-left:4px solid;margin:var(--space-6) 0}
+.callout-accent{border-color:var(--color-accent);background:var(--color-accent-light)}
+.callout-info{border-color:var(--color-info);background:var(--color-info-light)}
+.callout-warning{border-color:var(--color-error);background:var(--color-error-light)}
+.callout-icon{font-size:1.5rem;flex-shrink:0}
+.callout-title{font-family:var(--font-display);font-weight:600;display:block;margin-bottom:var(--space-1)}
+.file-tree{font-family:var(--font-mono);font-size:var(--text-sm);background:var(--color-surface);border-radius:var(--radius-md);padding:var(--space-5);border:1px solid var(--color-border-light);margin:var(--space-6) 0}
+.ft-folder,.ft-file{padding:var(--space-1) 0}
+.ft-children{padding-left:var(--space-6);overflow:hidden;transition:max-height var(--duration-normal) var(--ease-out)}
+.ft-toggle{cursor:pointer;user-select:none;color:var(--color-text-muted);margin-right:var(--space-1)}
+.ft-name{font-weight:600}
+.ft-folder>.ft-name{color:var(--color-accent)}
+.ft-desc{color:var(--color-text-muted);font-size:var(--text-xs);margin-left:var(--space-3)}
+.ft-size{color:var(--color-text-muted);font-size:var(--text-xs);margin-left:var(--space-2);opacity:0.7}
+.ft-icon{margin-right:var(--space-1)}
+.ft-file{display:flex;align-items:center;flex-wrap:wrap;padding:var(--space-1) 0;border-radius:var(--radius-sm);transition:background var(--duration-fast)}
+.ft-file:hover{background:var(--color-bg)}
+.term{border-bottom:1.5px dashed var(--color-accent);cursor:pointer;color:var(--color-text)}
+.tooltip{position:fixed;z-index:10000;background:var(--color-bg-code);color:#CDD6F4;padding:var(--space-3) var(--space-4);border-radius:var(--radius-sm);font-size:var(--text-sm);max-width:300px;line-height:var(--leading-normal);box-shadow:var(--shadow-md);pointer-events:none;animation:fadeInUp 150ms var(--ease-out)}
+.insight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-4);margin:var(--space-6) 0}
+.insight-card{background:var(--color-surface);border-radius:var(--radius-md);padding:var(--space-5);border:1px solid var(--color-border-light);box-shadow:var(--shadow-sm);transition:transform var(--duration-fast),box-shadow var(--duration-fast)}
+.insight-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.insight-card h4{font-family:var(--font-display);font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2)}
+.insight-card p{font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-normal)}
+.insight-icon{font-size:1.5rem;margin-bottom:var(--space-2)}
+.snippet-label{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:var(--space-2)}
+@media(max-width:768px){:root{--text-4xl:1.875rem;--text-5xl:2.25rem}.graph-svg{height:350px}.graph-info-panel{width:100%;height:50%;top:auto;border-left:none;border-top:1px solid var(--color-border)}}
+@media(max-width:480px){:root{--text-4xl:1.5rem;--text-5xl:1.875rem}.section{padding:var(--space-8) var(--space-4);padding-top:calc(var(--nav-height) + var(--space-8))}.graph-svg{height:280px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* SKILL.md Deep Dive */
+.skill-hero{display:flex;align-items:center;gap:var(--space-6);padding:var(--space-6);background:var(--color-surface);border-radius:var(--radius-lg);border:1px solid var(--color-border-light);box-shadow:var(--shadow-sm);margin-bottom:var(--space-8)}
+.skill-hero-icon{width:80px;height:80px;border-radius:var(--radius-md);background:#D94F30;display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0}
+.skill-hero-info h2{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700}
+.skill-hero-info p{color:var(--color-text-secondary);margin-top:var(--space-1)}
+.skill-hero-meta{display:flex;gap:var(--space-4);margin-top:var(--space-3);flex-wrap:wrap}
+.skill-hero-meta span{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-text-muted);background:var(--color-bg);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full)}
+/* Phase Pipeline */
+.phase-pipeline{display:flex;gap:var(--space-5);margin:var(--space-8) 0;overflow-x:auto;padding-bottom:var(--space-2);align-items:stretch}
+.phase-pipe{flex:1;min-width:160px;position:relative;cursor:pointer;transition:transform var(--duration-fast) var(--ease-out);display:flex;flex-direction:column}
+.phase-pipe:hover{transform:translateY(-3px)}
+.phase-pipe-head{padding:var(--space-4) var(--space-4) var(--space-3);border-radius:var(--radius-md) var(--radius-md) 0 0;color:white;position:relative;text-align:center}
+.phase-pipe-num{font-family:var(--font-mono);font-size:var(--text-xs);opacity:0.7}
+.phase-pipe-title{font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;margin-top:var(--space-1)}
+.phase-pipe-body{background:var(--color-surface);border:1px solid var(--color-border-light);border-top:none;border-radius:0 0 var(--radius-md) var(--radius-md);padding:var(--space-3) var(--space-4);font-size:var(--text-xs);color:var(--color-text-secondary);line-height:var(--leading-normal);min-height:80px;flex:1}
+.phase-pipe-arrow{position:absolute;right:calc(-1 * var(--space-5) / 2 - 8px);top:38%;transform:translateY(-50%);z-index:2;color:var(--color-accent);font-size:1.4rem;font-weight:700;width:20px;text-align:center;pointer-events:none}
+.phase-pipe.active-pipe .phase-pipe-head{box-shadow:var(--shadow-glow)}
+.phase-pipe.active-pipe{transform:translateY(-3px)}
+.phase-detail-panel{background:var(--color-surface);border:1px solid var(--color-border-light);border-radius:var(--radius-md);padding:var(--space-5);margin-top:var(--space-4);box-shadow:var(--shadow-sm);display:none;animation:fadeInUp var(--duration-normal) var(--ease-out)}
+.phase-detail-panel.show{display:block}
+.phase-detail-panel h4{font-family:var(--font-display);font-weight:700;margin-bottom:var(--space-2)}
+.phase-detail-panel ul{padding-left:var(--space-5);color:var(--color-text-secondary);font-size:var(--text-sm);line-height:1.8}
+.phase-detail-files{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-3)}
+/* Structure Map */
+.struct-map{margin:var(--space-6) 0}
+.struct-section{border-left:3px solid var(--color-border);padding-left:var(--space-5);margin-bottom:var(--space-4);transition:border-color var(--duration-fast)}
+.struct-section:hover{border-color:var(--color-accent)}
+.struct-section-head{display:flex;align-items:center;gap:var(--space-3);cursor:pointer;padding:var(--space-2) 0}
+.struct-section-marker{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:var(--text-xs);font-weight:700;color:white;flex-shrink:0}
+.struct-section-title{font-family:var(--font-display);font-weight:600;font-size:var(--text-base)}
+.struct-section-desc{font-size:var(--text-sm);color:var(--color-text-muted);margin-left:auto}
+.struct-section-detail{display:none;padding:var(--space-3) 0;font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-normal)}
+.struct-section-detail.show{display:block;animation:fadeInUp 200ms var(--ease-out)}
+.struct-section-detail ul{padding-left:var(--space-5);margin-top:var(--space-2)}
+.struct-section-detail li{margin:var(--space-1) 0}
+/* Donut Chart */
+.donut-container{display:flex;align-items:center;gap:var(--space-8);margin:var(--space-6) 0;flex-wrap:wrap}
+.donut-chart{width:200px;height:200px;flex-shrink:0}
+.donut-legend{display:flex;flex-direction:column;gap:var(--space-3);flex:1}
+.donut-legend-item{display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm)}
+.donut-legend-color{width:14px;height:14px;border-radius:3px;flex-shrink:0}
+.donut-legend-label{color:var(--color-text-secondary)}
+.donut-legend-value{font-family:var(--font-mono);font-weight:600;margin-left:auto;color:var(--color-text)}
+/* Principle Cards */
+.principle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-4);margin:var(--space-6) 0}
+.principle-card{background:var(--color-surface);border-radius:var(--radius-md);padding:var(--space-5);border:1px solid var(--color-border-light);border-top:3px solid var(--color-accent);transition:transform var(--duration-fast),box-shadow var(--duration-fast)}
+.principle-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.principle-card h4{font-family:var(--font-display);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-2)}
+.principle-card p{font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-normal)}
+.principle-num{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-accent);margin-bottom:var(--space-1)}
+/* Sub-header */
+.sub-header{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;margin:var(--space-8) 0 var(--space-4);padding-bottom:var(--space-2);border-bottom:2px solid var(--color-border-light);display:flex;align-items:center;gap:var(--space-3)}
+.sub-header-icon{font-size:1.3rem}
+@media(max-width:768px){.phase-pipeline{flex-direction:column;gap:var(--space-3)}.phase-pipe-arrow{display:none}.skill-hero{flex-direction:column;text-align:center}.donut-container{flex-direction:column;align-items:center}}
+
+
+/* Perspective Cards */
+.perspective-card{background:var(--color-surface);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--color-border-light);transition:transform var(--duration-fast),box-shadow var(--duration-fast);margin-bottom:var(--space-6)}
+.perspective-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.perspective-header{padding:var(--space-5) var(--space-6);display:flex;align-items:center;gap:var(--space-4);cursor:pointer}
+.perspective-avatar{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;flex-shrink:0;font-weight:800;font-family:var(--font-display)}
+.perspective-meta{flex:1}
+.perspective-name{font-family:var(--font-display);font-weight:700;font-size:var(--text-base)}
+.perspective-tag{font-size:var(--text-xs);color:var(--color-text-muted);font-family:var(--font-mono)}
+.perspective-chevron{color:var(--color-text-muted);font-size:var(--text-lg);transition:transform var(--duration-fast)}
+.perspective-body{padding:0 var(--space-6) var(--space-6);display:none}
+.perspective-body.show{display:block;animation:fadeInUp 300ms var(--ease-out)}
+.perspective-verdict{padding:var(--space-4) var(--space-5);border-radius:var(--radius-md);margin-bottom:var(--space-4);font-style:italic;font-size:var(--text-lg);line-height:var(--leading-normal);border-left:4px solid}
+.perspective-points{list-style:none;padding:0}
+.perspective-points li{padding:var(--space-3) 0;border-bottom:1px solid var(--color-border-light);font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-normal);display:flex;gap:var(--space-3)}
+.perspective-points li:last-child{border-bottom:none}
+.perspective-points .point-icon{flex-shrink:0;width:24px;text-align:center}
+.perspective-points .point-text strong{color:var(--color-text)}
+/* Extension cards */
+.extension-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-4);margin:var(--space-6) 0}
+.extension-card{background:var(--color-surface);border-radius:var(--radius-md);padding:var(--space-5);border:1px solid var(--color-border-light);box-shadow:var(--shadow-sm);transition:all var(--duration-fast)}
+.extension-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.extension-card h4{font-family:var(--font-display);font-weight:700;margin-bottom:var(--space-2);display:flex;align-items:center;gap:var(--space-2)}
+.extension-card p{font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-normal)}
+.extension-difficulty{font-family:var(--font-mono);font-size:var(--text-xs);padding:var(--space-1) var(--space-2);border-radius:var(--radius-full);background:var(--color-bg)}
+
+</style>
+</head>
+<body>
+
+<!-- ====== NAVIGATION ====== -->
+<nav class="nav">
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="nav-inner">
+    <span class="nav-title">Skill 可视化分析</span>
+    <div class="nav-dots">
+      <button class="nav-dot active" data-target="section-1" title="概览" aria-label="概览"></button>
+      <button class="nav-dot" data-target="section-2" title="文件地图" aria-label="文件星座图"></button>
+      <button class="nav-dot" data-target="section-3" title="执行流程" aria-label="执行流程"></button>
+      <button class="nav-dot" data-target="section-4" title="文件详情" aria-label="文件详情"></button>
+      <button class="nav-dot" data-target="section-5" title="交互矩阵" aria-label="交互矩阵"></button>
+      <button class="nav-dot" data-target="section-6" title="洞察" aria-label="洞察"></button>
+      <button class="nav-dot" data-target="section-7" title="延伸" aria-label="延伸"></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== SECTION 1: OVERVIEW ====== -->
+<section class="section" id="section-1" style="background:var(--color-bg)">
+  <div class="section-content">
+    <header class="section-header animate-in">
+      <div class="section-num" style="color:var(--color-role-entry)">01</div>
+      <h1 class="section-title">Skill 可视化工具</h1>
+      <p class="section-subtitle">将任意 Skill 文件夹转化为交互式可视化，揭示文件关系与执行流程</p>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card animate-in"><div class="stat-icon">📄</div><div class="stat-value">4</div><div class="stat-label">文件数</div></div>
+      <div class="stat-card animate-in"><div class="stat-icon">📏</div><div class="stat-value">1,338</div><div class="stat-label">总行数</div></div>
+      <div class="stat-card animate-in"><div class="stat-icon">🔗</div><div class="stat-value">4</div><div class="stat-label">连接数</div></div>
+      <div class="stat-card animate-in"><div class="stat-icon">📊</div><div class="stat-value">中等</div><div class="stat-label">复杂度</div></div>
+    </div>
+
+    <div class="animate-in">
+      <h3 style="font-family:var(--font-display);margin-bottom:var(--space-3)">触发关键词</h3>
+      <div class="trigger-tags">
+        <span class="trigger-tag">"visualize this skill"</span>
+        <span class="trigger-tag">"analyze this skill"</span>
+        <span class="trigger-tag">"Skill可视化"</span>
+        <span class="trigger-tag">"分析这个Skill"</span>
+        <span class="trigger-tag">"展示Skill流程"</span>
+      </div>
+    </div>
+
+    <div class="file-tree animate-in" style="margin-top:var(--space-8)">
+      <div class="ft-folder open">
+        <span class="ft-toggle" onclick="toggleFolder(this)">▾</span>
+        <span class="ft-name">skill-visualizer/</span>
+        <span class="ft-desc">根目录</span>
+        <div class="ft-children">
+          <div class="ft-file"><span class="ft-icon">🎯</span><span class="ft-name">SKILL.md</span><span class="ft-desc">核心指令文件 — 技能的大脑</span><span class="ft-size">207 lines</span></div>
+          <div class="ft-file"><span class="ft-icon">📖</span><span class="ft-name">README.md</span><span class="ft-desc">项目文档</span><span class="ft-size">52 lines</span></div>
+          <div class="ft-folder open">
+            <span class="ft-toggle" onclick="toggleFolder(this)">▾</span>
+            <span class="ft-name">references/</span>
+            <span class="ft-desc">辅助知识库</span>
+            <div class="ft-children">
+              <div class="ft-file"><span class="ft-icon">📚</span><span class="ft-name">design-system.md</span><span class="ft-desc">CSS 设计令牌与视觉规范</span><span class="ft-size">439 lines</span></div>
+              <div class="ft-file"><span class="ft-icon">📚</span><span class="ft-name">interactive-elements.md</span><span class="ft-desc">交互组件实现模式</span><span class="ft-size">885 lines</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-accent animate-in">
+      <div class="callout-icon">🔍</div>
+      <div class="callout-content">
+        <strong class="callout-title">架构洞察</strong>
+        <p>此 Skill 采用 <span class="term" data-definition="一种架构模式：一个中心文件（枢纽）将专业任务委托给外围文件（辐条），让主文件保持精简和可管理。">枢纽-辐射模式</span> &mdash; SKILL.md 是枢纽，负责编排整个可视化流程，而参考文件按需提供专业的设计和交互知识。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SECTION 2: FILE CONSTELLATION ====== -->
+<section class="section" id="section-2" style="background:var(--color-bg-warm)">
+  <div class="section-content-wide">
+    <header class="section-header animate-in">
+      <div class="section-num" style="color:var(--color-role-reference)">02</div>
+      <h1 class="section-title">文件星座图</h1>
+      <p class="section-subtitle">点击任意节点探索其连接关系，悬停可预览关联文件</p>
+    </header>
+
+    <div class="graph-container animate-in" id="file-graph">
+      <svg class="graph-svg" viewBox="0 0 900 500">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#C4BBB0"/></marker>
+          <marker id="arrowhead-active" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2A7B9B"/></marker>
+          <filter id="glow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <!-- Edges -->
+        <g class="graph-edges">
+          <path class="graph-edge" data-from="SKILL.md" data-to="design-system.md" d="M300,170 Q450,80 620,200" marker-end="url(#arrowhead)"/>
+          <path class="graph-edge" data-from="SKILL.md" data-to="interactive-elements.md" d="M300,210 Q450,350 620,310" marker-end="url(#arrowhead)"/>
+          <path class="graph-edge" data-from="README.md" data-to="SKILL.md" d="M180,370 Q200,280 260,210" marker-end="url(#arrowhead)"/>
+          <path class="graph-edge" data-from="design-system.md" data-to="interactive-elements.md" d="M650,230 Q680,270 650,290" marker-end="url(#arrowhead)" style="stroke-dasharray:4 4"/>
+        </g>
+        <!-- Nodes -->
+        <g class="graph-nodes">
+          <g class="graph-node" data-file="SKILL.md" transform="translate(260,190)" onclick="selectNode('SKILL.md')" onmouseenter="hoverNode('SKILL.md')" onmouseleave="unhoverNode()">
+            <circle r="44" fill="#D94F30"/><text dy="-6" text-anchor="middle" fill="white" font-size="11" font-weight="600" style="font-family:var(--font-mono)">SKILL.md</text><text dy="10" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="9" style="font-family:var(--font-mono)">入口文件</text>
+          </g>
+          <g class="graph-node" data-file="design-system.md" transform="translate(640,200)" onclick="selectNode('design-system.md')" onmouseenter="hoverNode('design-system.md')" onmouseleave="unhoverNode()">
+            <circle r="34" fill="#2A7B9B"/><text dy="-6" text-anchor="middle" fill="white" font-size="10" font-weight="600" style="font-family:var(--font-mono)">design-</text><text dy="8" text-anchor="middle" fill="white" font-size="10" font-weight="600" style="font-family:var(--font-mono)">system.md</text>
+          </g>
+          <g class="graph-node" data-file="interactive-elements.md" transform="translate(640,320)" onclick="selectNode('interactive-elements.md')" onmouseenter="hoverNode('interactive-elements.md')" onmouseleave="unhoverNode()">
+            <circle r="34" fill="#2A7B9B"/><text dy="-6" text-anchor="middle" fill="white" font-size="10" font-weight="600" style="font-family:var(--font-mono)">interactive-</text><text dy="8" text-anchor="middle" fill="white" font-size="10" font-weight="600" style="font-family:var(--font-mono)">elements.md</text>
+          </g>
+          <g class="graph-node" data-file="README.md" transform="translate(160,380)" onclick="selectNode('README.md')" onmouseenter="hoverNode('README.md')" onmouseleave="unhoverNode()">
+            <circle r="22" fill="#7B6DAA"/><text dy="4" text-anchor="middle" fill="white" font-size="10" font-weight="600" style="font-family:var(--font-mono)">README</text>
+          </g>
+        </g>
+      </svg>
+
+      <div class="graph-info-panel" id="graph-info">
+        <button class="graph-info-close" onclick="closeGraphInfo()">&times;</button>
+        <div class="graph-info-content" id="graph-info-content"></div>
+      </div>
+
+      <div class="graph-legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#D94F30"></span><span>入口文件</span></div>
+        <div class="legend-item"><span class="legend-dot" style="background:#2A7B9B"></span><span>参考文件</span></div>
+        <div class="legend-item"><span class="legend-dot" style="background:#7B6DAA"></span><span>资源 / 文档</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SECTION 3: EXECUTION FLOW ====== -->
+<section class="section" id="section-3" style="background:var(--color-bg)">
+  <div class="section-content">
+    <header class="section-header animate-in">
+      <div class="section-num" style="color:var(--color-role-script)">03</div>
+      <h1 class="section-title">执行流程</h1>
+      <p class="section-subtitle">逐步追踪 Skill 从触发到输出的完整执行流程</p>
+    </header>
+
+    <div class="flow-timeline animate-in" id="exec-flow">
+      <div class="flow-track">
+        <div class="flow-phase active current" data-phase="0">
+          <div class="flow-phase-dot"><span class="flow-phase-num">1</span></div>
+          <div class="flow-phase-content">
+            <h4 class="flow-phase-title">触发</h4>
+            <p class="flow-phase-desc">用户输入触发关键词，如「visualize this skill」或「Skill可视化」</p>
+            <div class="flow-phase-files"><span class="flow-file-tag" style="border-color:#D94F30;color:#D94F30">SKILL.md</span></div>
+          </div>
+        </div>
+        <div class="flow-phase" data-phase="1">
+          <div class="flow-phase-dot"><span class="flow-phase-num">2</span></div>
+          <div class="flow-phase-content">
+            <h4 class="flow-phase-title">深度扫描</h4>
+            <p class="flow-phase-desc">读取 Skill 文件夹中的每个文件，按角色分类，映射依赖关系，提取执行阶段。</p>
+            <div class="flow-phase-files">
+              <span class="flow-file-tag" style="border-color:#D94F30;color:#D94F30">SKILL.md</span>
+              <span class="flow-file-tag" style="border-color:#2A7B9B;color:#2A7B9B">所有 Skill 文件</span>
+            </div>
+          </div>
+        </div>
+        <div class="flow-phase" data-phase="2">
+          <div class="flow-phase-dot"><span class="flow-phase-num">3</span></div>
+          <div class="flow-phase-content">
+            <h4 class="flow-phase-title">设计规划</h4>
+            <p class="flow-phase-desc">设计可视化板块：概览面板、节点关系图、流程时间线、文件卡片、热力矩阵和架构洞察。</p>
+            <div class="flow-phase-files"><span class="flow-file-tag" style="border-color:#D94F30;color:#D94F30">SKILL.md</span></div>
+          </div>
+        </div>
+        <div class="flow-phase" data-phase="3">
+          <div class="flow-phase-dot"><span class="flow-phase-num">4</span></div>
+          <div class="flow-phase-content">
+            <h4 class="flow-phase-title">加载参考</h4>
+            <p class="flow-phase-desc">读取 design-system.md 获取 CSS 令牌，读取 interactive-elements.md 获取组件模式。</p>
+            <div class="flow-phase-files">
+              <span class="flow-file-tag" style="border-color:#2A7B9B;color:#2A7B9B">design-system.md</span>
+              <span class="flow-file-tag" style="border-color:#2A7B9B;color:#2A7B9B">interactive-elements.md</span>
+            </div>
+          </div>
+        </div>
+        <div class="flow-phase" data-phase="4">
+          <div class="flow-phase-dot"><span class="flow-phase-num">5</span></div>
+          <div class="flow-phase-content">
+            <h4 class="flow-phase-title">构建 HTML</h4>
+            <p class="flow-phase-desc">生成单个自包含 HTML 文件，内联所有 CSS/JS。应用设计令牌，构建交互元素。</p>
+            <div class="flow-phase-files">
+              <span class="flow-file-tag" style="border-color:#2D8B55;color:#2D8B55">index.html（输出）</span>
+            </div>
+          </div>
+        </div>
+        <div class="flow-phase" data-phase="5">
+          <div class="flow-phase-dot"><span class="flow-phase-num">6</span></div>
+          <div class="flow-phase-content">
+            <h4 class="flow-phase-title">审查与交付</h4>
+            <p class="flow-phase-desc">在浏览器中打开，验证所有交互功能，向用户展示并收集反馈。</p>
+            <div class="flow-phase-files"><span class="flow-file-tag" style="border-color:#D4A843;color:#D4A843">浏览器预览</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-controls">
+        <button class="btn" id="flow-prev" onclick="prevPhase()" disabled>← 上一步</button>
+        <button class="btn btn-primary" id="flow-next" onclick="nextPhase()">下一步 →</button>
+        <button class="btn" onclick="playAllPhases()">▶ 自动播放</button>
+        <button class="btn" onclick="resetFlow()">↺ 重置</button>
+        <span class="flow-progress-text" id="flow-progress">Step 1 / 6</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SECTION 4: SKILL.md DEEP DIVE ====== -->
+<section class="section" id="section-4" style="background:var(--color-bg-warm)">
+  <div class="section-content">
+    <header class="section-header animate-in">
+      <div class="section-num" style="color:var(--color-role-entry)">04</div>
+      <h1 class="section-title">核心文件深度剖析</h1>
+      <p class="section-subtitle">SKILL.md 是整个 Skill 的大脑 — 这里展示它的内部结构、执行管线和设计哲学</p>
+    </header>
+
+    <!-- Hero Card -->
+    <div class="skill-hero animate-in">
+      <div class="skill-hero-icon">🎯</div>
+      <div class="skill-hero-info">
+        <h2>SKILL.md</h2>
+        <p>核心指令文件 — 定义了 Skill 的完整行为：从触发条件到最终交付，编排所有分析、设计和构建步骤。</p>
+        <div class="skill-hero-meta">
+          <span>📄 207 行</span>
+          <span>📐 4 个执行阶段</span>
+          <span>📖 6 个可视化板块</span>
+          <span>🔗 引用 2 个参考文件</span>
+          <span>🎯 10 个触发词</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Sub-section: Phase Pipeline ===== -->
+    <div class="sub-header animate-in"><span class="sub-header-icon">⚡</span> 四阶段执行管线</div>
+    <p class="animate-in" style="color:var(--color-text-secondary);margin-bottom:var(--space-4)">SKILL.md 将整个可视化过程编排为 4 个阶段，每个阶段有明确的输入、处理和输出。点击任意阶段查看详情。</p>
+
+    <div class="phase-pipeline animate-in">
+      <div class="phase-pipe active-pipe" onclick="showPhaseDetail(0)">
+        <div class="phase-pipe-head" style="background:#D94F30">
+          <div class="phase-pipe-num">PHASE 1</div>
+          <div class="phase-pipe-title">深度分析</div>
+        </div>
+        <div class="phase-pipe-body">读取所有文件，分类角色，映射依赖，提取执行流程和架构模式</div>
+        <span class="phase-pipe-arrow">→</span>
+      </div>
+      <div class="phase-pipe" onclick="showPhaseDetail(1)">
+        <div class="phase-pipe-head" style="background:#2A7B9B">
+          <div class="phase-pipe-num">PHASE 2</div>
+          <div class="phase-pipe-title">可视化设计</div>
+        </div>
+        <div class="phase-pipe-body">设计 6 个必备板块：概览、星座图、时间线、文件卡片、热力矩阵、洞察</div>
+        <span class="phase-pipe-arrow">→</span>
+      </div>
+      <div class="phase-pipe" onclick="showPhaseDetail(2)">
+        <div class="phase-pipe-head" style="background:#2D8B55">
+          <div class="phase-pipe-num">PHASE 3</div>
+          <div class="phase-pipe-title">构建 HTML</div>
+        </div>
+        <div class="phase-pipe-body">加载参考文件，生成单个自包含 HTML，内联所有 CSS/JS，零外部依赖</div>
+        <span class="phase-pipe-arrow">→</span>
+      </div>
+      <div class="phase-pipe" onclick="showPhaseDetail(3)">
+        <div class="phase-pipe-head" style="background:#D4A843">
+          <div class="phase-pipe-num">PHASE 4</div>
+          <div class="phase-pipe-title">审查交付</div>
+        </div>
+        <div class="phase-pipe-body">浏览器中打开验证所有交互，确保节点图、动画、矩阵等全部正常工作</div>
+      </div>
+    </div>
+
+    <div class="phase-detail-panel show" id="phase-detail">
+      <h4 id="phase-detail-title">阶段 1：深度分析</h4>
+      <p id="phase-detail-desc" style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-bottom:var(--space-3)">这是最关键的阶段 — 决定了可视化的质量。AI 需要完整理解 Skill 的内部结构。</p>
+      <ul id="phase-detail-list">
+        <li><strong>文件分类</strong>：将每个文件归入 6 种角色（入口、参考、脚本、配置、资源、钩子）</li>
+        <li><strong>依赖映射</strong>：识别文件之间的引用关系、读取时机和数据流向</li>
+        <li><strong>流程提取</strong>：追踪 6 个执行阶段（触发→分析→处理→参考→输出→审查）</li>
+        <li><strong>模式识别</strong>：发现 Prompt 链式调用、并行处理、条件分支等架构模式</li>
+      </ul>
+      <div class="phase-detail-files" id="phase-detail-files">
+        <span class="flow-file-tag" style="border-color:#D94F30;color:#D94F30">SKILL.md</span>
+        <span class="flow-file-tag" style="border-color:#2A7B9B;color:#2A7B9B">所有 Skill 文件</span>
+      </div>
+    </div>
+
+    <!-- ===== Sub-section: Document Structure Map ===== -->
+    <div class="sub-header animate-in"><span class="sub-header-icon">🗂️</span> 文档结构地图</div>
+    <p class="animate-in" style="color:var(--color-text-secondary);margin-bottom:var(--space-4)">SKILL.md 的 207 行内容被组织为 7 个核心章节。点击任意章节展开查看其包含的关键内容。</p>
+
+    <div class="struct-map animate-in">
+      <div class="struct-section" onclick="toggleStruct(this)">
+        <div class="struct-section-head">
+          <div class="struct-section-marker" style="background:#D94F30">1</div>
+          <span class="struct-section-title">技能元数据 & 触发词</span>
+          <span class="struct-section-desc">第 1-17 行</span>
+        </div>
+        <div class="struct-section-detail">
+          <p>定义了 Skill 的名称、描述和 10 个触发关键词（中英文双语）。这是 AI 判断是否激活此 Skill 的入口。</p>
+          <pre class="snippet-code" style="margin-top:var(--space-2)"><code><span class="code-property">name</span><span class="code-operator">:</span> <span class="code-string">skill-visualizer</span>
+<span class="code-property">description</span><span class="code-operator">:</span> <span class="code-string">"Analyze any skill folder and generate</span>
+<span class="code-string">  a beautiful, interactive HTML visualization"</span></code></pre>
+        </div>
+      </div>
+
+      <div class="struct-section" onclick="toggleStruct(this)">
+        <div class="struct-section-head">
+          <div class="struct-section-marker" style="background:#D94F30">2</div>
+          <span class="struct-section-title">目标用户</span>
+          <span class="struct-section-desc">第 19-25 行</span>
+        </div>
+        <div class="struct-section-detail">
+          <p>明确界定了受众：Skill 的使用者、创建者和调试者。列出 4 个核心需求：</p>
+          <ul>
+            <li>理解 Skill 的功能和结构</li>
+            <li>查看文件间的交互关系</li>
+            <li>追踪从触发到输出的执行流程</li>
+            <li>知道自定义时该修改哪里</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="struct-section" onclick="toggleStruct(this)">
+        <div class="struct-section-head">
+          <div class="struct-section-marker" style="background:#2A7B9B">3</div>
+          <span class="struct-section-title">阶段 1：深度扫描</span>
+          <span class="struct-section-desc">第 27-64 行</span>
+        </div>
+        <div class="struct-section-detail">
+          <p>定义了 4 大分析维度：文件分类（6 种角色）、依赖映射（引用/被引用/读取时机/数据流）、流程提取（6 个执行阶段）和模式识别（5 种架构模式）。</p>
+          <pre class="snippet-code" style="margin-top:var(--space-2)"><code><span class="code-comment">### 1.1 文件分类</span>
+<span class="code-keyword">| Entry Point</span> | <span class="code-string">主指令文件</span>        |
+<span class="code-keyword">| Reference  </span> | <span class="code-string">辅助知识/模板</span>     |
+<span class="code-keyword">| Script     </span> | <span class="code-string">可执行代码</span>        |
+<span class="code-keyword">| Config     </span> | <span class="code-string">配置文件</span>          |
+<span class="code-keyword">| Asset      </span> | <span class="code-string">静态资源</span>          |
+<span class="code-keyword">| Hook       </span> | <span class="code-string">生命周期钩子</span>      |</code></pre>
+        </div>
+      </div>
+
+      <div class="struct-section" onclick="toggleStruct(this)">
+        <div class="struct-section-head">
+          <div class="struct-section-marker" style="background:#2A7B9B">4</div>
+          <span class="struct-section-title">阶段 2：可视化设计</span>
+          <span class="struct-section-desc">第 66-111 行</span>
+        </div>
+        <div class="struct-section-detail">
+          <p>规定了 6 个必备可视化板块，每个板块的内容和交互要求都有详细定义：</p>
+          <ul>
+            <li><strong>概览仪表盘</strong> — 统计、触发词、复杂度评级</li>
+            <li><strong>文件星座图</strong> — 交互式 SVG 节点关系图</li>
+            <li><strong>执行流程时间线</strong> — 步骤式动画时间线</li>
+            <li><strong>文件深度剖析</strong> — 可折叠文件卡片</li>
+            <li><strong>交互矩阵热力图</strong> — 文件间交互强度</li>
+            <li><strong>关键洞察与模式</strong> — 架构分析和自定义指南</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="struct-section" onclick="toggleStruct(this)">
+        <div class="struct-section-head">
+          <div class="struct-section-marker" style="background:#2D8B55">5</div>
+          <span class="struct-section-title">阶段 3：构建 HTML</span>
+          <span class="struct-section-desc">第 112-164 行</span>
+        </div>
+        <div class="struct-section-detail">
+          <p>最长的章节 — 定义了 7 条构建铁律、设计系统引用、交互元素引用、代码展示规则和导航规范：</p>
+          <pre class="snippet-code" style="margin-top:var(--space-2)"><code><span class="code-comment">### 构建铁律</span>
+<span class="code-number">1.</span> <span class="code-keyword">自包含</span>：全部放进一个 HTML 文件
+<span class="code-number">2.</span> <span class="code-keyword">无框架</span>：纯 HTML + CSS + 原生 JS
+<span class="code-number">3.</span> <span class="code-keyword">仅 Google Fonts</span> 作为外部资源
+<span class="code-number">4.</span> <span class="code-keyword">响应式</span>：桌面和移动端都能工作
+<span class="code-number">5.</span> <span class="code-keyword">可访问</span>：ARIA 标签、键盘导航
+<span class="code-number">6.</span> <span class="code-keyword">高性能</span>：CSS 动画优先于 JS
+<span class="code-number">7.</span> <span class="code-keyword">交互性</span>：每个板块至少一个交互元素</code></pre>
+        </div>
+      </div>
+
+      <div class="struct-section" onclick="toggleStruct(this)">
+        <div class="struct-section-head">
+          <div class="struct-section-marker" style="background:#D4A843">6</div>
+          <span class="struct-section-title">阶段 4 & 参考文件表</span>
+          <span class="struct-section-desc">第 166-184 行</span>
+        </div>
+        <div class="struct-section-detail">
+          <p>审查清单（7 项验证）和参考文件索引。参考文件表是枢纽-辐射模式的关键连接点。</p>
+          <pre class="snippet-code" style="margin-top:var(--space-2)"><code><span class="code-comment">## 参考文件（按需读取）</span>
+| <span class="code-property">design-system.md</span>       | <span class="code-string">CSS 设计令牌</span>     | <span class="code-function">阶段 3</span> |
+| <span class="code-property">interactive-elements.md</span> | <span class="code-string">交互组件模式</span>     | <span class="code-function">阶段 3</span> |</code></pre>
+        </div>
+      </div>
+
+      <div class="struct-section" onclick="toggleStruct(this)">
+        <div class="struct-section-head">
+          <div class="struct-section-marker" style="background:#E06B56">7</div>
+          <span class="struct-section-title">核心原则 & 反模式</span>
+          <span class="struct-section-desc">第 186-207 行</span>
+        </div>
+        <div class="struct-section-detail">
+          <p>定义了 5 条设计优先级和 7 条反模式（绝对禁止的做法）。这是 Skill 的"灵魂"：</p>
+          <ul>
+            <li>🥇 <strong>清晰优先于花哨</strong> — 每个视觉元素都必须服务于理解</li>
+            <li>🥈 <strong>渐进式展示</strong> — 先概览，按需展开细节</li>
+            <li>🥉 <strong>只用真实内容</strong> — 展示实际代码、实际文件名</li>
+            <li>❌ 禁止杜撰代码片段</li>
+            <li>❌ 禁止纯静态图表</li>
+            <li>❌ 禁止紫色渐变</li>
+            <li>❌ 禁止外部依赖</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Sub-section: Content Composition ===== -->
+    <div class="sub-header animate-in"><span class="sub-header-icon">📊</span> 内容构成分析</div>
+    <div class="donut-container animate-in">
+      <svg class="donut-chart" viewBox="0 0 200 200" id="donut-chart">
+        <!-- Drawn by JS -->
+      </svg>
+      <div class="donut-legend">
+        <div class="donut-legend-item"><div class="donut-legend-color" style="background:#D94F30"></div><span class="donut-legend-label">执行流程定义</span><span class="donut-legend-value">38%</span></div>
+        <div class="donut-legend-item"><div class="donut-legend-color" style="background:#2A7B9B"></div><span class="donut-legend-label">可视化板块设计</span><span class="donut-legend-value">26%</span></div>
+        <div class="donut-legend-item"><div class="donut-legend-color" style="background:#2D8B55"></div><span class="donut-legend-label">构建规则与规范</span><span class="donut-legend-value">20%</span></div>
+        <div class="donut-legend-item"><div class="donut-legend-color" style="background:#D4A843"></div><span class="donut-legend-label">设计原则与反模式</span><span class="donut-legend-value">10%</span></div>
+        <div class="donut-legend-item"><div class="donut-legend-color" style="background:#7B6DAA"></div><span class="donut-legend-label">元数据与触发词</span><span class="donut-legend-value">6%</span></div>
+      </div>
+    </div>
+
+    <!-- ===== Sub-section: Design Principles ===== -->
+    <div class="sub-header animate-in"><span class="sub-header-icon">💎</span> 五大设计优先级</div>
+    <div class="principle-grid animate-in">
+      <div class="principle-card"><div class="principle-num">#1</div><h4>清晰优于花哨</h4><p>每个视觉元素都必须服务于用户理解，不做无意义的装饰</p></div>
+      <div class="principle-card"><div class="principle-num">#2</div><h4>渐进式展示</h4><p>先给出概览全局，用户需要时再按需展开详细信息</p></div>
+      <div class="principle-card"><div class="principle-num">#3</div><h4>只用真实内容</h4><p>展示实际代码、实际文件名、实际依赖关系，绝不杜撰</p></div>
+      <div class="principle-card"><div class="principle-num">#4</div><h4>交互式探索</h4><p>让用户通过点击和悬停自己发现连接关系，而非被动阅读</p></div>
+      <div class="principle-card"><div class="principle-num">#5</div><h4>默认即美观</h4><p>零配置即可获得精美输出，暖色调笔记本风格，拒绝冷蓝</p></div>
+    </div>
+
+    <div class="callout callout-accent animate-in" style="margin-top:var(--space-6)">
+      <div class="callout-icon">🧠</div>
+      <div class="callout-content">
+        <strong class="callout-title">核心哲学</strong>
+        <p>「不只是列出文件 — 揭示关系」。Skill 不是一堆文件的集合，而是一个协调运作的系统。SKILL.md 的全部设计都围绕这一理念：让隐形的连接变得可见。</p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div style="border-top:2px solid var(--color-border-light);margin:var(--space-12) 0;"></div>
+
+    <!-- ===== Other Files (kept as collapsible cards) ===== -->
+    <div class="sub-header animate-in"><span class="sub-header-icon">📁</span> 其他文件概览</div>
+
+    <div class="file-cards">
+
+      <!-- design-system.md -->
+      <div class="file-card animate-in">
+        <div class="file-card-header" onclick="toggleFileCard(this)">
+          <div class="file-card-left"><span class="role-badge" style="background:#2A7B9B">📚 参考</span><span class="file-card-name">references/design-system.md</span></div>
+          <div class="file-card-right"><span class="file-card-stat">439 lines</span><span class="file-card-chevron">▾</span></div>
+        </div>
+        <div class="file-card-body" style="display:none">
+          <h4>功能说明</h4>
+          <p>定义完整的视觉设计系统：30+ 个 CSS 自定义属性用于颜色、3 种字体族、间距比例尺、阴影、动画（包括节点脉冲、边缘流动、数据包传输）、响应式断点和 Catppuccin 语法高亮配色。</p>
+          <h4>连接关系</h4>
+          <div class="connection-list">
+            <div class="connection-in">SKILL.md（第 3 阶段读取此文件）</div>
+            <div class="connection-out">interactive-elements.md（共享设计令牌）</div>
+          </div>
+          <h4>关键代码</h4>
+          <div class="snippet-label">文件角色颜色</div>
+          <pre class="snippet-code"><code><span class="code-property">--color-role-entry</span><span class="code-operator">:</span> <span class="code-string">#D94F30</span>  <span class="code-comment">/* Entry Point */</span>
+<span class="code-property">--color-role-reference</span><span class="code-operator">:</span> <span class="code-string">#2A7B9B</span>  <span class="code-comment">/* Reference */</span>
+<span class="code-property">--color-role-script</span><span class="code-operator">:</span> <span class="code-string">#2D8B55</span>  <span class="code-comment">/* Script */</span>
+<span class="code-property">--color-role-config</span><span class="code-operator">:</span> <span class="code-string">#D4A843</span>  <span class="code-comment">/* Config */</span></code></pre>
+          <p class="snippet-explanation">每种文件角色获得一个唯一颜色，用于节点图可视化、徽章和连接线。颜色选择确保视觉上可区分且保持暖色调。</p>
+          <h4>使用的模式</h4>
+          <div class="pattern-tags">
+            <span class="pattern-tag">设计令牌</span>
+            <span class="pattern-tag">CSS 自定义属性</span>
+            <span class="pattern-tag">响应式比例</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- interactive-elements.md -->
+      <div class="file-card animate-in">
+        <div class="file-card-header" onclick="toggleFileCard(this)">
+          <div class="file-card-left"><span class="role-badge" style="background:#2A7B9B">📚 参考</span><span class="file-card-name">references/interactive-elements.md</span></div>
+          <div class="file-card-right"><span class="file-card-stat">885 lines</span><span class="file-card-chevron">▾</span></div>
+        </div>
+        <div class="file-card-body" style="display:none">
+          <h4>功能说明</h4>
+          <p>最大的文件 — 包含 9 种交互元素类型的完整目录，每种都有完整的 HTML 结构、CSS 样式和 JavaScript 逻辑。涵盖：SVG 节点图、流程时间线、可折叠文件卡片、热力矩阵、术语提示、提示框、统计卡片、文件树和数据流图。</p>
+          <h4>连接关系</h4>
+          <div class="connection-list">
+            <div class="connection-in">SKILL.md（第 3 阶段读取此文件）</div>
+            <div class="connection-in">design-system.md（使用共享设计令牌）</div>
+          </div>
+          <h4>关键代码</h4>
+          <div class="snippet-label">节点图交互逻辑</div>
+          <pre class="snippet-code"><code><span class="code-keyword">function</span> <span class="code-function">selectNode</span>(fileId) {
+  <span class="code-keyword">const</span> connected <span class="code-operator">=</span> <span class="code-keyword">new</span> <span class="code-function">Set</span>([fileId, ...nodeData.referencesTo]);
+  document.<span class="code-function">querySelectorAll</span>(<span class="code-string">'.graph-node'</span>).<span class="code-function">forEach</span>(n <span class="code-operator">=></span> {
+    n.classList.<span class="code-function">toggle</span>(<span class="code-string">'dimmed'</span>, !connected.<span class="code-function">has</span>(n.dataset.file));
+  });
+}</code></pre>
+          <p class="snippet-explanation">当点击一个节点时，所有无关节点变暗至 20% 透明度，而相连节点保持明亮。这种焦点+上下文技术帮助用户追踪文件依赖关系。</p>
+          <h4>使用的模式</h4>
+          <div class="pattern-tags">
+            <span class="pattern-tag">组件目录</span>
+            <span class="pattern-tag">渐进式展示</span>
+            <span class="pattern-tag">焦点+上下文</span>
+            <span class="pattern-tag">步骤动画</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- README.md -->
+      <div class="file-card animate-in">
+        <div class="file-card-header" onclick="toggleFileCard(this)">
+          <div class="file-card-left"><span class="role-badge" style="background:#7B6DAA">📖 资源</span><span class="file-card-name">README.md</span></div>
+          <div class="file-card-right"><span class="file-card-stat">52 lines</span><span class="file-card-chevron">▾</span></div>
+        </div>
+        <div class="file-card-body" style="display:none">
+          <h4>功能说明</h4>
+          <p>面向用户的文档，描述 Skill 的功能特性、安装步骤、项目结构、使用场景和设计理念。AI 在执行过程中不会读取此文件 — 纯粹供人类阅读。</p>
+          <h4>连接关系</h4>
+          <div class="connection-list">
+            <div class="connection-out">SKILL.md（描述其功能）</div>
+          </div>
+          <h4>使用的模式</h4>
+          <div class="pattern-tags"><span class="pattern-tag">文档</span><span class="pattern-tag">用户引导</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SECTION 5: INTERACTION MATRIX ====== -->
+<section class="section" id="section-5" style="background:var(--color-bg)">
+  <div class="section-content-wide">
+    <header class="section-header animate-in">
+      <div class="section-num" style="color:var(--color-role-asset)">05</div>
+      <h1 class="section-title">交互矩阵</h1>
+      <p class="section-subtitle">点击任意有颜色的单元格，查看两个文件之间的交互方式</p>
+    </header>
+
+    <div class="matrix-container animate-in">
+      <div class="matrix-wrapper">
+        <table class="matrix-table" id="interaction-matrix">
+          <thead><tr>
+            <th class="matrix-corner"></th>
+            <th class="matrix-col-header">SKILL.md</th>
+            <th class="matrix-col-header">design-system.md</th>
+            <th class="matrix-col-header">interactive-elements.md</th>
+            <th class="matrix-col-header">README.md</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td class="matrix-row-header">SKILL.md</td>
+              <td class="matrix-cell" data-from="SKILL.md" data-to="SKILL.md" data-strength="0" style="background:var(--heatmap-0)" onclick="showMatrixDetail(this)"></td>
+              <td class="matrix-cell" data-from="SKILL.md" data-to="design-system.md" data-strength="4" style="background:var(--heatmap-4)" onclick="showMatrixDetail(this)"><span class="matrix-value">4</span></td>
+              <td class="matrix-cell" data-from="SKILL.md" data-to="interactive-elements.md" data-strength="4" style="background:var(--heatmap-4)" onclick="showMatrixDetail(this)"><span class="matrix-value">4</span></td>
+              <td class="matrix-cell" data-from="SKILL.md" data-to="README.md" data-strength="0" style="background:var(--heatmap-0)" onclick="showMatrixDetail(this)"></td>
+            </tr>
+            <tr>
+              <td class="matrix-row-header">design-system.md</td>
+              <td class="matrix-cell" data-from="design-system.md" data-to="SKILL.md" data-strength="1" style="background:var(--heatmap-1)" onclick="showMatrixDetail(this)"><span class="matrix-value" style="color:var(--color-text-muted)">1</span></td>
+              <td class="matrix-cell" data-from="design-system.md" data-to="design-system.md" data-strength="0" style="background:var(--heatmap-0)" onclick="showMatrixDetail(this)"></td>
+              <td class="matrix-cell" data-from="design-system.md" data-to="interactive-elements.md" data-strength="3" style="background:var(--heatmap-3)" onclick="showMatrixDetail(this)"><span class="matrix-value">3</span></td>
+              <td class="matrix-cell" data-from="design-system.md" data-to="README.md" data-strength="0" style="background:var(--heatmap-0)" onclick="showMatrixDetail(this)"></td>
+            </tr>
+            <tr>
+              <td class="matrix-row-header">interactive-elements.md</td>
+              <td class="matrix-cell" data-from="interactive-elements.md" data-to="SKILL.md" data-strength="1" style="background:var(--heatmap-1)" onclick="showMatrixDetail(this)"><span class="matrix-value" style="color:var(--color-text-muted)">1</span></td>
+              <td class="matrix-cell" data-from="interactive-elements.md" data-to="design-system.md" data-strength="3" style="background:var(--heatmap-3)" onclick="showMatrixDetail(this)"><span class="matrix-value">3</span></td>
+              <td class="matrix-cell" data-from="interactive-elements.md" data-to="interactive-elements.md" data-strength="0" style="background:var(--heatmap-0)" onclick="showMatrixDetail(this)"></td>
+              <td class="matrix-cell" data-from="interactive-elements.md" data-to="README.md" data-strength="0" style="background:var(--heatmap-0)" onclick="showMatrixDetail(this)"></td>
+            </tr>
+            <tr>
+              <td class="matrix-row-header">README.md</td>
+              <td class="matrix-cell" data-from="README.md" data-to="SKILL.md" data-strength="2" style="background:var(--heatmap-2)" onclick="showMatrixDetail(this)"><span class="matrix-value" style="color:var(--color-text-secondary)">2</span></td>
+              <td class="matrix-cell" data-from="README.md" data-to="design-system.md" data-strength="0" style="background:var(--heatmap-0)" onclick="showMatrixDetail(this)"></td>
+              <td class="matrix-cell" data-from="README.md" data-to="interactive-elements.md" data-strength="0" style="background:var(--heatmap-0)" onclick="showMatrixDetail(this)"></td>
+              <td class="matrix-cell" data-from="README.md" data-to="README.md" data-strength="0" style="background:var(--heatmap-0)" onclick="showMatrixDetail(this)"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="matrix-detail" id="matrix-detail" style="display:none">
+        <button class="matrix-detail-close" onclick="closeMatrixDetail()">&times;</button>
+        <h4 class="matrix-detail-title" id="matrix-detail-title"></h4>
+        <div class="matrix-detail-body" id="matrix-detail-body"></div>
+      </div>
+      <div class="matrix-legend">
+        <span class="matrix-legend-label">交互强度：</span>
+        <span class="ml-item" style="background:var(--heatmap-0)">无</span>
+        <span class="ml-item" style="background:var(--heatmap-1)">低</span>
+        <span class="ml-item" style="background:var(--heatmap-2)"></span>
+        <span class="ml-item" style="background:var(--heatmap-3)">中</span>
+        <span class="ml-item" style="background:var(--heatmap-4)"></span>
+        <span class="ml-item" style="background:var(--heatmap-5)">高</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SECTION 6: MULTI-PERSPECTIVE INSIGHTS ====== -->
+<section class="section" id="section-6" style="background:var(--color-bg-warm)">
+  <div class="section-content">
+    <header class="section-header animate-in">
+      <div class="section-num" style="color:var(--color-role-hook)">06</div>
+      <h1 class="section-title">大师视角 · 多维洞察</h1>
+      <p class="section-subtitle">用 6 位顶级思想家的思维模型，从不同维度审视这个 Skill 的设计哲学</p>
+    </header>
+
+    <!-- Steve Jobs -->
+    <div class="perspective-card animate-in" onclick="togglePerspective(this)">
+      <div class="perspective-header">
+        <div class="perspective-avatar" style="background:#2C2A28">SJ</div>
+        <div class="perspective-meta">
+          <div class="perspective-name">Steve Jobs 视角 · 产品品味与极简主义</div>
+          <div class="perspective-tag">taste-driven judgment · ruthless simplification</div>
+        </div>
+        <span class="perspective-chevron">▾</span>
+      </div>
+      <div class="perspective-body show">
+        <div class="perspective-verdict" style="background:#FDF9F3;border-color:#2C2A28;color:var(--color-text)">
+          「这个 Skill 做对了一件关键的事：它把输出压缩成了单个 HTML 文件。没有安装、没有配置、没有依赖。打开就能用。这就是产品该有的样子 — 不可避免的简洁。」
+        </div>
+        <ul class="perspective-points">
+          <li><span class="point-icon">✅</span><span class="point-text"><strong>值得保留的</strong>：单文件自包含输出、零依赖离线可用 — 这是「不可避免的简洁」，删无可删</span></li>
+          <li><span class="point-icon">✅</span><span class="point-text"><strong>产品叙事清晰</strong>：「不只是列出文件 — 揭示关系」这句话就是整个产品的 editorial point of view</span></li>
+          <li><span class="point-icon">⚠️</span><span class="point-text"><strong>需要砍掉的</strong>：如果热力矩阵在 3 个文件的 Skill 上显得空洞，就该隐藏它。宁可少一个板块，也不要一个看起来平庸的板块</span></li>
+          <li><span class="point-icon">💡</span><span class="point-text"><strong>Jobs 式追问</strong>：「用户打开这个页面 3 秒内，能不能立刻明白这个 Skill 是干什么的？如果不能，首屏需要重新设计。」</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Elon Musk -->
+    <div class="perspective-card animate-in" onclick="togglePerspective(this)">
+      <div class="perspective-header">
+        <div class="perspective-avatar" style="background:#1E40AF">EM</div>
+        <div class="perspective-meta">
+          <div class="perspective-name">Elon Musk 视角 · 第一性原理与 10x 思维</div>
+          <div class="perspective-tag">first-principles · bottleneck removal · 10x improvement</div>
+        </div>
+        <span class="perspective-chevron">▾</span>
+      </div>
+      <div class="perspective-body">
+        <div class="perspective-verdict" style="background:#EFF6FF;border-color:#1E40AF;color:#1E40AF">
+          「当前的瓶颈不在可视化效果，而在分析深度。一个 Skill 的真正运行逻辑隐藏在 Prompt 的语义结构中，而不是文件的引用关系里。如果能让 AI 理解 Prompt 的意图链，这个工具的价值会提升 10 倍。」
+        </div>
+        <ul class="perspective-points">
+          <li><span class="point-icon">🔴</span><span class="point-text"><strong>真正的瓶颈</strong>：静态文件关系图只揭示了「结构」，没有揭示「意图」。用户想知道的不是 "A 引用了 B"，而是 "为什么 A 要在那个时机引用 B"</span></li>
+          <li><span class="point-icon">⚡</span><span class="point-text"><strong>第一性原理</strong>：Skill 本质是什么？是一段有结构的指令，让 AI 按特定模式行为。可视化应该展示的是「行为模式」而不仅是「文件关系」</span></li>
+          <li><span class="point-icon">🚀</span><span class="point-text"><strong>10x 改进方向</strong>：增加 Prompt 语义分析层 — 解析条件分支、角色切换、工具调用链。让静态文件变成动态行为流图</span></li>
+          <li><span class="point-icon">⏱️</span><span class="point-text"><strong>压缩时间线</strong>：为什么不能在用户安装 Skill 时自动生成可视化？把「手动触发」变成「自动产物」</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Charlie Munger -->
+    <div class="perspective-card animate-in" onclick="togglePerspective(this)">
+      <div class="perspective-header">
+        <div class="perspective-avatar" style="background:#6D28D9">CM</div>
+        <div class="perspective-meta">
+          <div class="perspective-name">Charlie Munger 视角 · 多元思维模型与逆向思维</div>
+          <div class="perspective-tag">mental models · inversion · circle of competence</div>
+        </div>
+        <span class="perspective-chevron">▾</span>
+      </div>
+      <div class="perspective-body">
+        <div class="perspective-verdict" style="background:#F5F3FF;border-color:#6D28D9;color:#6D28D9">
+          「先反过来想 — 什么会让这个 Skill 彻底失败？答案是：如果分析结果全是废话。可视化再好看，内容没价值就是零。所以核心护城河不在 CSS，在分析引擎的智能程度。」
+        </div>
+        <ul class="perspective-points">
+          <li><span class="point-icon">🔄</span><span class="point-text"><strong>逆向思维</strong>：让这个 Skill 失败的最快方式 = 对复杂 Skill 生成肤浅分析。应该对分析深度设置质量门槛，宁可拒绝输出也不输出垃圾</span></li>
+          <li><span class="point-icon">🧩</span><span class="point-text"><strong>多元模型</strong>：当前只用了「结构分析」一个维度。应该叠加「语义分析」（Prompt 意图解析）+ 「比较分析」（与已知优秀 Skill 的模式对比）+ 「缺陷分析」（常见 Skill 问题检测）</span></li>
+          <li><span class="point-icon">🏰</span><span class="point-text"><strong>护城河评估</strong>：3 分 — 设计系统漂亮但可复制；分析引擎智能度才是真正的护城河。建议积累 Skill 分析知识库，越用越聪明</span></li>
+          <li><span class="point-icon">📐</span><span class="point-text"><strong>能力圈</strong>：这个 Skill 最擅长分析 3-10 个文件的中等复杂度 Skill。对 100+ 文件的巨型 Skill 需要不同的策略（分层可视化），不要试图一招通吃</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Taleb -->
+    <div class="perspective-card animate-in" onclick="togglePerspective(this)">
+      <div class="perspective-header">
+        <div class="perspective-avatar" style="background:#0F766E">NT</div>
+        <div class="perspective-meta">
+          <div class="perspective-name">Nassim Taleb 视角 · 反脆弱与凸性分析</div>
+          <div class="perspective-tag">antifragile · convexity · skin in the game · lindy effect</div>
+        </div>
+        <span class="perspective-chevron">▾</span>
+      </div>
+      <div class="perspective-body">
+        <div class="perspective-verdict" style="background:#F0FDFA;border-color:#0F766E;color:#0F766E">
+          「这个 Skill 具有天然的反脆弱性 — Skill 生态越复杂、越混乱，对可视化工具的需求就越强。混乱是它的朋友。但要警惕：依赖单一 AI 模型的分析能力是一个脆弱性来源。」
+        </div>
+        <ul class="perspective-points">
+          <li><span class="point-icon">📈</span><span class="point-text"><strong>凸性（上行无限，下行有限）</strong>：Skill 生态越繁荣，可视化需求越大；即使 Skill 生态萎缩，基本的代码可视化需求仍在。典型的凸性收益结构</span></li>
+          <li><span class="point-icon">🦢</span><span class="point-text"><strong>黑天鹅检测</strong>：如果未来 AI 编程工具自带 Skill 可视化功能（如 IDE 内置），这个 Skill 就会失去存在价值。应该提前布局差异化 — 比如「跨 Skill 生态比较分析」</span></li>
+          <li><span class="point-icon">⏳</span><span class="point-text"><strong>林迪效应</strong>：单个 HTML 文件输出 — 这是一个已存在 30 年的技术形态。越古老的技术越长命。HTML 的寿命远超任何 JS 框架。这个选择会通过林迪检验</span></li>
+          <li><span class="point-icon">🎯</span><span class="point-text"><strong>切身利害</strong>：建议作者自己用这个 Skill 来理解其他 Skill，「吃自己的狗粮」是最好的质量保证</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Feynman -->
+    <div class="perspective-card animate-in" onclick="togglePerspective(this)">
+      <div class="perspective-header">
+        <div class="perspective-avatar" style="background:#DC2626">RF</div>
+        <div class="perspective-meta">
+          <div class="perspective-name">Richard Feynman 视角 · 费曼学习法与简化解释</div>
+          <div class="perspective-tag">feynman technique · simplify · teach to learn</div>
+        </div>
+        <span class="perspective-chevron">▾</span>
+      </div>
+      <div class="perspective-body">
+        <div class="perspective-verdict" style="background:#FEF2F2;border-color:#DC2626;color:#DC2626">
+          「如果你不能把一个 Skill 解释给完全不懂编程的人听，说明你的可视化还不够好。真正的理解 = 能用最简单的语言重新表达。这个工具应该是 Skill 的"费曼测试"。」
+        </div>
+        <ul class="perspective-points">
+          <li><span class="point-icon">🎓</span><span class="point-text"><strong>费曼测试</strong>：每个文件卡片的「功能说明」应该简单到一个非技术人员也能理解。如果解释里出现了没有 tooltip 的术语，就是没通过费曼测试</span></li>
+          <li><span class="point-icon">🔬</span><span class="point-text"><strong>层层深入</strong>：从「这个 Skill 是干什么的」→「它怎么做到的」→「每个文件负责什么」→「代码细节」。每一层都应该是完整的、自洽的解释</span></li>
+          <li><span class="point-icon">🎯</span><span class="point-text"><strong>类比的力量</strong>：节点图 = 人际关系网；执行流 = 菜谱步骤；热力矩阵 = 同事协作频率。好的可视化自带比喻</span></li>
+          <li><span class="point-icon">💭</span><span class="point-text"><strong>延伸想法</strong>：加入「一句话总结」功能 — 用一句不超过 20 字的话概括整个 Skill，强制提炼本质</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Paul Graham -->
+    <div class="perspective-card animate-in" onclick="togglePerspective(this)">
+      <div class="perspective-header">
+        <div class="perspective-avatar" style="background:#EA580C">PG</div>
+        <div class="perspective-meta">
+          <div class="perspective-name">Paul Graham 视角 · 做不能规模化的事</div>
+          <div class="perspective-tag">do things that don't scale · start simple · essay thinking</div>
+        </div>
+        <span class="perspective-chevron">▾</span>
+      </div>
+      <div class="perspective-body">
+        <div class="perspective-verdict" style="background:#FFF7ED;border-color:#EA580C;color:#EA580C">
+          「最好的 Skill 都是从解决自己的问题开始的。这个可视化工具的最大价值不在于"看"，而在于"理解"。当你被迫解释一个 Skill 的架构时，你自己也会更深地理解它。写作即思考，可视化即理解。」
+        </div>
+        <ul class="perspective-points">
+          <li><span class="point-icon">📝</span><span class="point-text"><strong>写作即思考</strong>：可视化的过程本身就是理解的过程。这个 Skill 最大的隐藏价值是：生成可视化的 AI 会被迫深度理解 Skill 的设计意图</span></li>
+          <li><span class="point-icon">🌱</span><span class="point-text"><strong>从小处开始</strong>：不要一开始就追求完美的通用解决方案。先做好「分析自己」这个 case，然后一个一个扩展到其他类型的 Skill</span></li>
+          <li><span class="point-icon">🔮</span><span class="point-text"><strong>做不能规模化的事</strong>：当前每次分析都需要 AI 完整阅读所有文件。这不能规模化，但这恰恰是质量的保证。过早优化（如缓存分析结果）会损害分析质量</span></li>
+          <li><span class="point-icon">🏗️</span><span class="point-text"><strong>产品机会</strong>：如果 Skill 可视化成为 Skill 开发的标配，那么「Skill 商店里的每个 Skill 都自带可视化预览」就是一个真正有价值的产品方向</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout callout-accent animate-in" style="margin-top:var(--space-8)">
+      <div class="callout-icon">🧠</div>
+      <div class="callout-content">
+        <strong class="callout-title">六位大师的共识</strong>
+        <p>跨越产品、工程、投资、科学、创业五个领域，有一个共同结论：<strong>这个 Skill 的长期价值不在「可视化的美观度」，而在「分析的智能深度」</strong>。设计可以被复制，但对 Skill 架构的深度理解无法被轻易复制。应该持续投资在分析引擎的能力上。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SECTION 7: EXTENSIONS & FUTURE ====== -->
+<section class="section" id="section-7" style="background:var(--color-bg)">
+  <div class="section-content">
+    <header class="section-header animate-in">
+      <div class="section-num" style="color:var(--color-accent)">07</div>
+      <h1 class="section-title">延伸方向与改造路线图</h1>
+      <p class="section-subtitle">基于大师洞察推导出的 8 个可落地的优化方向</p>
+    </header>
+
+    <div class="extension-grid animate-in">
+      <div class="extension-card" style="border-top:3px solid #D94F30">
+        <h4>🧬 Prompt 语义分析层 <span class="extension-difficulty" style="color:#D94F30">高价值</span></h4>
+        <p>解析 SKILL.md 中的条件分支、角色切换、工具调用链，把文件关系图升级为「行为意图图」。让用户看到的不只是"A 引用 B"，而是"当 X 条件满足时，A 委托 B 执行 Y"。</p>
+      </div>
+      <div class="extension-card" style="border-top:3px solid #2A7B9B">
+        <h4>🔄 Skill 对比分析 <span class="extension-difficulty" style="color:#2A7B9B">中等难度</span></h4>
+        <p>同时分析两个 Skill，生成差异对比视图。哪个架构更好？哪个缺少必要的组件？帮助 Skill 开发者学习优秀 Skill 的设计模式。</p>
+      </div>
+      <div class="extension-card" style="border-top:3px solid #2D8B55">
+        <h4>📊 智能复杂度自适应 <span class="extension-difficulty" style="color:#2D8B55">推荐</span></h4>
+        <p>根据 Skill 文件数量自动调整可视化策略：3 个文件→紧凑单页；10+ 文件→分层展开；50+ 文件→模块化多页。避免用同一个模板硬套所有规模。</p>
+      </div>
+      <div class="extension-card" style="border-top:3px solid #D4A843">
+        <h4>🏪 Skill 商店预览集成 <span class="extension-difficulty" style="color:#D4A843">生态机会</span></h4>
+        <p>让 Skill 市场中的每个 Skill 都自带可视化预览。用户安装前就能看到 Skill 的内部架构，就像 App Store 的截图预览。</p>
+      </div>
+      <div class="extension-card" style="border-top:3px solid #7B6DAA">
+        <h4>🩺 Skill 健康检查 <span class="extension-difficulty" style="color:#7B6DAA">高需求</span></h4>
+        <p>不只是可视化，还要诊断。检测常见问题：孤立文件（没有被任何文件引用）、循环依赖、缺失的参考表、过长的单文件。给出优化建议。</p>
+      </div>
+      <div class="extension-card" style="border-top:3px solid #E06B56">
+        <h4>📖 交互式教学模式 <span class="extension-difficulty" style="color:#E06B56">独特价值</span></h4>
+        <p>把可视化变成教程：逐步引导用户从 Skill 概览到深层理解。每个步骤都有「为什么这样设计」的解释。把费曼学习法内建到工具中。</p>
+      </div>
+      <div class="extension-card" style="border-top:3px solid #0F766E">
+        <h4>🔮 模式库积累 <span class="extension-difficulty" style="color:#0F766E">长期护城河</span></h4>
+        <p>每次分析一个 Skill，都提取并记录其架构模式。积累 100+ 个 Skill 后，就能构建一个「Skill 架构模式图谱」，越用越聪明。这是 Munger 说的不可复制的护城河。</p>
+      </div>
+      <div class="extension-card" style="border-top:3px solid #2C2A28">
+        <h4>⚡ 安装时自动生成 <span class="extension-difficulty" style="color:#2C2A28">体验升级</span></h4>
+        <p>把「手动触发」变成「自动产物」。用户安装 Skill 时自动生成可视化，存入 .skill-viz/ 目录。不需要用户主动请求，打开就有。Musk 说的：压缩用户操作步骤到零。</p>
+      </div>
+    </div>
+
+    <div class="callout callout-info animate-in">
+      <div class="callout-icon">🗺️</div>
+      <div class="callout-content">
+        <strong class="callout-title">建议落地顺序</strong>
+        <p><strong>短期</strong>（1-2 周）：智能复杂度自适应 + Skill 健康检查<br>
+        <strong>中期</strong>（1 个月）：Prompt 语义分析层 + 交互式教学模式<br>
+        <strong>长期</strong>（持续）：模式库积累 + Skill 商店集成</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:var(--space-16);padding:var(--space-10);opacity:0.6">
+      <p style="font-family:var(--font-display);font-size:var(--text-lg);color:var(--color-text-muted)">由 <strong>Skill 可视化工具</strong> 生成</p>
+      <p style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-2)">一次自引用的可视化 &mdash; 这个 Skill 分析了它自己</p>
+      <p style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-1)">洞察来源：Jobs · Musk · Munger · Taleb · Feynman · Graham</p>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+// ===== FILE DATA =====
+const fileData = {
+  'SKILL.md': {
+    role: 'entry', lines: 207, color: '#D94F30',
+    summary: '核心指令文件，定义了 4 阶段执行流程：分析、设计、构建、审查。包含触发关键词、文件分类规则和可视化板块规范。',
+    referencesTo: ['design-system.md', 'interactive-elements.md'],
+    referencedBy: ['README.md']
+  },
+  'design-system.md': {
+    role: 'reference', lines: 439, color: '#2A7B9B',
+    summary: '完整的 CSS 设计系统，含 30+ 自定义属性：颜色、排版（3 种字体族）、间距比例尺、阴影、动画、响应式断点和 Catppuccin 语法高亮。',
+    referencesTo: ['interactive-elements.md'],
+    referencedBy: ['SKILL.md']
+  },
+  'interactive-elements.md': {
+    role: 'reference', lines: 885, color: '#2A7B9B',
+    summary: '9 种交互元素类型的完整目录，含完整 HTML/CSS/JS 实现模式：节点图、流程时间线、文件卡片、热力图、提示、提示框、统计、文件树、数据流。',
+    referencesTo: [],
+    referencedBy: ['SKILL.md', 'design-system.md']
+  },
+  'README.md': {
+    role: 'asset', lines: 52, color: '#7B6DAA',
+    summary: '面向用户的文档，含功能列表、安装说明、项目结构、使用场景和设计理念。Skill 执行时不使用。',
+    referencesTo: ['SKILL.md'],
+    referencedBy: []
+  }
+};
+
+// ===== MATRIX INTERACTION DATA =====
+const interactionDetails = {
+  'SKILL.md->design-system.md': '<p><strong>类型：</strong>参考引用（按需读取）</p><p><strong>时机：</strong>第 3 阶段 — 构建 HTML 之前</p><ul><li>SKILL.md 指示 AI 读取 design-system.md 获取 CSS 令牌</li><li>颜色方案应用于所有视觉元素</li><li>排版规则指导文本渲染</li><li>动画规范驱动交互元素</li></ul>',
+  'SKILL.md->interactive-elements.md': '<p><strong>类型：</strong>参考引用（按需读取）</p><p><strong>时机：</strong>第 3 阶段 — HTML 构建期间</p><ul><li>SKILL.md 指示 AI 读取 interactive-elements.md 获取组件模式</li><li>9 种元素类型提供 HTML/CSS/JS 模板</li><li>节点图模式用于文件星座图</li><li>流程时间线模式用于执行流程</li></ul>',
+  'design-system.md->interactive-elements.md': '<p><strong>类型：</strong>共享设计令牌</p><p><strong>方向：</strong>双向 — 两者引用相同的 CSS 变量</p><ul><li>interactive-elements.md 使用 design-system.md 中定义的颜色变量</li><li>两个文件共享动画关键帧</li><li>间距和排版令牌应用于元素模式</li></ul>',
+  'design-system.md->SKILL.md': '<p><strong>类型：</strong>隐式依赖</p><p>design-system.md 是被动资源 — 在执行过程中为 SKILL.md 提供数据。</p>',
+  'interactive-elements.md->SKILL.md': '<p><strong>类型：</strong>隐式依赖</p><p>interactive-elements.md 是被动资源 — 在执行过程中为 SKILL.md 提供模式。</p>',
+  'interactive-elements.md->design-system.md': '<p><strong>类型：</strong>共享设计令牌</p><ul><li>元素模式引用 CSS 自定义属性</li><li>两个文件定义视觉系统的互补方面</li><li>design-system.md = 令牌，interactive-elements.md = 组件</li></ul>',
+  'README.md->SKILL.md': '<p><strong>类型：</strong>文档引用</p><ul><li>README.md 描述 SKILL.md 的功能</li><li>列出 SKILL.md 中定义的触发关键词</li></ul>'
+};
+
+// ===== SCROLL OBSERVER =====
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+// ===== PROGRESS BAR =====
+const progressBar = document.getElementById('progress-bar');
+function updateProgress() {
+  const s = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (h > 0 ? (s / h) * 100 : 0) + '%';
+}
+window.addEventListener('scroll', () => requestAnimationFrame(updateProgress), { passive: true });
+
+// ===== NAV DOTS =====
+const sections = document.querySelectorAll('.section');
+const dots = document.querySelectorAll('.nav-dot');
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+    }
+  });
+}, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+sections.forEach(s => sectionObserver.observe(s));
+dots.forEach(d => d.addEventListener('click', () => {
+  document.getElementById(d.dataset.target)?.scrollIntoView({ behavior: 'smooth' });
+}));
+
+// ===== KEYBOARD NAV =====
+const sectionIds = Array.from(sections).map(s => s.id);
+document.addEventListener('keydown', e => {
+  if (['INPUT','TEXTAREA'].includes(e.target.tagName)) return;
+  const currentIdx = sectionIds.findIndex(id => {
+    const el = document.getElementById(id);
+    const r = el.getBoundingClientRect();
+    return r.top <= 100 && r.bottom > 100;
+  });
+  if ((e.key === 'ArrowDown' || e.key === 'ArrowRight') && currentIdx < sectionIds.length - 1) {
+    document.getElementById(sectionIds[currentIdx + 1]).scrollIntoView({ behavior: 'smooth' }); e.preventDefault();
+  }
+  if ((e.key === 'ArrowUp' || e.key === 'ArrowLeft') && currentIdx > 0) {
+    document.getElementById(sectionIds[currentIdx - 1]).scrollIntoView({ behavior: 'smooth' }); e.preventDefault();
+  }
+});
+
+// ===== GRAPH INTERACTION =====
+function selectNode(fileId) {
+  const data = fileData[fileId];
+  const connected = new Set([fileId, ...data.referencesTo, ...data.referencedBy]);
+  document.querySelectorAll('.graph-node').forEach(n => {
+    n.classList.toggle('dimmed', !connected.has(n.dataset.file));
+    n.classList.toggle('selected', n.dataset.file === fileId);
+  });
+  document.querySelectorAll('.graph-edge').forEach(e => {
+    const c = e.dataset.from === fileId || e.dataset.to === fileId;
+    e.classList.toggle('highlighted', c); e.classList.toggle('dimmed', !c);
+    e.setAttribute('marker-end', c ? 'url(#arrowhead-active)' : 'url(#arrowhead)');
+  });
+  showGraphInfo(fileId);
+}
+function hoverNode(fileId) {
+  if (document.querySelector('.graph-node.selected')) return;
+  const data = fileData[fileId];
+  document.querySelectorAll('.graph-edge').forEach(e => {
+    if (e.dataset.from === fileId || e.dataset.to === fileId) e.classList.add('highlighted');
+  });
+}
+function unhoverNode() {
+  if (document.querySelector('.graph-node.selected')) return;
+  document.querySelectorAll('.graph-edge.highlighted').forEach(e => e.classList.remove('highlighted'));
+}
+function showGraphInfo(fileId) {
+  const d = fileData[fileId]; const panel = document.getElementById('graph-info');
+  const roleName = {entry:'入口文件',reference:'参考文件',asset:'文档'}[d.role]||d.role.toUpperCase();
+  let html = '<div style="margin-bottom:var(--space-3)"><span class="role-badge" style="background:'+d.color+'">'+roleName+'</span></div>';
+  html += '<h3 class="info-filename">'+fileId+'</h3>';
+  html += '<p class="info-summary">'+d.summary+'</p>';
+  html += '<div class="info-stats"><span class="info-stat">📄 '+d.lines+' lines</span><span class="info-stat">📤 Refs '+d.referencesTo.length+'</span><span class="info-stat">📥 By '+d.referencedBy.length+'</span></div>';
+  if (d.referencesTo.length || d.referencedBy.length) {
+    html += '<div class="info-connections"><h4>连接关系</h4>';
+    d.referencesTo.forEach(f => html += '<div class="connection-out">'+f+'</div>');
+    d.referencedBy.forEach(f => html += '<div class="connection-in">'+f+'</div>');
+    html += '</div>';
+  }
+  document.getElementById('graph-info-content').innerHTML = html;
+  panel.classList.add('open');
+}
+function closeGraphInfo() {
+  document.getElementById('graph-info').classList.remove('open');
+  document.querySelectorAll('.graph-node').forEach(n => n.classList.remove('dimmed','selected'));
+  document.querySelectorAll('.graph-edge').forEach(e => {
+    e.classList.remove('highlighted','dimmed'); e.setAttribute('marker-end','url(#arrowhead)');
+  });
+}
+document.querySelector('.graph-svg').addEventListener('click', e => {
+  if (!e.target.closest('.graph-node')) closeGraphInfo();
+});
+
+// ===== FLOW TIMELINE =====
+let currentPhase = 0;
+let flowAutoPlayed = false;
+let flowPlaying = false;
+const phases = document.querySelectorAll('.flow-phase');
+
+function scrollPhaseToCenter(idx) {
+  const el = phases[idx];
+  if (!el) return;
+  const rect = el.getBoundingClientRect();
+  const viewH = window.innerHeight;
+  const elCenter = rect.top + rect.height / 2;
+  const offset = elCenter - viewH / 2;
+  if (Math.abs(offset) > 40) {
+    window.scrollBy({ top: offset, behavior: 'smooth' });
+  }
+}
+
+function showPhase(idx, autoScroll) {
+  phases.forEach((p, i) => { p.classList.toggle('active', i <= idx); p.classList.toggle('current', i === idx); });
+  document.getElementById('flow-prev').disabled = idx <= 0;
+  document.getElementById('flow-next').disabled = idx >= phases.length - 1;
+  document.getElementById('flow-progress').textContent = '步骤 '+(idx+1)+' / '+phases.length;
+  if (autoScroll) { setTimeout(() => scrollPhaseToCenter(idx), 100); }
+}
+
+function nextPhase() { if (currentPhase < phases.length-1) { currentPhase++; showPhase(currentPhase, true); } }
+function prevPhase() { if (currentPhase > 0) { currentPhase--; showPhase(currentPhase, true); } }
+
+async function playAllPhases() {
+  if (flowPlaying) return;
+  flowPlaying = true;
+  resetFlow();
+  await new Promise(r => setTimeout(r, 400));
+  for (let i = 0; i < phases.length; i++) {
+    currentPhase = i;
+    showPhase(i, true);
+    await new Promise(r => setTimeout(r, 1200));
+  }
+  flowPlaying = false;
+}
+
+function resetFlow() { currentPhase = 0; showPhase(0, false); }
+
+// Auto-play when the flow section scrolls into view
+const flowSection = document.getElementById('exec-flow');
+if (flowSection) {
+  const flowObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !flowAutoPlayed) {
+        flowAutoPlayed = true;
+        flowObserver.unobserve(flowSection);
+        setTimeout(() => playAllPhases(), 600);
+      }
+    });
+  }, { threshold: 0.3 });
+  flowObserver.observe(flowSection);
+}
+
+// ===== FILE CARDS =====
+function toggleFileCard(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.file-card-chevron');
+  if (body.style.display !== 'none') {
+    body.style.maxHeight = body.scrollHeight+'px';
+    requestAnimationFrame(() => { body.style.maxHeight='0'; body.style.opacity='0'; });
+    setTimeout(() => { body.style.display='none'; body.style.maxHeight=''; body.style.opacity=''; }, 300);
+    chevron.textContent = '▾';
+  } else {
+    body.style.display='block'; body.style.maxHeight='0'; body.style.opacity='0';
+    requestAnimationFrame(() => { body.style.maxHeight=body.scrollHeight+'px'; body.style.opacity='1'; });
+    setTimeout(() => { body.style.maxHeight='none'; }, 300);
+    chevron.textContent = '▴';
+  }
+}
+
+// ===== MATRIX =====
+function showMatrixDetail(cell) {
+  const from=cell.dataset.from, to=cell.dataset.to, s=cell.dataset.strength;
+  if(s==='0') return;
+  const key=from+'->'+to; const detail=interactionDetails[key];
+  if(!detail) return;
+  document.getElementById('matrix-detail-title').textContent=from+' → '+to;
+  document.getElementById('matrix-detail-body').innerHTML=detail;
+  document.getElementById('matrix-detail').style.display='block';
+  document.querySelectorAll('.matrix-cell').forEach(c=>c.classList.remove('highlighted'));
+  cell.classList.add('highlighted');
+}
+function closeMatrixDetail(){
+  document.getElementById('matrix-detail').style.display='none';
+  document.querySelectorAll('.matrix-cell').forEach(c=>c.classList.remove('highlighted'));
+}
+
+// ===== FILE TREE =====
+function toggleFolder(toggle) {
+  const folder=toggle.parentElement, children=folder.querySelector('.ft-children');
+  if(folder.classList.contains('open')){
+    children.style.maxHeight=children.scrollHeight+'px';
+    requestAnimationFrame(()=>{children.style.maxHeight='0';});
+    folder.classList.remove('open'); toggle.textContent='▸';
+  } else {
+    folder.classList.add('open'); toggle.textContent='▾';
+    children.style.maxHeight=children.scrollHeight+'px';
+    setTimeout(()=>{children.style.maxHeight='none';},300);
+  }
+}
+
+// ===== TOOLTIPS =====
+const tooltip=document.createElement('div');tooltip.className='tooltip';tooltip.style.display='none';document.body.appendChild(tooltip);
+document.querySelectorAll('.term').forEach(term=>{
+  term.addEventListener('mouseenter',e=>showTooltip(e.target));
+  term.addEventListener('mouseleave',()=>hideTooltip());
+  term.addEventListener('click',e=>{e.stopPropagation();tooltip.style.display==='block'&&tooltip._t===e.target?hideTooltip():showTooltip(e.target);});
+});
+function showTooltip(t){
+  tooltip.textContent=t.dataset.definition;tooltip.style.display='block';tooltip._t=t;
+  const r=t.getBoundingClientRect();
+  tooltip.style.position='fixed';tooltip.style.zIndex='10000';
+  const tr=tooltip.getBoundingClientRect();
+  let top=r.top-tr.height-8,left=r.left+(r.width/2)-(tr.width/2);
+  if(top<8)top=r.bottom+8;
+  left=Math.max(8,Math.min(left,window.innerWidth-tr.width-8));
+  tooltip.style.top=top+'px';tooltip.style.left=left+'px';
+}
+function hideTooltip(){tooltip.style.display='none';tooltip._t=null;}
+document.addEventListener('click',()=>hideTooltip());
+
+// Init
+showPhase(0);
+
+
+// ===== PHASE PIPELINE =====
+const phaseDetails = [
+  { title: '阶段 1：深度分析', desc: '最关键的阶段 — 决定了可视化的质量。AI 需要完整理解 Skill 的内部结构。',
+    items: ['<strong>文件分类</strong>：将每个文件归入 6 种角色（入口、参考、脚本、配置、资源、钩子）','<strong>依赖映射</strong>：识别文件之间的引用关系、读取时机和数据流向','<strong>流程提取</strong>：追踪 6 个执行阶段（触发→分析→处理→参考→输出→审查）','<strong>模式识别</strong>：发现 Prompt 链式调用、并行处理、条件分支等架构模式'],
+    files: [['#D94F30','SKILL.md'],['#2A7B9B','所有 Skill 文件']]
+  },
+  { title: '阶段 2：可视化设计', desc: '根据分析结果设计 6 个可视化板块，每个板块都有明确的内容和交互要求。',
+    items: ['<strong>概览仪表盘</strong> — 统计数据、触发词、复杂度评级','<strong>文件星座图</strong> — SVG 节点关系图，点击/悬停交互','<strong>执行流程时间线</strong> — 步骤式动画，支持手动/自动播放','<strong>文件深度剖析</strong> — 可展开卡片，含真实代码片段','<strong>交互矩阵热力图</strong> — 文件间交互强度可视化','<strong>关键洞察</strong> — 架构模式和自定义指南'],
+    files: [['#D94F30','SKILL.md']]
+  },
+  { title: '阶段 3：构建 HTML', desc: '按照 7 条铁律生成单个自包含 HTML 文件，加载参考文件获取设计令牌和组件模式。',
+    items: ['加载 <strong>design-system.md</strong> 获取完整 CSS 变量体系','加载 <strong>interactive-elements.md</strong> 获取 9 种交互组件模式','内联所有 CSS 到 &lt;style&gt;，所有 JS 到 &lt;script&gt;','应用暖色调设计、Catppuccin 语法高亮、滚动吸附导航','确保响应式（桌面 + 平板 + 手机）和无障碍访问'],
+    files: [['#2A7B9B','design-system.md'],['#2A7B9B','interactive-elements.md'],['#2D8B55','index.html（输出）']]
+  },
+  { title: '阶段 4：审查交付', desc: '在浏览器中打开成品，逐项验证所有交互功能，确认无误后交付用户。',
+    items: ['节点图渲染正常，点击/悬停响应正确','流程动画播放顺畅','文件卡片展开/折叠流畅','矩阵单元格可点击','导航圆点和进度条同步更新','响应式在窄视口下表现良好','向用户展示成果，收集反馈'],
+    files: [['#D4A843','浏览器预览']]
+  }
+];
+function showPhaseDetail(idx) {
+  document.querySelectorAll('.phase-pipe').forEach((p,i)=>{p.classList.toggle('active-pipe',i===idx)});
+  const d = phaseDetails[idx];
+  document.getElementById('phase-detail-title').textContent = d.title;
+  document.getElementById('phase-detail-desc').textContent = d.desc;
+  document.getElementById('phase-detail-list').innerHTML = d.items.map(i=>'<li>'+i+'</li>').join('');
+  document.getElementById('phase-detail-files').innerHTML = d.files.map(f=>'<span class="flow-file-tag" style="border-color:'+f[0]+';color:'+f[0]+'">'+f[1]+'</span>').join('');
+  const panel = document.getElementById('phase-detail');
+  panel.classList.remove('show');
+  void panel.offsetWidth;
+  panel.classList.add('show');
+}
+
+// ===== STRUCTURE MAP =====
+function toggleStruct(el) {
+  const detail = el.querySelector('.struct-section-detail');
+  if (detail.classList.contains('show')) { detail.classList.remove('show'); }
+  else {
+    document.querySelectorAll('.struct-section-detail.show').forEach(d => d.classList.remove('show'));
+    detail.classList.add('show');
+  }
+}
+
+// ===== DONUT CHART =====
+(function drawDonut() {
+  const data = [{v:38,c:'#D94F30'},{v:26,c:'#2A7B9B'},{v:20,c:'#2D8B55'},{v:10,c:'#D4A843'},{v:6,c:'#7B6DAA'}];
+  const svg = document.getElementById('donut-chart');
+  if (!svg) return;
+  const cx=100, cy=100, r=70, inner=45;
+  let cumulative = 0;
+  data.forEach(d => {
+    const startAngle = (cumulative / 100) * 2 * Math.PI - Math.PI/2;
+    cumulative += d.v;
+    const endAngle = (cumulative / 100) * 2 * Math.PI - Math.PI/2;
+    const largeArc = d.v > 50 ? 1 : 0;
+    const x1 = cx + r * Math.cos(startAngle), y1 = cy + r * Math.sin(startAngle);
+    const x2 = cx + r * Math.cos(endAngle), y2 = cy + r * Math.sin(endAngle);
+    const ix1 = cx + inner * Math.cos(endAngle), iy1 = cy + inner * Math.sin(endAngle);
+    const ix2 = cx + inner * Math.cos(startAngle), iy2 = cy + inner * Math.sin(startAngle);
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d', `M${x1},${y1} A${r},${r} 0 ${largeArc} 1 ${x2},${y2} L${ix1},${iy1} A${inner},${inner} 0 ${largeArc} 0 ${ix2},${iy2} Z`);
+    path.setAttribute('fill', d.c);
+    path.style.transition = 'opacity 0.2s';
+    path.style.cursor = 'pointer';
+    path.addEventListener('mouseenter', () => { svg.querySelectorAll('path').forEach(p => p.style.opacity = p===path?'1':'0.4'); });
+    path.addEventListener('mouseleave', () => { svg.querySelectorAll('path').forEach(p => p.style.opacity = '1'); });
+    svg.appendChild(path);
+  });
+  const center = document.createElementNS('http://www.w3.org/2000/svg','text');
+  center.setAttribute('x', cx); center.setAttribute('y', cy-6);
+  center.setAttribute('text-anchor','middle'); center.setAttribute('fill','#2C2A28');
+  center.style.fontFamily = "'Bricolage Grotesque',serif"; center.style.fontWeight = '700'; center.style.fontSize = '22px';
+  center.textContent = '207';
+  svg.appendChild(center);
+  const sub = document.createElementNS('http://www.w3.org/2000/svg','text');
+  sub.setAttribute('x', cx); sub.setAttribute('y', cy+14);
+  sub.setAttribute('text-anchor','middle'); sub.setAttribute('fill','#9E9790');
+  sub.style.fontFamily = "'JetBrains Mono',monospace"; sub.style.fontSize = '10px';
+  sub.textContent = '总行数';
+  svg.appendChild(sub);
+})();
+
+
+// ===== PERSPECTIVE CARDS =====
+function togglePerspective(card) {
+  const body = card.querySelector('.perspective-body');
+  const chevron = card.querySelector('.perspective-chevron');
+  if (body.classList.contains('show')) {
+    body.classList.remove('show');
+    body.style.display = 'none';
+    chevron.textContent = '▾';
+  } else {
+    body.classList.add('show');
+    body.style.display = 'block';
+    chevron.textContent = '▴';
+  }
+}
+
+</script>
+</body>
+</html>

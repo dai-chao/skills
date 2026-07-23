@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: FortiumPartners
+github_url: https://github.com/FortiumPartners/ensemble/tree/main/packages/codex/.codex/skills/commands/ensemble-generate-api-docs
+skillsmp_url: https://skillsmp.com/creators/fortiumpartners/ensemble/packages-codex-codex-skills-commands-ensemble-generate-api-docs
+skillsmp_id: fortiumpartners-ensemble-packages-codex-codex-skills-commands-ensemble-generate-api-docs-skill-md
+stars: 11
+source_path: /Users/chao/Desktop/skills/07-docs-office/ensemble-generate-api-docs-fortiumpartners/SKILL.md
+content_hash: bae3fa1a7986
+category: 07-docs-office

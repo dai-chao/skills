@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: diegosouzapw
+github_url: https://github.com/diegosouzapw/awesome-omni-skills/tree/main/skills/code-refactoring-refactor-clean-v2
+skillsmp_url: https://skillsmp.com/creators/diegosouzapw/awesome-omni-skills/skills-code-refactoring-refactor-clean-v2
+skillsmp_id: diegosouzapw-awesome-omni-skills-skills-code-refactoring-refactor-clean-v2-skill-md
+stars: 70
+source_path: /Users/chao/Desktop/skills/03-code-quality/code-refactoring-refactor-clean-v2-diegosouzapw-2/SKILL.md
+content_hash: 4d6758ff9f78
+category: 03-code-quality

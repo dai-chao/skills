@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: diillson
+github_url: https://github.com/diillson/chatcli/tree/main/pkg/persona/builtin/skills/web-research
+skillsmp_url: https://skillsmp.com/creators/diillson/chatcli/pkg-persona-builtin-skills-web-research
+skillsmp_id: diillson-chatcli-pkg-persona-builtin-skills-web-research-skill-md
+stars: 89
+source_path: /Users/chao/Desktop/skills/08-research-web/web-research/SKILL.md
+content_hash: e5af52a358f3
+category: 08-research-web

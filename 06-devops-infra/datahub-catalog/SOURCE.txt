@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: ivanshamaev
+github_url: https://github.com/ivanshamaev/de-agent-skills/tree/main/skills/datahub_catalog
+skillsmp_url: https://skillsmp.com/creators/ivanshamaev/de-agent-skills/skills-datahub-catalog
+skillsmp_id: ivanshamaev-de-agent-skills-skills-datahub-catalog-skill-md
+stars: 11
+source_path: /Users/chao/Desktop/skills/06-devops-infra/datahub-catalog/SKILL.md
+content_hash: fbb152ffe4fb
+category: 06-devops-infra

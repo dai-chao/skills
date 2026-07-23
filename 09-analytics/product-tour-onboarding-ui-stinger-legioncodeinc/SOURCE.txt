@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: legioncodeinc
+github_url: https://github.com/legioncodeinc/that-git-life/tree/main/.claude/skills/product-tour-onboarding-ui-stinger
+skillsmp_url: https://skillsmp.com/creators/legioncodeinc/that-git-life/claude-skills-product-tour-onboarding-ui-stinger
+skillsmp_id: legioncodeinc-that-git-life-claude-skills-product-tour-onboarding-ui-stinger-skill-md
+stars: 72
+source_path: /Users/chao/Desktop/skills/09-analytics/product-tour-onboarding-ui-stinger-legioncodeinc/SKILL.md
+content_hash: bc716b9e5469
+category: 09-analytics

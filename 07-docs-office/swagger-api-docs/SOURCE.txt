@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: tuannguyen151
+github_url: https://github.com/tuannguyen151/foxdemon-plugins/tree/main/nestjs-clean-arch/skills/swagger-api-docs
+skillsmp_url: https://skillsmp.com/creators/tuannguyen151/foxdemon-plugins/nestjs-clean-arch-skills-swagger-api-docs
+skillsmp_id: tuannguyen151-foxdemon-plugins-nestjs-clean-arch-skills-swagger-api-docs-skill-md
+stars: 0
+source_path: /Users/chao/Desktop/skills/07-docs-office/swagger-api-docs/SKILL.md
+content_hash: c236aa6f69de
+category: 07-docs-office

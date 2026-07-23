@@ -1,15 +1,15 @@
-services:
-  - type: web
-    name: skill-cafe
-    runtime: node
-    # 不用 rootDir：需同时读取 site/ 与各 skill 分类目录
-    buildCommand: cd server && npm install
-    startCommand: cd server && npm start
-    healthCheckPath: /api/health
-    envVars:
-      - key: NODE_VERSION
-        value: "20"
-      - key: DASHSCOPE_API_KEY
-        sync: false
-      - key: BAILIAN_MODEL
-        value: qwen-plus
+# 后端已迁至并列目录 ~/Desktop/skillsServer（不在本仓库内）。
+# Render 部署需单独托管该服务，并设置：
+#   DASHSCOPE_API_KEY
+#   SKILLS_ROOT=<本仓库在构建环境中的绝对路径>
+# 本地启动见 site/README.md 或 skillsServer/README.md。
+#
+# 若将来把 skillsServer 收进本仓库，可恢复类似配置：
+# services:
+#   - type: web
+#     name: skill-cafe
+#     runtime: node
+#     buildCommand: cd skillsServer && npm install
+#     startCommand: cd skillsServer && npm start
+#     healthCheckPath: /api/health
+services: []

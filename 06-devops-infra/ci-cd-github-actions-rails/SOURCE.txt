@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: sandeepmvl
+github_url: https://github.com/sandeepmvl/rails-skills/tree/main/skills/55-ci-cd-github-actions-rails
+skillsmp_url: https://skillsmp.com/creators/sandeepmvl/rails-skills/skills-55-ci-cd-github-actions-rails
+skillsmp_id: sandeepmvl-rails-skills-skills-55-ci-cd-github-actions-rails-skill-md
+stars: 21
+source_path: /Users/chao/Desktop/skills/06-devops-infra/ci-cd-github-actions-rails/SKILL.md
+content_hash: 0cd2d2a529db
+category: 06-devops-infra

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: ADASK-B
+github_url: https://github.com/ADASK-B/Schulung/tree/main/.github/skills/github-actions-ci-cd
+skillsmp_url: https://skillsmp.com/creators/adask-b/schulung/github-skills-github-actions-ci-cd
+skillsmp_id: adask-b-schulung-github-skills-github-actions-ci-cd-skill-md
+stars: 2
+source_path: /Users/chao/Desktop/skills/06-devops-infra/github-actions-ci-cd/SKILL.md
+content_hash: 810c2116d18d
+category: 06-devops-infra

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: julianobarbosa
+github_url: https://github.com/julianobarbosa/claude-code-skills/tree/main/skills/pyroscope
+skillsmp_url: https://skillsmp.com/creators/julianobarbosa/claude-code-skills/skills-pyroscope
+skillsmp_id: julianobarbosa-claude-code-skills-skills-pyroscope-skill-md
+stars: 3
+source_path: /Users/chao/Desktop/skills/06-devops-infra/pyroscope/SKILL.md
+content_hash: 415d71691d84
+category: 06-devops-infra

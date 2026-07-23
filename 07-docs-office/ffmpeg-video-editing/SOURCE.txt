@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: benchflow-ai
+github_url: https://github.com/benchflow-ai/skillsbench/tree/main/tasks-extra/video-filler-word-remover/environment/skills/ffmpeg-video-editing
+skillsmp_url: https://skillsmp.com/creators/benchflow-ai/skillsbench/tasks-extra-video-filler-word-remover-environment-skills-ffmpeg-video-editing
+skillsmp_id: benchflow-ai-skillsbench-tasks-extra-video-filler-word-remover-environment-skills-ffmpeg-video-editing-skill-md
+stars: 1523
+source_path: /Users/chao/Desktop/skills/07-docs-office/ffmpeg-video-editing/SKILL.md
+content_hash: 4e33abec2186
+category: 07-docs-office

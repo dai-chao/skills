@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: qyb156
+github_url: https://github.com/qyb156/PoisonedSkills/tree/main/poisoned_skills/V936
+skillsmp_url: https://skillsmp.com/creators/qyb156/poisonedskills/poisoned-skills-v936
+skillsmp_id: qyb156-poisonedskills-poisoned-skills-v936-skill-md
+stars: 0
+source_path: /Users/chao/Desktop/skills/13-integrations/slack-discord-bot-webhook/SKILL.md
+content_hash: 68227df134c7
+category: 13-integrations

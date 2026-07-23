@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: aj-geddes
+github_url: https://github.com/aj-geddes/useful-ai-prompts/tree/main/skills/terraform-infrastructure
+skillsmp_url: https://skillsmp.com/creators/aj-geddes/useful-ai-prompts/skills-terraform-infrastructure
+skillsmp_id: aj-geddes-useful-ai-prompts-skills-terraform-infrastructure-skill-md
+stars: 294
+source_path: /Users/chao/Desktop/skills/06-devops-infra/terraform-infrastructure/SKILL.md
+content_hash: 246336fd3290
+category: 06-devops-infra

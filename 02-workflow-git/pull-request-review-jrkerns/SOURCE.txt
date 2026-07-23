@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: jrkerns
+github_url: https://github.com/jrkerns/pylinac/tree/master/.agents/skills/pull-request-review
+skillsmp_url: https://skillsmp.com/creators/jrkerns/pylinac/agents-skills-pull-request-review
+skillsmp_id: jrkerns-pylinac-agents-skills-pull-request-review-skill-md
+stars: 198
+source_path: /Users/chao/Desktop/skills/02-workflow-git/pull-request-review-jrkerns/SKILL.md
+content_hash: 8fb1c4856c58
+category: 02-workflow-git

@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: hiyabh
+github_url: https://github.com/hiyabh/claude-video-skills/tree/master/skills/framer-motion
+skillsmp_url: https://skillsmp.com/creators/hiyabh/claude-video-skills/skills-framer-motion
+skillsmp_id: hiyabh-claude-video-skills-skills-framer-motion-skill-md
+stars: 1
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/framer-motion-hiyabh-2/SKILL.md
+content_hash: 830dd8934bf3
+category: 04-frontend-ui

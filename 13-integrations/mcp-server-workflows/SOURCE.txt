@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: SAP-samples
+github_url: https://github.com/SAP-samples/hana-developer-cli-tool-example/tree/main/.github/skills/mcp-server-workflows
+skillsmp_url: https://skillsmp.com/creators/sap-samples/hana-developer-cli-tool-example/github-skills-mcp-server-workflows
+skillsmp_id: sap-samples-hana-developer-cli-tool-example-github-skills-mcp-server-workflows-skill-md
+stars: 108
+source_path: /Users/chao/Desktop/skills/13-integrations/mcp-server-workflows/SKILL.md
+content_hash: 5bad1ce3b1e2
+category: 13-integrations

@@ -19,6 +19,8 @@ import hashlib
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 import time
 import urllib.error
@@ -189,34 +191,142 @@ def list_github_dir(owner: str, repo: str, path: str, ref: str) -> list[dict]:
     return data
 
 
+def _run(cmd: list[str], cwd: Path | None = None) -> None:
+    env = os.environ.copy()
+    env["GIT_TERMINAL_PROMPT"] = "0"
+    subprocess.run(
+        cmd,
+        cwd=str(cwd) if cwd else None,
+        check=True,
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+
+
+def download_via_sparse_git(owner: str, repo: str, path: str, ref: str, dest: Path) -> list[str]:
+    """Clone with sparse-checkout (avoids GitHub REST rate limits)."""
+    tmp_root = ROOT / "_tmp_curated"
+    tmp_root.mkdir(parents=True, exist_ok=True)
+    clone_dir = tmp_root / f"{owner}-{repo}-{os.getpid()}"
+    if clone_dir.exists():
+        shutil.rmtree(clone_dir, ignore_errors=True)
+
+    url = f"https://github.com/{owner}/{repo}.git"
+    try:
+        _run(
+            [
+                "git",
+                "-c",
+                "advice.detachedHead=false",
+                "clone",
+                "--depth",
+                "1",
+                "--filter=blob:none",
+                "--sparse",
+                "--branch",
+                ref,
+                url,
+                str(clone_dir),
+            ]
+        )
+    except subprocess.CalledProcessError:
+        # branch name might be a commit-ish; try default branch then checkout ref
+        _run(
+            [
+                "git",
+                "clone",
+                "--depth",
+                "1",
+                "--filter=blob:none",
+                "--sparse",
+                url,
+                str(clone_dir),
+            ]
+        )
+        try:
+            _run(["git", "fetch", "--depth", "1", "origin", ref], cwd=clone_dir)
+            _run(["git", "checkout", ref], cwd=clone_dir)
+        except subprocess.CalledProcessError as e:
+            raise RuntimeError(f"git clone/checkout failed for {url}@{ref}: {e.stderr}") from e
+
+    sparse_paths = []
+    if path:
+        sparse_paths.append(path)
+    else:
+        sparse_paths.extend(["SKILL.md", "scripts", "references", "assets", "templates", "examples"])
+
+    try:
+        _run(["git", "sparse-checkout", "set", *sparse_paths], cwd=clone_dir)
+    except subprocess.CalledProcessError as e:
+        raise RuntimeError(f"sparse-checkout failed: {e.stderr}") from e
+
+    src = clone_dir / path if path else clone_dir
+    if path and not src.exists():
+        raise RuntimeError(f"path not found in repo: {path}")
+
+    if not path:
+        # copy only skill-relevant bits from repo root
+        dest.mkdir(parents=True, exist_ok=True)
+        files = []
+        for name in ("SKILL.md", "README.md", "LICENSE", "LICENSE.md", "AGENTS.md"):
+            p = src / name
+            if p.is_file():
+                shutil.copy2(p, dest / name)
+                files.append(name)
+        for dname in ("scripts", "references", "assets", "templates", "examples"):
+            d = src / dname
+            if d.is_dir():
+                shutil.copytree(d, dest / dname, dirs_exist_ok=True)
+                for f in (dest / dname).rglob("*"):
+                    if f.is_file():
+                        files.append(f.relative_to(dest).as_posix())
+    else:
+        if dest.exists():
+            shutil.rmtree(dest)
+        shutil.copytree(src, dest, ignore=shutil.ignore_patterns(".git", "node_modules", ".DS_Store"))
+        files = [
+            f.relative_to(dest).as_posix()
+            for f in dest.rglob("*")
+            if f.is_file()
+        ]
+
+    shutil.rmtree(clone_dir, ignore_errors=True)
+    return files
+
+
 def download_github_tree(owner: str, repo: str, path: str, ref: str, dest: Path) -> list[str]:
-    """Recursively download a directory; return relative file paths."""
+    """Prefer git sparse-checkout; fall back to Contents API."""
+    try:
+        return download_via_sparse_git(owner, repo, path, ref, dest)
+    except Exception as git_err:
+        print(f"  git sparse failed ({git_err}); trying API…")
+        return download_github_tree_api(owner, repo, path, ref, dest)
+
+
+def download_github_tree_api(owner: str, repo: str, path: str, ref: str, dest: Path) -> list[str]:
+    """Recursively download via GitHub Contents API."""
     files: list[str] = []
     entries = list_github_dir(owner, repo, path, ref)
     dest.mkdir(parents=True, exist_ok=True)
 
-    # If repo root and no SKILL.md at top, prefer a nested skills/<name> if present
     if not path:
         names = {e["name"] for e in entries}
         if "SKILL.md" not in names:
             for candidate in ("skills", ".agents/skills", ".claude/skills"):
-                # only one-level dir name in listing
                 top = candidate.split("/")[0]
                 if top in names:
-                    # try full candidate path
                     try:
                         nested = list_github_dir(owner, repo, candidate, ref)
                         if any(e.get("name") == "SKILL.md" for e in nested):
-                            return download_github_tree(owner, repo, candidate, ref, dest)
+                            return download_github_tree_api(owner, repo, candidate, ref, dest)
                     except Exception:
                         pass
 
     for ent in entries:
         name = ent["name"]
-        # skip huge / irrelevant
         if name in (".git", "node_modules", ".DS_Store"):
             continue
-        # at repo root, don't pull entire monorepo — only skill-like files/dirs
         if not path and ent["type"] == "dir" and name not in (
             "scripts",
             "references",
@@ -225,12 +335,10 @@ def download_github_tree(owner: str, repo: str, path: str, ref: str, dest: Path)
             "examples",
         ):
             continue
-        rel = name
         if ent["type"] == "file":
             if ent.get("size", 0) > 2_000_000:
                 print(f"  skip large file: {name} ({ent.get('size')} bytes)")
                 continue
-            # at repo root only keep skill-relevant files
             if not path and name not in (
                 "SKILL.md",
                 "README.md",
@@ -244,10 +352,10 @@ def download_github_tree(owner: str, repo: str, path: str, ref: str, dest: Path)
                 continue
             content = http_bytes(download_url, headers=github_headers())
             (dest / name).write_bytes(content)
-            files.append(rel)
+            files.append(name)
         elif ent["type"] == "dir":
             sub_path = f"{path}/{name}" if path else name
-            sub = download_github_tree(owner, repo, sub_path, ref, dest / name)
+            sub = download_github_tree_api(owner, repo, sub_path, ref, dest / name)
             files.extend(f"{name}/{s}" for s in sub)
         time.sleep(0.05)
     return files
@@ -473,8 +581,6 @@ def main() -> int:
             fail += 1
             # cleanup partial
             if dest.exists() and not (dest / "SKILL.md").exists():
-                import shutil
-
                 shutil.rmtree(dest, ignore_errors=True)
         time.sleep(0.3)
 

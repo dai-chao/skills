@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: Miaoge-Ge
+github_url: https://github.com/Miaoge-Ge/coding-agent-skills/tree/main/plugins/accessibility-expert/skills/accessibility-expert
+skillsmp_url: https://skillsmp.com/creators/miaoge-ge/coding-agent-skills/plugins-accessibility-expert-skills-accessibility-expert
+skillsmp_id: miaoge-ge-coding-agent-skills-plugins-accessibility-expert-skills-accessibility-expert-skill-md
+stars: 4
+source_path: /Users/chao/Desktop/skills/04-frontend-ui/accessibility-expert-miaoge-ge/SKILL.md
+content_hash: 0dd987912ca9
+category: 04-frontend-ui

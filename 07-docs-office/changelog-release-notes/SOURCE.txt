@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: TencentBlueKing
+github_url: https://github.com/TencentBlueKing/bk-ci/tree/master/ai/skills/changelog-release-notes
+skillsmp_url: https://skillsmp.com/creators/tencentblueking/bk-ci/ai-skills-changelog-release-notes
+skillsmp_id: tencentblueking-bk-ci-ai-skills-changelog-release-notes-skill-md
+stars: 2513
+source_path: /Users/chao/Desktop/skills/07-docs-office/changelog-release-notes/SKILL.md
+content_hash: 2913d13bc0dc
+category: 07-docs-office

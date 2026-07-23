@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: davila7
+github_url: https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering
+skillsmp_url: https://skillsmp.com/creators/davila7/claude-code-templates/cli-tool-components-skills-ai-research-prompt-engineering
+skillsmp_id: davila7-claude-code-templates-cli-tool-components-skills-ai-research-prompt-engineering-skill-md
+stars: 29660
+source_path: /Users/chao/Desktop/skills/12-meta/prompt-engineering-davila7/SKILL.md
+content_hash: 668d59f0e8d4
+category: 12-meta

@@ -1,9 +1,29 @@
 /* Skill Café — performance-tuned app */
 (() => {
   const DATA_URL = "data/skills.json";
+  const SYNONYMS_URL = "data/search-synonyms.json";
   const SKILL_ROOT = "..";
   const PAGE_SIZE = 24;
   const SEARCH_DEBOUNCE_MS = 180;
+
+  /** API base for AI ask. Override via window.SKILL_CAFE_API or <meta name="skill-cafe-api">. */
+  function apiBase() {
+    const fromWindow =
+      typeof window.SKILL_CAFE_API === "string" ? window.SKILL_CAFE_API.trim() : "";
+    const fromMeta = document.querySelector('meta[name="skill-cafe-api"]')?.content?.trim() || "";
+    const raw = fromWindow || fromMeta;
+    if (raw) return raw.replace(/\/$/, "");
+    if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+      return "http://localhost:3000";
+    }
+    return ""; // same-origin behind reverse proxy
+  }
+
+  function apiUrl(path) {
+    const base = apiBase();
+    const p = path.startsWith("/") ? path : `/${path}`;
+    return base ? `${base}${p}` : p;
+  }
 
   // Lightweight inline SVG icons (avoid lucide.createIcons on hundreds of cards)
   const ICON_SVG = {
@@ -60,6 +80,7 @@
     renderToken: 0,
     loadingMore: false,
     io: null,
+    ask: null,
   };
 
   const $ = (sel, el = document) => el.querySelector(sel);
@@ -154,7 +175,7 @@
   }
 
   function getSkill(id) {
-    return state.byId.get(id);
+    return state.byId?.get(id);
   }
 
   function ensureSorted(key) {
@@ -170,6 +191,200 @@
 
   function filterKey() {
     return `${state.tab}|${state.sort}|${state.category}|${state.query.trim().toLowerCase()}`;
+  }
+
+  /** Loaded from data/search-synonyms.json — category + term aliases */
+  let searchSynonyms = { terms: {}, category_keywords: {} };
+
+  function expandSearchQuery(q) {
+    const raw = String(q || "").trim().toLowerCase();
+    if (!raw) return [];
+    const terms = new Set([raw]);
+    for (const syn of searchSynonyms.terms[raw] || []) {
+      terms.add(String(syn).toLowerCase());
+    }
+    return [...terms];
+  }
+
+  function textHasSearchTerm(text, term) {
+    if (!text || !term) return false;
+    if (term.length <= 2 && /^[a-z0-9]+$/i.test(term)) {
+      return new RegExp(`(?:^|[^a-z0-9])${term}(?:[^a-z0-9]|$)`, "i").test(text);
+    }
+    return text.includes(term);
+  }
+
+  function skillMatchesQuery(skill, q) {
+    const terms = expandSearchQuery(q);
+    if (!terms.length) return true;
+    const hay = skill._q || "";
+    return terms.some((t) => textHasSearchTerm(hay, t));
+  }
+
+  function resolveAskSkills(payloadSkills) {
+    return (payloadSkills || [])
+      .map((s) => {
+        const full = getSkill(s.id);
+        if (full) return full;
+        return {
+          id: s.id,
+          name: s.name,
+          title: s.title || s.name,
+          description: s.description || "",
+          description_zh: s.description_zh || "",
+          category: s.category || "",
+          category_label: s.category_label || "",
+          popularity: s.popularity || 0,
+          hot: s.hot || 0,
+          rank: s.rank || 999,
+          updated: s.updated || "",
+          path: s.path || s.id,
+          files: s.files || ["SKILL.md"],
+          _q: `${s.name || ""} ${s.title || ""} ${s.description || ""} ${s.description_zh || ""}`.toLowerCase(),
+        };
+      })
+      .filter((s) => s && s.id);
+  }
+
+  const ASK_PAGE_SIZE = 9;
+
+  function clearAskMode({ rerender = true } = {}) {
+    state.ask = null;
+    const panel = $("#askPanel");
+    const skillsEl = $("#askSkills");
+    const webEl = $("#askWeb");
+    const pagerEl = $("#askPager");
+    const loadingEl = $("#askLoading");
+    if (panel) {
+      panel.hidden = true;
+      panel.classList.remove("is-loading");
+    }
+    if (loadingEl) loadingEl.hidden = true;
+    if (skillsEl) skillsEl.innerHTML = "";
+    if (webEl) {
+      webEl.hidden = true;
+      webEl.innerHTML = "";
+    }
+    if (pagerEl) {
+      pagerEl.hidden = true;
+      pagerEl.innerHTML = "";
+    }
+    const tips = $("#askTips");
+    if (tips) tips.hidden = false;
+    if (rerender) {
+      /* panel already cleared */
+    }
+  }
+
+  function renderAskSkillsPage() {
+    const skillsEl = $("#askSkills");
+    const pagerEl = $("#askPager");
+    if (!skillsEl || !state.ask?.skills?.length) {
+      if (skillsEl) skillsEl.innerHTML = "";
+      if (pagerEl) {
+        pagerEl.hidden = true;
+        pagerEl.innerHTML = "";
+      }
+      return;
+    }
+
+    const skills = state.ask.skills;
+    const total = skills.length;
+    const pageSize = ASK_PAGE_SIZE;
+    const totalPages = Math.max(1, Math.ceil(total / pageSize));
+    let page = Math.min(Math.max(1, state.ask.page || 1), totalPages);
+    state.ask.page = page;
+
+    const start = (page - 1) * pageSize;
+    const slice = skills.slice(start, start + pageSize);
+    skillsEl.innerHTML = slice.map((s) => cardHtml(s, { showRank: true })).join("");
+
+    if (!pagerEl) return;
+    if (totalPages <= 1) {
+      pagerEl.hidden = true;
+      pagerEl.innerHTML = "";
+      return;
+    }
+
+    pagerEl.hidden = false;
+    const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
+      .map(
+        (p) =>
+          `<button type="button" class="ask-page-btn${p === page ? " is-active" : ""}" data-ask-page="${p}">${p}</button>`
+      )
+      .join("");
+    pagerEl.innerHTML = `
+      <button type="button" class="ask-page-nav" data-ask-page="${page - 1}" ${page <= 1 ? "disabled" : ""}>${escapeHtml(
+        t("askPagePrev")
+      )}</button>
+      <div class="ask-page-nums">${pages}</div>
+      <button type="button" class="ask-page-nav" data-ask-page="${page + 1}" ${
+      page >= totalPages ? "disabled" : ""
+    }>${escapeHtml(t("askPageNext"))}</button>
+      <span class="ask-page-meta">${escapeHtml(t("askPageMeta").replace("{page}", String(page)).replace("{total}", String(totalPages)).replace("{count}", String(total)))}</span>
+    `;
+  }
+
+  function renderAskPanel(data) {
+    const panel = $("#askPanel");
+    const statusEl = $("#askStatus");
+    const summaryEl = $("#askSummary");
+    const skillsEl = $("#askSkills");
+    const webEl = $("#askWeb");
+    if (!panel || !statusEl || !summaryEl || !skillsEl || !webEl) return;
+
+    const skills = resolveAskSkills(data.skills);
+    const mode = data.mode || "local";
+    const summary = data.reply || data.summary || "";
+    const keepPage = data === state.ask && state.ask?.page;
+
+    state.ask = {
+      active: true,
+      mode,
+      summary,
+      skills,
+      web: data.web || null,
+      page: keepPage || 1,
+    };
+
+    panel.hidden = false;
+    panel.classList.remove("is-loading");
+    const loadingEl = $("#askLoading");
+    if (loadingEl) loadingEl.hidden = true;
+    statusEl.textContent = mode === "web" ? t("askModeWeb") : t("askModeLocal");
+    statusEl.className = "ask-badge" + (mode === "web" ? " is-web" : "");
+    summaryEl.textContent = summary;
+
+    renderAskSkillsPage();
+
+    if (mode === "web" && data.web) {
+      webEl.hidden = false;
+      const sources = (data.web.sources || [])
+        .filter((s) => s.url)
+        .map(
+          (s) =>
+            `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+              s.title || s.url
+            )}</a>`
+        )
+        .join("");
+      webEl.innerHTML = `<p class="ask-web-body">${escapeHtml(data.web.text || summary || t("askEmpty"))}</p>${
+        sources
+          ? `<div class="ask-web-sources"><span class="ask-web-sources-label">${escapeHtml(
+              t("askSources")
+            )}</span>${sources}</div>`
+          : ""
+      }`;
+      if (!skills.length && data.web.text) {
+        summaryEl.textContent = summary.slice(0, 120) || t("askEmpty");
+      }
+    } else {
+      webEl.hidden = true;
+      webEl.innerHTML = "";
+    }
+
+    const tips = $("#askTips");
+    if (tips) tips.hidden = true;
   }
 
   function getFilteredList() {
@@ -188,7 +403,7 @@
       list = list.filter((s) => s.category === state.category);
     }
     if (q) {
-      list = list.filter((s) => s._q.includes(q));
+      list = list.filter((s) => skillMatchesQuery(s, q));
     }
 
     if (!q && !state.category && (state.tab === "hot" || state.tab === "recent")) {
@@ -222,19 +437,31 @@
 
   function setView(view) {
     state.view = view;
+    document.body.dataset.cafeView = view;
     document.querySelectorAll(".view").forEach((v) => {
       v.classList.toggle("active", v.id === `view-${view}`);
     });
+    document.querySelectorAll(".nav-links a[data-view]").forEach((a) => {
+      a.classList.toggle("active", a.dataset.view === view);
+    });
     $("#nav")?.classList.remove("open");
-    if (view === "explore") {
+    if (view === "all") {
       state.page = 1;
       syncTabGroup();
       scheduleRenderExplore();
+    } else if (view === "explore") {
+      setupInfiniteScroll(false);
+      if (state.data) renderHome();
     } else {
       setupInfiniteScroll(false);
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
-    const path = view === "home" ? "/" : `/${view}${state.tab && view === "explore" ? `/${state.tab}` : ""}`;
+    const path =
+      view === "home"
+        ? "/"
+        : view === "all"
+          ? `/all${state.tab && state.tab !== "all" ? `/${state.tab}` : ""}`
+          : `/${view}`;
     trackPage(path, `Skill Café · ${view}`);
   }
 
@@ -256,11 +483,11 @@
       else if (tab === "recent") sort.value = "recent";
       state.sort = sort.value || state.sort;
     }
-    if (state.view !== "explore") setView("explore");
+    if (state.view !== "all") setView("all");
     else {
       syncTabGroup();
       scheduleRenderExplore();
-      trackPage(`/explore/${tab}`, `Skill Café · explore · ${tab}`);
+      trackPage(`/all/${tab}`, `Skill Café · all · ${tab}`);
     }
   }
 
@@ -271,7 +498,6 @@
     $("#statTotal").textContent = state.data.total.toLocaleString();
     $("#statCats").textContent = state.data.categories.length;
     $("#statHot").textContent = "60";
-    $("#footerStamp").textContent = `${t("updatedAt")} ${state.data.generated_at || "—"} · ${state.data.total} skills`;
 
     $("#homeHot").innerHTML = byHot.slice(0, 6).map((s) => cardHtml(s)).join("");
     $("#homeRecent").innerHTML = byRecent.slice(0, 6).map((s) => cardHtml(s, { showRank: false })).join("");
@@ -355,12 +581,12 @@
       state.io = null;
     }
 
-    if (!hasMore || state.view !== "explore") return;
+    if (!hasMore || state.view !== "all") return;
 
     state.io = new IntersectionObserver(
       (entries) => {
         const hit = entries.some((e) => e.isIntersecting);
-        if (!hit || state.loadingMore || state.view !== "explore") return;
+        if (!hit || state.loadingMore || state.view !== "all") return;
         const list = getFilteredList();
         if (state.page * PAGE_SIZE >= list.length) return;
         state.loadingMore = true;
@@ -564,13 +790,17 @@
     const panel = $("#askPanel");
     const statusEl = $("#askStatus");
     const summaryEl = $("#askSummary");
-    const clarifyEl = $("#askClarify");
     const skillsEl = $("#askSkills");
     const webEl = $("#askWeb");
     if (!form || !input || !panel) return;
 
-    let lastQuery = "";
     let busy = false;
+
+    function resizeAskInput() {
+      if (!(input instanceof HTMLTextAreaElement)) return;
+      input.style.height = "auto";
+      input.style.height = `${Math.min(input.scrollHeight, 160)}px`;
+    }
 
     function setBusy(v) {
       busy = v;
@@ -578,122 +808,72 @@
       input.disabled = v;
     }
 
-    function modeLabel(mode) {
-      if (mode === "local") return t("askModeLocal");
-      if (mode === "clarify") return t("askModeClarify");
-      if (mode === "web") return t("askModeWeb");
-      return "";
-    }
-
-    function renderAskResult(data) {
-      panel.hidden = false;
-      panel.classList.remove("is-loading");
-      statusEl.textContent = modeLabel(data.mode);
-      summaryEl.textContent = data.summary || "";
-
-      const options = data.clarify_options || [];
-      if (data.mode === "clarify" && options.length) {
-        clarifyEl.hidden = false;
-        clarifyEl.innerHTML = options
-          .map(
-            (opt) =>
-              `<button type="button" class="ask-chip" data-clarify="${escapeHtml(opt)}">${escapeHtml(opt)}</button>`
-          )
-          .join("");
-      } else {
-        clarifyEl.hidden = true;
-        clarifyEl.innerHTML = "";
-      }
-
-      const skills = data.skills || [];
-      if (skills.length) {
-        const langZh = (I18n()?.getLang?.() || "zh") === "zh";
-        skillsEl.innerHTML = skills
-          .map((s) => {
-            const desc = langZh
-              ? s.description_zh || s.description || ""
-              : s.description || s.description_zh || "";
-            return `<button type="button" class="ask-skill" data-action="preview" data-id="${escapeHtml(s.id)}">
-              <div>
-                <strong>${escapeHtml(s.title || s.name)}</strong>
-                <span class="meta">${escapeHtml(s.category_label || s.category || "")}</span>
-              </div>
-              <span class="ask-view">${escapeHtml(t("askView"))}</span>
-              <span class="desc">${escapeHtml(String(desc).slice(0, 120))}</span>
-            </button>`;
-          })
-          .join("");
-      } else {
-        skillsEl.innerHTML = "";
-      }
-
-      if (data.mode === "web" && data.web) {
-        webEl.hidden = false;
-        const sources = (data.web.sources || [])
-          .filter((s) => s.url)
-          .map(
-            (s) =>
-              `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(
-                s.title || s.url
-              )}</a>`
-          )
-          .join("");
-        webEl.innerHTML = `${escapeHtml(data.web.text || t("askEmpty"))}${
-          sources
-            ? `<div class="ask-web-sources"><strong>${escapeHtml(t("askSources"))}</strong>${sources}</div>`
-            : ""
-        }`;
-      } else {
-        webEl.hidden = true;
-        webEl.innerHTML = "";
-      }
-    }
-
     function showAskError(message) {
       panel.hidden = false;
       panel.classList.remove("is-loading");
-      statusEl.textContent = t("askError");
-      summaryEl.textContent = message;
-      clarifyEl.hidden = true;
-      clarifyEl.innerHTML = "";
-      skillsEl.innerHTML = "";
-      webEl.hidden = true;
-      webEl.innerHTML = "";
+      const loadingEl = $("#askLoading");
+      if (loadingEl) loadingEl.hidden = true;
+      if (statusEl) {
+        statusEl.textContent = t("askError");
+        statusEl.className = "ask-badge is-web";
+      }
+      if (summaryEl) summaryEl.textContent = message;
+      if (skillsEl) skillsEl.innerHTML = "";
+      if (webEl) {
+        webEl.hidden = true;
+        webEl.innerHTML = "";
+      }
+      state.ask = { active: true, mode: "error", skills: [] };
     }
 
-    async function runAsk(query, clarify = null) {
+    async function runAsk(query) {
       const q = String(query || "").trim();
       if (!q || busy) return;
-      lastQuery = q;
+
+      if (state.view !== "home") setView("home");
+
       input.value = q;
+      resizeAskInput();
       setBusy(true);
+
       panel.hidden = false;
       panel.classList.add("is-loading");
-      statusEl.textContent = "…";
-      summaryEl.textContent = t("askSearching");
-      clarifyEl.hidden = true;
-      clarifyEl.innerHTML = "";
-      skillsEl.innerHTML = "";
-      webEl.hidden = true;
-      webEl.innerHTML = "";
+      const loadingEl = $("#askLoading");
+      if (loadingEl) loadingEl.hidden = false;
+      if (statusEl) {
+        statusEl.textContent = t("askSearching");
+        statusEl.className = "ask-badge is-loading";
+      }
+      if (summaryEl) summaryEl.textContent = "";
+      if (skillsEl) skillsEl.innerHTML = "";
+      const pagerEl = $("#askPager");
+      if (pagerEl) {
+        pagerEl.hidden = true;
+        pagerEl.innerHTML = "";
+      }
+      if (webEl) {
+        webEl.hidden = true;
+        webEl.innerHTML = "";
+      }
 
       try {
-        const res = await fetch("/api/ask", {
+        const res = await fetch(apiUrl("/api/ask"), {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: q, clarify }),
+          body: JSON.stringify({ query: q }),
         });
         const data = await res.json().catch(() => ({}));
         if (!res.ok) {
           showAskError(data.error || (res.status >= 500 ? t("askNeedServer") : t("askError")));
           return;
         }
-        renderAskResult(data);
+        renderAskPanel(data);
         trackEvent("ask", { mode: data.mode });
       } catch (_err) {
         showAskError(t("askNeedServer"));
       } finally {
         setBusy(false);
+        input.focus();
       }
     }
 
@@ -702,22 +882,44 @@
       runAsk(input.value);
     });
 
+    input.addEventListener("input", resizeAskInput);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        if (!busy) runAsk(input.value);
+      }
+    });
+    resizeAskInput();
+
     $("#askTips")?.addEventListener("click", (e) => {
       const tip = e.target.closest("[data-ask]");
       if (!tip) return;
       runAsk(tip.getAttribute("data-ask"));
     });
 
-    clarifyEl?.addEventListener("click", (e) => {
-      const chip = e.target.closest("[data-clarify]");
-      if (!chip) return;
-      runAsk(lastQuery || input.value, chip.getAttribute("data-clarify"));
+    $("#askClear")?.addEventListener("click", () => {
+      clearAskMode();
+      input.focus();
+    });
+
+    $("#askPager")?.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-ask-page]");
+      if (!btn || btn.disabled || !state.ask?.skills?.length) return;
+      const page = Number(btn.getAttribute("data-ask-page"));
+      if (!Number.isFinite(page) || page < 1) return;
+      state.ask.page = page;
+      renderAskSkillsPage();
+      skillsEl?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     });
 
     document.addEventListener("keydown", (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "j") {
         e.preventDefault();
-        input.focus();
+        if (state.view !== "home") setView("home");
+        requestAnimationFrame(() => {
+          input.focus();
+          $("#ask-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
       }
     });
   }
@@ -741,7 +943,7 @@
         return;
       }
 
-      const viewBtn = e.target.closest("[data-view]");
+      const viewBtn = e.target.closest("a[data-view], button[data-view], sl-button[data-view]");
       if (viewBtn) {
         e.preventDefault();
         const tab = viewBtn.dataset.tab;
@@ -765,7 +967,7 @@
       state.query = value || "";
       state.page = 1;
       state.filteredCache = null;
-      if (state.view !== "explore") setView("explore");
+      if (state.view !== "all") setView("all");
       else scheduleRenderExplore();
     }, SEARCH_DEBOUNCE_MS);
 
@@ -775,7 +977,8 @@
       state.category = e.target.value || "";
       state.page = 1;
       state.filteredCache = null;
-      scheduleRenderExplore();
+      if (state.view !== "all") setView("all");
+      else scheduleRenderExplore();
     });
 
     $("#sortSelect")?.addEventListener("sl-change", (e) => {
@@ -784,7 +987,8 @@
       state.page = 1;
       state.filteredCache = null;
       syncTabGroup();
-      scheduleRenderExplore();
+      if (state.view !== "all") setView("all");
+      else scheduleRenderExplore();
     });
 
     $("#exploreTabs")?.addEventListener("sl-tab-show", (e) => {
@@ -793,14 +997,23 @@
         state.tab = name;
         state.page = 1;
         state.filteredCache = null;
-        scheduleRenderExplore();
+        if (state.view !== "all") setView("all");
+        else scheduleRenderExplore();
       }
     });
 
     $("#btnFocusSearch")?.addEventListener("click", () => {
-      setView("explore");
+      setView("all");
       setTab("all");
       setTimeout(() => $("#searchInput")?.focus(), 50);
+    });
+
+    $("#heroAskCta")?.addEventListener("click", () => {
+      if (state.view !== "home") setView("home");
+      requestAnimationFrame(() => {
+        $("#ask-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        $("#askInput")?.focus();
+      });
     });
 
     $("#modalClose2")?.addEventListener("click", () => $("#modal")?.hide());
@@ -847,8 +1060,8 @@
     document.addEventListener("keydown", (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
-        setView("explore");
-        $("#searchInput")?.focus();
+        setView("all");
+        setTimeout(() => $("#searchInput")?.focus(), 50);
       }
     });
 
@@ -859,20 +1072,23 @@
         s._q = `${s.name} ${s.title} ${s.description || ""} ${s.description_zh || ""} ${s.category_label || ""} ${s.category}`.toLowerCase();
       });
       if (state.data) {
-        if (state.view === "home") renderHome();
-        else scheduleRenderExplore();
+        if (state.view === "home") {
+          renderHome();
+          if (state.ask?.active) renderAskPanel(state.ask);
+        } else if (state.view === "all") scheduleRenderExplore();
+        else if (state.view === "explore") renderHome();
         if (state.current && $("#modal")?.open) openPreview(state.current);
       }
       refreshChromeIcons(document.querySelector(".nav"));
       refreshChromeIcons(document.querySelector(".subnav"));
-      refreshChromeIcons(document.querySelector(".footer"));
     });
   }
 
   function indexSkills(skills) {
     const byId = new Map();
     for (const s of skills) {
-      s._q = `${s.name} ${s.title} ${s.description || ""} ${s.description_zh || ""} ${s.category_label || ""} ${s.category}`.toLowerCase();
+      const kw = Array.isArray(s.search_keywords) ? s.search_keywords.join(" ") : "";
+      s._q = `${s.name} ${s.title} ${s.description || ""} ${s.description_zh || ""} ${s.category_label || ""} ${s.category} ${kw}`.toLowerCase();
       if (s.files && s.files.length > 12) s.files = s.files.slice(0, 12);
       byId.set(s.id, s);
     }
@@ -950,12 +1166,18 @@
     bindAskUi();
     refreshChromeIcons(document.querySelector(".nav"));
     refreshChromeIcons(document.querySelector(".hero-copy"));
+    refreshChromeIcons(document.querySelector(".ask-section"));
     refreshChromeIcons(document.querySelector(".subnav"));
-    refreshChromeIcons(document.querySelector(".footer"));
 
     try {
-      const res = await fetch(DATA_URL);
+      const [res, synRes] = await Promise.all([
+        fetch(DATA_URL),
+        fetch(SYNONYMS_URL).catch(() => null),
+      ]);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (synRes?.ok) {
+        searchSynonyms = await synRes.json().catch(() => searchSynonyms);
+      }
       state.data = await res.json();
       state.skills = state.data.skills || [];
       state.byId = indexSkills(state.skills);
@@ -977,9 +1199,9 @@
     } catch (err) {
       const localHint =
         location.hostname === "localhost" || location.hostname === "127.0.0.1"
-          ? `<pre style="text-align:left;background:#fff;padding:1rem;border-radius:12px;display:inline-block;margin-top:1rem">cd ~/Desktop/skills/server
-npm install && npm start
-# → http://localhost:3000/site/</pre>`
+          ? `<pre style="text-align:left;background:#fff;padding:1rem;border-radius:12px;display:inline-block;margin-top:1rem">cd ~/Desktop/skills
+python3 -m http.server 8765
+# → http://localhost:8765/site/</pre>`
           : `<p style="margin-top:1rem;color:rgba(0,0,0,.55)">请稍后刷新重试。若持续失败，可能是部署尚未完成或网络异常。</p>`;
       $("main").innerHTML = `
         <div class="container state-box" style="padding:4rem 1rem">

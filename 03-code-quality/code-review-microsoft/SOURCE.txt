@@ -1,0 +1,9 @@
+origin: skillsmp-curated
+repo: microsoft
+github_url: https://github.com/microsoft/vscode/tree/main/src/vs/sessions/skills/code-review
+skillsmp_url: https://skillsmp.com/creators/microsoft/vscode/src-vs-sessions-skills-code-review
+skillsmp_id: microsoft-vscode-src-vs-sessions-skills-code-review-skill-md
+stars: 187604
+source_path: /Users/chao/Desktop/skills/03-code-quality/code-review-microsoft/SKILL.md
+content_hash: c2a0feb2dc49
+category: 03-code-quality

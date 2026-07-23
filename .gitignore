@@ -1,6 +1,6 @@
-node_modules/
-.DS_Store
-server/node_modules/
+_tmp_curated/
+_tmp_curated_test/
+_tmp_sources/
 .env
 .env.*
 !.env.example
