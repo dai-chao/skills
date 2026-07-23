@@ -28,7 +28,7 @@ python3 -m http.server 8765
 - 健康检查：http://localhost:3000/api/health
 - AI 点单：首页「想点什么」，或 `⌘/Ctrl+J`
 - 探索页：按分类逛 / 热门精选 / 最近更新
-- 前端默认请求 `http://localhost:3000/api/*`；可用 `window.SKILL_CAFE_API` 或 `<meta name="skill-cafe-api" content="...">` 覆盖
+- 后端切换：改 `site/js/app.js` 里的 `API_TARGET`（`"local"` / `"remote"`）；也可用 `window.SKILL_CAFE_API = "..."` 临时覆盖
 
 > 不启后端也能浏览 / 下载，只是 AI 点单不可用。
 

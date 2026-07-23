@@ -6,17 +6,27 @@
   const PAGE_SIZE = 24;
   const SEARCH_DEBOUNCE_MS = 180;
 
-  /** API base for AI ask. Override via window.SKILL_CAFE_API or <meta name="skill-cafe-api">. */
+  /**
+   * AI 点单后端目标：改这里即可切换本地 / 远程。
+   * - "local"  → http://localhost:3000
+   * - "remote" → https://skills-server-csdh.onrender.com
+   * 仍可用 window.SKILL_CAFE_API 临时覆盖。
+   */
+  const API_TARGET = "remote"; // "local" | "remote"
+
+  const API_BASES = {
+    local: "http://localhost:3000",
+    remote: "https://skills-server-csdh.onrender.com",
+  };
+
+  /** Resolve API base from constant, then window override. */
   function apiBase() {
     const fromWindow =
       typeof window.SKILL_CAFE_API === "string" ? window.SKILL_CAFE_API.trim() : "";
-    const fromMeta = document.querySelector('meta[name="skill-cafe-api"]')?.content?.trim() || "";
-    const raw = fromWindow || fromMeta;
-    if (raw) return raw.replace(/\/$/, "");
-    if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-      return "http://localhost:3000";
-    }
-    return ""; // same-origin behind reverse proxy
+    if (fromWindow) return fromWindow.replace(/\/$/, "");
+
+    const fromConst = API_BASES[API_TARGET] || API_BASES.remote;
+    return fromConst.replace(/\/$/, "");
   }
 
   function apiUrl(path) {
